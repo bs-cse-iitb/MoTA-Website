@@ -31,6 +31,7 @@ interface Answer {
 type Saved = { role: 'user'; text: string } | { role: 'bot'; answer: Answer } | { role: 'fallback'; query: string; pages: Link[] };
 type Link = { title: string; url: string };
 type PF = {
+  options: (o: Record<string, unknown>) => Promise<void>;
   init: () => Promise<void>;
   search: (q: string) => Promise<{ results: { data: () => Promise<{ url: string; meta: { title?: string } }> }[] }>;
 };
@@ -38,6 +39,9 @@ type PF = {
 const CHAT_KEY = 'mota-assistant-chat'; // sessionStorage: this tab only, cleared when it closes
 const LANG_KEY = 'mota-assistant-lang'; // localStorage: the answer language the visitor chose
 const MAX_TURNS = 10;
+// Folder the site is served from: empty on the website, set as data-base only on copies
+// served from a sub-folder (the GitHub Pages preview, scripts/build-pages.mjs).
+const BASE = document.documentElement.dataset.base ?? '';
 
 const root = document.querySelector<HTMLElement>('[data-tribot]');
 if (root) init(root);
@@ -251,7 +255,7 @@ function init(root: HTMLElement) {
       el.append(ul);
     }
     const more = document.createElement('p');
-    const search = d.searchUrl || `${pageLang === 'hi' ? '/hi' : ''}/search/`;
+    const search = d.searchUrl || `${BASE}${pageLang === 'hi' ? '/hi' : ''}/search/`;
     more.append(link(d.lSearch!, `${search}?q=${encodeURIComponent(query)}`));
     el.append(more);
     scroll(el);
@@ -394,8 +398,9 @@ function init(root: HTMLElement) {
     if (d.searchUrl) return []; // no search index on this page
     try {
       if (!pf) {
-        const url = '/pagefind/pagefind.js';
+        const url = `${BASE}/pagefind/pagefind.js`;
         pf = (await import(/* @vite-ignore */ url)) as PF;
+        if (BASE) await pf.options({ baseUrl: `${BASE}/` });
         await pf.init();
       }
       const res = await pf.search(keywords(query));

@@ -10,6 +10,7 @@ Paths are inside `packages/dbim-kit/`.
 - Chat assistant rebuilt from the Ministry's "Jago" widget in the DBIM design: Jago mascot (`assets/jago-96.webp`, `jago-160.webp`), the service's 11 answer languages, its request format (`messages`, `language` codes such as `eng`/`hin`/`gnd`, `top_k`, `session_id`), list and table answers, Copy answer, voice input that fills the question box, the conversation kept for the browser tab, a 60-second time-out. Answers are written as text only. Theme-aware colours fix low contrast of the old notice in the dark theme.
 - All kit scripts are ES modules (`export {}`), which removes 24 TypeScript errors caused by names shared across scripts.
 - Chat assistant: optional `data-search-url`, the address of the website's search page, for pages without the site's search index. When it is set and the service fails, the assistant links to that page and does not search. Used by the standalone `chat_popup/` page at the repository root (`npm run chat:build`).
+- Search and chat assistant: for copies served from a sub-folder (the GitHub Pages preview), `data-base` on `<html>` is added to the addresses the scripts build (Pagefind, search links, search results). Not set on the website, so nothing changes there.
 
 ## 1.1.0 — UAT (October 2026)
 

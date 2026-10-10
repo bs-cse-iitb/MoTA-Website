@@ -18,6 +18,9 @@ const list = document.querySelector<HTMLOListElement>('[data-search-results]');
 const status = document.querySelector<HTMLElement>('[data-search-status]');
 const filterBox = document.querySelector<HTMLElement>('[data-search-filters]');
 const hi = document.documentElement.lang === 'hi';
+// Folder the site is served from: empty on the website, set as data-base only on copies
+// served from a sub-folder (the GitHub Pages preview, scripts/build-pages.mjs).
+const BASE = document.documentElement.dataset.base ?? '';
 const L = (en: string, h: string) => (hi ? h : en);
 const active: Record<string, Set<string>> = { type: new Set(), audience: new Set() };
 const AUDIENCE: Record<string, string> = { student: 'Students', citizen: 'Tribal citizens', researcher: 'Researchers', ngo: 'Voluntary organisations', state: 'State Governments', entrepreneur: 'Entrepreneurs', media: 'Media' };
@@ -26,9 +29,9 @@ let pagefind: PF | null = null;
 async function load(): Promise<PF | null> {
   if (pagefind) return pagefind;
   try {
-    const url = '/pagefind/pagefind.js';
+    const url = `${BASE}/pagefind/pagefind.js`;
     pagefind = (await import(/* @vite-ignore */ url)) as PF;
-    await pagefind.options({ excerptLength: 28 });
+    await pagefind.options({ excerptLength: 28, ...(BASE ? { baseUrl: `${BASE}/` } : {}) });
     await pagefind.init();
     return pagefind;
   } catch {
@@ -75,7 +78,7 @@ function suggestions(): string {
     [L('Guidelines', 'दिशानिर्देश'), '/documents/guidelines/'],
     [L('Directory', 'निर्देशिका'), '/connect/directory/'],
   ];
-  const prefix = hi ? '/hi' : '';
+  const prefix = BASE + (hi ? '/hi' : '');
   return `<li class="result"><p class="result__excerpt">${esc(L('Popular searches:', 'लोकप्रिय खोजें:'))}</p><ul class="chips" role="list">${items.map(([t, u]) => `<li><a class="chip" href="${prefix}${u}">${esc(t)}</a></li>`).join('')}</ul></li>`;
 }
 
