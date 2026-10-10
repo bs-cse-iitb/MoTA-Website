@@ -4,7 +4,8 @@ This document covers:
 - what was obtained for the work, and what is still missing;
 - the security and condition of the current website.
 
-Position on **6 Oct 2026**. Owners and target dates of the follow-up tasks (T-…) are in the
+Position on **6 Oct 2026**; the checks of the chat service and its widget made on 10 Oct are
+marked "(10 Oct)". Owners and target dates of the follow-up tasks (T-…) are in the
 [review package](../6_Submit/Review_Package.md) §3.
 
 ## 1. Access
@@ -20,7 +21,7 @@ Position on **6 Oct 2026**. Owners and target dates of the follow-up tasks (T-�
 | STQC certificate | **Expired on 12 Feb 2026.** STQC/WQCS/GIGW/2023/Q1/05, issued under GIGW 2018 | `https://tribal.gov.in/DivisionsFiles/STQC13022023.pdf` | New evaluation under GIGW 3.0 after go-live (T-20) |
 | Hosting details: data centre, network, backup and disaster recovery | Not received | — | NIC (T-35) |
 | Network access to 6 sister portals | Not reachable from the assessment network | [Sister-portal gap matrix](../2_Assess/Gap_Matrix_Sister_Portals.md) | Re-run the assessment from NICNET (T-05) |
-| TriBot chat service | Reachable; answers without an API key | `https://tribot.tribal.gov.in/api/v1` | Same-origin proxy on staging (T-30) |
+| TriBot chat service | Reachable; answers without an API key. Browsers on `tribal.gov.in` and `www.tribal.gov.in` pages are refused (preflight answered HTTP 400), but the same call forwarded by a server is answered; pages at `http://127.0.0.1:5500` and its own pages are accepted. No intermediate certificate (A-11) (10 Oct) | `https://tribot.tribal.gov.in/api/v1` | Same-origin proxy on staging (T-30) |
 
 ## 2. The current website
 
@@ -33,7 +34,9 @@ public site is retired.
 - ASP.NET Web Forms on .NET Framework 4.0 (unsupported since January 2016), on IIS 10.
 - **TLS:** the server sends no intermediate certificate ("GlobalSign GCC R6 AlphaSSL CA 2025";
   `openssl` verify return code 21), so some browsers and all scripted clients fail to
-  connect. TLS 1.3 was not offered on 5 Oct (row 22).
+  connect. TLS 1.3 was not offered on 5 Oct (row 22). The chat service,
+  tribot.tribal.gov.in, has the same fault (10 Oct): Node refuses it
+  (`UNABLE_TO_VERIFY_LEAF_SIGNATURE`) unless it is given the certificate.
 - **Headers:**
   - `X-Content-Type-Options` is malformed: it contains CSP text;
   - the server sends `ETag: SAMEORIGIN`;
@@ -48,7 +51,11 @@ public site is retired.
     `ResourcesHindi/SanctionOrderDetails_VIEW.aspx` return 404;
   - 45 Hindi sanction reports (`ResourcesHindi/senctionReporth.aspx?…`) and the PFMS search
     pages without parameters return 500;
-  - the Hindi menu links to `ResourcesHindi/PFMS_…` addresses that do not exist.
+  - the Hindi menu links to `ResourcesHindi/PFMS_…` addresses that do not exist;
+  - the TriBot chat widget cannot run (10 Oct): the pages carry its button, but its files
+    `api.js`, `script.js` and `chatbot.css` return HTTP 500, which the server also returns
+    for any address that does not exist (instead of 404); `chat_popup/index.html` returns
+    502. Even with its files, the widget's calls would be refused by the chat service (§1).
 - **Out-of-date or failing links:**
   - the footer still shows the STQC logo, although the certificate expired on 12 Feb 2026;
   - the NVSP logo leads to a certificate warning: the certificate of www.nvsp.in expired on 17 Mar 2025;
@@ -78,7 +85,7 @@ anywhere. "New build" says what the new static site does about each finding.
 | A-08 | Eleven jQuery versions, several end-of-life (1.2.6, 1.3.2, 2.1.x) | `App/js`, `App/javascript`, `App/js_CMS` … | Medium | Open | Resolved: no jQuery |
 | A-09 | Scripts from public CDNs without Subresource Integrity | Home page: cdnjs.cloudflare.com, cdn.jsdelivr.net, code.jquery.com | Medium | Open | Resolved: self-hosted |
 | A-10 | Security headers missing or malformed; server version disclosed | Response headers | Medium | Open | Resolved |
-| A-11 | Incomplete certificate chain; no TLS 1.3 | `openssl s_client`: verify error 21 | Medium | Open | Verify on staging (T-08) |
+| A-11 | Incomplete certificate chain; no TLS 1.3. The chat service tribot.tribal.gov.in sends no intermediate either (10 Oct) | `openssl s_client`: verify error 21 | Medium | Open | Verify on staging (T-08); the IIS forwarding to the chat service must connect despite it (T-30) |
 | A-12 | 77 code-behind files read query-string parameters; parameterised queries not confirmed | `Request.QueryString[...]` across `App/` | Medium | Pending verification | Not applicable: no database |
 | A-13 | Counter cookies without SameSite; temporary (302) HTTPS redirect | `ENGLISHCOUNT` / `HINDICOUNT` cookies | Low | Open | Resolved |
 | A-14 | Personal (non-government) e-mail addresses in the directory | Directory page | Low | Open | Partly: to be confirmed by Establishment |
@@ -94,5 +101,6 @@ Their urgent security points are in the [sister-portal gap matrix](../2_Assess/G
 ## 4. Handling rules
 
 - Never copy, send or commit the old `Web.config` or the database backups: they hold credentials.
-  The copy of the old chat widget, which held an API key, was deleted on 6 Oct 2026.
+  The copy of the old chat widget, which held an API key, was deleted on 6 Oct 2026;
+  `chat_popup/` now holds the website's assistant, which uses no key (10 Oct).
 - Security testing only on the local stand-in or on authorised staging.

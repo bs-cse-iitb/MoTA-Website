@@ -33,10 +33,11 @@ npm run serve:uat    # http://127.0.0.1:4322, served like IIS
 | `src/` | Pages, components and content data (`src/data/`: settings, menus, schemes, old-address map, chat assistant) |
 | `public/` | Files copied as they are: emblem, logos, mascot, `robots.txt`, Search Console files, early accessibility script |
 | `packages/dbim-kit/` | Component kit for other portals: sources, build and generated templates |
+| `chat_popup/` | The chat assistant on a page of its own, made from the component kit (`npm run chat:build`), for the chat service to serve at `/chat_popup/` |
 | `scripts/` | IIS stand-in server; link, navigation and release checks; migration inventory; assessments |
 | `tests/` | Redirect, document and chat-assistant tests |
 | `docs/` | Project documents and test evidence |
-| `vendor/` | Third-party artwork kept with its source (State Emblem SVG) |
+| `vendor/` | Third-party files kept with their source: the State Emblem SVG, and the intermediate certificate that the chat service does not send (used by `npm run dev`) |
 
 
 ## Free Deploy

@@ -19,7 +19,7 @@ here for now. They will be built from the NIC export once it arrives
 | Campaign logos in the header (at most two) | `site.ts` → `cobrand`; images in `public/images/cobrand/` |
 | STQC certificate in the footer | `site.ts` → `stqc`: shown only until `validTill` |
 | FAQ file and visitor counter in the footer | `site.ts` → `faq`, `visitorCounter` |
-| Chat assistant: name, service address, languages, suggested questions | `assistant.ts` |
+| Chat assistant: name, service address, languages, suggested questions | `assistant.ts`; then rebuild `chat_popup/` ([RUN.md](RUN.md#chat-popup-page)) |
 | Menus | `nav.ts` |
 | Scrolling announcements, What's New, tenders, archives, sanction-order years | `updates.ts` |
 | Home page banners, photo albums, videos | `media.ts`; images in `src/assets/banners/` and `src/assets/gallery/` |
@@ -175,7 +175,8 @@ LEGACY_DIR=../MoTA_Website_Old/App npm run assets
 
 1. Run `npm run build`.
 2. Run the checks in [RUN.md](RUN.md): at least `check:links` and `test:uat`. Add `kit:build`
-   and `kit:test` if anything in `packages/dbim-kit/src/` changed.
+   and `kit:test` if anything in `packages/dbim-kit/src/` changed, then `chat:build` and
+   `test:chat-popup` if the kit or the chat assistant changed.
 3. Look at the change on `npm run serve:uat`.
 4. Deploy as in [DEPLOYMENT.md](docs/DEPLOYMENT.md): staging first, production only after
    approval.
