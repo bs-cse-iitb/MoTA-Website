@@ -111,6 +111,7 @@ python3 -m http.server 5500 --bind 127.0.0.1 --directory chat_popup
 | `node scripts/fetch-link-meta.mjs` | Records the format and size of every linked document in `src/data/generated/link-meta.json`; `--refresh` checks them all again |
 | `npm run assets` | Imports images from the old site again (one time; see [MAINTENANCE.md](MAINTENANCE.md)) |
 | `npm audit` | Known vulnerabilities in the dependencies |
+| `node scripts/build-pages.mjs --base /MoTA-Website` | After a build: the GitHub Pages preview in `dist-pages/`, adjusted for its sub-folder, marked noindex, every internal link checked. `.github/workflows/pages.yml` runs it and publishes the result on every push to `main` |
 
 ## Related instructions
 

@@ -4,6 +4,7 @@
 # packages/dbim-kit/dist/ is NOT ignored: it is the ready-to-copy kit for other portals.
 node_modules/
 /dist/
+/dist-pages/
 /.astro/
 
 # Local settings and secrets: copy .env.example to .env (never commit .env)

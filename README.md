@@ -41,7 +41,10 @@ npm run serve:uat    # http://127.0.0.1:4322, served like IIS
 
 
 ## Free Deploy
+Previews for review, not the official site:
 - https://mota-website.bs-veer-868.workers.dev/
+- https://bs-cse-iitb.github.io/MoTA-Website/ (GitHub Pages, from every push to `main`:
+  `.github/workflows/pages.yml` publishes only the built site, with every page marked noindex)
 
 Not in the repository: `node_modules/` and `dist/` (rebuilt by `npm ci && npm run build`),
 `.env` (local settings; see `.env.example`), the official guideline PDFs (download links in

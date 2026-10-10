@@ -1,0 +1,49 @@
+# Preview of the website on GitHub Pages: https://bs-cse-iitb.github.io/MoTA-Website/
+# Publishes only the built site, never the repository's own files. The build in dist/ is
+# copied and adjusted for the sub-folder by scripts/build-pages.mjs, which also marks every
+# page noindex and stops the deploy if an internal link does not resolve. It is a preview,
+# not the official site: GitHub Pages has none of the IIS settings in web.config (security
+# headers, old-address redirects, the chat assistant's forwarding).
+name: GitHub Pages preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - id: pages
+        uses: actions/configure-pages@v5
+      - run: npm ci
+      - run: npm run build
+      - name: Adjust the build for the sub-folder and check every internal link
+        run: node scripts/build-pages.mjs --base "${{ steps.pages.outputs.base_path }}" --out dist-pages
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
