@@ -4,9 +4,10 @@ What has changed on the UAT website, by area, with evidence. **Nothing has been 
 staging or production.** Open issues are not repeated here: they are the rows marked *Open*
 in the [main-website gap matrix](../2_Assess/Gap_Matrix_Main_Website.md).
 
-Changes made on 5 Oct 2026 are marked "(5 Oct)"; the rest were made on 6 Oct. Evidence
-paths are relative to `docs/Evidence/`. The reports of 6 Oct are in
-`runs/2026-10-10-final/`, the final test run.
+Changes made on 5 Oct 2026 are marked "(5 Oct)" and those of 10 Oct "(10 Oct)"; the rest
+were made on 6 Oct. Evidence paths are relative to `docs/Evidence/`. The reports of 6 Oct are
+in `runs/2026-10-10-final/`, the final test run; those of 10 Oct are in
+`runs/2026-10-10-chat-popup/`.
 
 ## 1. Accessibility
 
@@ -15,6 +16,7 @@ paths are relative to `docs/Evidence/`. The reports of 6 Oct are in
 | Skip link, landmarks, one heading 1 per page; menus, dialogs, tabs and carousels work by keyboard; pausable banner and ticker; accessibility panel (5 Oct) | `uat-suite.txt`, cases TC-001 to TC-013 | Done; automated tests only |
 | Automated WCAG 2.1 A and AA checks: 0 violations in 104 page, width and theme combinations | `uat-suite.txt`, `uat/results.json` | Done; automated only |
 | Chat assistant rebuilt: labelled controls, a live log of the conversation, focus returns to the button, answers marked with their language, works in all themes and on phones. A dark-theme contrast fault of the old version is fixed | `assistant-test.txt` (8 of 8) | Done |
+| Chat popup page for the chat service (`chat_popup/`): the service's own widget replaced by the website's assistant on a page of its own, in English and Hindi, made from the component kit; nothing loaded from outside the folder; 508 KB instead of 7.6 MB; when the service fails, it links to the website's search (10 Oct) | `runs/2026-10-10-chat-popup/chat-popup-test.txt` (9 of 9) | Done on the local stand-in; not yet served by the chat service |
 | Accessibility statement rewritten to give its real status, "not yet assessed" | `src/data/policies.ts`, `policies-hi.ts` | Done; Ministry approval and Hindi vetting pending |
 | Hindi persona pages: portal descriptions were marked as English (`lang="en"`), so screen readers would read the Hindi with English rules. They are now marked as English only where English text is shown | `src/components/page/views/PersonaView.astro`, `PortalsView.astro` | Done |
 
@@ -51,4 +53,4 @@ paths are relative to `docs/Evidence/`. The reports of 6 Oct are in
 | Static public site: no server code, database, login or uploads on the public server (5 Oct) | [TECHNOLOGY.md](../../TECHNOLOGY.md) | Done |
 | All of the following are set in the generated `web.config`: security headers (Content-Security-Policy without inline scripts, HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy); only GET, HEAD and POST allowed; HTTPS by 301; custom 404 page; no server banner | `uat-suite.txt` (TC-021); `dist/web.config` | Done on the local stand-in; verify on staging |
 | Chat assistant: answers shown as text only, so markup in an answer cannot run (tested); no API key in the browser or the code; same-origin proxy | `assistant-test.txt` | Done |
-| Credentials and the API-key folder kept out of any repository (`.gitignore`); secrets not reproduced in documents | `.gitignore` | Done |
+| Credentials kept out of any repository (`.gitignore`); secrets not reproduced in documents. The chat widget copy that held an API key was deleted; `chat_popup/` now holds the website's assistant, which needs no key (10 Oct) | `.gitignore` | Done |

@@ -1,0 +1,4 @@
+Run after the chat_popup page was added and the kit's chat assistant gained data-search-url, 10 Oct 2026 20:11 IST
+Node v20.12.1, npm 10.5.0, macOS 26.6.2, Google Chrome 155.0.8059.39 
+Version: commit 3dad9b1 plus this batch's changes, not yet committed
+chat-popup-test.txt run again at 20:27 IST, after chat_popup/config.js was changed so that pages on this computer (except port 8000) use the live service

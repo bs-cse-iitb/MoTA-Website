@@ -28,5 +28,6 @@ Paths in the documents are relative to `Evidence/` unless they say otherwise.
 | Folder or file | Contents |
 |---|---|
 | `runs/2026-10-10-final/` | The final run of every test and check on this version, including the navigation check and the audit of the new build. New runs go in `runs/<date>-<subject>/` |
+| `runs/2026-10-10-chat-popup/` | Later on 10 Oct: the chat popup page test, and the suites its kit change touches run again ([test report](GIGW_DBIM_Standardisation/5_Verify/Test_Report.md) §2.1) |
 | `assessment/` | Audit of tribal.gov.in and the sister portals (`raw/`) and Hindi coverage, 5 Oct 2026 |
 | `broken-links-report.csv` | Documents linked from the old pages that are missing on the live server (written by `npm run check:links`) |

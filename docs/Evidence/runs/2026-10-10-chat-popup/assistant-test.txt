@@ -1,0 +1,56 @@
+$ env ASSISTANT_OUT=docs/Evidence/runs/2026-10-10-chat-popup/assistant npm run test:assistant
+
+> mota-website@0.1.0 test:assistant
+> node --test tests/assistant.test.mjs
+
+TAP version 13
+# Subtest: opens from the keyboard, focuses the question box, and Escape closes it
+ok 1 - opens from the keyboard, focuses the question box, and Escape closes it
+  ---
+  duration_ms: 1614.082417
+  ...
+# Subtest: offers the 11 answer languages of the service; the page language is the default
+ok 2 - offers the 11 answer languages of the service; the page language is the default
+  ---
+  duration_ms: 1769.038625
+  ...
+# Subtest: sends the service request format and shows plain-text, list and table answers
+ok 3 - sends the service request format and shows plain-text, list and table answers
+  ---
+  duration_ms: 1222.829333
+  ...
+# Subtest: markup in a question or answer is shown as text, never run
+ok 4 - markup in a question or answer is shown as text, never run
+  ---
+  duration_ms: 987.194083
+  ...
+# Subtest: falls back to the site search when the service fails
+ok 5 - falls back to the site search when the service fails
+  ---
+  duration_ms: 1204.087959
+  ...
+# Subtest: keeps the conversation when moving to another page; New chat clears it
+ok 6 - keeps the conversation when moving to another page; New chat clears it
+  ---
+  duration_ms: 1659.941667
+  ...
+# Subtest: Hindi page: asks in Hindi; an answer in another language carries its lang attribute
+ok 7 - Hindi page: asks in Hindi; an answer in another language carries its lang attribute
+  ---
+  duration_ms: 1176.8275
+  ...
+# Subtest: axe-core WCAG 2.1 A/AA: no violations with the panel open (themes, Hindi, phone)
+ok 8 - axe-core WCAG 2.1 A/AA: no violations with the panel open (themes, Hindi, phone)
+  ---
+  duration_ms: 7305.867542
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17208.6635
+exit=0

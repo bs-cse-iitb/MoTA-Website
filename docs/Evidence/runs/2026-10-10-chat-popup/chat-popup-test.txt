@@ -1,0 +1,61 @@
+$ env CHAT_POPUP_OUT=docs/Evidence/runs/2026-10-10-chat-popup/chat-popup npm run test:chat-popup
+
+> mota-website@0.1.0 test:chat-popup
+> node --test tests/chat-popup.test.mjs
+
+TAP version 13
+# Subtest: chat_popup/ is up to date with the kit (otherwise run npm run chat:build)
+ok 1 - chat_popup/ is up to date with the kit (otherwise run npm run chat:build)
+  ---
+  duration_ms: 1093.225958
+  ...
+# Subtest: config.js chooses the address for each kind of host
+ok 2 - config.js chooses the address for each kind of host
+  ---
+  duration_ms: 3.102917
+  ...
+# Subtest: both pages load every file from the folder itself, without errors
+ok 3 - both pages load every file from the folder itself, without errors
+  ---
+  duration_ms: 2092.949458
+  ...
+# Subtest: opens from the keyboard, focuses the question box, and Escape closes it
+ok 4 - opens from the keyboard, focuses the question box, and Escape closes it
+  ---
+  duration_ms: 1186.094709
+  ...
+# Subtest: sends the service request format and shows the answer
+ok 5 - sends the service request format and shows the answer
+  ---
+  duration_ms: 1380.959834
+  ...
+# Subtest: when the service fails: says so and links to the website search, with the leaving notice
+ok 6 - when the service fails: says so and links to the website search, with the leaving notice
+  ---
+  duration_ms: 1233.640625
+  ...
+# Subtest: Hindi page: asks in Hindi and links to the Hindi search when the service fails
+ok 7 - Hindi page: asks in Hindi and links to the Hindi search when the service fails
+  ---
+  duration_ms: 1322.103708
+  ...
+# Subtest: axe-core WCAG 2.1 A/AA: no violations with the panel open (themes, Hindi, phone)
+ok 8 - axe-core WCAG 2.1 A/AA: no violations with the panel open (themes, Hindi, phone)
+  ---
+  duration_ms: 6556.3805
+  ...
+# Subtest: nothing was sent to the live service
+ok 9 - nothing was sent to the live service
+  ---
+  duration_ms: 0.320833
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15172.140292
+exit=0

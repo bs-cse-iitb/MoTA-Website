@@ -2,7 +2,8 @@
 
 The final test run of the updated UAT website, on **10 Oct 2026**, on the version in this
 repository. All reports are in `docs/Evidence/runs/2026-10-10-final/`; the results match the
-earlier runs of 5 and 6 Oct.
+earlier runs of 5 and 6 Oct. Later that day, the suites touched by the new chat popup page
+were run again (§2.1).
 
 ## 1. Environment
 
@@ -31,6 +32,27 @@ earlier runs of 5 and 6 Oct.
 | Audit of the new build | Lighthouse, axe, headers and page weight of the English and Hindi home pages and a scheme page | axe 0 rules failing; Lighthouse accessibility 97; home page 1,374 KB (Hindi 1,397 KB) against 17,671 KB for the live home page on 5 Oct | `prototype-audit.txt`, `prototype/` |
 | Dependency audit | Known vulnerabilities in npm packages | **Failed**: 1 critical, 9 high, 19 moderate, 1 low (gap matrix row 11) | `npm-audit.json` |
 | Go-live readiness | Migration blockers | **Not ready**: 5 open areas | `check-release.txt` |
+
+### 2.1 Later run: the chat popup page
+
+Later on 10 Oct 2026, the chat popup page (`chat_popup/`) was added and the kit's chat
+assistant gained an optional setting, `data-search-url`
+([changes](../4_Implement/Changes_on_UAT.md) §1). The suites this touches were run again on
+the changed version, on the computer and browser of §1 with Node.js 20.12.1 only. Reports
+are in `docs/Evidence/runs/2026-10-10-chat-popup/`.
+
+| Suite | What it checks | Result | Report |
+|---|---|---|---|
+| Chat popup page, 9 tests | Up to date with the kit; the address chosen for each host; every file from the folder, nothing from outside; keyboard; the request format and the answer; the message and website-search link when the service fails, with the "You are leaving" notice; Hindi; axe with the chat open (3 themes, Hindi, phone); nothing sent to the live service | **9 of 9 passed**, against a stand-in for the TriBot service. Run again at 20:27, after `config.js` was changed so that pages on this computer use the live service | `chat-popup-test.txt`, `chat-popup/` |
+| Build, link check, type check | As in §2 | Pass: 229 pages; 0 broken internal links; 0 errors | `build.txt`, `chat-build.txt`, `check-links.txt`, `typecheck.txt` |
+| Site UAT, 21 cases | As in §2 | **21 of 21 passed**; 0 axe violations in 104 combinations | `uat-suite.txt`, `uat/` |
+| Component kit, 13 cases | As in §2 | **13 of 13 passed** | `kit-build.txt`, `kit-suite.txt`, `uat-kit/` |
+| Old addresses | As in §2 | **309 of 309 passed** | `redirects-test.txt` |
+| Chat assistant on the website, 8 tests | As in §2 | **8 of 8 passed** | `assistant-test.txt`, `assistant/` |
+
+Not run again, because the change does not touch what they check: documents at old
+addresses, the home-page checklist, the navigation check, the audit of the new build, the
+dependency audit and go-live readiness.
 
 ## 3. Navigation check of the old home page
 

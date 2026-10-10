@@ -1,0 +1,1564 @@
+$ npm run test:redirects
+
+> mota-website@0.1.0 test:redirects
+> node --test tests/redirects.test.mjs
+
+TAP version 13
+# Subtest: every old page redirects permanently to its recorded new page
+    # Subtest: 1000-springs-initiative.aspx
+    ok 1 - 1000-springs-initiative.aspx
+      ---
+      duration_ms: 32.773833
+      ...
+    # Subtest: AboutMinistry.aspx
+    ok 2 - AboutMinistry.aspx
+      ---
+      duration_ms: 3.899
+      ...
+    # Subtest: atmanirbhar-bharat.aspx
+    ok 3 - atmanirbhar-bharat.aspx
+      ---
+      duration_ms: 3.879917
+      ...
+    # Subtest: Clm.aspx
+    ok 4 - Clm.aspx
+      ---
+      duration_ms: 5.167583
+      ...
+    # Subtest: ContactUs.aspx
+    ok 5 - ContactUs.aspx
+      ---
+      duration_ms: 2.363958
+      ...
+    # Subtest: ContactUsh.aspx
+    ok 6 - ContactUsh.aspx
+      ---
+      duration_ms: 3.891792
+      ...
+    # Subtest: copyrightpolicy.aspx
+    ok 7 - copyrightpolicy.aspx
+      ---
+      duration_ms: 3.485917
+      ...
+    # Subtest: covid19.aspx
+    ok 8 - covid19.aspx
+      ---
+      duration_ms: 2.006959
+      ...
+    # Subtest: dajagua.aspx
+    ok 9 - dajagua.aspx
+      ---
+      duration_ms: 2.503625
+      ...
+    # Subtest: Default.aspx
+    ok 10 - Default.aspx
+      ---
+      duration_ms: 1.328959
+      ...
+    # Subtest: disclaimer.aspx
+    ok 11 - disclaimer.aspx
+      ---
+      duration_ms: 1.236583
+      ...
+    # Subtest: display_PAC_minutes.aspx
+    ok 12 - display_PAC_minutes.aspx
+      ---
+      duration_ms: 1.462125
+      ...
+    # Subtest: EMRS.aspx
+    ok 13 - EMRS.aspx
+      ---
+      duration_ms: 1.22775
+      ...
+    # Subtest: Error.aspx
+    ok 14 - Error.aspx
+      ---
+      duration_ms: 1.952791
+      ...
+    # Subtest: estVigilance.aspx
+    ok 15 - estVigilance.aspx
+      ---
+      duration_ms: 1.100958
+      ...
+    # Subtest: FAQ.aspx
+    ok 16 - FAQ.aspx
+      ---
+      duration_ms: 1.09975
+      ...
+    # Subtest: Feedback.aspx
+    ok 17 - Feedback.aspx
+      ---
+      duration_ms: 1.228
+      ...
+    # Subtest: Finance.aspx
+    ok 18 - Finance.aspx
+      ---
+      duration_ms: 1.24875
+      ...
+    # Subtest: FRA.aspx
+    ok 19 - FRA.aspx
+      ---
+      duration_ms: 1.127916
+      ...
+    # Subtest: GapAnalysis.aspx
+    ok 20 - GapAnalysis.aspx
+      ---
+      duration_ms: 2.637458
+      ...
+    # Subtest: Geet.aspx
+    ok 21 - Geet.aspx
+      ---
+      duration_ms: 1.313916
+      ...
+    # Subtest: Goal-old.aspx
+    ok 22 - Goal-old.aspx
+      ---
+      duration_ms: 1.033375
+      ...
+    # Subtest: Goal.aspx
+    ok 23 - Goal.aspx
+      ---
+      duration_ms: 1.039583
+      ...
+    # Subtest: Help.aspx
+    ok 24 - Help.aspx
+      ---
+      duration_ms: 0.870542
+      ...
+    # Subtest: Home.aspx
+    ok 25 - Home.aspx
+      ---
+      duration_ms: 1.015083
+      ...
+    # Subtest: Home_26062023.aspx
+    ok 26 - Home_26062023.aspx
+      ---
+      duration_ms: 0.954625
+      ...
+    # Subtest: IceStupa-old.aspx
+    ok 27 - IceStupa-old.aspx
+      ---
+      duration_ms: 0.844958
+      ...
+    # Subtest: IceStupa.aspx
+    ok 28 - IceStupa.aspx
+      ---
+      duration_ms: 1.059625
+      ...
+    # Subtest: KnowledgeHub.aspx
+    ok 29 - KnowledgeHub.aspx
+      ---
+      duration_ms: 1.067042
+      ...
+    # Subtest: Livelihood.aspx
+    ok 30 - Livelihood.aspx
+      ---
+      duration_ms: 1.015042
+      ...
+    # Subtest: Model-Village.aspx
+    ok 31 - Model-Village.aspx
+      ---
+      duration_ms: 0.9905
+      ...
+    # Subtest: model-village.html
+    ok 32 - model-village.html
+      ---
+      duration_ms: 1.94275
+      ...
+    # Subtest: MOUS.aspx
+    ok 33 - MOUS.aspx
+      ---
+      duration_ms: 1.060917
+      ...
+    # Subtest: NCST.aspx
+    ok 34 - NCST.aspx
+      ---
+      duration_ms: 1.011
+      ...
+    # Subtest: NGO.aspx
+    ok 35 - NGO.aspx
+      ---
+      duration_ms: 0.963209
+      ...
+    # Subtest: NSTFDC.aspx
+    ok 36 - NSTFDC.aspx
+      ---
+      duration_ms: 0.991708
+      ...
+    # Subtest: OfficialLanguage.aspx
+    ok 37 - OfficialLanguage.aspx
+      ---
+      duration_ms: 0.957875
+      ...
+    # Subtest: old pages/ScholarshiP.aspx
+    ok 38 - old pages/ScholarshiP.aspx
+      ---
+      duration_ms: 1.034708
+      ...
+    # Subtest: OrganisationalChart.aspx
+    ok 39 - OrganisationalChart.aspx
+      ---
+      duration_ms: 1.126292
+      ...
+    # Subtest: PerformanceDashboard-old.aspx
+    ok 40 - PerformanceDashboard-old.aspx
+      ---
+      duration_ms: 1.229916
+      ...
+    # Subtest: PerformanceDashboard.aspx
+    ok 41 - PerformanceDashboard.aspx
+      ---
+      duration_ms: 0.941292
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd.aspx
+    ok 42 - PFMS_SentionDtSchemeUpd.aspx
+      ---
+      duration_ms: 0.940875
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd19.aspx
+    ok 43 - PFMS_SentionDtSchemeUpd19.aspx
+      ---
+      duration_ms: 1.004333
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd20.aspx
+    ok 44 - PFMS_SentionDtSchemeUpd20.aspx
+      ---
+      duration_ms: 2.264833
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd21.aspx
+    ok 45 - PFMS_SentionDtSchemeUpd21.aspx
+      ---
+      duration_ms: 0.907125
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd22.aspx
+    ok 46 - PFMS_SentionDtSchemeUpd22.aspx
+      ---
+      duration_ms: 0.862166
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd23.aspx
+    ok 47 - PFMS_SentionDtSchemeUpd23.aspx
+      ---
+      duration_ms: 0.959208
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd24.aspx
+    ok 48 - PFMS_SentionDtSchemeUpd24.aspx
+      ---
+      duration_ms: 1.086834
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd25.aspx
+    ok 49 - PFMS_SentionDtSchemeUpd25.aspx
+      ---
+      duration_ms: 0.972667
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd26.aspx
+    ok 50 - PFMS_SentionDtSchemeUpd26.aspx
+      ---
+      duration_ms: 0.857416
+      ...
+    # Subtest: PFMS_SentionDtSchemeUpd27.aspx
+    ok 51 - PFMS_SentionDtSchemeUpd27.aspx
+      ---
+      duration_ms: 0.838292
+      ...
+    # Subtest: photoAlbum.aspx
+    ok 52 - photoAlbum.aspx
+      ---
+      duration_ms: 0.981125
+      ...
+    # Subtest: photos.aspx
+    ok 53 - photos.aspx
+      ---
+      duration_ms: 1.037708
+      ...
+    # Subtest: PM-JANMAN.aspx
+    ok 54 - PM-JANMAN.aspx
+      ---
+      duration_ms: 2.022167
+      ...
+    # Subtest: PnC - Copy.aspx
+    ok 55 - PnC - Copy.aspx
+      ---
+      duration_ms: 1.053333
+      ...
+    # Subtest: PnC.aspx
+    ok 56 - PnC.aspx
+      ---
+      duration_ms: 1.167833
+      ...
+    # Subtest: pri-awareness-program.aspx
+    ok 57 - pri-awareness-program.aspx
+      ---
+      duration_ms: 1.149917
+      ...
+    # Subtest: PublicGrievances.aspx
+    ok 58 - PublicGrievances.aspx
+      ---
+      duration_ms: 1.012292
+      ...
+    # Subtest: RealtedWebsites.aspx
+    ok 59 - RealtedWebsites.aspx
+      ---
+      duration_ms: 1.206583
+      ...
+    # Subtest: Resources/promovideo.aspx
+    ok 60 - Resources/promovideo.aspx
+      ---
+      duration_ms: 1.012417
+      ...
+    # Subtest: ResourcesHindi/1000-springs-initiativeh.aspx
+    ok 61 - ResourcesHindi/1000-springs-initiativeh.aspx
+      ---
+      duration_ms: 0.966541
+      ...
+    # Subtest: ResourcesHindi/AboutMinistryh.aspx
+    ok 62 - ResourcesHindi/AboutMinistryh.aspx
+      ---
+      duration_ms: 1.286625
+      ...
+    # Subtest: ResourcesHindi/Archive_annulreporth.aspx
+    ok 63 - ResourcesHindi/Archive_annulreporth.aspx
+      ---
+      duration_ms: 1.251167
+      ...
+    # Subtest: ResourcesHindi/atmanirbhar-bharath.aspx
+    ok 64 - ResourcesHindi/atmanirbhar-bharath.aspx
+      ---
+      duration_ms: 3.167292
+      ...
+    # Subtest: ResourcesHindi/Clmh.aspx
+    ok 65 - ResourcesHindi/Clmh.aspx
+      ---
+      duration_ms: 3.256
+      ...
+    # Subtest: ResourcesHindi/ContactUsh.aspx
+    ok 66 - ResourcesHindi/ContactUsh.aspx
+      ---
+      duration_ms: 0.983291
+      ...
+    # Subtest: ResourcesHindi/ContactUsh1.aspx
+    ok 67 - ResourcesHindi/ContactUsh1.aspx
+      ---
+      duration_ms: 0.853375
+      ...
+    # Subtest: ResourcesHindi/copyrightpolicyh.aspx
+    ok 68 - ResourcesHindi/copyrightpolicyh.aspx
+      ---
+      duration_ms: 0.908291
+      ...
+    # Subtest: ResourcesHindi/covid19h.aspx
+    ok 69 - ResourcesHindi/covid19h.aspx
+      ---
+      duration_ms: 0.930042
+      ...
+    # Subtest: ResourcesHindi/Defaulth.aspx
+    ok 70 - ResourcesHindi/Defaulth.aspx
+      ---
+      duration_ms: 0.935125
+      ...
+    # Subtest: ResourcesHindi/disclaimerh.aspx
+    ok 71 - ResourcesHindi/disclaimerh.aspx
+      ---
+      duration_ms: 0.939542
+      ...
+    # Subtest: ResourcesHindi/EMRSh.aspx
+    ok 72 - ResourcesHindi/EMRSh.aspx
+      ---
+      duration_ms: 0.892167
+      ...
+    # Subtest: ResourcesHindi/estvigilanceh.aspx
+    ok 73 - ResourcesHindi/estvigilanceh.aspx
+      ---
+      duration_ms: 0.991333
+      ...
+    # Subtest: ResourcesHindi/FAQh.aspx
+    ok 74 - ResourcesHindi/FAQh.aspx
+      ---
+      duration_ms: 1.046083
+      ...
+    # Subtest: ResourcesHindi/Feedbackh.aspx
+    ok 75 - ResourcesHindi/Feedbackh.aspx
+      ---
+      duration_ms: 0.936209
+      ...
+    # Subtest: ResourcesHindi/Financeh.aspx
+    ok 76 - ResourcesHindi/Financeh.aspx
+      ---
+      duration_ms: 0.981708
+      ...
+    # Subtest: ResourcesHindi/FRAh.aspx
+    ok 77 - ResourcesHindi/FRAh.aspx
+      ---
+      duration_ms: 0.952375
+      ...
+    # Subtest: ResourcesHindi/GapAnalysish.aspx
+    ok 78 - ResourcesHindi/GapAnalysish.aspx
+      ---
+      duration_ms: 0.955167
+      ...
+    # Subtest: ResourcesHindi/Geeth.aspx
+    ok 79 - ResourcesHindi/Geeth.aspx
+      ---
+      duration_ms: 0.859209
+      ...
+    # Subtest: ResourcesHindi/Goalh.aspx
+    ok 80 - ResourcesHindi/Goalh.aspx
+      ---
+      duration_ms: 0.81
+      ...
+    # Subtest: ResourcesHindi/Helph.aspx
+    ok 81 - ResourcesHindi/Helph.aspx
+      ---
+      duration_ms: 0.883625
+      ...
+    # Subtest: ResourcesHindi/Homeh - Copy.aspx
+    ok 82 - ResourcesHindi/Homeh - Copy.aspx
+      ---
+      duration_ms: 1.062708
+      ...
+    # Subtest: ResourcesHindi/Homeh.aspx
+    ok 83 - ResourcesHindi/Homeh.aspx
+      ---
+      duration_ms: 1.218958
+      ...
+    # Subtest: ResourcesHindi/HomehTest.aspx
+    ok 84 - ResourcesHindi/HomehTest.aspx
+      ---
+      duration_ms: 1.244292
+      ...
+    # Subtest: ResourcesHindi/IceStupah.aspx
+    ok 85 - ResourcesHindi/IceStupah.aspx
+      ---
+      duration_ms: 1.034125
+      ...
+    # Subtest: ResourcesHindi/KnowledgeHubh.aspx
+    ok 86 - ResourcesHindi/KnowledgeHubh.aspx
+      ---
+      duration_ms: 0.921125
+      ...
+    # Subtest: ResourcesHindi/Livelihoodh.aspx
+    ok 87 - ResourcesHindi/Livelihoodh.aspx
+      ---
+      duration_ms: 0.906834
+      ...
+    # Subtest: ResourcesHindi/Model-villageh.aspx
+    ok 88 - ResourcesHindi/Model-villageh.aspx
+      ---
+      duration_ms: 0.957125
+      ...
+    # Subtest: ResourcesHindi/MOUSh.aspx
+    ok 89 - ResourcesHindi/MOUSh.aspx
+      ---
+      duration_ms: 0.876583
+      ...
+    # Subtest: ResourcesHindi/NCSTh.aspx
+    ok 90 - ResourcesHindi/NCSTh.aspx
+      ---
+      duration_ms: 0.836166
+      ...
+    # Subtest: ResourcesHindi/NGOh.aspx
+    ok 91 - ResourcesHindi/NGOh.aspx
+      ---
+      duration_ms: 0.892625
+      ...
+    # Subtest: ResourcesHindi/NSTFDCh.aspx
+    ok 92 - ResourcesHindi/NSTFDCh.aspx
+      ---
+      duration_ms: 1.075
+      ...
+    # Subtest: ResourcesHindi/OfficialLanguageh.aspx
+    ok 93 - ResourcesHindi/OfficialLanguageh.aspx
+      ---
+      duration_ms: 0.997
+      ...
+    # Subtest: ResourcesHindi/OrganisationalCharth.aspx
+    ok 94 - ResourcesHindi/OrganisationalCharth.aspx
+      ---
+      duration_ms: 1.003083
+      ...
+    # Subtest: ResourcesHindi/PerformanceDashboardh.aspx
+    ok 95 - ResourcesHindi/PerformanceDashboardh.aspx
+      ---
+      duration_ms: 0.951
+      ...
+    # Subtest: ResourcesHindi/PFMS_SentionDtSchemeUpd19h.aspx
+    ok 96 - ResourcesHindi/PFMS_SentionDtSchemeUpd19h.aspx
+      ---
+      duration_ms: 0.847542
+      ...
+    # Subtest: ResourcesHindi/PFMS_SentionDtSchemeUpd20h.aspx
+    ok 97 - ResourcesHindi/PFMS_SentionDtSchemeUpd20h.aspx
+      ---
+      duration_ms: 2.970875
+      ...
+    # Subtest: ResourcesHindi/PFMS_SentionDtSchemeUpd21h.aspx
+    ok 98 - ResourcesHindi/PFMS_SentionDtSchemeUpd21h.aspx
+      ---
+      duration_ms: 1.675916
+      ...
+    # Subtest: ResourcesHindi/PFMS_SentionDtSchemewise1819h.aspx
+    ok 99 - ResourcesHindi/PFMS_SentionDtSchemewise1819h.aspx
+      ---
+      duration_ms: 0.884417
+      ...
+    # Subtest: ResourcesHindi/PFMS_SentionDtSchemewise1920h.aspx
+    ok 100 - ResourcesHindi/PFMS_SentionDtSchemewise1920h.aspx
+      ---
+      duration_ms: 0.909542
+      ...
+    # Subtest: ResourcesHindi/PFMS_SentionDtSchemewise2021h.aspx
+    ok 101 - ResourcesHindi/PFMS_SentionDtSchemewise2021h.aspx
+      ---
+      duration_ms: 0.826208
+      ...
+    # Subtest: ResourcesHindi/photoAlbumh.aspx
+    ok 102 - ResourcesHindi/photoAlbumh.aspx
+      ---
+      duration_ms: 0.821625
+      ...
+    # Subtest: ResourcesHindi/photosh.aspx
+    ok 103 - ResourcesHindi/photosh.aspx
+      ---
+      duration_ms: 0.9265
+      ...
+    # Subtest: ResourcesHindi/PnCh.aspx
+    ok 104 - ResourcesHindi/PnCh.aspx
+      ---
+      duration_ms: 0.951625
+      ...
+    # Subtest: ResourcesHindi/pri-awareness-programh.aspx
+    ok 105 - ResourcesHindi/pri-awareness-programh.aspx
+      ---
+      duration_ms: 0.948042
+      ...
+    # Subtest: ResourcesHindi/PublicGrievancesh.aspx
+    ok 106 - ResourcesHindi/PublicGrievancesh.aspx
+      ---
+      duration_ms: 0.860959
+      ...
+    # Subtest: ResourcesHindi/RealtedWebsitesh.aspx
+    ok 107 - ResourcesHindi/RealtedWebsitesh.aspx
+      ---
+      duration_ms: 0.900375
+      ...
+    # Subtest: ResourcesHindi/ReviewMeetingh.aspx
+    ok 108 - ResourcesHindi/ReviewMeetingh.aspx
+      ---
+      duration_ms: 1.056834
+      ...
+    # Subtest: ResourcesHindi/RTIh.aspx
+    ok 109 - ResourcesHindi/RTIh.aspx
+      ---
+      duration_ms: 0.879
+      ...
+    # Subtest: ResourcesHindi/sanctionorderh.aspx
+    ok 110 - ResourcesHindi/sanctionorderh.aspx
+      ---
+      duration_ms: 0.906541
+      ...
+    # Subtest: ResourcesHindi/ScholarshiPh.aspx
+    ok 111 - ResourcesHindi/ScholarshiPh.aspx
+      ---
+      duration_ms: 0.827583
+      ...
+    # Subtest: ResourcesHindi/ScreenReaderAccessh.aspx
+    ok 112 - ResourcesHindi/ScreenReaderAccessh.aspx
+      ---
+      duration_ms: 0.875834
+      ...
+    # Subtest: ResourcesHindi/Searchh.aspx
+    ok 113 - ResourcesHindi/Searchh.aspx
+      ---
+      duration_ms: 0.996416
+      ...
+    # Subtest: ResourcesHindi/senctionReporth.aspx
+    ok 114 - ResourcesHindi/senctionReporth.aspx
+      ---
+      duration_ms: 1.074875
+      ...
+    # Subtest: ResourcesHindi/sickle-cell-disease-piramal-swasthya.html
+    ok 115 - ResourcesHindi/sickle-cell-disease-piramal-swasthya.html
+      ---
+      duration_ms: 0.915375
+      ...
+    # Subtest: ResourcesHindi/sickle-cell-disease-piramal-swasthyah.aspx
+    ok 116 - ResourcesHindi/sickle-cell-disease-piramal-swasthyah.aspx
+      ---
+      duration_ms: 0.958292
+      ...
+    # Subtest: ResourcesHindi/SiteMaph.aspx
+    ok 117 - ResourcesHindi/SiteMaph.aspx
+      ---
+      duration_ms: 0.900625
+      ...
+    # Subtest: ResourcesHindi/Statisticsh.aspx
+    ok 118 - ResourcesHindi/Statisticsh.aspx
+      ---
+      duration_ms: 0.987125
+      ...
+    # Subtest: ResourcesHindi/STCMonitoringh.aspx
+    ok 119 - ResourcesHindi/STCMonitoringh.aspx
+      ---
+      duration_ms: 2.900292
+      ...
+    # Subtest: ResourcesHindi/STWelfareGranth.aspx
+    ok 120 - ResourcesHindi/STWelfareGranth.aspx
+      ---
+      duration_ms: 0.924875
+      ...
+    # Subtest: ResourcesHindi/swasthya-porta.html
+    ok 121 - ResourcesHindi/swasthya-porta.html
+      ---
+      duration_ms: 0.868417
+      ...
+    # Subtest: ResourcesHindi/swasthya-portalh.aspx
+    ok 122 - ResourcesHindi/swasthya-portalh.aspx
+      ---
+      duration_ms: 1.036833
+      ...
+    # Subtest: ResourcesHindi/TendersAdvertismenth.aspx
+    ok 123 - ResourcesHindi/TendersAdvertismenth.aspx
+      ---
+      duration_ms: 1.217333
+      ...
+    # Subtest: ResourcesHindi/TRIh.aspx
+    ok 124 - ResourcesHindi/TRIh.aspx
+      ---
+      duration_ms: 0.959041
+      ...
+    # Subtest: ResourcesHindi/UMh.aspx
+    ok 125 - ResourcesHindi/UMh.aspx
+      ---
+      duration_ms: 0.911375
+      ...
+    # Subtest: ResourcesHindi/vigilanceh.aspx
+    ok 126 - ResourcesHindi/vigilanceh.aspx
+      ---
+      duration_ms: 0.852
+      ...
+    # Subtest: ResourcesHindi/WebcastLinksh.aspx
+    ok 127 - ResourcesHindi/WebcastLinksh.aspx
+      ---
+      duration_ms: 0.830125
+      ...
+    # Subtest: ResourcesHindi/WebsitePolicyh.aspx
+    ok 128 - ResourcesHindi/WebsitePolicyh.aspx
+      ---
+      duration_ms: 0.8115
+      ...
+    # Subtest: ResourcesHindi/WhatsNewh.aspx
+    ok 129 - ResourcesHindi/WhatsNewh.aspx
+      ---
+      duration_ms: 0.893875
+      ...
+    # Subtest: ResourcesHindi/whatsnewsArchivesh.aspx
+    ok 130 - ResourcesHindi/whatsnewsArchivesh.aspx
+      ---
+      duration_ms: 1.029834
+      ...
+    # Subtest: ResourcesHindi/wimh.aspx
+    ok 131 - ResourcesHindi/wimh.aspx
+      ---
+      duration_ms: 0.97075
+      ...
+    # Subtest: ResourcesHindi/WorkAllocationh.aspx
+    ok 132 - ResourcesHindi/WorkAllocationh.aspx
+      ---
+      duration_ms: 0.862625
+      ...
+    # Subtest: results.aspx
+    ok 133 - results.aspx
+      ---
+      duration_ms: 0.897
+      ...
+    # Subtest: ReviewMeeting.aspx
+    ok 134 - ReviewMeeting.aspx
+      ---
+      duration_ms: 0.93725
+      ...
+    # Subtest: RTI.aspx
+    ok 135 - RTI.aspx
+      ---
+      duration_ms: 0.885125
+      ...
+    # Subtest: SanctionOrderDetails_VIEW.aspx
+    ok 136 - SanctionOrderDetails_VIEW.aspx
+      ---
+      duration_ms: 1.013959
+      ...
+    # Subtest: schemes/nfs.aspx
+    ok 137 - schemes/nfs.aspx
+      ---
+      duration_ms: 0.963167
+      ...
+    # Subtest: schemes/nos.aspx
+    ok 138 - schemes/nos.aspx
+      ---
+      duration_ms: 0.904042
+      ...
+    # Subtest: schemes/postmatric.aspx
+    ok 139 - schemes/postmatric.aspx
+      ---
+      duration_ms: 0.900167
+      ...
+    # Subtest: schemes/prematric.aspx
+    ok 140 - schemes/prematric.aspx
+      ---
+      duration_ms: 1.115375
+      ...
+    # Subtest: ScholarshiP.aspx
+    ok 141 - ScholarshiP.aspx
+      ---
+      duration_ms: 0.935125
+      ...
+    # Subtest: ScholarshiP_04082021.aspx
+    ok 142 - ScholarshiP_04082021.aspx
+      ---
+      duration_ms: 1.083042
+      ...
+    # Subtest: ScreenReaderAccess.aspx
+    ok 143 - ScreenReaderAccess.aspx
+      ---
+      duration_ms: 3.924792
+      ...
+    # Subtest: Search.aspx
+    ok 144 - Search.aspx
+      ---
+      duration_ms: 1.189667
+      ...
+    # Subtest: senctionReport.aspx
+    ok 145 - senctionReport.aspx
+      ---
+      duration_ms: 0.813166
+      ...
+    # Subtest: sickle-cell-disease-piramal-swasthya.aspx
+    ok 146 - sickle-cell-disease-piramal-swasthya.aspx
+      ---
+      duration_ms: 0.838958
+      ...
+    # Subtest: sickle-cell-disease-piramal-swasthya.html
+    ok 147 - sickle-cell-disease-piramal-swasthya.html
+      ---
+      duration_ms: 0.97125
+      ...
+    # Subtest: sitemap.aspx
+    ok 148 - sitemap.aspx
+      ---
+      duration_ms: 0.891083
+      ...
+    # Subtest: Statistics.aspx
+    ok 149 - Statistics.aspx
+      ---
+      duration_ms: 0.813458
+      ...
+    # Subtest: STCMonitoring.aspx
+    ok 150 - STCMonitoring.aspx
+      ---
+      duration_ms: 1.132166
+      ...
+    # Subtest: STWelfareGrant.aspx
+    ok 151 - STWelfareGrant.aspx
+      ---
+      duration_ms: 1.045292
+      ...
+    # Subtest: swasthya-porta.html
+    ok 152 - swasthya-porta.html
+      ---
+      duration_ms: 1.039125
+      ...
+    # Subtest: swasthya-portal-old.aspx
+    ok 153 - swasthya-portal-old.aspx
+      ---
+      duration_ms: 0.931583
+      ...
+    # Subtest: Swasthya-Portal.aspx
+    ok 154 - Swasthya-Portal.aspx
+      ---
+      duration_ms: 0.81575
+      ...
+    # Subtest: Telemedicine.aspx
+    ok 155 - Telemedicine.aspx
+      ---
+      duration_ms: 0.8255
+      ...
+    # Subtest: TendersAdvertisment.aspx
+    ok 156 - TendersAdvertisment.aspx
+      ---
+      duration_ms: 0.836709
+      ...
+    # Subtest: TendersAdvertismentArc.aspx
+    ok 157 - TendersAdvertismentArc.aspx
+      ---
+      duration_ms: 0.846
+      ...
+    # Subtest: TendersAdvertismenttemp.aspx
+    ok 158 - TendersAdvertismenttemp.aspx
+      ---
+      duration_ms: 0.744375
+      ...
+    # Subtest: THC.aspx
+    ok 159 - THC.aspx
+      ---
+      duration_ms: 0.763583
+      ...
+    # Subtest: TRI.aspx
+    ok 160 - TRI.aspx
+      ---
+      duration_ms: 0.776083
+      ...
+    # Subtest: TribeX.aspx
+    ok 161 - TribeX.aspx
+      ---
+      duration_ms: 0.840292
+      ...
+    # Subtest: UM.aspx
+    ok 162 - UM.aspx
+      ---
+      duration_ms: 0.955583
+      ...
+    # Subtest: Vigilance.aspx
+    ok 163 - Vigilance.aspx
+      ---
+      duration_ms: 0.95725
+      ...
+    # Subtest: WebcastLinks.aspx
+    ok 164 - WebcastLinks.aspx
+      ---
+      duration_ms: 0.842916
+      ...
+    # Subtest: WebsitePolicy.aspx
+    ok 165 - WebsitePolicy.aspx
+      ---
+      duration_ms: 0.934167
+      ...
+    # Subtest: WhatsNew.aspx
+    ok 166 - WhatsNew.aspx
+      ---
+      duration_ms: 0.984
+      ...
+    # Subtest: whatsnewsArchives.aspx
+    ok 167 - whatsnewsArchives.aspx
+      ---
+      duration_ms: 3.841959
+      ...
+    # Subtest: wim.aspx
+    ok 168 - wim.aspx
+      ---
+      duration_ms: 1.105625
+      ...
+    # Subtest: WorkAllocation.aspx
+    ok 169 - WorkAllocation.aspx
+      ---
+      duration_ms: 0.861542
+      ...
+    # Subtest: target /offerings/initiatives/1000-springs/ answers 200
+    ok 170 - target /offerings/initiatives/1000-springs/ answers 200
+      ---
+      duration_ms: 3.591
+      ...
+    # Subtest: target /ministry/about-us/ answers 200
+    ok 171 - target /ministry/about-us/ answers 200
+      ---
+      duration_ms: 3.406084
+      ...
+    # Subtest: target /offerings/initiatives/atmanirbhar-bharat/ answers 200
+    ok 172 - target /offerings/initiatives/atmanirbhar-bharat/ answers 200
+      ---
+      duration_ms: 2.343041
+      ...
+    # Subtest: target /ministry/our-divisions/constitutional-legal-matters/ answers 200
+    ok 173 - target /ministry/our-divisions/constitutional-legal-matters/ answers 200
+      ---
+      duration_ms: 2.162458
+      ...
+    # Subtest: target /connect/contact-us/ answers 200
+    ok 174 - target /connect/contact-us/ answers 200
+      ---
+      duration_ms: 1.869417
+      ...
+    # Subtest: target /hi/connect/contact-us/ answers 200
+    ok 175 - target /hi/connect/contact-us/ answers 200
+      ---
+      duration_ms: 1.918
+      ...
+    # Subtest: target /policies/copyright-policy/ answers 200
+    ok 176 - target /policies/copyright-policy/ answers 200
+      ---
+      duration_ms: 1.473875
+      ...
+    # Subtest: target /archives/ answers 200
+    ok 177 - target /archives/ answers 200
+      ---
+      duration_ms: 1.8505
+      ...
+    # Subtest: target /offerings/schemes/da-jgua/ answers 200
+    ok 178 - target /offerings/schemes/da-jgua/ answers 200
+      ---
+      duration_ms: 1.897
+      ...
+    # Subtest: target / answers 200
+    ok 179 - target / answers 200
+      ---
+      duration_ms: 3.033542
+      ...
+    # Subtest: target /policies/disclaimer/ answers 200
+    ok 180 - target /policies/disclaimer/ answers 200
+      ---
+      duration_ms: 1.65375
+      ...
+    # Subtest: target /documents/minutes-of-meetings/ answers 200
+    ok 181 - target /documents/minutes-of-meetings/ answers 200
+      ---
+      duration_ms: 1.818333
+      ...
+    # Subtest: target /ministry/our-divisions/emrs/ answers 200
+    ok 182 - target /ministry/our-divisions/emrs/ answers 200
+      ---
+      duration_ms: 1.880209
+      ...
+    # Subtest: target /ministry/our-divisions/establishment/ answers 200
+    ok 183 - target /ministry/our-divisions/establishment/ answers 200
+      ---
+      duration_ms: 1.789458
+      ...
+    # Subtest: target /help/ answers 200
+    ok 184 - target /help/ answers 200
+      ---
+      duration_ms: 1.7865
+      ...
+    # Subtest: target /connect/feedback/ answers 200
+    ok 185 - target /connect/feedback/ answers 200
+      ---
+      duration_ms: 1.622042
+      ...
+    # Subtest: target /ministry/our-divisions/finance/ answers 200
+    ok 186 - target /ministry/our-divisions/finance/ answers 200
+      ---
+      duration_ms: 1.553791
+      ...
+    # Subtest: target /ministry/our-divisions/forest-rights-act/ answers 200
+    ok 187 - target /ministry/our-divisions/forest-rights-act/ answers 200
+      ---
+      duration_ms: 1.573125
+      ...
+    # Subtest: target /offerings/initiatives/gap-analysis/ answers 200
+    ok 188 - target /offerings/initiatives/gap-analysis/ answers 200
+      ---
+      duration_ms: 1.480625
+      ...
+    # Subtest: target /offerings/initiatives/geet/ answers 200
+    ok 189 - target /offerings/initiatives/geet/ answers 200
+      ---
+      duration_ms: 1.510292
+      ...
+    # Subtest: target /offerings/initiatives/goal/ answers 200
+    ok 190 - target /offerings/initiatives/goal/ answers 200
+      ---
+      duration_ms: 1.578167
+      ...
+    # Subtest: target /offerings/initiatives/ice-stupa/ answers 200
+    ok 191 - target /offerings/initiatives/ice-stupa/ answers 200
+      ---
+      duration_ms: 1.513708
+      ...
+    # Subtest: target /documents/knowledge-hub/ answers 200
+    ok 192 - target /documents/knowledge-hub/ answers 200
+      ---
+      duration_ms: 1.848375
+      ...
+    # Subtest: target /ministry/our-divisions/livelihood/ answers 200
+    ok 193 - target /ministry/our-divisions/livelihood/ answers 200
+      ---
+      duration_ms: 1.736959
+      ...
+    # Subtest: target /offerings/initiatives/model-village/ answers 200
+    ok 194 - target /offerings/initiatives/model-village/ answers 200
+      ---
+      duration_ms: 1.571625
+      ...
+    # Subtest: target /offerings/initiatives/ answers 200
+    ok 195 - target /offerings/initiatives/ answers 200
+      ---
+      duration_ms: 1.638792
+      ...
+    # Subtest: target /ministry/our-organisations/ncst/ answers 200
+    ok 196 - target /ministry/our-organisations/ncst/ answers 200
+      ---
+      duration_ms: 1.627291
+      ...
+    # Subtest: target /ministry/our-divisions/ngo/ answers 200
+    ok 197 - target /ministry/our-divisions/ngo/ answers 200
+      ---
+      duration_ms: 1.995083
+      ...
+    # Subtest: target /ministry/our-organisations/nstfdc/ answers 200
+    ok 198 - target /ministry/our-organisations/nstfdc/ answers 200
+      ---
+      duration_ms: 1.458417
+      ...
+    # Subtest: target /ministry/our-divisions/official-language/ answers 200
+    ok 199 - target /ministry/our-divisions/official-language/ answers 200
+      ---
+      duration_ms: 1.401541
+      ...
+    # Subtest: target /ministry/our-divisions/scholarship/ answers 200
+    ok 200 - target /ministry/our-divisions/scholarship/ answers 200
+      ---
+      duration_ms: 1.504
+      ...
+    # Subtest: target /ministry/our-team/ answers 200
+    ok 201 - target /ministry/our-team/ answers 200
+      ---
+      duration_ms: 1.619041
+      ...
+    # Subtest: target /offerings/initiatives/performance-dashboard/ answers 200
+    ok 202 - target /offerings/initiatives/performance-dashboard/ answers 200
+      ---
+      duration_ms: 1.613541
+      ...
+    # Subtest: target /documents/sanction-orders/ answers 200
+    ok 203 - target /documents/sanction-orders/ answers 200
+      ---
+      duration_ms: 1.678208
+      ...
+    # Subtest: target /media/photos/ answers 200
+    ok 204 - target /media/photos/ answers 200
+      ---
+      duration_ms: 1.8385
+      ...
+    # Subtest: target /offerings/schemes/pm-janman/ answers 200
+    ok 205 - target /offerings/schemes/pm-janman/ answers 200
+      ---
+      duration_ms: 4.146625
+      ...
+    # Subtest: target /ministry/our-divisions/parliament-coordination/ answers 200
+    ok 206 - target /ministry/our-divisions/parliament-coordination/ answers 200
+      ---
+      duration_ms: 3.097541
+      ...
+    # Subtest: target /offerings/initiatives/pri-awareness/ answers 200
+    ok 207 - target /offerings/initiatives/pri-awareness/ answers 200
+      ---
+      duration_ms: 9.344125
+      ...
+    # Subtest: target /connect/grievance-redressal/ answers 200
+    ok 208 - target /connect/grievance-redressal/ answers 200
+      ---
+      duration_ms: 2.711708
+      ...
+    # Subtest: target /related-links/ answers 200
+    ok 209 - target /related-links/ answers 200
+      ---
+      duration_ms: 2.359166
+      ...
+    # Subtest: target /media/videos/ answers 200
+    ok 210 - target /media/videos/ answers 200
+      ---
+      duration_ms: 2.250375
+      ...
+    # Subtest: target /hi/offerings/initiatives/1000-springs/ answers 200
+    ok 211 - target /hi/offerings/initiatives/1000-springs/ answers 200
+      ---
+      duration_ms: 2.287417
+      ...
+    # Subtest: target /hi/ministry/about-us/ answers 200
+    ok 212 - target /hi/ministry/about-us/ answers 200
+      ---
+      duration_ms: 2.496292
+      ...
+    # Subtest: target /hi/ministry/our-divisions/statistics/ answers 200
+    ok 213 - target /hi/ministry/our-divisions/statistics/ answers 200
+      ---
+      duration_ms: 2.368541
+      ...
+    # Subtest: target /hi/offerings/initiatives/atmanirbhar-bharat/ answers 200
+    ok 214 - target /hi/offerings/initiatives/atmanirbhar-bharat/ answers 200
+      ---
+      duration_ms: 1.881375
+      ...
+    # Subtest: target /hi/ministry/our-divisions/constitutional-legal-matters/ answers 200
+    ok 215 - target /hi/ministry/our-divisions/constitutional-legal-matters/ answers 200
+      ---
+      duration_ms: 2.948625
+      ...
+    # Subtest: target /hi/policies/copyright-policy/ answers 200
+    ok 216 - target /hi/policies/copyright-policy/ answers 200
+      ---
+      duration_ms: 2.671958
+      ...
+    # Subtest: target /hi/archives/ answers 200
+    ok 217 - target /hi/archives/ answers 200
+      ---
+      duration_ms: 2.246625
+      ...
+    # Subtest: target /hi/ answers 200
+    ok 218 - target /hi/ answers 200
+      ---
+      duration_ms: 3.434583
+      ...
+    # Subtest: target /hi/policies/disclaimer/ answers 200
+    ok 219 - target /hi/policies/disclaimer/ answers 200
+      ---
+      duration_ms: 1.709833
+      ...
+    # Subtest: target /hi/ministry/our-divisions/emrs/ answers 200
+    ok 220 - target /hi/ministry/our-divisions/emrs/ answers 200
+      ---
+      duration_ms: 1.784708
+      ...
+    # Subtest: target /hi/ministry/our-divisions/establishment/ answers 200
+    ok 221 - target /hi/ministry/our-divisions/establishment/ answers 200
+      ---
+      duration_ms: 1.714375
+      ...
+    # Subtest: target /hi/help/ answers 200
+    ok 222 - target /hi/help/ answers 200
+      ---
+      duration_ms: 1.684375
+      ...
+    # Subtest: target /hi/connect/feedback/ answers 200
+    ok 223 - target /hi/connect/feedback/ answers 200
+      ---
+      duration_ms: 1.644291
+      ...
+    # Subtest: target /hi/ministry/our-divisions/finance/ answers 200
+    ok 224 - target /hi/ministry/our-divisions/finance/ answers 200
+      ---
+      duration_ms: 1.82475
+      ...
+    # Subtest: target /hi/ministry/our-divisions/forest-rights-act/ answers 200
+    ok 225 - target /hi/ministry/our-divisions/forest-rights-act/ answers 200
+      ---
+      duration_ms: 1.792583
+      ...
+    # Subtest: target /hi/offerings/initiatives/gap-analysis/ answers 200
+    ok 226 - target /hi/offerings/initiatives/gap-analysis/ answers 200
+      ---
+      duration_ms: 1.600041
+      ...
+    # Subtest: target /hi/offerings/initiatives/geet/ answers 200
+    ok 227 - target /hi/offerings/initiatives/geet/ answers 200
+      ---
+      duration_ms: 1.689
+      ...
+    # Subtest: target /hi/offerings/initiatives/goal/ answers 200
+    ok 228 - target /hi/offerings/initiatives/goal/ answers 200
+      ---
+      duration_ms: 1.791708
+      ...
+    # Subtest: target /hi/offerings/initiatives/ice-stupa/ answers 200
+    ok 229 - target /hi/offerings/initiatives/ice-stupa/ answers 200
+      ---
+      duration_ms: 1.66825
+      ...
+    # Subtest: target /hi/documents/knowledge-hub/ answers 200
+    ok 230 - target /hi/documents/knowledge-hub/ answers 200
+      ---
+      duration_ms: 2.169
+      ...
+    # Subtest: target /hi/ministry/our-divisions/livelihood/ answers 200
+    ok 231 - target /hi/ministry/our-divisions/livelihood/ answers 200
+      ---
+      duration_ms: 1.951625
+      ...
+    # Subtest: target /hi/offerings/initiatives/model-village/ answers 200
+    ok 232 - target /hi/offerings/initiatives/model-village/ answers 200
+      ---
+      duration_ms: 1.568208
+      ...
+    # Subtest: target /hi/offerings/initiatives/ answers 200
+    ok 233 - target /hi/offerings/initiatives/ answers 200
+      ---
+      duration_ms: 1.750958
+      ...
+    # Subtest: target /hi/ministry/our-organisations/ncst/ answers 200
+    ok 234 - target /hi/ministry/our-organisations/ncst/ answers 200
+      ---
+      duration_ms: 1.747958
+      ...
+    # Subtest: target /hi/ministry/our-divisions/ngo/ answers 200
+    ok 235 - target /hi/ministry/our-divisions/ngo/ answers 200
+      ---
+      duration_ms: 2.095833
+      ...
+    # Subtest: target /hi/ministry/our-organisations/nstfdc/ answers 200
+    ok 236 - target /hi/ministry/our-organisations/nstfdc/ answers 200
+      ---
+      duration_ms: 1.790583
+      ...
+    # Subtest: target /hi/ministry/our-divisions/official-language/ answers 200
+    ok 237 - target /hi/ministry/our-divisions/official-language/ answers 200
+      ---
+      duration_ms: 1.549167
+      ...
+    # Subtest: target /hi/ministry/our-team/ answers 200
+    ok 238 - target /hi/ministry/our-team/ answers 200
+      ---
+      duration_ms: 1.709959
+      ...
+    # Subtest: target /hi/offerings/initiatives/performance-dashboard/ answers 200
+    ok 239 - target /hi/offerings/initiatives/performance-dashboard/ answers 200
+      ---
+      duration_ms: 1.540125
+      ...
+    # Subtest: target /hi/documents/sanction-orders/ answers 200
+    ok 240 - target /hi/documents/sanction-orders/ answers 200
+      ---
+      duration_ms: 1.724917
+      ...
+    # Subtest: target /hi/media/photos/ answers 200
+    ok 241 - target /hi/media/photos/ answers 200
+      ---
+      duration_ms: 1.8475
+      ...
+    # Subtest: target /hi/ministry/our-divisions/parliament-coordination/ answers 200
+    ok 242 - target /hi/ministry/our-divisions/parliament-coordination/ answers 200
+      ---
+      duration_ms: 1.855167
+      ...
+    # Subtest: target /hi/offerings/initiatives/pri-awareness/ answers 200
+    ok 243 - target /hi/offerings/initiatives/pri-awareness/ answers 200
+      ---
+      duration_ms: 1.637333
+      ...
+    # Subtest: target /hi/connect/grievance-redressal/ answers 200
+    ok 244 - target /hi/connect/grievance-redressal/ answers 200
+      ---
+      duration_ms: 1.661208
+      ...
+    # Subtest: target /hi/related-links/ answers 200
+    ok 245 - target /hi/related-links/ answers 200
+      ---
+      duration_ms: 1.7885
+      ...
+    # Subtest: target /hi/ministry/our-performance/state-review-meetings/ answers 200
+    ok 246 - target /hi/ministry/our-performance/state-review-meetings/ answers 200
+      ---
+      duration_ms: 1.678916
+      ...
+    # Subtest: target /hi/connect/rti/ answers 200
+    ok 247 - target /hi/connect/rti/ answers 200
+      ---
+      duration_ms: 1.754958
+      ...
+    # Subtest: target /hi/ministry/our-divisions/scholarship/ answers 200
+    ok 248 - target /hi/ministry/our-divisions/scholarship/ answers 200
+      ---
+      duration_ms: 1.749833
+      ...
+    # Subtest: target /hi/screen-reader-access/ answers 200
+    ok 249 - target /hi/screen-reader-access/ answers 200
+      ---
+      duration_ms: 1.597166
+      ...
+    # Subtest: target /hi/search/ answers 200
+    ok 250 - target /hi/search/ answers 200
+      ---
+      duration_ms: 1.77875
+      ...
+    # Subtest: target /hi/offerings/initiatives/sickle-cell/ answers 200
+    ok 251 - target /hi/offerings/initiatives/sickle-cell/ answers 200
+      ---
+      duration_ms: 2.081042
+      ...
+    # Subtest: target /hi/sitemap/ answers 200
+    ok 252 - target /hi/sitemap/ answers 200
+      ---
+      duration_ms: 2.039792
+      ...
+    # Subtest: target /hi/ministry/our-divisions/stc-monitoring/ answers 200
+    ok 253 - target /hi/ministry/our-divisions/stc-monitoring/ answers 200
+      ---
+      duration_ms: 1.8695
+      ...
+    # Subtest: target /hi/ministry/our-divisions/grants/ answers 200
+    ok 254 - target /hi/ministry/our-divisions/grants/ answers 200
+      ---
+      duration_ms: 2.404875
+      ...
+    # Subtest: target /hi/offerings/initiatives/swasthya-portal/ answers 200
+    ok 255 - target /hi/offerings/initiatives/swasthya-portal/ answers 200
+      ---
+      duration_ms: 1.911834
+      ...
+    # Subtest: target /hi/offerings/tenders/ answers 200
+    ok 256 - target /hi/offerings/tenders/ answers 200
+      ---
+      duration_ms: 2.178958
+      ...
+    # Subtest: target /hi/ministry/our-divisions/tri-research-media/ answers 200
+    ok 257 - target /hi/ministry/our-divisions/tri-research-media/ answers 200
+      ---
+      duration_ms: 2.239
+      ...
+    # Subtest: target /hi/ministry/our-divisions/vigilance/ answers 200
+    ok 258 - target /hi/ministry/our-divisions/vigilance/ answers 200
+      ---
+      duration_ms: 1.729708
+      ...
+    # Subtest: target /hi/media/videos/ answers 200
+    ok 259 - target /hi/media/videos/ answers 200
+      ---
+      duration_ms: 1.95725
+      ...
+    # Subtest: target /hi/policies/ answers 200
+    ok 260 - target /hi/policies/ answers 200
+      ---
+      duration_ms: 1.953542
+      ...
+    # Subtest: target /hi/whats-new/ answers 200
+    ok 261 - target /hi/whats-new/ answers 200
+      ---
+      duration_ms: 1.904083
+      ...
+    # Subtest: target /hi/connect/directory/ answers 200
+    ok 262 - target /hi/connect/directory/ answers 200
+      ---
+      duration_ms: 2.325
+      ...
+    # Subtest: target /ministry/our-performance/state-review-meetings/ answers 200
+    ok 263 - target /ministry/our-performance/state-review-meetings/ answers 200
+      ---
+      duration_ms: 1.559333
+      ...
+    # Subtest: target /connect/rti/ answers 200
+    ok 264 - target /connect/rti/ answers 200
+      ---
+      duration_ms: 1.656667
+      ...
+    # Subtest: target /offerings/schemes/national-fellowship/ answers 200
+    ok 265 - target /offerings/schemes/national-fellowship/ answers 200
+      ---
+      duration_ms: 1.606041
+      ...
+    # Subtest: target /offerings/schemes/national-overseas-scholarship/ answers 200
+    ok 266 - target /offerings/schemes/national-overseas-scholarship/ answers 200
+      ---
+      duration_ms: 1.635125
+      ...
+    # Subtest: target /offerings/schemes/post-matric-scholarship/ answers 200
+    ok 267 - target /offerings/schemes/post-matric-scholarship/ answers 200
+      ---
+      duration_ms: 1.667875
+      ...
+    # Subtest: target /offerings/schemes/pre-matric-scholarship/ answers 200
+    ok 268 - target /offerings/schemes/pre-matric-scholarship/ answers 200
+      ---
+      duration_ms: 2.059833
+      ...
+    # Subtest: target /screen-reader-access/ answers 200
+    ok 269 - target /screen-reader-access/ answers 200
+      ---
+      duration_ms: 2.314875
+      ...
+    # Subtest: target /search/ answers 200
+    ok 270 - target /search/ answers 200
+      ---
+      duration_ms: 1.790917
+      ...
+    # Subtest: target /offerings/initiatives/sickle-cell/ answers 200
+    ok 271 - target /offerings/initiatives/sickle-cell/ answers 200
+      ---
+      duration_ms: 1.411584
+      ...
+    # Subtest: target /sitemap/ answers 200
+    ok 272 - target /sitemap/ answers 200
+      ---
+      duration_ms: 1.543417
+      ...
+    # Subtest: target /ministry/our-divisions/statistics/ answers 200
+    ok 273 - target /ministry/our-divisions/statistics/ answers 200
+      ---
+      duration_ms: 1.513916
+      ...
+    # Subtest: target /ministry/our-divisions/stc-monitoring/ answers 200
+    ok 274 - target /ministry/our-divisions/stc-monitoring/ answers 200
+      ---
+      duration_ms: 1.568667
+      ...
+    # Subtest: target /ministry/our-divisions/grants/ answers 200
+    ok 275 - target /ministry/our-divisions/grants/ answers 200
+      ---
+      duration_ms: 1.614
+      ...
+    # Subtest: target /offerings/initiatives/swasthya-portal/ answers 200
+    ok 276 - target /offerings/initiatives/swasthya-portal/ answers 200
+      ---
+      duration_ms: 1.453875
+      ...
+    # Subtest: target /offerings/initiatives/telemedicine/ answers 200
+    ok 277 - target /offerings/initiatives/telemedicine/ answers 200
+      ---
+      duration_ms: 1.37125
+      ...
+    # Subtest: target /offerings/tenders/ answers 200
+    ok 278 - target /offerings/tenders/ answers 200
+      ---
+      duration_ms: 1.321
+      ...
+    # Subtest: target /ministry/our-divisions/tribal-health/ answers 200
+    ok 279 - target /ministry/our-divisions/tribal-health/ answers 200
+      ---
+      duration_ms: 1.534125
+      ...
+    # Subtest: target /ministry/our-divisions/tri-research-media/ answers 200
+    ok 280 - target /ministry/our-divisions/tri-research-media/ answers 200
+      ---
+      duration_ms: 1.523375
+      ...
+    # Subtest: target /offerings/initiatives/tribex/ answers 200
+    ok 281 - target /offerings/initiatives/tribex/ answers 200
+      ---
+      duration_ms: 1.365875
+      ...
+    # Subtest: target /ministry/our-divisions/vigilance/ answers 200
+    ok 282 - target /ministry/our-divisions/vigilance/ answers 200
+      ---
+      duration_ms: 1.662208
+      ...
+    # Subtest: target /policies/ answers 200
+    ok 283 - target /policies/ answers 200
+      ---
+      duration_ms: 1.5985
+      ...
+    # Subtest: target /whats-new/ answers 200
+    ok 284 - target /whats-new/ answers 200
+      ---
+      duration_ms: 1.763083
+      ...
+    # Subtest: target /connect/directory/ answers 200
+    ok 285 - target /connect/directory/ answers 200
+      ---
+      duration_ms: 2.129958
+      ...
+    1..285
+ok 1 - every old page redirects permanently to its recorded new page
+  ---
+  duration_ms: 483.296542
+  ...
+# Subtest: pages held back until their content is migrated are not redirected
+    # Subtest: sanctionorder.aspx
+    ok 1 - sanctionorder.aspx
+      ---
+      duration_ms: 1.546666
+      ...
+    # Subtest: PFMS_SentionDtSchemewise.aspx
+    ok 2 - PFMS_SentionDtSchemewise.aspx
+      ---
+      duration_ms: 1.357791
+      ...
+    # Subtest: PFMS_SentionDtSchemewise1819.aspx
+    ok 3 - PFMS_SentionDtSchemewise1819.aspx
+      ---
+      duration_ms: 1.42825
+      ...
+    # Subtest: PFMS_SentionDtSchemewise1920.aspx
+    ok 4 - PFMS_SentionDtSchemewise1920.aspx
+      ---
+      duration_ms: 1.45125
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2021.aspx
+    ok 5 - PFMS_SentionDtSchemewise2021.aspx
+      ---
+      duration_ms: 1.456667
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2122.aspx
+    ok 6 - PFMS_SentionDtSchemewise2122.aspx
+      ---
+      duration_ms: 1.368125
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2223.aspx
+    ok 7 - PFMS_SentionDtSchemewise2223.aspx
+      ---
+      duration_ms: 1.534833
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2324.aspx
+    ok 8 - PFMS_SentionDtSchemewise2324.aspx
+      ---
+      duration_ms: 1.768291
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2425.aspx
+    ok 9 - PFMS_SentionDtSchemewise2425.aspx
+      ---
+      duration_ms: 1.459
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2526.aspx
+    ok 10 - PFMS_SentionDtSchemewise2526.aspx
+      ---
+      duration_ms: 1.355708
+      ...
+    # Subtest: PFMS_SentionDtSchemewise2627.aspx
+    ok 11 - PFMS_SentionDtSchemewise2627.aspx
+      ---
+      duration_ms: 1.286916
+      ...
+    # Subtest: ICC.aspx
+    ok 12 - ICC.aspx
+      ---
+      duration_ms: 1.378125
+      ...
+    # Subtest: FRAArch.aspx
+    ok 13 - FRAArch.aspx
+      ---
+      duration_ms: 1.322417
+      ...
+    # Subtest: Archive_annulreport.aspx
+    ok 14 - Archive_annulreport.aspx
+      ---
+      duration_ms: 1.448
+      ...
+    # Subtest: AwarenessHTC.aspx
+    ok 15 - AwarenessHTC.aspx
+      ---
+      duration_ms: 1.289917
+      ...
+    # Subtest: Display_Apex_Minutes.aspx
+    ok 16 - Display_Apex_Minutes.aspx
+      ---
+      duration_ms: 1.480459
+      ...
+    # Subtest: display_PAC_DAJAGUAMinutes.aspx
+    ok 17 - display_PAC_DAJAGUAMinutes.aspx
+      ---
+      duration_ms: 1.276291
+      ...
+    1..17
+ok 2 - pages held back until their content is migrated are not redirected
+  ---
+  duration_ms: 25.225667
+  ...
+# Subtest: retired old addresses answer 404 (not a redirect)
+    # Subtest: captcha.aspx
+    ok 1 - captcha.aspx
+      ---
+      duration_ms: 1.339167
+      ...
+    # Subtest: page.html
+    ok 2 - page.html
+      ---
+      duration_ms: 1.54325
+      ...
+    # Subtest: ErrorPage.htm
+    ok 3 - ErrorPage.htm
+      ---
+      duration_ms: 1.470375
+      ...
+    # Subtest: error404.htm
+    ok 4 - error404.htm
+      ---
+      duration_ms: 1.390583
+      ...
+    1..4
+ok 3 - retired old addresses answer 404 (not a redirect)
+  ---
+  duration_ms: 6.031792
+  ...
+1..3
+# tests 309
+# suites 0
+# pass 309
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 563.514417
+exit=0

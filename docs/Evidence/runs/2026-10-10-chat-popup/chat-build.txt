@@ -1,0 +1,7 @@
+$ npm run chat:build
+
+> mota-website@0.1.0 chat:build
+> node scripts/build-chat-popup.mjs
+
+chat_popup/: index.html, hi/index.html and 12 kit files
+exit=0

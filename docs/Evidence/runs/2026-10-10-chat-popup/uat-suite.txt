@@ -1,0 +1,28 @@
+$ npm run test:uat -- --out docs/Evidence/runs/2026-10-10-chat-popup/uat
+
+> mota-website@0.1.0 test:uat
+> node scripts/assess/prototype-suite.mjs --base http://127.0.0.1:4322 --out docs/Evidence/runs/2026-10-10-chat-popup/uat
+
+Combinations scanned: 104; axe violations: 0; horizontal scroll failures: 0
+TC-001 [Pass] Accessibility: Automated WCAG 2.1 A/AA scan (axe-core) — 104 page/viewport/theme combinations
+TC-002 [Pass] Responsive: No horizontal scrolling at 320, 390, 768, 1366 and 1920 px
+TC-003 [Pass] Bilingual: Hindi pages declare lang="hi"; English pages lang="en"
+TC-004 [Pass] Quality: No JavaScript errors on any tested page
+TC-005 [Pass] Accessibility: First Tab focuses “Skip to main content”
+TC-006 [Pass] Accessibility: Skip link moves focus to main content
+TC-007 [Pass] Navigation: Global menu opens with ↓, focus moves into it, Esc closes it
+TC-008 [Pass] Bilingual: Language selector lists English and हिन्दी and links to the same page in Hindi
+TC-009 [Pass] Accessibility: Accessibility panel: text size, invert, low saturation, hide images, big cursor, highlight links, spacing, readable font, stop motion, reset — {"[data-a11y=\"text\"][value=\"2\"]":true,"[data-a11y=\"filter\"][value=\"invert\"]":true,"[data-a11y=\"hideImages\"]":true,"[data-a11y=\"bigCursor\"]":true,"[data-a11y=\"links\"]":true,"[data-a11y=\"spacing\"]":true,"[data-a11y=\"readable\"]":true,"[data-a11y=\"noMotion\"]":true}
+TC-010 [Pass] Accessibility: High-contrast toggle in the top bar
+TC-011 [Pass] Hyperlinks: External link shows “You are leaving tribal.gov.in” notice
+TC-012 [Pass] Accessibility: Banner slideshow can be paused (WCAG 2.2.2)
+TC-013 [Pass] Accessibility: Announcements ticker can be paused
+TC-014 [Pass] Privacy: Cookie consent banner at the bottom with Accept / Reject / Customise (DBIM 7.6)
+TC-015 [Pass] Responsive: Mobile menu opens as a drawer
+TC-016 [Pass] Search: Site search returns results with type filters (DBIM 9) — 25 results
+TC-017 [Pass] Forms: Feedback form shows errors and focuses the first invalid field
+TC-018 [Pass] TriBot: Chat assistant (Jago) opens from the keyboard, replies, and Esc returns focus — No chat service on UAT: the reply came from the site-search fallback (service checks: tests/assistant.test.mjs)
+TC-019 [Pass] Metadata: Home page has title, description, keywords, canonical, hreflang en/hi, lang
+TC-020 [Pass] Sitemap: XML sitemap with both languages; HTML sitemap with at least two levels
+TC-021 [Pass] Security: Security headers configured (HSTS, CSP, XCTO, XFO, Referrer, Permissions; server header removed) — To be verified on UAT server with curl -I
+exit=0

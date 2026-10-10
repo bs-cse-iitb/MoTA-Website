@@ -1,0 +1,180 @@
+{
+  "generated": "2026-10-10T14:45:36.400Z",
+  "base": "packages/dbim-kit (served locally)",
+  "summary": {
+    "total": 13,
+    "pass": 13
+  },
+  "results": [
+    {
+      "id": "KIT-01",
+      "title": "Gallery: axe WCAG 2.1 AA, 0 violations in all 11 DBIM colour groups (light theme)",
+      "result": "Pass",
+      "evidence": "screenshots/gallery-group-*.png",
+      "detail": ""
+    },
+    {
+      "id": "KIT-02",
+      "title": "Footer background is the key colour of the selected colour group (DBIM 5.6)",
+      "result": "Pass",
+      "evidence": "results.json → groupColours",
+      "detail": ""
+    },
+    {
+      "id": "KIT-03",
+      "title": "Gallery loads with no missing files, JS errors or console errors",
+      "result": "Pass",
+      "evidence": "results.json",
+      "detail": ""
+    },
+    {
+      "id": "KIT-04",
+      "title": "Gallery and template sample pages (English, Hindi): axe 0 violations in standard, dark and high-contrast themes",
+      "result": "Pass",
+      "evidence": "screenshots/*-dark.png, *-contrast.png",
+      "detail": ""
+    },
+    {
+      "id": "KIT-05",
+      "title": "Icons are drawn from the kit sprite (icons.svg) in key colour/white at DBIM sizes",
+      "result": "Pass",
+      "evidence": "screenshots/page-en-light.png",
+      "detail": "{\"total\":56,\"visible\":53,\"drawn\":53}"
+    },
+    {
+      "id": "KIT-06",
+      "title": "Mega menu: opens with Enter, closes with Escape, focus returns to the trigger",
+      "result": "Pass",
+      "evidence": "screenshots/kit-mega-menu-open.png",
+      "detail": "open=true closed=false focusBack=true"
+    },
+    {
+      "id": "KIT-07",
+      "title": "Accessibility panel: text size, themes, invert, low saturation, hide images, big cursor, highlight links, spacing, save and reset",
+      "result": "Pass",
+      "evidence": "screenshots/kit-a11y-panel.png",
+      "detail": "{\"a11y-invert\":true,\"a11y-saturate\":true,\"a11y-noimg\":true,\"a11y-cursor\":true,\"a11y-links\":true,\"a11y-spacing\":true,\"text2\":true,\"contrast\":true,\"saved\":true,\"reset\":true,\"closed\":true}"
+    },
+    {
+      "id": "KIT-08",
+      "title": "Cookie consent bar on first visit; \"Reject non-essential\" stores the choice and hides the bar",
+      "result": "Pass",
+      "evidence": "screenshots/kit-cookie-bar.png",
+      "detail": "shown=true hidden=true"
+    },
+    {
+      "id": "KIT-09",
+      "title": "External links open the \"You are leaving\" notice with the destination shown (GIGW hyperlink policy)",
+      "result": "Pass",
+      "evidence": "screenshots/kit-external-link.png",
+      "detail": "host=x.com"
+    },
+    {
+      "id": "KIT-10",
+      "title": "Language selector switches to the Hindi template; page declares lang=\"hi\" and Noto Sans Devanagari is loaded",
+      "result": "Pass",
+      "evidence": "screenshots/page-hi-desktop.png",
+      "detail": "{\"url\":\"/examples/page-hi.html\",\"lang\":\"hi\",\"deva\":true,\"title\":\"हमारे बारे में | जनजातीय कार्य मंत्रालय, भारत सरकार\"}"
+    },
+    {
+      "id": "KIT-11",
+      "title": "Noto Sans (DBIM 4.1) is self-hosted and applied to body text",
+      "result": "Pass",
+      "evidence": "dist/fonts/",
+      "detail": "{\"latin\":true,\"family\":\"\\\"Noto Sans Variable\\\", \\\"Noto Sans\\\", \\\"Noto Sans Devanagari Variable\\\", \\\"Noto Sans Devanagari\\\", system-ui, -apple-system, \\\"Segoe UI\\\", Roboto, Arial, sans-serif\"}"
+    },
+    {
+      "id": "KIT-12",
+      "title": "Responsive: no horizontal scrolling at 320, 390 and 768 px; mobile menu opens with every item visible",
+      "result": "Pass",
+      "evidence": "screenshots/kit-mobile-menu.png",
+      "detail": ""
+    },
+    {
+      "id": "KIT-13",
+      "title": "Templates work under a strict CSP (no inline scripts, styles or event handlers); samples fully resolved",
+      "result": "Pass",
+      "evidence": "templates/",
+      "detail": ""
+    }
+  ],
+  "groupColours": [
+    {
+      "group": "9",
+      "key": "#3E170E",
+      "keyRgb": "rgb(62, 23, 14)",
+      "footer": "rgb(62, 23, 14)",
+      "match": true
+    },
+    {
+      "group": "1",
+      "key": "#6C1340",
+      "keyRgb": "rgb(108, 19, 64)",
+      "footer": "rgb(108, 19, 64)",
+      "match": true
+    },
+    {
+      "group": "2",
+      "key": "#0F5757",
+      "keyRgb": "rgb(15, 87, 87)",
+      "footer": "rgb(15, 87, 87)",
+      "match": true
+    },
+    {
+      "group": "3",
+      "key": "#5D3E00",
+      "keyRgb": "rgb(93, 62, 0)",
+      "footer": "rgb(93, 62, 0)",
+      "match": true
+    },
+    {
+      "group": "4",
+      "key": "#771D1D",
+      "keyRgb": "rgb(119, 29, 29)",
+      "footer": "rgb(119, 29, 29)",
+      "match": true
+    },
+    {
+      "group": "5",
+      "key": "#162F6A",
+      "keyRgb": "rgb(22, 47, 106)",
+      "footer": "rgb(22, 47, 106)",
+      "match": true
+    },
+    {
+      "group": "6",
+      "key": "#29136C",
+      "keyRgb": "rgb(41, 19, 108)",
+      "footer": "rgb(41, 19, 108)",
+      "match": true
+    },
+    {
+      "group": "7",
+      "key": "#1E3F0D",
+      "keyRgb": "rgb(30, 63, 13)",
+      "footer": "rgb(30, 63, 13)",
+      "match": true
+    },
+    {
+      "group": "8",
+      "key": "#412B0B",
+      "keyRgb": "rgb(65, 43, 11)",
+      "footer": "rgb(65, 43, 11)",
+      "match": true
+    },
+    {
+      "group": "10",
+      "key": "#006B7A",
+      "keyRgb": "rgb(0, 107, 122)",
+      "footer": "rgb(0, 107, 122)",
+      "match": true
+    },
+    {
+      "group": "neutral",
+      "key": "#22242A",
+      "keyRgb": "rgb(34, 36, 42)",
+      "footer": "rgb(34, 36, 42)",
+      "match": true
+    }
+  ]
+}
