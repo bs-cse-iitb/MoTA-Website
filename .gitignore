@@ -21,8 +21,7 @@ node_modules/
 
 # Safety net: none of these belong in the repository. The legacy ASP.NET source (database
 # credentials) and the database backups live outside it. The old chat widget copy held
-# an API key; never commit one.
-/chat_popup/
+# an API key; never commit one (chat_popup/ now holds the website's assistant, which needs none).
 *.bak
 *.mdf
 *.ldf

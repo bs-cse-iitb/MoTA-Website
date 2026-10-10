@@ -12,6 +12,7 @@
     "build": "astro build && pagefind --site dist --output-subdir pagefind",
     "kit:build": "node packages/dbim-kit/build.mjs",
     "kit:test": "node packages/dbim-kit/test.mjs",
+    "chat:build": "node scripts/build-chat-popup.mjs",
     "preview": "astro preview",
     "serve:uat": "node scripts/serve-uat.mjs",
     "check:links": "node scripts/check-links.mjs",
@@ -26,6 +27,7 @@
     "test:redirects": "node --test tests/redirects.test.mjs",
     "test:documents": "node --test tests/documents.test.mjs",
     "test:assistant": "node --test tests/assistant.test.mjs",
+    "test:chat-popup": "node --test tests/chat-popup.test.mjs",
     "assess": "node scripts/assess/audit.mjs --lighthouse"
   },
   "dependencies": {

@@ -1,9 +1,10 @@
 ---
 // Chat assistant "Jago" (floating, bottom right): the Ministry's chat widget (supplied as
-// chat_popup/ in Sep 2026, deleted after this rebuild) in the site's DBIM design, without outside fonts,
+// chat_popup/ in Sep 2026) in the site's DBIM design, without outside fonts,
 // icon fonts or inline scripts. It talks to the TriBot service through the same-origin
 // path in src/data/assistant.ts. If the service does not answer, it replies with matching
 // pages from the site search instead. Behaviour: packages/dbim-kit/src/js/tribot.ts.
+// chat_popup/ at the repository root has it on a page of its own (npm run chat:build).
 import type { Locale } from '../data/site';
 import { assistant } from '../data/assistant';
 import Icon from './Icon.astro';
