@@ -1,0 +1,55 @@
+---
+// Accessibility controls (DBIM 8, Fig. 44; GIGW 3.0 accessibility options):
+// text size, colour contrast, link highlighting, text spacing, readable font,
+// animation stop, reset. Choices persist as an essential preference.
+import type { Locale } from '../data/site';
+import { t, localePath } from '../data/i18n';
+import Icon from './Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<dialog class="panel a11y-panel" id="a11y-panel" aria-labelledby="a11y-title">
+  <div class="panel__head">
+    <h2 id="a11y-title" class="panel__title"><Icon name="Accessibility" /> {t('accessibility', locale)}</h2>
+    <button type="button" class="icon-btn" data-close-dialog aria-label={t('close', locale)}><Icon name="X" /></button>
+  </div>
+  <div class="panel__body">
+    <fieldset class="a11y-group">
+      <legend>{t('textSize', locale)}</legend>
+      <div class="seg" role="radiogroup" aria-label={t('textSize', locale)}>
+        <button type="button" role="radio" data-a11y="text" value="-1" aria-checked="false"><span aria-hidden="true">A−</span><span class="visually-hidden">{t('decreaseText', locale)}</span></button>
+        <button type="button" role="radio" data-a11y="text" value="0" aria-checked="true"><span aria-hidden="true">A</span><span class="visually-hidden">{t('normalText', locale)}</span></button>
+        <button type="button" role="radio" data-a11y="text" value="1" aria-checked="false"><span aria-hidden="true">A+</span><span class="visually-hidden">{t('increaseText', locale)}</span></button>
+        <button type="button" role="radio" data-a11y="text" value="2" aria-checked="false"><span aria-hidden="true">A++</span><span class="visually-hidden">{t('increaseText', locale)} ×2</span></button>
+      </div>
+    </fieldset>
+    <fieldset class="a11y-group">
+      <legend>{t('colourContrast', locale)}</legend>
+      <div class="seg seg--themes" role="radiogroup" aria-label={t('colourContrast', locale)}>
+        <button type="button" role="radio" data-a11y="theme" value="light" aria-checked="true"><span class="swatch swatch--light" aria-hidden="true"></span>{t('standard', locale)}</button>
+        <button type="button" role="radio" data-a11y="theme" value="dark" aria-checked="false"><span class="swatch swatch--dark" aria-hidden="true"></span>{t('dark', locale)}</button>
+        <button type="button" role="radio" data-a11y="theme" value="contrast" aria-checked="false"><span class="swatch swatch--contrast" aria-hidden="true"></span>{t('highContrast', locale)}</button>
+      </div>
+    </fieldset>
+    <fieldset class="a11y-group">
+      <legend>{t('colourFilter', locale)}</legend>
+      <div class="a11y-toggles">
+        <button type="button" class="toggle" data-a11y="filter" value="invert" aria-pressed="false"><Icon name="SunMoon" class="icon icon--sm" />{t('invertColours', locale)}</button>
+        <button type="button" class="toggle" data-a11y="filter" value="saturate" aria-pressed="false"><Icon name="Droplet" class="icon icon--sm" />{t('lowSaturation', locale)}</button>
+      </div>
+    </fieldset>
+    <div class="a11y-toggles">
+      <button type="button" class="toggle" data-a11y="links" aria-pressed="false"><Icon name="Link" class="icon icon--sm" />{t('highlightLinks', locale)}</button>
+      <button type="button" class="toggle" data-a11y="spacing" aria-pressed="false"><Icon name="Type" class="icon icon--sm" />{t('textSpacing', locale)}</button>
+      <button type="button" class="toggle" data-a11y="readable" aria-pressed="false"><Icon name="BookOpen" class="icon icon--sm" />{t('dyslexiaFont', locale)}</button>
+      <button type="button" class="toggle" data-a11y="noMotion" aria-pressed="false"><Icon name="Pause" class="icon icon--sm" />{t('stopMotion', locale)}</button>
+      <button type="button" class="toggle" data-a11y="hideImages" aria-pressed="false"><Icon name="ImageOff" class="icon icon--sm" />{t('hideImages', locale)}</button>
+      <button type="button" class="toggle" data-a11y="bigCursor" aria-pressed="false"><Icon name="MousePointer2" class="icon icon--sm" />{t('bigCursor', locale)}</button>
+    </div>
+  </div>
+  <div class="panel__foot">
+    <button type="button" class="btn btn--ghost btn--sm" data-a11y-reset><Icon name="RotateCcw" class="icon icon--sm" />{t('reset', locale)}</button>
+    <a class="link-arrow" href={localePath('/help/', locale)}>{t('help', locale)}<Icon name="ArrowRight" /></a>
+  </div>
+</dialog>

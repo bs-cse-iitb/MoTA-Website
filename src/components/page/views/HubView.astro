@@ -1,0 +1,26 @@
+---
+// Level-1 section landing page: every level-2 page as a card (3-click rule, DBIM A).
+import type { Locale } from '../../../data/site';
+import type { PageDef } from '../../../lib/routes';
+import { pageByPath } from '../../../lib/routes';
+import { mainNav } from '../../../data/nav';
+import { t, localePath } from '../../../data/i18n';
+import Icon from '../../Icon.astro';
+
+interface Props { page: PageDef; locale: Locale }
+const { page, locale } = Astro.props;
+const section = mainNav.find((s) => s.href === page.path)!;
+---
+<ul class="grid grid--3" role="list">
+  {section.children!.map((c) => {
+    const p = pageByPath(c.href);
+    return (
+      <li class="card card--link">
+        <span class="card__icon"><Icon name={c.icon ?? 'ChevronRight'} /></span>
+        <h2 class="card__title"><a href={localePath(c.href, locale)}>{c.label[locale]}</a></h2>
+        {p?.lead && <p class="card__text">{p.lead[locale]}</p>}
+        <span class="card__more" aria-hidden="true">{t('explore', locale)}<Icon name="ArrowRight" /></span>
+      </li>
+    );
+  })}
+</ul>

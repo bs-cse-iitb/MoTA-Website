@@ -1,0 +1,100 @@
+---
+// Chat assistant "Jago" (floating, bottom right): the Ministry's chat widget (supplied as
+// chat_popup/ in Sep 2026, deleted after this rebuild) in the site's DBIM design, without outside fonts,
+// icon fonts or inline scripts. It talks to the TriBot service through the same-origin
+// path in src/data/assistant.ts. If the service does not answer, it replies with matching
+// pages from the site search instead. Behaviour: packages/dbim-kit/src/js/tribot.ts.
+import type { Locale } from '../data/site';
+import { assistant } from '../data/assistant';
+import Icon from './Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const T = (en: string, h: string) => (hi ? h : en);
+const name = assistant.name[locale];
+const defaultLang = hi ? 'hin' : 'eng';
+// "Gondi (गोंडी)" on English pages, "गोंडी" on Hindi pages: the native name is added
+// only where it differs from the label.
+const langLabel = (l: (typeof assistant.languages)[number]) => {
+  const label = hi ? l.hi : l.en;
+  return l.native === label ? label : `${label} (${l.native})`;
+};
+---
+<div
+  class="tribot"
+  data-tribot
+  data-endpoint={assistant.endpoint}
+  data-timeout={assistant.timeoutSeconds}
+  data-default-lang={defaultLang}
+  data-l-you={T('You', 'आप')}
+  data-l-typing={T(`${name} is typing…`, `${name} लिख रहा है…`)}
+  data-l-sources={T('Sources', 'स्रोत')}
+  data-l-page={T('page', 'पृष्ठ')}
+  data-l-fallback={T(`I can’t reach the ${name} service right now. These pages on this website match your question:`, `अभी ${name} सेवा से संपर्क नहीं हो पा रहा है। इस वेबसाइट के ये पृष्ठ आपके प्रश्न से मेल खाते हैं:`)}
+  data-l-none={T(`I can’t reach the ${name} service right now, and no page matched. Please try the site search or contact the Ministry.`, `अभी ${name} सेवा से संपर्क नहीं हो पा रहा है और कोई पृष्ठ मेल नहीं खाया। कृपया साइट खोज का उपयोग करें या मंत्रालय से संपर्क करें।`)}
+  data-l-search={T('Search the website', 'वेबसाइट पर खोजें')}
+  data-l-listening={T('Listening… speak now', 'सुन रहा हूं… अब बोलें')}
+  data-l-expand={T('Make larger', 'बड़ा करें')}
+  data-l-shrink={T('Make smaller', 'छोटा करें')}
+  data-l-copy={T('Copy answer', 'उत्तर कॉपी करें')}
+  data-l-copied={T('Answer copied', 'उत्तर कॉपी हो गया')}
+  data-l-table={T('Table', 'तालिका')}
+>
+  <button type="button" class="tribot__fab" aria-expanded="false" aria-controls="tribot-panel" data-tribot-toggle>
+    <img class="tribot__fab-img" src={assistant.avatar.large} alt="" width="56" height="56" loading="lazy" decoding="async" />
+    <span class="tribot__fab-label">{T(`Ask ${name}`, `${name} से पूछें`)}<span class="visually-hidden"> — {T('chat assistant', 'चैट सहायक')}</span></span>
+  </button>
+
+  <section class="tribot__panel" id="tribot-panel" role="dialog" aria-modal="false" aria-labelledby="tribot-title" aria-describedby="tribot-desc" hidden data-tribot-panel>
+    <div class="tribot__head">
+      <span class="tribot__avatar"><img src={assistant.avatar.small} alt="" width="40" height="40" loading="lazy" decoding="async" /></span>
+      <div class="tribot__id">
+        <h2 id="tribot-title" class="tribot__name">{name}</h2>
+        <p id="tribot-desc" class="tribot__sub">{T('AI assistant, Ministry of Tribal Affairs', 'एआई सहायक, जनजातीय कार्य मंत्रालय')}</p>
+      </div>
+      <button type="button" class="icon-btn tribot__btn" data-tribot-new aria-label={T('New chat', 'नई बातचीत')} title={T('New chat', 'नई बातचीत')}><Icon name="RotateCcw" class="icon icon--sm" /></button>
+      <button type="button" class="icon-btn tribot__btn tribot__expand" data-tribot-expand aria-pressed="false" aria-label={T('Make larger', 'बड़ा करें')} title={T('Make larger', 'बड़ा करें')}><Icon name="Maximize2" class="icon icon--sm" /></button>
+      <button type="button" class="icon-btn tribot__btn" data-tribot-close aria-label={T(`Close ${name}`, `${name} बंद करें`)} title={T('Close', 'बंद करें')}><Icon name="X" class="icon icon--sm" /></button>
+    </div>
+
+    <div class="tribot__langbar">
+      <label for="tribot-lang"><Icon name="Languages" class="icon icon--sm" />{T('Answer in', 'उत्तर की भाषा')}</label>
+      <select id="tribot-lang" class="tribot__lang" data-tribot-lang>
+        {assistant.languages.map((l) => (
+          <option value={l.code} data-tag={l.tag} data-speech={l.speech} selected={l.code === defaultLang}>{langLabel(l)}</option>
+        ))}
+      </select>
+    </div>
+
+    <div class="tribot__body" data-tribot-body>
+      <p class="tribot__notice"><Icon name="Info" class="icon icon--sm" /><span>{T('Answers are written by AI and can be wrong or incomplete. Check important details in the official documents. Do not share personal details such as Aadhaar or bank account numbers.', 'उत्तर एआई द्वारा लिखे जाते हैं और गलत या अधूरे हो सकते हैं। महत्वपूर्ण जानकारी आधिकारिक दस्तावेज़ों में जांच लें। आधार या बैंक खाता संख्या जैसी व्यक्तिगत जानकारी साझा न करें।')}<span data-tribot-voice-note hidden> {T('Voice input uses your browser’s speech service.', 'आवाज़ से पूछने के लिए आपके ब्राउज़र की वाक् सेवा का उपयोग होता है।')}</span></span></p>
+      <div class="tribot__log" role="log" aria-live="polite" aria-relevant="additions" aria-label={T('Conversation', 'बातचीत')} data-tribot-log>
+        <div class="tribot__welcome" data-tribot-welcome>
+          <p class="tribot__hello">{T('Namaste!', 'नमस्ते!')}</p>
+          <p>{T(`I am ${name}, the AI assistant of the Ministry of Tribal Affairs. Ask me about schemes, scholarships, eligibility or any tribal welfare programme.`, `मैं ${name} हूं, जनजातीय कार्य मंत्रालय का एआई सहायक। मुझसे योजनाओं, छात्रवृत्तियों, पात्रता या किसी भी जनजातीय कल्याण कार्यक्रम के बारे में पूछें।`)}</p>
+        </div>
+      </div>
+      <div class="tribot__suggest" data-tribot-suggest>
+        <p class="tribot__suggest-label">{T('Suggested questions', 'सुझाए गए प्रश्न')}</p>
+        <ul role="list">
+          {assistant.suggestions.map((q) => <li><button type="button" class="chip" data-tribot-q>{q[locale]}</button></li>)}
+        </ul>
+      </div>
+    </div>
+
+    <p class="tribot__typing" role="status" data-tribot-status><span class="tribot__dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-tribot-status-text></span></p>
+
+    <form class="tribot__form" data-tribot-form>
+      <button type="button" class="icon-btn tribot__btn tribot__voice" data-tribot-voice hidden aria-pressed="false" aria-label={T('Speak your question', 'अपना प्रश्न बोलें')} title={T('Speak your question', 'अपना प्रश्न बोलें')}><Icon name="Mic" class="icon icon--sm" /></button>
+      <label class="visually-hidden" for="tribot-input">{T(`Ask ${name}`, `${name} से पूछें`)}</label>
+      <input id="tribot-input" class="tribot__input" type="text" autocomplete="off" maxlength="500" enterkeyhint="send" placeholder={T('Ask about schemes, scholarships…', 'योजनाओं, छात्रवृत्तियों के बारे में पूछें…')} data-tribot-input />
+      <button type="submit" class="tribot__send" aria-label={T('Send', 'भेजें')} title={T('Send', 'भेजें')}><Icon name="SendHorizontal" class="icon icon--sm" /></button>
+    </form>
+    <p class="tribot__foot"><Icon name="Landmark" class="icon icon--sm" />{T('Ministry of Tribal Affairs', 'जनजातीय कार्य मंत्रालय')}<span aria-hidden="true">·</span><Icon name="Sparkles" class="icon icon--sm" />{T('AI powered', 'एआई आधारित')}</p>
+  </section>
+</div>
+
+<script>
+  import '@kit/js/tribot';
+</script>

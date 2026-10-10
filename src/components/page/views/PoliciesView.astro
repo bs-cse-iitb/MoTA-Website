@@ -1,0 +1,14 @@
+---
+import type { Locale } from '../../../data/site';
+import { policyNav } from '../../../data/nav';
+import { localePath } from '../../../data/i18n';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<ul class="tiles tiles--wide" role="list">
+  {policyNav.children!.map((p) => (
+    <li><a class="tile" href={localePath(p.href, locale)}><span class="tile__icon"><Icon name="ShieldCheck" class="icon icon--sm" /></span>{p.label[locale]}</a></li>
+  ))}
+</ul>

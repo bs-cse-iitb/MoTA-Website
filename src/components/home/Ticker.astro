@@ -1,0 +1,42 @@
+---
+// Announcements ticker (DBIM A.4.1.2 iii). Moving content can be paused
+// (WCAG 2.2.2), stops on hover/focus, and is static for reduced motion.
+import type { Locale } from '../../data/site';
+import { t } from '../../data/i18n';
+import { announcements } from '../../data/updates';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<section class="ticker" aria-label={t('announcements', locale)} data-ticker>
+  <div class="container ticker__inner">
+    <p class="ticker__label"><Icon name="Megaphone" class="icon icon--sm" /><span>{t('announcements', locale)}</span></p>
+    <div class="ticker__track-wrap">
+      <ul class="ticker__track" role="list">
+        {announcements.map((a) => (
+          <li><SmartLink href={a.url} locale={locale}>{a.text[locale]}</SmartLink></li>
+        ))}
+      </ul>
+      <ul class="ticker__track ticker__track--clone" role="list" aria-hidden="true">
+        {announcements.map((a) => <li><span>{a.text[locale]}</span></li>)}
+      </ul>
+    </div>
+    <button type="button" class="ticker__toggle" aria-pressed="false" data-ticker-toggle data-label-pause={t('pauseTicker', locale)} data-label-play={t('playTicker', locale)}>
+      <Icon name="Pause" class="icon icon--sm icon-pause" /><Icon name="Play" class="icon icon--sm icon-play" />
+      <span class="visually-hidden" data-ticker-label>{t('pauseTicker', locale)}</span>
+    </button>
+  </div>
+</section>
+<script>
+  const ticker = document.querySelector<HTMLElement>('[data-ticker]');
+  const btn = ticker?.querySelector<HTMLButtonElement>('[data-ticker-toggle]');
+  const label = ticker?.querySelector<HTMLElement>('[data-ticker-label]');
+  btn?.addEventListener('click', () => {
+    const paused = !ticker!.classList.contains('is-paused');
+    ticker!.classList.toggle('is-paused', paused);
+    btn.setAttribute('aria-pressed', String(paused));
+    if (label) label.textContent = paused ? btn.dataset.labelPlay! : btn.dataset.labelPause!;
+  });
+</script>

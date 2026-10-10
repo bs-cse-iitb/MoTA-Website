@@ -1,0 +1,10 @@
+---
+import { allPages, type PageDef } from '../lib/routes';
+import PageView from '../components/page/PageView.astro';
+
+export function getStaticPaths() {
+  return allPages().map((page) => ({ params: { slug: page.path.replace(/^\/|\/$/g, '') }, props: { page } }));
+}
+const { page } = Astro.props as { page: PageDef };
+---
+<PageView page={page} locale="en" />

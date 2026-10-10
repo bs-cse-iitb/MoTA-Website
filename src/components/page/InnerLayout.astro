@@ -1,0 +1,99 @@
+---
+// Shell for every inner page: breadcrumb, title band, section navigation,
+// content, and page tools (last reviewed, print, share).
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { Locale } from '../../data/site';
+import { site } from '../../data/site';
+import type { PageDef } from '../../lib/routes';
+import { pageByPath } from '../../lib/routes';
+import { findTrail, sectionFor, policyNav, type NavItem } from '../../data/nav';
+import { t, localePath, formatDate } from '../../data/i18n';
+import Icon from '../Icon.astro';
+import WarliBand from '../WarliBand.astro';
+import { personaArt } from '../../lib/warli';
+
+interface Props { page: PageDef; locale: Locale; wide?: boolean; art?: Parameters<typeof personaArt>[0] }
+const { page, locale, wide = false, art } = Astro.props;
+
+// Breadcrumb: Home > section > L2 > (L3). The section is found by URL prefix so
+// pages linked from two menus (e.g. Directory) always show one canonical trail.
+function trailFor(path: string): { label: string; href: string }[] {
+  const sec = sectionFor(path) ?? (path.startsWith('/policies/') ? policyNav : undefined);
+  if (!sec) {
+    const node = findTrail(path).at(-1);
+    return node ? [{ label: node.label[locale], href: node.href }] : [];
+  }
+  const out = [{ label: sec.label[locale], href: sec.href }];
+  const child = sec.children?.find((c) => c.href === path);
+  if (child && child.href !== sec.href) out.push({ label: child.label[locale], href: child.href });
+  return out;
+}
+const crumbs: { label: string; href?: string }[] = [{ label: t('home', locale), href: '/' }];
+if (page.parent && page.parent !== '/') {
+  const trail = trailFor(page.parent);
+  if (!trail.some((c) => c.href === page.parent)) {
+    const parent = pageByPath(page.parent);
+    if (parent) trail.push({ label: parent.title[locale], href: parent.path });
+  }
+  crumbs.push(...trail, { label: page.title[locale] });
+} else if (page.parent === '/') {
+  crumbs.push({ label: page.title[locale] });
+} else {
+  const trail = trailFor(page.path);
+  if (trail.length && trail.at(-1)!.href === page.path) trail.pop();
+  crumbs.push(...trail, { label: page.title[locale] });
+}
+
+const section: NavItem | undefined = sectionFor(page.parent && page.parent !== '/' ? page.parent : page.path) ?? (page.path.startsWith('/policies/') ? policyNav : undefined);
+const siblings = section?.children ?? [];
+const currentL2 = page.parent && page.parent !== '/' ? page.parent : page.path;
+const showSide = !wide && siblings.length > 0;
+const artProp = art ?? ({ ministry: 'pillar', offerings: 'basket', documents: 'book', media: 'mic', connect: 'hands', policies: 'lens' } as const)[(section?.href.replace(/\//g, '') ?? '') as 'ministry'] ?? 'tree';
+const shareUrl = new URL(localePath(page.path, locale), site.url).href;
+---
+<BaseLayout title={page.title[locale]} description={page.lead?.[locale]} locale={locale} pageType={page.type} personas={page.personas}>
+  <div class="page-hero">
+    <div class="container page-hero__inner">
+      <div>
+        <nav class="breadcrumb" aria-label={t('breadcrumb', locale)}>
+          <ol>
+            {crumbs.map((c, i) => (
+              <li>{c.href && i < crumbs.length - 1 ? <a href={localePath(c.href, locale)}>{c.label}</a> : <span aria-current="page">{c.label}</span>}</li>
+            ))}
+          </ol>
+        </nav>
+        <h1>{page.title[locale]}</h1>
+        {page.lead && <p class="page-hero__lead">{page.lead[locale]}</p>}
+      </div>
+      <svg class="page-hero__art" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true" focusable="false" set:html={personaArt(artProp)} />
+    </div>
+  </div>
+
+  <div class:list={['container page-body', { 'page-body--wide': !showSide }]}>
+    {showSide && (
+      <nav class="side-nav" aria-label={`${t('inThisSection', locale)}: ${section!.label[locale]}`}>
+        <p class="side-nav__title">{section!.label[locale]}</p>
+        <ul role="list">
+          {siblings.map((s) => (
+            <li><a href={localePath(s.href, locale)} aria-current={s.href === currentL2 ? 'page' : undefined}>{s.label[locale]}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+    <div class="page-content">
+      <div class="page-content__body">
+        <slot />
+      </div>
+      <div class="page-tools" data-pagefind-ignore>
+        <p>{t('pageUpdated', locale)}: <time datetime={site.lastUpdated.toISOString().slice(0, 10)}>{formatDate(site.lastUpdated, locale)}</time></p>
+        <div class="page-tools__actions">
+          <button type="button" class="btn btn--ghost btn--sm" data-print><Icon name="Printer" class="icon icon--sm" />{t('print', locale)}</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-share={shareUrl} data-copied={t('copied', locale)}><Icon name="Share2" class="icon icon--sm" />{t('share', locale)}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    import '@kit/js/pagetools';
+  </script>
+</BaseLayout>

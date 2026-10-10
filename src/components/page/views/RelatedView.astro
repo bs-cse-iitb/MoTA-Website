@@ -1,0 +1,25 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { legacyLinks } from '../../../lib/legacy';
+import { governmentPortals } from '../../../data/portals';
+import { govPortalHi, stateHi } from '../../../data/hi-content';
+import { hostOf } from '../../../lib/links';
+import SmartLink from '../../SmartLink.astro';
+import Icon from '../../Icon.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const states = legacyLinks('related').filter((l) => l.kind === 'external');
+---
+<h2>{tx(locale, 'State tribal welfare departments', 'राज्य जनजातीय कल्याण विभाग')}</h2>
+<ul class="portal-grid" role="list">
+  {states.map((s) => (
+    <li><SmartLink class="portal" href={s.url} locale={locale}><span class="portal__icon"><Icon name="MapPin" /></span><span class="portal__body"><span class="portal__name">{locale === 'hi' ? stateHi[s.title] ?? s.title : s.title}</span><span class="portal__host" lang="en">{hostOf(s.url)}</span></span><Icon name="ArrowUpRight" class="icon icon--sm portal__arrow" /></SmartLink></li>
+  ))}
+</ul>
+<h2 class="mt">{tx(locale, 'Government of India', 'भारत सरकार')}</h2>
+<ul class="portal-grid" role="list">
+  {governmentPortals.map((g) => (
+    <li><SmartLink class="portal" href={g.url} locale={locale}><img src={g.logo} alt="" width="46" height="46" class="portal__logo" loading="lazy" /><span class="portal__body"><span class="portal__name">{locale === 'hi' ? govPortalHi[g.name] ?? g.name : g.name}</span><span class="portal__host" lang="en">{hostOf(g.url)}</span></span><Icon name="ArrowUpRight" class="icon icon--sm portal__arrow" /></SmartLink></li>
+  ))}
+</ul>

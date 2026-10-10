@@ -1,0 +1,9 @@
+$ npm run kit:build
+dbim-kit built: {
+  'dbim.css': '78.0 KB',
+  'dbim.min.css': '63.3 KB',
+  'dbim.js': '25.7 KB',
+  'dbim-search.js': '4.2 KB',
+  'icons.svg': '29.9 KB'
+} 96 icons 55 gallery images
+exit=0

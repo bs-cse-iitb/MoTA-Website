@@ -1,0 +1,32 @@
+---
+// Photos (DBIM A.5.4.1): albums with caption and date; thumbnails under 100 KB,
+// with the original available on click.
+import { Image, getImage } from 'astro:assets';
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { albums } from '../../../data/media';
+import { albumHi } from '../../../data/hi-content';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const full = await Promise.all(albums.map((a) => getImage({ src: a.image, format: 'webp', width: 1440, quality: 82 })));
+const view = (a: (typeof albums)[number]) => (locale === 'hi' && albumHi[a.id] ? { ...a, ...albumHi[a.id], date: albumHi[a.id].date ?? a.date } : a);
+---
+<ul class="gallery" role="list">
+  {albums.map((raw, i) => {
+    const a = view(raw);
+    return (
+      <li class="album" id={a.id}>
+        <a href={full[i].src} target="_blank" rel="noopener">
+          <Image src={a.image} alt={a.alt} widths={[480, 720]} sizes="(min-width: 1024px) 33vw, 100vw" format="webp" quality={72} loading="lazy" />
+          <span class="visually-hidden"> ({tx(locale, 'opens full-size image in a new tab', 'बड़ी छवि नए टैब में खुलेगी')})</span>
+        </a>
+        <div class="album__body">
+          <span class="album__date">{a.date}</span>
+          <h2 class="album__title">{a.title}</h2>
+          <p class="album__caption">{a.caption}</p>
+        </div>
+      </li>
+    );
+  })}
+</ul>

@@ -1,0 +1,28 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { portals, governmentPortals } from '../../../data/portals';
+import { portalDescHi, govPortalHi } from '../../../data/hi-content';
+import { hostOf } from '../../../lib/links';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<ul class="grid grid--3" role="list">
+  {portals.map((p) => (
+    <li class="card card--link">
+      <span class="card__icon"><Icon name={p.icon} /></span>
+      <h2 class="card__title"><SmartLink href={p.url} locale={locale}>{p.name[locale]}</SmartLink></h2>
+      <p class="card__text" lang={locale === 'hi' && !portalDescHi[p.url] ? 'en' : undefined}>{locale === 'hi' ? portalDescHi[p.url] ?? p.desc : p.desc}</p>
+      <span class="card__more" aria-hidden="true" lang="en">{hostOf(p.url)}<Icon name="ArrowUpRight" /></span>
+    </li>
+  ))}
+</ul>
+<h2 class="mt">{tx(locale, 'Government of India portals', 'भारत सरकार के पोर्टल')}</h2>
+<ul class="portal-grid" role="list">
+  {governmentPortals.map((g) => (
+    <li><SmartLink class="portal" href={g.url} locale={locale}><img src={g.logo} alt="" width="46" height="46" class="portal__logo" loading="lazy" /><span class="portal__body"><span class="portal__name">{locale === 'hi' ? govPortalHi[g.name] ?? g.name : g.name}</span><span class="portal__host" lang="en">{hostOf(g.url)}</span></span><Icon name="ArrowUpRight" class="icon icon--sm portal__arrow" /></SmartLink></li>
+  ))}
+</ul>

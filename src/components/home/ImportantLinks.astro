@@ -1,0 +1,38 @@
+---
+// Important links (DBIM A.4.1.2 x): the Ministry's most-used portals.
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { portals } from '../../data/portals';
+import { hostOf } from '../../lib/links';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const list = portals.filter((p) => p.featured);
+---
+<section class="section section--soft" aria-labelledby="links-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{locale === 'hi' ? 'ऑनलाइन सेवाएं' : 'Online services'}</p>
+        <h2 id="links-title">{t('importantLinks', locale)}</h2>
+      </div>
+      <a class="link-arrow" href={localePath('/offerings/portals/', locale)}>{t('viewAll', locale)}<Icon name="ArrowRight" /></a>
+    </div>
+    <ul class="portal-grid" role="list">
+      {list.map((p) => (
+        <li>
+          <SmartLink class="portal" href={p.url} locale={locale}>
+            <span class="portal__icon"><Icon name={p.icon} /></span>
+            <span class="portal__body">
+              <span class="portal__name">{p.name[locale]}</span>
+              <span class="portal__host" lang="en">{hostOf(p.url)}</span>
+            </span>
+            <Icon name="ArrowUpRight" class="icon icon--sm portal__arrow" />
+          </SmartLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import DocItem from '../../DocItem.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<div class="empty"><Icon name="Trophy" /><p>{T('No competitions are open at present. Competitions of the Ministry are also listed on MyGov.', 'वर्तमान में कोई प्रतियोगिता खुली नहीं है। मंत्रालय की प्रतियोगिताएं माईगव पर भी सूचीबद्ध की जाती हैं।')}</p><SmartLink class="btn btn--ghost btn--sm" href="https://www.mygov.in/" locale={locale}>{T('Open MyGov', 'माईगव खोलें')}<Icon name="ArrowUpRight" /></SmartLink></div>
+<h2 class="mt">{T('Awards and recognition', 'पुरस्कार और सम्मान')}</h2>
+<ul class="doc-list" role="list">
+  <DocItem title={T('Ministry of Tribal Affairs wins the SKOCH Challenger Award for “Best Performance in e-Governance” and three Gold awards for its digital initiatives (PIB)', 'जनजातीय कार्य मंत्रालय को डिजिटल पहलों हेतु “ई-गवर्नेंस में सर्वश्रेष्ठ प्रदर्शन” के लिए स्कॉच चैलेंजर पुरस्कार और तीन स्वर्ण पुरस्कार (पीआईबी)')} url="https://www.pib.gov.in/PressReleasePage.aspx?PRID=1689177" locale={locale} />
+  <DocItem title={T('National Award to Teachers 2020 — Ms. Sudha Panauli, Vice Principal, EMRS', 'राष्ट्रीय शिक्षक पुरस्कार 2020 — सुश्री सुधा पनौली, उप-प्रधानाचार्य, ईएमआरएस')} url="https://tribal.gov.in/downloads/EMRS/NAT%20Award.pdf" format="PDF" locale={locale} />
+</ul>

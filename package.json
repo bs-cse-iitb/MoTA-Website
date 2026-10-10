@@ -1,0 +1,47 @@
+{
+  "name": "mota-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "New tribal.gov.in, the website of the Ministry of Tribal Affairs: static site in English and Hindi built to the DBIM v3 structure, with the DBIM component kit for other MoTA portals.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.3.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist --output-subdir pagefind",
+    "kit:build": "node packages/dbim-kit/build.mjs",
+    "kit:test": "node packages/dbim-kit/test.mjs",
+    "preview": "astro preview",
+    "serve:uat": "node scripts/serve-uat.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:external": "node scripts/check-links.mjs --external",
+    "check:parity": "node scripts/assess/live-parity.mjs",
+    "check:nav": "node scripts/assess/nav-parity.mjs",
+    "crawl:live": "node scripts/migration/crawl-live.mjs",
+    "inventory": "node scripts/migration/build-inventory.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "assets": "node scripts/prepare-assets.mjs",
+    "test:uat": "node scripts/assess/prototype-suite.mjs --base http://127.0.0.1:4322",
+    "test:redirects": "node --test tests/redirects.test.mjs",
+    "test:documents": "node --test tests/documents.test.mjs",
+    "test:assistant": "node --test tests/assistant.test.mjs",
+    "assess": "node scripts/assess/audit.mjs --lighthouse"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans": "^5.2.0",
+    "@fontsource-variable/noto-sans-devanagari": "^5.2.0",
+    "astro": "~5.18.2",
+    "lucide-static": "^1.52.0",
+    "simple-icons": "^16.34.0"
+  },
+  "devDependencies": {
+    "axe-core": "^4.13.0",
+    "esbuild": "^0.27.7",
+    "lighthouse": "^12.8.2",
+    "pagefind": "^1.5.2",
+    "parse5": "^7.3.0",
+    "puppeteer-core": "^22.15.0",
+    "sharp": "^0.34.0"
+  }
+}

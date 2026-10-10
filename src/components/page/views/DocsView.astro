@@ -1,0 +1,47 @@
+---
+// Documents L2 (DBIM A.5.3): documents from every division, grouped by the
+// division that published them, with a filter.
+import type { Locale } from '../../../data/site';
+import { documentsByCategory, legacySections, SOURCE_LABEL, type DocCategory, type DocLink } from '../../../lib/legacy';
+import { localePath, tx } from '../../../data/i18n';
+import { divisions } from '../../../data/divisions';
+import DocList from '../DocList.astro';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { category: string; locale: Locale }
+const { category, locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+// Hindi group names: division titles where the source is a division
+const sourceHi = (key: string) => {
+  const d = divisions.find((x) => x.slug === key || x.legacy?.key === key);
+  return d?.title.hi;
+};
+let groups: { heading: string; links: DocLink[] }[];
+if (category === 'knowledge-hub') {
+  groups = legacySections('knowledge-hub').map((s) => ({ heading: s.heading, links: s.links }));
+} else {
+  const docs = documentsByCategory().get(category as DocCategory) ?? [];
+  const bySource = new Map<string, DocLink[]>();
+  for (const d of docs) {
+    const key = d.source ?? '';
+    const k = (locale === 'hi' && sourceHi(key)) || SOURCE_LABEL[key] || 'Other';
+    if (!bySource.has(k)) bySource.set(k, []);
+    bySource.get(k)!.push(d);
+  }
+  groups = [...bySource.entries()].map(([heading, links]) => ({ heading, links }));
+}
+const extra: Record<string, { label: string; url: string }[]> = {
+  'acts-and-policies': [{ label: T('The Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006 — India Code', 'अनुसूचित जनजाति और अन्य परंपरागत वन निवासी (वन अधिकारों की मान्यता) अधिनियम, 2006 — इंडिया कोड'), url: 'https://www.indiacode.nic.in/' }],
+  'gazette-notifications': [{ label: T('e-Gazette of India', 'भारत का ई-राजपत्र'), url: 'https://egazette.gov.in/' }],
+  'press-releases': [{ label: T('All press releases on the Press Information Bureau website', 'पत्र सूचना कार्यालय की वेबसाइट पर सभी प्रेस विज्ञप्तियां'), url: 'https://pib.gov.in/' }],
+};
+---
+{extra[category] && (
+  <div class="callout mb">
+    <Icon name="Info" />
+    <ul class="link-list" role="list">{extra[category].map((e) => <li><SmartLink href={e.url} locale={locale} showExternalIcon>{e.label}</SmartLink></li>)}</ul>
+  </div>
+)}
+<DocList groups={groups} locale={locale} />
+<p class="mt muted small">{T('Looking for something else?', 'कुछ और खोज रहे हैं?')} <a href={localePath('/search/', locale)}>{T('Search all documents', 'सभी दस्तावेज़ खोजें')}</a> {T('or browse', 'या देखें')} <a href={localePath('/archives/', locale)}>{T('Archives', 'पुरालेख')}</a>.</p>

@@ -1,0 +1,61 @@
+---
+// Directory (DBIM A.5.5): officers by seniority, with work allocation and contacts.
+import type { Locale } from '../../../data/site';
+import { t, tx } from '../../../data/i18n';
+import directory from '../../../data/generated/directory.json';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const total = directory.reduce((n, g) => n + g.people.length, 0);
+const clean = (e: string) => (e && e.includes('[at]') ? e.replace(/\s+(?=\S+\[at\])/g, '\n') : '');
+---
+<div class="doc-tools">
+  <div class="doc-filter">
+    <label class="visually-hidden" for="dir-filter">{locale === 'hi' ? 'नाम, पद या विषय से खोजें' : 'Search by name, designation or subject'}</label>
+    <Icon name="Search" />
+    <input id="dir-filter" class="input" type="search" placeholder={locale === 'hi' ? 'नाम, पद या विषय से खोजें' : 'Search by name, designation or subject'} data-dir-filter autocomplete="off" />
+  </div>
+  <p class="doc-count" aria-live="polite" data-dir-count data-total={total}>{`${t('showing', locale)} ${total} ${t('items', locale)}`}</p>
+</div>
+{directory.map((g, gi) => (
+  <section class="dir-group" data-dir-group>
+    <h2 id={`dir-${gi}`}>{locale === 'hi' ? <>{g.hi} <span lang="en">{g.en}</span></> : <>{g.en} <span lang="hi">{g.hi}</span></>}</h2>
+    <div class="table-wrap" tabindex="0" role="region" aria-labelledby={`dir-${gi}`}>
+      <table class="table" aria-labelledby={`dir-${gi}`}>
+        <thead><tr><th scope="col">{tx(locale, 'Name and designation', 'नाम और पद')}</th><th scope="col">{tx(locale, 'Work allocation', 'कार्य आवंटन')}</th><th scope="col">{tx(locale, 'Phone', 'फ़ोन')}</th><th scope="col">{tx(locale, 'Email', 'ईमेल')}</th><th scope="col">{tx(locale, 'Office', 'कार्यालय')}</th></tr></thead>
+        <tbody>
+          {g.people.map((p) => (
+            <tr data-dir-row data-text={`${p.name} ${p.nameHi} ${p.designation} ${p.work}`.toLowerCase()}>
+              {locale === 'hi'
+                ? <td class="who">{p.nameHi || p.name || p.designation}{(p.designationHi || p.designation) && p.name && <small>{p.designationHi || p.designation}</small>}{p.name && <small lang="en">{p.name}</small>}</td>
+                : <td class="who">{p.name || p.designation}{p.name && <small>{p.designation}</small>}{p.nameHi && <small lang="hi">{p.nameHi}</small>}</td>}
+              <td lang={locale === 'hi' ? 'en' : undefined}>{p.work}</td>
+              <td class="contact" lang="en">{p.phone && <span>{p.phone}</span>}{p.intercom && <span>Intercom: {p.intercom}</span>}</td>
+              <td class="contact" lang="en">{clean(p.email).split('\n').map((e) => <span>{e}</span>)}</td>
+              <td class="small" lang={locale === 'hi' ? 'en' : undefined}>{p.address}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+))}
+<p class="empty" hidden data-dir-empty>{t('noMatches', locale)}</p>
+<script>
+  const input = document.querySelector<HTMLInputElement>('[data-dir-filter]');
+  const count = document.querySelector<HTMLElement>('[data-dir-count]');
+  const empty = document.querySelector<HTMLElement>('[data-dir-empty]');
+  input?.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    document.querySelectorAll<HTMLElement>('[data-dir-group]').forEach((g) => {
+      let n = 0;
+      g.querySelectorAll<HTMLElement>('[data-dir-row]').forEach((r) => { const m = !q || r.dataset.text!.includes(q); r.hidden = !m; if (m) n++; });
+      g.hidden = n === 0;
+      shown += n;
+    });
+    if (count) count.textContent = count.textContent!.replace(/\d+/, String(shown));
+    if (empty) empty.hidden = shown !== 0;
+  });
+</script>

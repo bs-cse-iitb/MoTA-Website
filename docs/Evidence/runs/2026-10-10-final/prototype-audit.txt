@@ -1,0 +1,7 @@
+$ npm run assess -- --targets scripts/assess/targets-prototype.json --out docs/Evidence/runs/2026-10-10-final/prototype
+• proto-en … status 200, axe 0 rules, 1374 KB, LH perf 80
+• proto-hi … status 200, axe 0 rules, 1397 KB, LH perf 76
+• proto-scheme … status 200, axe 0 rules, 370 KB, LH perf 94
+
+Wrote docs/Evidence/runs/2026-10-10-final/prototype/results.json and summary.csv
+exit=0

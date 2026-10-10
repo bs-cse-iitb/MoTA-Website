@@ -1,0 +1,21 @@
+---
+// Site search (DBIM 9): covers every page; filters by content type and audience.
+// Powered by Pagefind — a static index built at deploy time, no server needed.
+import type { Locale } from '../../../data/site';
+import { t, localePath } from '../../../data/i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<form class="search-box" role="search" data-search-form>
+  <label class="visually-hidden" for="q">{t('search', locale)}</label>
+  <input class="input" id="q" name="q" type="search" placeholder={t('searchPlaceholder', locale)} autocomplete="off" />
+  <button class="btn" type="submit">{t('search', locale)}</button>
+</form>
+<p class="muted small">{t('searchHint', locale)}</p>
+<div class="search-filters" data-search-filters aria-label={locale === 'hi' ? 'फ़िल्टर' : 'Filters'} role="group"></div>
+<p class="doc-count" aria-live="polite" data-search-status></p>
+<ol class="results" role="list" data-search-results></ol>
+<noscript><p>Search needs JavaScript. Please use the <a href={localePath('/sitemap/', locale)}>Sitemap</a> instead.</p></noscript>
+<script>
+  import '@kit/js/search';
+</script>

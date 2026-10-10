@@ -1,0 +1,19 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { sanctionYears } from '../../../data/updates';
+import SmartLink from '../../SmartLink.astro';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<p>{T('Sanction orders are generated from the Public Financial Management System (PFMS) and list every release by scheme, State and date. Choose a financial year.', 'स्वीकृति आदेश सार्वजनिक वित्तीय प्रबंधन प्रणाली (पीएफएमएस) से तैयार होते हैं और प्रत्येक विमोचन को योजना, राज्य और तिथि के अनुसार सूचीबद्ध करते हैं। वित्तीय वर्ष चुनें।')}</p>
+<ul class="tiles" role="list">
+  {sanctionYears.map((y) => (
+    <li><SmartLink class="tile" href={y.url} locale={locale}><span class="tile__icon"><Icon name="FileCheck" class="icon icon--sm" /></span>{T(`Financial year ${y.fy.replace('-', '\u2011')}`, `वित्तीय वर्ष ${y.fy.replace('-', '\u2011')}`)}</SmartLink></li>
+  ))}
+  <li><SmartLink class="tile" href="https://tribal.gov.in/SanctionOrder.aspx" locale={locale}><span class="tile__icon"><Icon name="FolderOpen" class="icon icon--sm" /></span>{T('Earlier sanction orders', 'पुराने स्वीकृति आदेश')}</SmartLink></li>
+</ul>
+<p class="muted small mt">{T('These reports are served from the Ministry’s existing PFMS reporting pages until they move to the new content management system.', 'नई सामग्री प्रबंधन प्रणाली में स्थानांतरित होने तक ये रिपोर्ट मंत्रालय के वर्तमान पीएफएमएस रिपोर्टिंग पृष्ठों से उपलब्ध कराई जाती हैं।')}</p>

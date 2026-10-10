@@ -1,0 +1,74 @@
+---
+// Filterable list of documents, optionally grouped (Documents section, division pages).
+import type { Locale } from '../../data/site';
+import type { DocLink } from '../../lib/legacy';
+import { t } from '../../data/i18n';
+import DocItem from '../DocItem.astro';
+import Icon from '../Icon.astro';
+import { headingHi } from '../../data/hi-content';
+
+interface Group { heading: string; links: (DocLink & { date?: string; isNew?: boolean })[] }
+interface Props { groups: Group[]; locale?: Locale; filter?: boolean; showGroupOnItem?: boolean; headingLevel?: 'h2' | 'h3'; id?: string }
+const { groups, locale = 'en', filter = true, showGroupOnItem = false, headingLevel = 'h2', id = 'docs' } = Astro.props;
+const total = groups.reduce((n, g) => n + g.links.length, 0);
+const H = headingLevel;
+const headingFor = (h: string) => (locale === 'hi' ? headingHi[h] ?? h : h);
+const isLatin = (h: string) => locale === 'hi' && !/[\u0900-\u097F]/.test(headingFor(h));
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+{total === 0 ? (
+  <div class="empty"><Icon name="FolderOpen" /><p>{locale === 'hi' ? 'इस अनुभाग में अभी कोई दस्तावेज़ उपलब्ध नहीं है।' : 'There are no documents in this section at present.'}</p></div>
+) : (
+  <div class="doc-block" data-doc-filter-root id={id}>
+    {filter && total > 6 && (
+      <div class="doc-tools">
+        <div class="doc-filter">
+          <label class="visually-hidden" for={`${id}-filter`}>{t('filterList', locale)}</label>
+          <Icon name="Filter" />
+          <input id={`${id}-filter`} class="input" type="search" placeholder={t('filterList', locale)} data-doc-filter autocomplete="off" />
+        </div>
+        <p class="doc-count" aria-live="polite" data-doc-count data-total={total} data-label-showing={t('showing', locale)} data-label-items={t('items', locale)}>
+          {`${t('showing', locale)} ${total} ${t('items', locale)}`}
+        </p>
+      </div>
+    )}
+    {groups.filter((g) => g.links.length).map((g) => (
+      <section class="doc-group" aria-labelledby={`${id}-${slug(g.heading)}`} data-doc-group>
+        {groups.length > 1 && (
+          <H class="doc-group__title" id={`${id}-${slug(g.heading)}`}><span lang={isLatin(g.heading) ? 'en' : undefined}>{headingFor(g.heading)}</span><span class="count">{g.links.length}</span></H>
+        )}
+        <ul class="doc-list" role="list">
+          {g.links.map((l) => (
+            <DocItem title={l.title} url={l.url} locale={locale} format={l.format} size={l.size} date={l.date} isNew={l.isNew} group={showGroupOnItem ? l.group : undefined} />
+          ))}
+        </ul>
+      </section>
+    ))}
+    {locale === 'hi' && <p class="small muted">{t('contentInEnglish', 'hi')}</p>}
+    <p class="empty" hidden data-doc-empty>{t('noMatches', locale)}</p>
+  </div>
+)}
+<script>
+  document.querySelectorAll<HTMLElement>('[data-doc-filter-root]').forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>('[data-doc-filter]');
+    const count = root.querySelector<HTMLElement>('[data-doc-count]');
+    const empty = root.querySelector<HTMLElement>('[data-doc-empty]');
+    if (!input) return;
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      root.querySelectorAll<HTMLElement>('[data-doc-group]').forEach((g) => {
+        let inGroup = 0;
+        g.querySelectorAll<HTMLElement>('.doc').forEach((d) => {
+          const match = !q || (d.dataset.filterText ?? '').includes(q);
+          d.hidden = !match;
+          if (match) inGroup++;
+        });
+        g.hidden = inGroup === 0;
+        shown += inGroup;
+      });
+      if (count) count.textContent = `${count.dataset.labelShowing} ${shown} ${count.dataset.labelItems}`;
+      if (empty) empty.hidden = shown !== 0;
+    });
+  });
+</script>

@@ -1,0 +1,38 @@
+---
+// Central posts (DBIM A.4.1.2 xii, 7.4): a reserved area for content published
+// centrally for all Government websites, with prominent links to the National
+// Portal (GIGW) and other whole-of-government platforms.
+import type { Locale } from '../../data/site';
+import { t } from '../../data/i18n';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const posts = [
+  { icon: 'Landmark', title: hi ? 'भारत का राष्ट्रीय पोर्टल' : 'National Portal of India', text: hi ? 'सभी सरकारी सेवाओं और जानकारी का एकल प्रवेश द्वार।' : 'Single window to Government of India information and services.', url: 'https://www.india.gov.in/' },
+  { icon: 'ListChecks', title: 'myScheme', text: hi ? 'अपनी पात्रता के अनुसार सरकारी योजनाएं खोजें।' : 'Find the government schemes you are eligible for.', url: 'https://www.myscheme.gov.in/' },
+  { icon: 'MessageSquare', title: 'MyGov', text: hi ? 'नीति-निर्माण में भाग लें और सुझाव दें।' : 'Take part in governance: discussions, polls and tasks.', url: 'https://www.mygov.in/' },
+];
+---
+<section class="section section--muted central" aria-labelledby="central-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{hi ? 'केंद्रीय सामग्री' : 'Central posts'}</p>
+        <h2 id="central-title">{t('centralPosts', locale)}</h2>
+      </div>
+    </div>
+    <ul class="central__grid" role="list">
+      {posts.map((p) => (
+        <li class="card card--link central__card">
+          <span class="card__icon"><Icon name={p.icon} /></span>
+          <h3 class="card__title"><SmartLink href={p.url} locale={locale}>{p.title}</SmartLink></h3>
+          <p class="card__text">{p.text}</p>
+          <span class="card__more" aria-hidden="true">{new URL(p.url).hostname.replace('www.', '')}<Icon name="ArrowUpRight" /></span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../../../data/site';
+import { site } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import BrandIcon from '../../BrandIcon.astro';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<div class="grid grid--3">
+  <div class="card"><span class="card__icon"><Icon name="MessageSquare" /></span><h2 class="card__title"><SmartLink href="https://www.mygov.in/" locale={locale}>{T('MyGov', 'माईगव')}</SmartLink></h2><p class="card__text">{T('Take part in discussions, polls and tasks of the Ministry and Government of India.', 'मंत्रालय और भारत सरकार की चर्चाओं, सर्वेक्षणों और कार्यों में भाग लें।')}</p></div>
+  <div class="card"><span class="card__icon"><Icon name="Send" /></span><h2 class="card__title"><a href={localePath('/connect/feedback/', locale)}>{T('Website feedback', 'वेबसाइट प्रतिक्रिया')}</a></h2><p class="card__text">{T('Tell us what to improve on this website.', 'हमें बताएं कि इस वेबसाइट में क्या सुधार करना चाहिए।')}</p></div>
+  <div class="card"><span class="card__icon"><Icon name="LifeBuoy" /></span><h2 class="card__title"><a href={localePath('/connect/grievance-redressal/', locale)}>{T('Grievances', 'शिकायतें')}</a></h2><p class="card__text">{T('Lodge and track a grievance through CPGRAMS.', 'सीपीग्राम्स के माध्यम से शिकायत दर्ज करें और उसकी स्थिति देखें।')}</p></div>
+</div>
+<h2 class="mt">{T('Follow the Ministry', 'मंत्रालय को फ़ॉलो करें')}</h2>
+<ul class="social-grid" role="list">
+  {site.social.map((s) => (
+    <li class="social-card">
+      <div class="social-card__head"><span class="social-card__logo"><BrandIcon id={s.id as 'x'} /></span><div><p class="social-card__name" lang="en">{s.label}</p><p class="social-card__handle" lang="en">{s.handle}</p></div></div>
+      <SmartLink class="link-arrow" href={s.url} locale={locale}>{T('Follow', 'फ़ॉलो करें')}<Icon name="ArrowUpRight" /></SmartLink>
+    </li>
+  ))}
+</ul>

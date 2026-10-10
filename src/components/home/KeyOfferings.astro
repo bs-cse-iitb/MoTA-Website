@@ -1,0 +1,74 @@
+---
+// Key Offerings (DBIM A.4.1.2 vi): schemes, tenders and vacancies, five latest
+// entries each with "View more". Tabs follow the WAI-ARIA tabs pattern.
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { schemes, categoryLabels } from '../../data/schemes';
+import { tenders } from '../../data/updates';
+import Icon from '../Icon.astro';
+import DocItem from '../DocItem.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const featured = ['pm-janman', 'da-jgua', 'emrs', 'post-matric-scholarship', 'national-overseas-scholarship'].map((s) => schemes.find((x) => x.slug === s)!);
+const tabs = [
+  { id: 'schemes', label: t('schemes', locale), icon: 'HandCoins', count: schemes.length },
+  { id: 'tenders', label: t('tenders', locale), icon: 'Gavel', count: tenders.length },
+  { id: 'vacancies', label: t('vacancies', locale), icon: 'Briefcase', count: 0 },
+];
+---
+<section class="section offerings" aria-labelledby="offerings-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{hi ? 'सेवाएं' : 'Offerings'}</p>
+        <h2 id="offerings-title">{t('keyOfferings', locale)}</h2>
+      </div>
+    </div>
+    <div class="tabs" data-tabs>
+      <div class="tabs__list" role="tablist" aria-label={t('keyOfferings', locale)}>
+        {tabs.map((tab, i) => (
+          <button type="button" role="tab" class="tabs__tab" id={`tab-${tab.id}`} aria-controls={`panel-${tab.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+            <Icon name={tab.icon} class="icon icon--sm" />{tab.label}<span class="tabs__count">{tab.count}</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-schemes" aria-labelledby="tab-schemes" tabindex="0">
+        <ul class="offer-grid" role="list">
+          {featured.map((s) => (
+            <li class="card card--link offer">
+              <div class="offer__top">
+                <span class="card__icon"><Icon name={s.icon} /></span>
+                <span class="badge">{categoryLabels[s.category][locale]}</span>
+              </div>
+              <h3 class="card__title"><a href={localePath(`/offerings/schemes/${s.slug}/`, locale)}>{locale === 'hi' ? s.title.hi : s.short}</a></h3>
+              <p class="card__text">{s.summary[locale]}</p>
+              <span class="card__more" aria-hidden="true">{t('explore', locale)}<Icon name="ArrowRight" /></span>
+            </li>
+          ))}
+        </ul>
+        <a class="btn btn--ghost" href={localePath('/offerings/schemes/', locale)}>{t('viewMore', locale)} — {schemes.length} {t('schemes', locale)}<Icon name="ArrowRight" /></a>
+      </div>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-tenders" aria-labelledby="tab-tenders" tabindex="0" hidden>
+        <ul class="doc-list" role="list">
+          {tenders.slice(0, 5).map((d) => <DocItem title={`${d.title as string}${d.ref ? ` (${d.ref})` : ''}`} url={d.url} date={d.date} format={d.format} locale={locale} />)}
+        </ul>
+        <p><a class="btn btn--ghost" href={localePath('/offerings/tenders/', locale)}>{t('viewMore', locale)}<Icon name="ArrowRight" /></a></p>
+      </div>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-vacancies" aria-labelledby="tab-vacancies" tabindex="0" hidden>
+        <div class="empty">
+          <Icon name="Briefcase" />
+          <p>{hi ? 'वर्तमान में मंत्रालय में कोई रिक्ति खुली नहीं है।' : 'There are no open vacancies in the Ministry at present.'}</p>
+          <a class="link-arrow" href={localePath('/offerings/vacancies/', locale)}>{t('viewMore', locale)}<Icon name="ArrowRight" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  import '@kit/js/tabs';
+</script>

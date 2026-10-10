@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import SmartLink from '../../SmartLink.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const readers = [
+  { name: 'NVDA (NonVisual Desktop Access)', platform: 'Windows', type: T('Free', 'निःशुल्क'), url: 'https://www.nvaccess.org/' },
+  { name: 'JAWS (Job Access With Speech)', platform: 'Windows', type: T('Commercial', 'व्यावसायिक'), url: 'https://www.freedomscientific.com/products/software/jaws/' },
+  { name: 'Narrator', platform: 'Windows', type: T('Built in', 'अंतर्निर्मित'), url: '' },
+  { name: 'VoiceOver', platform: 'macOS, iPhone, iPad', type: T('Built in', 'अंतर्निर्मित'), url: '' },
+  { name: 'TalkBack', platform: 'Android', type: T('Built in', 'अंतर्निर्मित'), url: '' },
+  { name: 'Orca', platform: 'Linux', type: T('Free', 'निःशुल्क'), url: 'https://help.gnome.org/users/orca/stable/' },
+];
+---
+<div class="prose">
+  {/* Describe only what is built and tested; no conformance claim (docs/GIGW_DBIM_Standardisation/2_Assess/Gap_Matrix_Main_Website.md). */}
+  <p>{T('Visitors with visual impairments can use this website with screen readers. Pages are built with headings, labelled page regions and text alternatives for images, and controls work with a keyboard. Testing with screen readers is not complete yet; if something does not work for you, please tell us (see the Accessibility Statement).', 'दृष्टिबाधित आगंतुक स्क्रीन रीडर की सहायता से इस वेबसाइट का उपयोग कर सकते हैं। पृष्ठों में शीर्षक, लेबलयुक्त क्षेत्र और चित्रों के पाठ विकल्प दिए गए हैं, और नियंत्रण कीबोर्ड से उपयोग किए जा सकते हैं। स्क्रीन रीडर से परीक्षण अभी पूरा नहीं हुआ है; यदि कुछ ठीक से काम न करे, तो कृपया हमें बताएं (सुगम्यता विवरण देखें)।')}</p>
+  <p>{T('Hindi content can be read with screen readers that support Indian languages, such as NVDA with an Indian-language voice.', 'हिन्दी सामग्री भारतीय भाषाओं का समर्थन करने वाले स्क्रीन रीडर, जैसे भारतीय भाषा की आवाज़ के साथ एनवीडीए, से पढ़ी जा सकती है।')}</p>
+</div>
+<div class="table-wrap" tabindex="0" role="region" aria-label={T('Screen readers', 'स्क्रीन रीडर')}>
+  <table class="table">
+    <caption class="visually-hidden">{T('Screen readers', 'स्क्रीन रीडर')}</caption>
+    <thead><tr><th scope="col">{T('Screen reader', 'स्क्रीन रीडर')}</th><th scope="col">{T('Platform', 'प्लेटफ़ॉर्म')}</th><th scope="col">{T('Free / Commercial', 'निःशुल्क / व्यावसायिक')}</th></tr></thead>
+    <tbody>
+      {readers.map((r) => (
+        <tr><td class="who" lang={locale === 'hi' ? 'en' : undefined}>{r.url ? <SmartLink href={r.url} locale={locale} showExternalIcon>{r.name}</SmartLink> : r.name}</td><td lang={locale === 'hi' ? 'en' : undefined}>{r.platform}</td><td>{r.type}</td></tr>
+      ))}
+    </tbody>
+  </table>
+</div>

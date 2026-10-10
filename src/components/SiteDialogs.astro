@@ -1,0 +1,79 @@
+---
+// External-link notice (GIGW hyperlink policy), cookie consent banner and
+// settings (DBIM 7.6 + DPDP Act 2023), and the back-to-top button.
+import type { Locale } from '../data/site';
+import { t, localePath } from '../data/i18n';
+import Icon from './Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<dialog class="panel ext-dialog" id="ext-dialog" aria-labelledby="ext-title" aria-describedby="ext-body">
+  <div class="panel__head">
+    <h2 id="ext-title" class="panel__title"><Icon name="SquareArrowOutUpRight" />{t('leavingTitle', locale)}</h2>
+  </div>
+  <div class="panel__body">
+    <p id="ext-body">{t('leavingBody', locale)}</p>
+    <p class="ext-dialog__url"><Icon name="Globe" class="icon icon--sm" /><span data-ext-host></span></p>
+  </div>
+  <div class="panel__foot">
+    <button type="button" class="btn btn--ghost" data-close-dialog>{t('cancel', locale)}</button>
+    <button type="button" class="btn" data-ext-continue>{t('continue', locale)}<Icon name="ArrowRight" /></button>
+  </div>
+</dialog>
+
+<section class="cookie-bar" aria-label={t('cookieTitle', locale)} data-cookie-bar hidden>
+  <div class="container cookie-bar__inner">
+    <div class="cookie-bar__text">
+      <p class="cookie-bar__title"><Icon name="Cookie" class="icon icon--sm" />{t('cookieTitle', locale)}</p>
+      <p>{t('cookieBody', locale)} <a href={localePath('/policies/cookie-policy/', locale)}>{t('cookiePolicy', locale)}</a></p>
+    </div>
+    <div class="cookie-bar__actions">
+      <button type="button" class="btn btn--ghost btn--sm" data-open-cookies>{t('customise', locale)}</button>
+      <button type="button" class="btn btn--ghost btn--sm" data-consent="reject">{t('rejectAll', locale)}</button>
+      <button type="button" class="btn btn--sm" data-consent="accept">{t('acceptAll', locale)}</button>
+    </div>
+  </div>
+</section>
+
+<dialog class="panel cookie-dialog" id="cookie-dialog" aria-labelledby="cookie-title">
+  <div class="panel__head">
+    <h2 id="cookie-title" class="panel__title"><Icon name="Cookie" />{t('cookieTitle', locale)}</h2>
+    <button type="button" class="icon-btn" data-close-dialog aria-label={t('close', locale)}><Icon name="X" /></button>
+  </div>
+  <div class="panel__body">
+    <p>{t('cookieBody', locale)}</p>
+    <div class="consent-row">
+      <div>
+        <label class="consent-row__name" for="consent-essential">{t('essential', locale)}</label>
+        <p class="muted small" id="consent-essential-desc">{t('essentialDesc', locale)}</p>
+      </div>
+      <input type="checkbox" role="switch" class="switch" id="consent-essential" checked disabled aria-describedby="consent-essential-desc" />
+    </div>
+    <div class="consent-row">
+      <div>
+        <label class="consent-row__name" for="consent-analytics">{t('analytics', locale)}</label>
+        <p class="muted small" id="consent-analytics-desc">{t('analyticsDesc', locale)}</p>
+      </div>
+      <input type="checkbox" role="switch" class="switch" id="consent-analytics" data-consent-key="analytics" aria-describedby="consent-analytics-desc" />
+    </div>
+    <div class="consent-row">
+      <div>
+        <label class="consent-row__name" for="consent-social">{t('socialCookies', locale)}</label>
+        <p class="muted small" id="consent-social-desc">{t('socialDesc', locale)}</p>
+      </div>
+      <input type="checkbox" role="switch" class="switch" id="consent-social" data-consent-key="social" aria-describedby="consent-social-desc" />
+    </div>
+  </div>
+  <div class="panel__foot">
+    <button type="button" class="btn btn--ghost" data-consent="reject">{t('rejectAll', locale)}</button>
+    <button type="button" class="btn" data-consent="save">{t('savePrefs', locale)}</button>
+  </div>
+</dialog>
+
+<a href="#top" class="to-top" data-to-top aria-label={t('backToTop', locale)}><Icon name="ArrowUp" /></a>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<script>
+  import '@kit/js/dialogs';
+</script>

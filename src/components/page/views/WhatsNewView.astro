@@ -1,0 +1,11 @@
+---
+import type { Locale } from '../../../data/site';
+import { whatsNew } from '../../../data/updates';
+import { updateHi, categoryHi } from '../../../data/hi-content';
+import { tx } from '../../../data/i18n';
+import DocList from '../DocList.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const links = whatsNew.map((n) => ({ title: (locale === 'hi' && updateHi[n.url]) || (n.title as string), url: n.url, kind: 'document' as const, format: n.format, size: n.size, group: locale === 'hi' ? categoryHi[n.category] : n.category, date: n.date, isNew: n.isNew }));
+---
+<DocList groups={[{ heading: tx(locale, "What's New", 'नया क्या है'), links }]} locale={locale} showGroupOnItem />

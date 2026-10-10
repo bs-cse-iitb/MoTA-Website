@@ -1,0 +1,32 @@
+---
+// User personas (DBIM A.2, A.4.1.2 ix) with Warli-style illustrations.
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { personas } from '../../data/personas';
+import WarliPersona from '../WarliPersona.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<section class="section personas" id="personas" aria-labelledby="personas-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{locale === 'hi' ? 'उपयोगकर्ता' : 'Personas'}</p>
+        <h2 id="personas-title">{t('personaTitle', locale)}</h2>
+        <p>{t('personaLead', locale)}</p>
+      </div>
+    </div>
+    <ul class="persona-grid" role="list">
+      {personas.map((p) => (
+        <li>
+          <a class="persona" href={localePath(`/personas/${p.id}/`, locale)}>
+            <WarliPersona prop={p.prop} />
+            <span class="persona__title">{p.title[locale]}</span>
+            <span class="persona__short">{p.short[locale]}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

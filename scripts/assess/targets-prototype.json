@@ -1,0 +1,5 @@
+[
+  { "id": "proto-en", "name": "Pilot prototype (UAT build) — English home", "url": "http://127.0.0.1:4322/", "category": "prototype" },
+  { "id": "proto-hi", "name": "Pilot prototype (UAT build) — Hindi home", "url": "http://127.0.0.1:4322/hi/", "category": "prototype" },
+  { "id": "proto-scheme", "name": "Pilot prototype (UAT build) — scheme page", "url": "http://127.0.0.1:4322/offerings/schemes/pm-janman/", "category": "prototype" }
+]

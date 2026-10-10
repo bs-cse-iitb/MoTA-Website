@@ -1,0 +1,48 @@
+---
+import type { Locale } from '../../../data/site';
+import { site } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import directory from '../../../data/generated/directory.json';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const find = (group: string) => directory.find((g) => g.en.startsWith(group))?.people[0];
+const keys = [
+  { id: 'secretary', role: T('Office of the Secretary', 'सचिव का कार्यालय'), p: find('Secretary') },
+  { id: 'web-information-manager', role: T('Web Information Manager', 'वेब सूचना प्रबंधक'), p: find('Web Information Manager') },
+  { id: 'nodal-grievance-officer', role: T('Nodal Grievance Resolution Officer', 'नोडल शिकायत निवारण अधिकारी'), p: find('Nodal Grievance') },
+].filter((k) => k.p);
+const nm = (p: { name: string; nameHi: string }) => (locale === 'hi' && p.nameHi ? p.nameHi : p.name);
+const dg = (p: { designation: string; designationHi: string }) => (locale === 'hi' && p.designationHi ? p.designationHi : p.designation);
+---
+<div class="grid grid--2">
+  {site.offices.map((o) => (
+    <div class="office">
+      <h2 class="card__title">{o.label[locale]}</h2>
+      <p><Icon name="MapPin" />{o.address[locale]}</p>
+      <p><Icon name="Phone" /><a href={`tel:${o.phone.replace(/-/g, '')}`}>{o.phone}</a></p>
+      <p><Icon name="Map" /><SmartLink href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.mapQuery)}`} locale={locale}>{T('View on map', 'मानचित्र पर देखें')}</SmartLink></p>
+    </div>
+  ))}
+</div>
+<h2 class="mt" id="key-contacts">{T('Key contacts', 'प्रमुख संपर्क')}</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label={T('Key contacts', 'प्रमुख संपर्क')}>
+  <table class="table">
+    <caption class="visually-hidden">{T('Key contacts of the Ministry', 'मंत्रालय के प्रमुख संपर्क')}</caption>
+    <thead><tr><th scope="col">{T('Role', 'भूमिका')}</th><th scope="col">{T('Officer', 'अधिकारी')}</th><th scope="col">{T('Phone', 'फ़ोन')}</th><th scope="col">{T('Email', 'ईमेल')}</th></tr></thead>
+    <tbody>
+      {keys.map((k) => (
+        <tr id={k.id}><td class="who">{k.role}</td><td>{nm(k.p!)}<br /><small class="muted">{dg(k.p!)}</small></td><td class="contact" lang="en">{k.p!.phone || '—'}</td><td class="contact" lang="en">{k.p!.email && k.p!.email.includes('[at]') ? k.p!.email : '—'}</td></tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<p class="muted small">{T('Email addresses are written with [at] and [dot] to prevent spam. Replace them with @ and . when writing.', 'स्पैम से बचाव हेतु ईमेल पते [at] और [dot] के साथ लिखे गए हैं। लिखते समय इन्हें @ और . से बदलें।')}</p>
+<div class="grid grid--3 mt">
+  <a class="tile" href={localePath('/connect/directory/', locale)}><span class="tile__icon"><Icon name="Contact" class="icon icon--sm" /></span>{T('Full directory of officers', 'अधिकारियों की पूर्ण निर्देशिका')}</a>
+  <a class="tile" href={localePath('/connect/grievance-redressal/', locale)}><span class="tile__icon"><Icon name="LifeBuoy" class="icon icon--sm" /></span>{T('Lodge a grievance', 'शिकायत दर्ज करें')}</a>
+  <a class="tile" href={localePath('/connect/feedback/', locale)}><span class="tile__icon"><Icon name="Send" class="icon icon--sm" /></span>{T('Website feedback', 'वेबसाइट प्रतिक्रिया')}</a>
+</div>

@@ -1,0 +1,400 @@
+$ npm run build
+
+> mota-website@0.1.0 build
+> astro build && pagefind --site dist --output-subdir pagefind
+
+13:49:01 [vite] Re-optimizing dependencies because lockfile has changed
+13:49:01 [content] Syncing content
+13:49:01 [content] Synced content
+13:49:01 [types] Generated 104ms
+13:49:01 [build] output: "static"
+13:49:01 [build] mode: "static"
+13:49:01 [build] directory: dist/
+13:49:01 [build] Collecting build info...
+13:49:01 [build] ✓ Completed in 114ms.
+13:49:01 [build] Building static entrypoints...
+13:49:02 [WARN] [vite] 
+/images/warli-band.svg referenced in /images/warli-band.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+13:49:03 [vite] ✓ built in 1.14s
+13:49:03 [build] ✓ Completed in 1.16s.
+
+ building client (vite) 
+13:49:03 [vite] transforming...
+13:49:03 [vite] ✓ 33 modules transformed.
+13:49:03 [vite] rendering chunks...
+13:49:03 [vite] computing gzip size...
+13:49:03 [vite] dist/_assets/BaseLayout.astro_astro_type_script_index_0_lang.CMI35QnQ.js         0.06 kB │ gzip: 0.07 kB
+13:49:03 [vite] dist/_assets/Initiatives.astro_astro_type_script_index_0_lang.CFldzU_7.js        0.24 kB │ gzip: 0.21 kB
+13:49:03 [vite] dist/_assets/PartnerCarousel.astro_astro_type_script_index_0_lang.D-rwh8tq.js    0.25 kB │ gzip: 0.18 kB
+13:49:03 [vite] dist/_assets/Ticker.astro_astro_type_script_index_0_lang.B1uiMi8c.js             0.35 kB │ gzip: 0.22 kB
+13:49:03 [vite] dist/_assets/InnerLayout.astro_astro_type_script_index_0_lang.D8uZbg1U.js        0.49 kB │ gzip: 0.32 kB
+13:49:03 [vite] dist/_assets/DirectoryView.astro_astro_type_script_index_0_lang.Dci6oKRy.js      0.50 kB │ gzip: 0.29 kB
+13:49:03 [vite] dist/_assets/KeyOfferings.astro_astro_type_script_index_0_lang.ClUSvpX8.js       0.53 kB │ gzip: 0.36 kB
+13:49:03 [vite] dist/_assets/DocList.astro_astro_type_script_index_0_lang.98uz6d79.js            0.56 kB │ gzip: 0.32 kB
+13:49:03 [vite] dist/_assets/Footer.astro_astro_type_script_index_0_lang.BkLHCNF7.js             0.56 kB │ gzip: 0.38 kB
+13:49:03 [vite] dist/_assets/StatsBand.astro_astro_type_script_index_0_lang.Rz_9MRnY.js          0.66 kB │ gzip: 0.42 kB
+13:49:03 [vite] dist/_assets/SchemesView.astro_astro_type_script_index_0_lang.CEgSJWyT.js        0.74 kB │ gzip: 0.41 kB
+13:49:03 [vite] dist/_assets/prefs.ELdSDzWm.js                                                   1.31 kB │ gzip: 0.62 kB
+13:49:03 [vite] dist/_assets/CitizenEngagement.astro_astro_type_script_index_0_lang.DT_5F6TF.js  1.51 kB │ gzip: 0.81 kB
+13:49:03 [vite] dist/_assets/FeedbackView.astro_astro_type_script_index_0_lang.BzamOx3N.js       1.67 kB │ gzip: 0.94 kB
+13:49:03 [vite] dist/_assets/page.BT_9kWGp.js                                                    2.25 kB │ gzip: 1.01 kB
+13:49:03 [vite] dist/_assets/HeroCarousel.astro_astro_type_script_index_0_lang.DmOrThh1.js       2.60 kB │ gzip: 1.01 kB
+13:49:03 [vite] dist/_assets/SearchView.astro_astro_type_script_index_0_lang.BzXVfb1d.js         3.85 kB │ gzip: 1.99 kB
+13:49:03 [vite] dist/_assets/SiteDialogs.astro_astro_type_script_index_0_lang.Bds7vXOm.js        3.94 kB │ gzip: 1.74 kB
+13:49:03 [vite] dist/_assets/Header.astro_astro_type_script_index_0_lang.9So7NN_g.js             4.93 kB │ gzip: 1.70 kB
+13:49:03 [vite] dist/_assets/TriBot.astro_astro_type_script_index_0_lang.C3zdDG0s.js             9.61 kB │ gzip: 3.93 kB
+13:49:03 [vite] ✓ built in 78ms
+
+ generating static routes 
+13:49:03 ▶ src/pages/404.astro
+13:49:03   └─ /404.html (+10ms) 
+13:49:03 ▶ src/pages/[...slug].astro
+13:49:03   ├─ /ministry/index.html (+6ms) 
+13:49:03   ├─ /ministry/about-us/index.html (+6ms) 
+13:49:03   ├─ /ministry/our-team/index.html (+6ms) 
+13:49:03   ├─ /ministry/our-divisions/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-organisations/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-performance/index.html (+5ms) 
+13:49:03   ├─ /connect/directory/index.html (+5ms) 
+13:49:03   ├─ /offerings/index.html (+4ms) 
+13:49:03   ├─ /offerings/schemes/index.html (+3ms) 
+13:49:03   ├─ /offerings/portals/index.html (+4ms) 
+13:49:03   ├─ /offerings/initiatives/index.html (+3ms) 
+13:49:03   ├─ /offerings/tenders/index.html (+4ms) 
+13:49:03   ├─ /offerings/vacancies/index.html (+3ms) 
+13:49:03   ├─ /offerings/competitions-and-awards/index.html (+3ms) 
+13:49:03   ├─ /documents/index.html (+3ms) 
+13:49:03   ├─ /documents/reports/index.html (+14ms) 
+13:49:03   ├─ /documents/acts-and-policies/index.html (+3ms) 
+13:49:03   ├─ /documents/guidelines/index.html (+5ms) 
+13:49:03   ├─ /documents/orders-and-notices/index.html (+9ms) 
+13:49:03   ├─ /documents/gazette-notifications/index.html (+3ms) 
+13:49:03   ├─ /documents/minutes-of-meetings/index.html (+4ms) 
+13:49:03   ├─ /documents/publications/index.html (+3ms) 
+13:49:03   ├─ /documents/press-releases/index.html (+3ms) 
+13:49:03   ├─ /documents/sanction-orders/index.html (+3ms) 
+13:49:03   ├─ /documents/knowledge-hub/index.html (+4ms) 
+13:49:03   ├─ /media/index.html (+3ms) 
+13:49:03   ├─ /media/photos/index.html (+5ms) 
+13:49:03   ├─ /media/videos/index.html (+2ms) 
+13:49:03   ├─ /media/brochures/index.html (+2ms) 
+13:49:03   ├─ /connect/index.html (+2ms) 
+13:49:03   ├─ /connect/contact-us/index.html (+2ms) 
+13:49:03   ├─ /connect/rti/index.html (+4ms) 
+13:49:03   ├─ /connect/grievance-redressal/index.html (+2ms) 
+13:49:03   ├─ /connect/citizen-engagement/index.html (+2ms) 
+13:49:03   ├─ /connect/parliament-questions/index.html (+4ms) 
+13:49:03   ├─ /connect/feedback/index.html (+2ms) 
+13:49:03   ├─ /policies/index.html (+2ms) 
+13:49:03   ├─ /whats-new/index.html (+5ms) 
+13:49:03   ├─ /archives/index.html (+4ms) 
+13:49:03   ├─ /related-links/index.html (+3ms) 
+13:49:03   ├─ /help/index.html (+2ms) 
+13:49:03   ├─ /screen-reader-access/index.html (+3ms) 
+13:49:03   ├─ /sitemap/index.html (+2ms) 
+13:49:03   ├─ /search/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/pm-janman/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/da-jgua/index.html (+2ms) 
+13:49:03   ├─ /offerings/schemes/emrs/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/post-matric-scholarship/index.html (+2ms) 
+13:49:03   ├─ /offerings/schemes/pre-matric-scholarship/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/top-class-scholarship/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/national-fellowship/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/national-overseas-scholarship/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/pmjvm/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/vcf-st/index.html (+3ms) 
+13:49:03   ├─ /offerings/schemes/nstfdc-equity/index.html (+2ms) 
+13:49:03   ├─ /offerings/schemes/pmaagy/index.html (+2ms) 
+13:49:03   ├─ /offerings/schemes/article-275-1-grants/index.html (+2ms) 
+13:49:03   ├─ /offerings/schemes/pvtg-development/index.html (+2ms) 
+13:49:03   ├─ /offerings/schemes/ngo-grants/index.html (+5ms) 
+13:49:03   ├─ /offerings/schemes/support-to-tri/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-divisions/scholarship/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-divisions/tri-research-media/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-divisions/tribal-health/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-divisions/emrs/index.html (+4ms) 
+13:49:03   ├─ /ministry/our-divisions/livelihood/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-divisions/grants/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-divisions/ngo/index.html (+6ms) 
+13:49:03   ├─ /ministry/our-divisions/forest-rights-act/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-divisions/stc-monitoring/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-divisions/constitutional-legal-matters/index.html (+4ms) 
+13:49:03   ├─ /ministry/our-divisions/parliament-coordination/index.html (+5ms) 
+13:49:03   ├─ /ministry/our-divisions/establishment/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-divisions/vigilance/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-divisions/statistics/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-divisions/finance/index.html (+4ms) 
+13:49:03   ├─ /ministry/our-divisions/official-language/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/adi-karmayogi/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/tribex/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/sickle-cell/index.html (+1ms) 
+13:49:03   ├─ /offerings/initiatives/swasthya-portal/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/performance-dashboard/index.html (+1ms) 
+13:49:03   ├─ /offerings/initiatives/goal/index.html (+3ms) 
+13:49:03   ├─ /offerings/initiatives/geet/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/1000-springs/index.html (+3ms) 
+13:49:03   ├─ /offerings/initiatives/ice-stupa/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/model-village/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/telemedicine/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/pri-awareness/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/atmanirbhar-bharat/index.html (+2ms) 
+13:49:03   ├─ /offerings/initiatives/gap-analysis/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-organisations/ncst/index.html (+3ms) 
+13:49:03   ├─ /ministry/our-organisations/nstfdc/index.html (+2ms) 
+13:49:03   ├─ /ministry/our-performance/state-review-meetings/index.html (+2ms) 
+13:49:03   ├─ /policies/terms-of-use/index.html (+2ms) 
+13:49:03   ├─ /policies/privacy-policy/index.html (+2ms) 
+13:49:03   ├─ /policies/hyperlinking-policy/index.html (+2ms) 
+13:49:03   ├─ /policies/copyright-policy/index.html (+1ms) 
+13:49:03   ├─ /policies/cookie-policy/index.html (+2ms) 
+13:49:03   ├─ /policies/disclaimer/index.html (+2ms) 
+13:49:03   ├─ /policies/accessibility-statement/index.html (+2ms) 
+13:49:03   ├─ /policies/content-archival-policy/index.html (+3ms) 
+13:49:03   ├─ /policies/cmap/index.html (+2ms) 
+13:49:03   ├─ /policies/content-review-policy/index.html (+3ms) 
+13:49:03   ├─ /policies/security-policy/index.html (+2ms) 
+13:49:03   ├─ /policies/contingency-management-plan/index.html (+2ms) 
+13:49:03   ├─ /policies/website-monitoring-policy/index.html (+2ms) 
+13:49:03   ├─ /personas/student/index.html (+2ms) 
+13:49:03   ├─ /personas/citizen/index.html (+3ms) 
+13:49:03   ├─ /personas/researcher/index.html (+2ms) 
+13:49:03   ├─ /personas/ngo/index.html (+3ms) 
+13:49:03   ├─ /personas/state/index.html (+3ms) 
+13:49:03   ├─ /personas/entrepreneur/index.html (+3ms) 
+13:49:03   └─ /personas/media/index.html (+2ms) 
+13:49:03 ▶ src/pages/hi/[...slug].astro
+13:49:03   ├─ /hi/ministry/index.html (+4ms) 
+13:49:03   ├─ /hi/ministry/about-us/index.html (+2ms) 
+13:49:03   ├─ /hi/ministry/our-team/index.html (+4ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/index.html (+2ms) 
+13:49:03   ├─ /hi/ministry/our-organisations/index.html (+2ms) 
+13:49:03   ├─ /hi/ministry/our-performance/index.html (+2ms) 
+13:49:03   ├─ /hi/connect/directory/index.html (+4ms) 
+13:49:03   ├─ /hi/offerings/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/portals/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/initiatives/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/tenders/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/vacancies/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/competitions-and-awards/index.html (+2ms) 
+13:49:03   ├─ /hi/documents/index.html (+2ms) 
+13:49:03   ├─ /hi/documents/reports/index.html (+6ms) 
+13:49:03   ├─ /hi/documents/acts-and-policies/index.html (+2ms) 
+13:49:03   ├─ /hi/documents/guidelines/index.html (+6ms) 
+13:49:03   ├─ /hi/documents/orders-and-notices/index.html (+7ms) 
+13:49:03   ├─ /hi/documents/gazette-notifications/index.html (+4ms) 
+13:49:03   ├─ /hi/documents/minutes-of-meetings/index.html (+2ms) 
+13:49:03   ├─ /hi/documents/publications/index.html (+3ms) 
+13:49:03   ├─ /hi/documents/press-releases/index.html (+2ms) 
+13:49:03   ├─ /hi/documents/sanction-orders/index.html (+2ms) 
+13:49:03   ├─ /hi/documents/knowledge-hub/index.html (+4ms) 
+13:49:03   ├─ /hi/media/index.html (+2ms) 
+13:49:03   ├─ /hi/media/photos/index.html (+3ms) 
+13:49:03   ├─ /hi/media/videos/index.html (+2ms) 
+13:49:03   ├─ /hi/media/brochures/index.html (+3ms) 
+13:49:03   ├─ /hi/connect/index.html (+2ms) 
+13:49:03   ├─ /hi/connect/contact-us/index.html (+3ms) 
+13:49:03   ├─ /hi/connect/rti/index.html (+3ms) 
+13:49:03   ├─ /hi/connect/grievance-redressal/index.html (+2ms) 
+13:49:03   ├─ /hi/connect/citizen-engagement/index.html (+2ms) 
+13:49:03   ├─ /hi/connect/parliament-questions/index.html (+4ms) 
+13:49:03   ├─ /hi/connect/feedback/index.html (+3ms) 
+13:49:03   ├─ /hi/policies/index.html (+2ms) 
+13:49:03   ├─ /hi/whats-new/index.html (+3ms) 
+13:49:03   ├─ /hi/archives/index.html (+3ms) 
+13:49:03   ├─ /hi/related-links/index.html (+2ms) 
+13:49:03   ├─ /hi/help/index.html (+3ms) 
+13:49:03   ├─ /hi/screen-reader-access/index.html (+3ms) 
+13:49:03   ├─ /hi/sitemap/index.html (+2ms) 
+13:49:03   ├─ /hi/search/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/pm-janman/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/schemes/da-jgua/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/emrs/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/post-matric-scholarship/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/schemes/pre-matric-scholarship/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/schemes/top-class-scholarship/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/national-fellowship/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/schemes/national-overseas-scholarship/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/pmjvm/index.html (+4ms) 
+13:49:03   ├─ /hi/offerings/schemes/vcf-st/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/nstfdc-equity/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/pmaagy/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/article-275-1-grants/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/pvtg-development/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/schemes/ngo-grants/index.html (+6ms) 
+13:49:03   ├─ /hi/offerings/schemes/support-to-tri/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/scholarship/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/tri-research-media/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/tribal-health/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/emrs/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/livelihood/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/grants/index.html (+4ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/ngo/index.html (+5ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/forest-rights-act/index.html (+2ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/stc-monitoring/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/constitutional-legal-matters/index.html (+5ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/parliament-coordination/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/establishment/index.html (+2ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/vigilance/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/statistics/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/finance/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-divisions/official-language/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/adi-karmayogi/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/tribex/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/sickle-cell/index.html (+4ms) 
+13:49:03   ├─ /hi/offerings/initiatives/swasthya-portal/index.html (+6ms) 
+13:49:03   ├─ /hi/offerings/initiatives/performance-dashboard/index.html (+5ms) 
+13:49:03   ├─ /hi/offerings/initiatives/goal/index.html (+10ms) 
+13:49:03   ├─ /hi/offerings/initiatives/geet/index.html (+3ms) 
+13:49:03   ├─ /hi/offerings/initiatives/1000-springs/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/ice-stupa/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/model-village/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/telemedicine/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/pri-awareness/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/atmanirbhar-bharat/index.html (+2ms) 
+13:49:03   ├─ /hi/offerings/initiatives/gap-analysis/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-organisations/ncst/index.html (+3ms) 
+13:49:03   ├─ /hi/ministry/our-organisations/nstfdc/index.html (+2ms) 
+13:49:03   ├─ /hi/ministry/our-performance/state-review-meetings/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/terms-of-use/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/privacy-policy/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/hyperlinking-policy/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/copyright-policy/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/cookie-policy/index.html (+1ms) 
+13:49:03   ├─ /hi/policies/disclaimer/index.html (+1ms) 
+13:49:03   ├─ /hi/policies/accessibility-statement/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/content-archival-policy/index.html (+1ms) 
+13:49:03   ├─ /hi/policies/cmap/index.html (+1ms) 
+13:49:03   ├─ /hi/policies/content-review-policy/index.html (+1ms) 
+13:49:03   ├─ /hi/policies/security-policy/index.html (+3ms) 
+13:49:03   ├─ /hi/policies/contingency-management-plan/index.html (+2ms) 
+13:49:03   ├─ /hi/policies/website-monitoring-policy/index.html (+2ms) 
+13:49:03   ├─ /hi/personas/student/index.html (+2ms) 
+13:49:03   ├─ /hi/personas/citizen/index.html (+2ms) 
+13:49:03   ├─ /hi/personas/researcher/index.html (+2ms) 
+13:49:03   ├─ /hi/personas/ngo/index.html (+2ms) 
+13:49:03   ├─ /hi/personas/state/index.html (+3ms) 
+13:49:03   ├─ /hi/personas/entrepreneur/index.html (+2ms) 
+13:49:03   └─ /hi/personas/media/index.html (+2ms) 
+13:49:03 ▶ src/pages/hi/index.astro
+13:49:03   └─ /hi/index.html (+9ms) 
+13:49:03 λ src/pages/images/warli-band.svg.ts
+13:49:03   └─ /images/warli-band.svg (+1ms) 
+13:49:03 ▶ src/pages/index.astro
+13:49:03   └─ /index.html (+9ms) 
+13:49:03 λ src/pages/sitemap.xml.ts
+13:49:03   └─ /sitemap.xml (+1ms) 
+13:49:03 λ src/pages/web.config.ts
+13:49:03   └─ /web.config (+1ms) 
+13:49:03 ✓ Completed in 753ms.
+
+ generating optimized images 
+13:49:03   ▶ /_assets/durgadas-uikey.B2zlFqxm_ZSoAez.webp (reused cache entry) (+1ms) (1/74)
+13:49:03   ▶ /_assets/jual-oram.DGVs8X8Q_ZAsF7P.webp (reused cache entry) (+1ms) (2/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_2bEcSE.webp (reused cache entry) (+2ms) (3/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_miMIU.webp (reused cache entry) (+2ms) (4/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_Z1cQkYl.webp (reused cache entry) (+2ms) (5/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_Z2aGieV.webp (reused cache entry) (+2ms) (6/74)
+13:49:03   ▶ /_assets/world-sickle-cell-day.C-hyY041_Z5APp5.webp (reused cache entry) (+2ms) (7/74)
+13:49:03   ▶ /_assets/sickle-cell-2047.GTPXrP3j_Z1nhajt.webp (reused cache entry) (+2ms) (8/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_ZAwofx.webp (reused cache entry) (+1ms) (9/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_2sMuOq.webp (reused cache entry) (+1ms) (10/74)
+13:49:03   ▶ /_assets/pm-janman-manthan-shivir-2023.BgcHtPJD_1IcXP1.webp (reused cache entry) (+1ms) (11/74)
+13:49:03   ▶ /_assets/republic-day-2026.DDuR3893_13cMxQ.webp (reused cache entry) (+1ms) (12/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_24Nmbw.webp (reused cache entry) (+2ms) (13/74)
+13:49:03   ▶ /_assets/world-sickle-cell-day.C-hyY041_Z2jbqX0.webp (reused cache entry) (+2ms) (14/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_2s8wg7.webp (reused cache entry) (+2ms) (15/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_1k1jX.webp (reused cache entry) (+1ms) (16/74)
+13:49:03   ▶ /_assets/sickle-cell-2047.GTPXrP3j_Z1pMA4G.webp (reused cache entry) (+2ms) (17/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_ouoR8.webp (reused cache entry) (+1ms) (18/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_uQb1.webp (reused cache entry) (+1ms) (19/74)
+13:49:03   ▶ /_assets/pm-janman-manthan-shivir-2023.BgcHtPJD_287ycu.webp (reused cache entry) (+2ms) (20/74)
+13:49:03   ▶ /_assets/world-sickle-cell-day.C-hyY041_2k4VgG.webp (reused cache entry) (+1ms) (21/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_2rSgY6.webp (reused cache entry) (+2ms) (22/74)
+13:49:03   ▶ /_assets/sickle-cell-2047.GTPXrP3j_1NclDU.webp (reused cache entry) (+1ms) (23/74)
+13:49:03   ▶ /_assets/republic-day-2026.DDuR3893_ZdKhUK.webp (reused cache entry) (+2ms) (24/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_Ww8c2.webp (reused cache entry) (+2ms) (25/74)
+13:49:03   ▶ /_assets/pm-janman-manthan-shivir-2023.BgcHtPJD_Z8XhPO.webp (reused cache entry) (+2ms) (26/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_2cU9dQ.webp (reused cache entry) (+3ms) (27/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_109YC1.webp (reused cache entry) (+3ms) (28/74)
+13:49:03   ▶ /_assets/world-sickle-cell-day.C-hyY041_19G7x5.webp (reused cache entry) (+2ms) (29/74)
+13:49:03   ▶ /_assets/republic-day-2026.DDuR3893_Z13nqyn.webp (reused cache entry) (+1ms) (30/74)
+13:49:03   ▶ /_assets/sickle-cell-2047.GTPXrP3j_1yDdez.webp (reused cache entry) (+2ms) (31/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_1V1pon.webp (reused cache entry) (+2ms) (32/74)
+13:49:03   ▶ /_assets/pm-janman-manthan-shivir-2023.BgcHtPJD_ZK2RAs.webp (reused cache entry) (+2ms) (33/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_dgGeT.webp (reused cache entry) (+2ms) (34/74)
+13:49:03   ▶ /_assets/republic-day-2026.DDuR3893_ZiEGsO.webp (reused cache entry) (+1ms) (35/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_ZHBBRE.webp (reused cache entry) (+2ms) (36/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_ZhH8EA.webp (reused cache entry) (+2ms) (37/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_1zTmds.webp (reused cache entry) (+1ms) (38/74)
+13:49:03   ▶ /_assets/tribal-research-institute.00oYIeMB_Z1SayVY.webp (reused cache entry) (+2ms) (39/74)
+13:49:03   ▶ /_assets/tribex.DIf7Bvtw_Y0Br5.webp (reused cache entry) (+1ms) (40/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_OucMd.webp (reused cache entry) (+2ms) (41/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_1i6bwj.webp (reused cache entry) (+2ms) (42/74)
+13:49:03   ▶ /_assets/bharat-innovates-2026.BilUqE1-_IRpF2.webp (reused cache entry) (+2ms) (43/74)
+13:49:03   ▶ /_assets/12-saal.BkU6g8pS_2mLnN.webp (reused cache entry) (+2ms) (44/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_1xED89.webp (reused cache entry) (+2ms) (45/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_ZRrCw5.webp (reused cache entry) (+1ms) (46/74)
+13:49:03   ▶ /_assets/janjatiya-gaurav-divas.CwTL9uNX_2wUDet.webp (reused cache entry) (+2ms) (47/74)
+13:49:03   ▶ /_assets/tribex.DIf7Bvtw_Z1NDgnE.webp (reused cache entry) (+2ms) (48/74)
+13:49:03   ▶ /_assets/tribal-research-institute.00oYIeMB_Z16nP6U.webp (reused cache entry) (+2ms) (49/74)
+13:49:03   ▶ /_assets/bharat-innovates-2026.BilUqE1-_KF4rx.webp (reused cache entry) (+1ms) (50/74)
+13:49:03   ▶ /_assets/aadi-mahotsav-2025.D0ckw-fA_1SKLhc.webp (reused cache entry) (+1ms) (51/74)
+13:49:03   ▶ /_assets/12-saal.BkU6g8pS_2vA7nO.webp (reused cache entry) (+1ms) (52/74)
+13:49:03   ▶ /_assets/tribal-business-conclave-2025.BA0Kiw0X_Z1oju6N.webp (reused cache entry) (+1ms) (53/74)
+13:49:03   ▶ /_assets/tribal-research-institute.00oYIeMB_2jQMys.webp (reused cache entry) (+1ms) (54/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_Z25sNDH.webp (reused cache entry) (+2ms) (55/74)
+13:49:03   ▶ /_assets/tribex.DIf7Bvtw_Z2bR6Om.webp (reused cache entry) (+1ms) (56/74)
+13:49:03   ▶ /_assets/bharat-innovates-2026.BilUqE1-_1gfMR4.webp (reused cache entry) (+1ms) (57/74)
+13:49:03   ▶ /_assets/jgu-2026-technology.czkzU1Os_nFU3R.webp (reused cache entry) (+2ms) (58/74)
+13:49:03   ▶ /_assets/tribal-research-institute.00oYIeMB_1HhtcB.webp (reused cache entry) (+1ms) (59/74)
+13:49:03   ▶ /_assets/12-saal.BkU6g8pS_Z2lwjud.webp (reused cache entry) (+1ms) (60/74)
+13:49:03   ▶ /_assets/jgu-2026-jan-bhagidaari.BCKileRy_zSsJN.webp (reused cache entry) (+2ms) (61/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_Z2mDUBg.webp (reused cache entry) (+2ms) (62/74)
+13:49:03   ▶ /_assets/jgu-2026-technology.czkzU1Os_ZJXAKe.webp (reused cache entry) (+3ms) (63/74)
+13:49:03   ▶ /_assets/jgu-2026-jan-bhagidaari.BCKileRy_Z19cEPG.webp (reused cache entry) (+2ms) (64/74)
+13:49:03   ▶ /_assets/jgu-2026-classroom.ClfnBDvR_2uauc0.webp (reused cache entry) (+4ms) (65/74)
+13:49:03   ▶ /_assets/jgu-2026-birsa.CT6GVPB0_Z1Vy2Fa.webp (reused cache entry) (+4ms) (66/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_Z1BHBHz.webp (reused cache entry) (+3ms) (67/74)
+13:49:03   ▶ /_assets/jgu-2026-technology.czkzU1Os_ZONkpU.webp (reused cache entry) (+1ms) (68/74)
+13:49:03   ▶ /_assets/jgu-2026-classroom.ClfnBDvR_Z1qG6UR.webp (reused cache entry) (+0ms) (69/74)
+13:49:03   ▶ /_assets/jgu-2026-jan-bhagidaari.BCKileRy_1GkrOf.webp (reused cache entry) (+1ms) (70/74)
+13:49:03   ▶ /_assets/jgu-2026-birsa.CT6GVPB0_1mLySX.webp (reused cache entry) (+1ms) (71/74)
+13:49:03   ▶ /_assets/jgu-2026-themes.to5av03X_1kG1qC.webp (reused cache entry) (+1ms) (72/74)
+13:49:03   ▶ /_assets/jgu-2026-classroom.ClfnBDvR_ZOjSVM.webp (reused cache entry) (+1ms) (73/74)
+13:49:03   ▶ /_assets/jgu-2026-birsa.CT6GVPB0_1BTAp1.webp (reused cache entry) (+1ms) (74/74)
+13:49:03 ✓ Completed in 18ms.
+
+13:49:03 [build] 229 page(s) built in 2.24s
+13:49:03 [build] Complete!
+
+Running Pagefind v1.5.2 (Extended)
+Running from: "."
+Source:       "dist"
+Output:       "dist/pagefind"
+
+[Walking source directory]
+Found 231 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+↳ Ignoring pages without this tag.
+2 pages found without an <html> element. 
+Pages without an outer <html> element will not be processed by default. 
+If adding this element is not possible, use the root selector config to target a different root element.
+  * "/googlea1be9bf13ad77981.html" has no <html> element
+  * "/googlea7be761dac026655.html" has no <html> element
+
+[Reading languages]
+Discovered 2 languages: en, hi
+
+[Building search indexes]
+Total: 
+  Indexed 2 languages
+  Indexed 229 pages
+  Indexed 9218 words
+  Indexed 4 filters
+  Indexed 0 sorts
+
+Finished in 0.434 seconds
+exit=0

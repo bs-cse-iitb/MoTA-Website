@@ -1,0 +1,15 @@
+---
+import type { Locale } from '../../../data/site';
+import { archives } from '../../../data/updates';
+import { updateHi, categoryHi } from '../../../data/hi-content';
+import { legacyLinks } from '../../../lib/legacy';
+import { localePath, tx } from '../../../data/i18n';
+import DocList from '../DocList.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const recent = archives.map((n) => ({ title: (locale === 'hi' && updateHi[n.url]) || (n.title as string), url: n.url, kind: 'document' as const, format: n.format, size: n.size, group: locale === 'hi' ? categoryHi[n.category] : n.category, date: n.date }));
+const older = [...legacyLinks('livelihood', { only: /archives/i }), ...legacyLinks('scholarship', { only: /^results$/i })];
+---
+<p>{T('Content is moved here after its closing or event date, as set out in the', 'सामग्री उसकी अंतिम तिथि या आयोजन तिथि के बाद यहां स्थानांतरित की जाती है, जैसा कि')} <a href={localePath('/policies/content-archival-policy/', locale)}>{T('Content Archival Policy', 'सामग्री संग्रह नीति')}</a>{T('.', ' में निर्धारित है।')}</p>
+<DocList groups={[{ heading: T('Recently archived', 'हाल ही में पुरालेख में रखा गया'), links: recent }, { heading: T('Older documents', 'पुराने दस्तावेज़'), links: older }]} locale={locale} showGroupOnItem />

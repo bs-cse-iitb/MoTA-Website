@@ -1,0 +1,19 @@
+---
+import type { Locale } from '../../../data/site';
+import { policies } from '../../../data/policies';
+import { policiesHi } from '../../../data/policies-hi';
+interface Props { slug: string; locale: Locale }
+const { slug, locale } = Astro.props;
+const en = policies.find((x) => x.slug === slug)!;
+const p = locale === 'hi' && policiesHi[slug] ? { ...en, ...policiesHi[slug] } : en;
+---
+<div class="prose">
+  {p.intro && <p class="ministry__lead">{p.intro}</p>}
+  {p.blocks.map((b) => (
+    <>
+      {b.heading && <h2>{b.heading}</h2>}
+      {b.paras?.map((t) => <p>{t}</p>)}
+      {b.list && <ul class="feature-list">{b.list.map((t) => <li>{t}</li>)}</ul>}
+    </>
+  ))}
+</div>

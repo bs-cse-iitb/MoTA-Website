@@ -1,0 +1,44 @@
+---
+// Home page — sections in the order of DBIM 3.0 Annexure A.4.1.2.
+import type { Locale } from '../../data/site';
+import { site } from '../../data/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroCarousel from './HeroCarousel.astro';
+import Ticker from './Ticker.astro';
+import QuickActions from './QuickActions.astro';
+import PMQuote from './PMQuote.astro';
+import MinistrySection from './MinistrySection.astro';
+import StatsBand from './StatsBand.astro';
+import KeyOfferings from './KeyOfferings.astro';
+import WhatsNewDocs from './WhatsNewDocs.astro';
+import Personas from './Personas.astro';
+import DivisionsGrid from './DivisionsGrid.astro';
+import Initiatives from './Initiatives.astro';
+import ImportantLinks from './ImportantLinks.astro';
+import CitizenEngagement from './CitizenEngagement.astro';
+import CentralPosts from './CentralPosts.astro';
+import MediaGallery from './MediaGallery.astro';
+import PartnerCarousel from './PartnerCarousel.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<BaseLayout title={site.name[locale]} locale={locale} pageType={locale === 'hi' ? 'मुखपृष्ठ' : 'Home'} bodyClass="is-home">
+  <h1 class="visually-hidden">{site.name[locale]}, {site.government[locale]}</h1>
+  <HeroCarousel locale={locale} />
+  <Ticker locale={locale} />
+  <QuickActions locale={locale} />
+  <PMQuote locale={locale} />
+  <MinistrySection locale={locale} />
+  <StatsBand locale={locale} />
+  <KeyOfferings locale={locale} />
+  <WhatsNewDocs locale={locale} />
+  <Personas locale={locale} />
+  <DivisionsGrid locale={locale} />
+  <Initiatives locale={locale} />
+  <ImportantLinks locale={locale} />
+  <CitizenEngagement locale={locale} />
+  <CentralPosts locale={locale} />
+  <MediaGallery locale={locale} />
+  <PartnerCarousel locale={locale} slot="after-main" />
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+// Schemes and Services L2 (DBIM A.5.2.1): two-tile layout with category filter.
+import type { Locale } from '../../../data/site';
+import { t, localePath, tx } from '../../../data/i18n';
+import { schemes, categoryLabels, type SchemeCategory } from '../../../data/schemes';
+import { L } from '../../../data/hi-content';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const cats = Object.keys(categoryLabels) as SchemeCategory[];
+---
+<div class="chips scheme-filter" role="group" aria-label={tx(locale, 'Filter by category', 'श्रेणी से फ़िल्टर करें')} data-scheme-filter data-label-shown={tx(locale, 'schemes shown', 'योजनाएं दिखाई जा रही हैं')}>
+  <button type="button" class="chip" aria-pressed="true" data-cat="all">{tx(locale, 'All', 'सभी')} ({schemes.length})</button>
+  {cats.map((c) => <button type="button" class="chip" aria-pressed="false" data-cat={c}>{categoryLabels[c][locale]} ({schemes.filter((s) => s.category === c).length})</button>)}
+</div>
+<p class="visually-hidden" aria-live="polite" data-scheme-status></p>
+<ul class="grid grid--2 scheme-list" role="list">
+  {schemes.map((s) => (
+    <li class="card card--link scheme-card" data-cat={s.category}>
+      <div class="offer__top">
+        <span class="card__icon"><Icon name={s.icon} /></span>
+        <span class="badge">{L(s.type, locale)}</span>
+      </div>
+      <h2 class="card__title"><a href={localePath(`/offerings/schemes/${s.slug}/`, locale)}>{s.title[locale]}</a></h2>
+      <p class="card__text">{s.summary[locale]}</p>
+      <div class="card__meta"><span class="badge badge--file">{categoryLabels[s.category][locale]}</span></div>
+      <span class="card__more" aria-hidden="true">{t('readMore', locale)}<Icon name="ArrowRight" /></span>
+    </li>
+  ))}
+</ul>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-scheme-filter]');
+  const status = document.querySelector<HTMLElement>('[data-scheme-status]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.scheme-card'));
+  const apply = (cat: string) => {
+    let n = 0;
+    cards.forEach((c) => { const show = cat === 'all' || c.dataset.cat === cat; c.hidden = !show; if (show) n++; });
+    root?.querySelectorAll<HTMLButtonElement>('[data-cat]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.cat === cat)));
+    if (status) status.textContent = `${n} ${root?.dataset.labelShown ?? ''}`;
+  };
+  root?.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-cat]');
+    if (!b) return;
+    apply(b.dataset.cat!);
+    const url = new URL(location.href);
+    if (b.dataset.cat === 'all') url.searchParams.delete('category'); else url.searchParams.set('category', b.dataset.cat!);
+    history.replaceState(null, '', url);
+  });
+  const initial = new URLSearchParams(location.search).get('category');
+  if (initial) apply(initial);
+</script>

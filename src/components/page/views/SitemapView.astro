@@ -1,0 +1,36 @@
+---
+// Sitemap with at least two levels (DBIM 5.6), generated from the page registry.
+import type { Locale } from '../../../data/site';
+import { mainNav, policyNav, utilityNav } from '../../../data/nav';
+import { allPages } from '../../../lib/routes';
+import { localePath, t } from '../../../data/i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const pages = allPages();
+const childrenOf = (href: string) => pages.filter((p) => p.parent === href);
+---
+<ul class="sitemap" role="list">
+  <li><h2><a href={localePath('/', locale)}>{t('home', locale)}</a></h2></li>
+  {[...mainNav, policyNav].map((s) => (
+    <li>
+      <h2><a href={localePath(s.href, locale)}>{s.label[locale]}</a></h2>
+      <ul role="list">
+        {s.children!.map((c) => (
+          <li>
+            <a href={localePath(c.href, locale)}>{c.label[locale]}</a>
+            {s.href !== '/policies/' && childrenOf(c.href).length > 0 && (
+              <ul role="list">{childrenOf(c.href).map((p) => <li><a href={localePath(p.path, locale)}>{p.title[locale]}</a></li>)}</ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </li>
+  ))}
+  <li>
+    <h2>{locale === 'hi' ? 'अन्य' : 'More'}</h2>
+    <ul role="list">
+      {utilityNav.map((u) => <li><a href={localePath(u.href, locale)}>{u.label[locale]}</a></li>)}
+      {pages.filter((p) => p.kind === 'persona').map((p) => <li><a href={localePath(p.path, locale)}>{p.title[locale]}</a></li>)}
+    </ul>
+  </li>
+</ul>

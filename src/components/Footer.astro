@@ -1,0 +1,107 @@
+---
+// DBIM 5.6 / A.4.1.2 (xv) footer: archives, website policies, sitemap, related
+// links, help, feedback, social media, last updated on, and lineage. Background
+// is the key colour of the selected colour group (DBIM checklist F.1 #4).
+import type { Locale } from '../data/site';
+import { site } from '../data/site';
+import { mainNav, policyNav } from '../data/nav';
+import { t, localePath, formatDate } from '../data/i18n';
+import Icon from './Icon.astro';
+import BrandIcon from './BrandIcon.astro';
+import SmartLink from './SmartLink.astro';
+import WarliBand from './WarliBand.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const lp = (p: string) => localePath(p, locale);
+const utility = [
+  { label: t('websitePolicies', locale), href: '/policies/' },
+  { label: t('sitemap', locale), href: '/sitemap/' },
+  { label: t('relatedLinks', locale), href: '/related-links/' },
+  { label: t('help', locale), href: '/help/' },
+  { label: t('feedback', locale), href: '/connect/feedback/' },
+  { label: t('contactUs', locale), href: '/connect/contact-us/' },
+  { label: t('archives', locale), href: '/archives/' },
+  { label: t('screenReader', locale), href: '/screen-reader-access/' },
+  { label: locale === 'hi' ? 'वेब सूचना प्रबंधक' : 'Web Information Manager', href: '/connect/contact-us/#web-information-manager' },
+];
+// The STQC badge is shown only while the certificate in site.ts is valid: left out of
+// the build after expiry, and hidden in the browser by @kit/js/expiry if the site is
+// not rebuilt in time (a static page cannot remove itself otherwise).
+const stqcValid = new Date(`${site.stqc.validTill}T23:59:59+05:30`) >= new Date();
+---
+<footer class="site-footer">
+  <WarliBand class="site-footer__band" height={44} />
+  <div class="site-footer__main">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href={lp('/')}>
+          <img class="brand__emblem" src="/images/emblem/emblem-white.png" width="44" height="70" alt={locale === 'hi' ? 'भारत का राजचिह्न' : 'State Emblem of India'} loading="lazy" />
+          <span class="brand__text">
+            <span class="brand__gov">{site.government[locale]}</span>
+            <span class="brand__name">{site.name[locale]}</span>
+          </span>
+        </a>
+        <address class="site-footer__address">
+          {site.offices[0].address[locale]}<br />
+          <a href={`tel:${site.offices[0].phone.replace(/-/g, '')}`}>{site.offices[0].phone}</a>
+        </address>
+        <p class="site-footer__follow">{t('followUs', locale)}</p>
+        <ul class="social" role="list">
+          {site.social.map((s) => (
+            <li>
+              <SmartLink href={s.url} locale={locale} class="social__link" aria-label={`${site.name[locale]} — ${s.label}`}>
+                <BrandIcon id={s.id as 'x'} class="icon icon--sm" />
+              </SmartLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {mainNav.map((sec) => (
+        <nav class="site-footer__col" aria-label={sec.label[locale]}>
+          <p class="site-footer__heading"><a href={lp(sec.href)}>{sec.label[locale]}</a></p>
+          <ul role="list">
+            {sec.children?.map((c) => <li><a href={lp(c.href)}>{c.label[locale]}</a></li>)}
+          </ul>
+        </nav>
+      ))}
+    </div>
+  </div>
+
+  <div class="site-footer__utility">
+    <div class="container">
+      <ul class="site-footer__links" role="list">
+        {utility.map((u) => <li><a href={lp(u.href)}>{u.label}</a></li>)}
+        <li><SmartLink href={site.faq.href} locale={locale}>{`${locale === 'hi' ? 'सामान्य प्रश्न' : 'FAQ'} `}<span lang="en">{`(PDF, ${site.faq.size})`}</span></SmartLink></li>
+        <li><button type="button" class="linklike" data-open-cookies>{locale === 'hi' ? 'कुकी सेटिंग' : 'Cookie settings'}</button></li>
+      </ul>
+      <ul class="site-footer__policies" role="list" aria-label={t('websitePolicies', locale)}>
+        {policyNav.children!.slice(0, 7).map((p) => <li><a href={lp(p.href)}>{p.label[locale]}</a></li>)}
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container site-footer__bottom-inner">
+      <div>
+        <p class="site-footer__lineage">{site.lineage[locale]}</p>
+        <p class="site-footer__meta">{site.managedBy[locale]}</p>
+      </div>
+      <div class="site-footer__stamp">
+        <p class="site-footer__visitors" data-visitor-count data-endpoint={site.visitorCounter || undefined} hidden><Icon name="Users" class="icon icon--sm" /> {locale === 'hi' ? 'आगंतुक संख्या' : 'Visitor count'}: <span data-visitor-value></span></p>
+        <p><Icon name="Clock" class="icon icon--sm" /> {t('lastUpdated', locale)}: <time datetime={site.lastUpdated.toISOString().slice(0, 10)}>{formatDate(site.lastUpdated, locale)}</time></p>
+        {stqcValid && (
+          <p class="site-footer__stqc" data-valid-till={site.stqc.validTill}>
+            <SmartLink href={site.stqc.href} locale={locale}><Icon name="BadgeCheck" class="icon icon--sm" />{`${locale === 'hi' ? 'एसटीक्यूसी प्रमाणपत्र' : 'STQC Certificate'} `}<span lang="en">{`(PDF, ${site.stqc.size})`}</span></SmartLink>
+          </p>
+        )}
+        {/* No "GIGW / DBIM / WCAG" badges: conformance may be claimed only after a formal
+            STQC assessment and a completed manual accessibility audit (docs/GIGW_DBIM_Standardisation/2_Assess/Gap_Matrix_Main_Website.md). */}
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  import '@kit/js/visitors';
+  import '@kit/js/expiry';
+</script>

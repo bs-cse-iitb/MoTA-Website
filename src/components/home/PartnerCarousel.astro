@@ -1,0 +1,39 @@
+---
+// Footer carousel (DBIM A.4.1.2 xiv): logos of related portals and associations.
+// A slow marquee that pauses on hover/focus and via the pause button.
+import type { Locale } from '../../data/site';
+import { t } from '../../data/i18n';
+import { governmentPortals } from '../../data/portals';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<section class="partners" aria-labelledby="partners-title" data-partners>
+  <div class="container partners__head">
+    <h2 id="partners-title" class="partners__title">{t('partners', locale)}</h2>
+    <button type="button" class="icon-btn partners__toggle" aria-pressed="false" data-partners-toggle aria-label={t('pauseSlides', locale)}>
+      <Icon name="Pause" class="icon icon--sm icon-pause" /><Icon name="Play" class="icon icon--sm icon-play" />
+    </button>
+  </div>
+  <div class="partners__viewport">
+    <ul class="partners__track" role="list">
+      {governmentPortals.map((p) => (
+        <li><SmartLink class="partner" href={p.url} locale={locale}><img src={p.logo} alt={p.name} loading="lazy" height="56" width="160" /></SmartLink></li>
+      ))}
+    </ul>
+    <ul class="partners__track" role="list" aria-hidden="true">
+      {governmentPortals.map((p) => <li><span class="partner"><img src={p.logo} alt="" loading="lazy" height="56" width="160" /></span></li>)}
+    </ul>
+  </div>
+</section>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-partners]');
+  const btn = root?.querySelector<HTMLButtonElement>('[data-partners-toggle]');
+  btn?.addEventListener('click', () => {
+    const paused = !root!.classList.contains('is-paused');
+    root!.classList.toggle('is-paused', paused);
+    btn.setAttribute('aria-pressed', String(paused));
+  });
+</script>

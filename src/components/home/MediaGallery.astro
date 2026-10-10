@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { albums } from '../../data/media';
+import { albumHi } from '../../data/hi-content';
+import Icon from '../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const list = albums.slice(0, 4);
+---
+<section class="section media-home" aria-labelledby="media-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{locale === 'hi' ? 'मीडिया' : 'Media'}</p>
+        <h2 id="media-title">{t('mediaGallery', locale)}</h2>
+      </div>
+      <a class="link-arrow" href={localePath('/media/photos/', locale)}>{t('viewAll', locale)}<Icon name="ArrowRight" /></a>
+    </div>
+    <ul class="media-mosaic" role="list">
+      {list.map((a, i) => (
+        <li class={`media-tile ${i === 0 ? 'media-tile--lead' : ''}`}>
+          <a href={localePath(`/media/photos/#${a.id}`, locale)}>
+            <Image src={a.image} alt={a.alt} widths={i === 0 ? [720, 1080] : [480, 720]} sizes={i === 0 ? '(min-width: 1024px) 60vw, 100vw' : '(min-width: 1024px) 30vw, 100vw'} format="webp" quality={76} loading="lazy" />
+            <span class="media-tile__cap"><span class="media-tile__date">{(locale === 'hi' && albumHi[a.id]?.date) || a.date}</span><span class="media-tile__title">{(locale === 'hi' && albumHi[a.id]?.title) || a.title}</span></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

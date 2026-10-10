@@ -1,0 +1,25 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import BrandIcon from '../../BrandIcon.astro';
+import SmartLink from '../../SmartLink.astro';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<div class="callout callout--cta">
+  <div class="video-cta">
+    <span class="social-card__logo"><BrandIcon id="youtube" /></span>
+    <div>
+      <h2>{T('Ministry of Tribal Affairs on YouTube', 'यूट्यूब पर जनजातीय कार्य मंत्रालय')}</h2>
+      <p>{T('Programmes, launches, Aadi Mahotsav, Janjatiya Gaurav Divas and awareness campaigns, with captions where available.', 'कार्यक्रम, शुभारंभ, आदि महोत्सव, जनजातीय गौरव दिवस और जागरूकता अभियान, जहां उपलब्ध हो वहां कैप्शन सहित।')}</p>
+    </div>
+  </div>
+  <SmartLink class="btn btn--light" href="https://www.youtube.com/c/MinistryofTribalAffairs/videos" locale={locale}>{T('Watch videos', 'वीडियो देखें')}<Icon name="ArrowUpRight" /></SmartLink>
+</div>
+<div class="prose mt">
+  <h2>{T('Why videos open on YouTube', 'वीडियो यूट्यूब पर क्यों खुलते हैं')}</h2>
+  <p>{T('Embedded video players set third-party cookies. To respect your privacy choices, videos open on the Ministry’s YouTube channel instead of playing on this page. The upload date of each video is shown on YouTube. Not every video has captions yet.', 'एम्बेड किए गए वीडियो प्लेयर तृतीय पक्ष कुकीज़ सेट करते हैं। आपकी गोपनीयता संबंधी पसंद का सम्मान करते हुए वीडियो इस पृष्ठ पर चलने के बजाय मंत्रालय के यूट्यूब चैनल पर खुलते हैं। प्रत्येक वीडियो की अपलोड तिथि यूट्यूब पर दिखाई देती है। अभी सभी वीडियो में कैप्शन उपलब्ध नहीं हैं।')}</p>
+</div>

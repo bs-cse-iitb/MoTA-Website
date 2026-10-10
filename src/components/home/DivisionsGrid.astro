@@ -1,0 +1,41 @@
+---
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { divisions } from '../../data/divisions';
+import Icon from '../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+// Tiles the live home page shows next to the divisions.
+const extra = [
+  { label: { en: 'NCST', hi: 'राष्ट्रीय अनुसूचित जनजाति आयोग' }, href: '/ministry/our-organisations/ncst/', icon: 'Scale' },
+  { label: { en: 'Policy & Grievances', hi: 'नीति एवं शिकायतें' }, href: '/connect/grievance-redressal/', icon: 'LifeBuoy' },
+];
+---
+<section class="section section--muted" aria-labelledby="divisions-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{locale === 'hi' ? 'मंत्रालय' : 'Ministry'}</p>
+        <h2 id="divisions-title">{t('divisions', locale)}</h2>
+      </div>
+      <a class="link-arrow" href={localePath('/ministry/our-divisions/', locale)}>{t('viewAll', locale)}<Icon name="ArrowRight" /></a>
+    </div>
+    <ul class="tiles" role="list">
+      {divisions.map((d) => (
+        <li>
+          <a class="tile" href={localePath(`/ministry/our-divisions/${d.slug}/`, locale)}>
+            <span class="tile__icon"><Icon name={d.icon} class="icon icon--sm" /></span>{d.title[locale]}
+          </a>
+        </li>
+      ))}
+      {extra.map((x) => (
+        <li>
+          <a class="tile" href={localePath(x.href, locale)}>
+            <span class="tile__icon"><Icon name={x.icon} class="icon icon--sm" /></span>{x.label[locale]}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

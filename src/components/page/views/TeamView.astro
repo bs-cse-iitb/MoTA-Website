@@ -1,0 +1,75 @@
+---
+// Our Team (DBIM A.5.1.2): interactive organogram with correct names and
+// portfolios, arranged by seniority. Built from the officers' directory; the
+// official organisational chart gives the exact reporting lines.
+import { Image } from 'astro:assets';
+import type { Locale } from '../../../data/site';
+import { ministers } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import directory from '../../../data/generated/directory.json';
+import DocItem from '../../DocItem.astro';
+import Icon from '../../Icon.astro';
+import jualOram from '../../../assets/people/jual-oram.png';
+import durgadasUikey from '../../../assets/people/durgadas-uikey.png';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const photos: Record<string, ImageMetadata> = { 'jual-oram': jualOram, 'durgadas-uikey': durgadasUikey };
+const staff = /stenographer|PPS|PA\b|PS\b|DEO|consultant|PA to/i;
+const levels = [
+  { match: 'Secretary', en: 'Secretary', hi: 'सचिव' },
+  { match: 'Additional Secretary', en: 'Additional Secretary', hi: 'अपर सचिव' },
+  { match: 'Joint Secretaries', en: 'Joint Secretaries, Advisers and DDG', hi: 'संयुक्त सचिव, सलाहकार और उप महानिदेशक' },
+  { match: 'Directors', en: 'Directors', hi: 'निदेशक' },
+  { match: 'Deputy Secretaries', en: 'Deputy Secretaries and Joint Directors', hi: 'उप सचिव और संयुक्त निदेशक' },
+  { match: 'Under Secretaries', en: 'Under Secretaries and Deputy Directors', hi: 'अवर सचिव और उप निदेशक' },
+].map((l) => ({ ...l, people: (directory.find((g) => g.en.startsWith(l.match))?.people ?? []).filter((p) => p.name && !staff.test(p.designation)) }));
+const nameOf = (p: { name: string; nameHi: string }) => (locale === 'hi' && p.nameHi ? p.nameHi : p.name);
+const desigOf = (p: { designation: string; designationHi: string }) => (locale === 'hi' && p.designationHi ? p.designationHi : p.designation);
+const initials = (n: string) => n.replace(/^(Sh|Smt|Ms|Mr|Mrs|Dr|Shri)\.?\s+/i, '').split(/\s+/).map((w) => w[0]).slice(0, 2).join('');
+---
+<h2>{T('Ministers', 'मंत्री')}</h2>
+<ul class="people people--ministers" role="list">
+  {ministers.map((m) => (
+    <li class="person">
+      <Image class="person__photo" src={photos[m.photo]} alt={m.name[locale]} width={134} height={134} format="webp" quality={92} />
+      <div><p class="person__name">{m.name[locale]}</p><p class="person__role">{m.role[locale]}</p></div>
+    </li>
+  ))}
+</ul>
+
+<h2 class="mt" id="organogram">{T('Organogram', 'संगठन चार्ट')}</h2>
+<p class="muted">{T('Select a level to show or hide the officers in it. Work allocation is shown for each officer. Exact reporting lines are in the official organisational chart below.', 'किसी स्तर के अधिकारियों को दिखाने या छिपाने हेतु उस स्तर का चयन करें। प्रत्येक अधिकारी का कार्य आवंटन दर्शाया गया है। सटीक रिपोर्टिंग व्यवस्था नीचे दिए गए आधिकारिक संगठनात्मक चार्ट में है।')}</p>
+<ol class="orgchart" role="list">
+  <li class="orgchart__level orgchart__level--top">
+    <div class="orgchart__node orgchart__node--lead"><Icon name="Landmark" class="icon" /><span>{T('Minister of Tribal Affairs', 'जनजातीय कार्य मंत्री')}</span><strong>{ministers[0].name[locale]}</strong></div>
+    <div class="orgchart__node orgchart__node--lead"><Icon name="Landmark" class="icon" /><span>{T('Minister of State', 'राज्य मंत्री')}</span><strong>{ministers[1].name[locale]}</strong></div>
+  </li>
+  {levels.filter((l) => l.people.length).map((l, i) => (
+    <li class="orgchart__level">
+      <details open={i < 3}>
+        <summary class="orgchart__summary"><span>{T(l.en, l.hi)}</span><span class="tabs__count">{l.people.length}</span></summary>
+        <ul class="orgchart__nodes" role="list">
+          {l.people.map((p) => (
+            <li class="orgchart__node">
+              <span class="person__initials" aria-hidden="true">{initials(p.name)}</span>
+              <div>
+                <p class="person__name">{nameOf(p)}</p>
+                <p class="person__role">{desigOf(p)}</p>
+                {p.work && p.work !== p.designation && <p class="person__role small" lang={locale === 'hi' ? 'en' : undefined}>{p.work}</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </li>
+  ))}
+</ol>
+
+<h2 class="mt">{T('Organisation structure documents', 'संगठन संरचना संबंधी दस्तावेज़')}</h2>
+<ul class="doc-list" role="list">
+  <DocItem title={T('Organisational chart of the Ministry', 'मंत्रालय का संगठनात्मक चार्ट')} url="https://tribal.gov.in/downloads/Tribal/Orgchart19122025.pdf" date="2025-12-19" format="PDF" locale={locale} />
+  <DocItem title={T('Work allocation among officers', 'अधिकारियों के बीच कार्य आवंटन')} url="https://tribal.gov.in/downloads/Tribal/Workallocation31072026.pdf" date="2026-07-31" format="PDF" locale={locale} />
+</ul>
+<p class="mt"><a class="link-arrow" href={localePath('/connect/directory/', locale)}>{T('Full directory with contact details', 'संपर्क विवरण सहित पूर्ण निर्देशिका')}<Icon name="ArrowRight" /></a></p>

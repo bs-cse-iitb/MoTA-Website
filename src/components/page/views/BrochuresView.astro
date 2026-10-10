@@ -1,0 +1,16 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { documentsByCategory, legacyLinks } from '../../../lib/legacy';
+import DocList from '../DocList.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const pubs = documentsByCategory().get('publications') ?? [];
+const booklets = legacyLinks('tribal-health').filter((l) => /booklet|conclave|compendium/i.test(l.title));
+const groups = [
+  { heading: tx(locale, 'Booklets and compendiums', 'पुस्तिकाएं और संकलन'), links: booklets },
+  { heading: tx(locale, 'Newsletters and publications', 'समाचार पत्र और प्रकाशन'), links: pubs },
+];
+---
+<DocList groups={groups} locale={locale} />

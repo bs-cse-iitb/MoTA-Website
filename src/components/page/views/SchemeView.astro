@@ -1,0 +1,72 @@
+---
+// Scheme L3 page (DBIM A.5.2.1, Fig. 71).
+import type { Locale } from '../../../data/site';
+import { t, localePath, tx } from '../../../data/i18n';
+import { schemeBySlug, schemes, categoryLabels } from '../../../data/schemes';
+import { divisionBySlug } from '../../../data/divisions';
+import { personas } from '../../../data/personas';
+import { schemeHi, L } from '../../../data/hi-content';
+import { legacySections } from '../../../lib/legacy';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import DocList from '../DocList.astro';
+import Facts from '../Facts.astro';
+
+interface Props { slug: string; locale: Locale }
+const { slug, locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const s = schemeBySlug(slug)!;
+const hi = locale === 'hi' ? schemeHi[slug] : undefined;
+const overview = hi?.overview ?? s.overview;
+const features = hi?.features ?? s.features;
+const sections = s.legacy ? legacySections(s.legacy.key, s.legacy) : [];
+const division = s.division ? divisionBySlug(s.division) : undefined;
+const related = schemes.filter((x) => x.category === s.category && x.slug !== s.slug).slice(0, 3);
+const forWho = personas.filter((p) => s.personas.includes(p.id));
+---
+<div class="scheme-summary">
+  <dl class="scheme-summary__list">
+    <div><dt>{T('Type', 'प्रकार')}</dt><dd>{L(s.type, locale)}</dd></div>
+    <div><dt>{T('Category', 'श्रेणी')}</dt><dd>{categoryLabels[s.category][locale]}</dd></div>
+    {division && <div><dt>{T('Division', 'प्रभाग')}</dt><dd><a href={localePath(`/ministry/our-divisions/${division.slug}/`, locale)}>{division.title[locale]}</a></dd></div>}
+    <div><dt>{T('Useful for', 'किसके लिए उपयोगी')}</dt><dd>{forWho.map((p, i) => <><a href={localePath(`/personas/${p.id}/`, locale)}>{p.title[locale]}</a>{i < forWho.length - 1 && ', '}</>)}</dd></div>
+  </dl>
+  {s.apply && <SmartLink class="btn" href={s.apply.url} locale={locale}>{L(s.apply.label, locale)}<Icon name="ArrowUpRight" /></SmartLink>}
+</div>
+
+{s.facts && <Facts facts={s.facts} note={hi?.factsNote ?? s.factsNote} locale={locale} />}
+
+<div class="prose mt">
+  <h2>{T('About the scheme', 'योजना के बारे में')}</h2>
+  {overview.map((p) => <p>{p}</p>)}
+  {features && (<><h2>{T('Key features', 'मुख्य विशेषताएं')}</h2><ul class="feature-list">{features.map((f) => <li>{f}</li>)}</ul></>)}
+</div>
+
+{s.portals && (
+  <section class="mt">
+    <h2>{T('Online services', 'ऑनलाइन सेवाएं')}</h2>
+    <ul class="link-list" role="list">{s.portals.map((p) => <li><SmartLink href={p.url} locale={locale} showExternalIcon>{L(p.label, locale)}</SmartLink></li>)}</ul>
+  </section>
+)}
+
+{sections.length > 0 && (
+  <section class="mt">
+    <h2>{t('documents', locale)}</h2>
+    <DocList groups={sections.map((x) => ({ heading: x.heading, links: x.links }))} locale={locale} headingLevel="h3" />
+  </section>
+)}
+
+{related.length > 0 && (
+  <section class="mt">
+    <h2>{T('Related schemes', 'संबंधित योजनाएं')}</h2>
+    <ul class="grid grid--3" role="list">
+      {related.map((r) => (
+        <li class="card card--link">
+          <span class="card__icon"><Icon name={r.icon} /></span>
+          <h3 class="card__title"><a href={localePath(`/offerings/schemes/${r.slug}/`, locale)}>{locale === 'hi' ? r.title.hi : r.short}</a></h3>
+          <p class="card__text">{r.summary[locale]}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

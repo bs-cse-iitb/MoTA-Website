@@ -1,0 +1,10 @@
+@media print {
+  :root { --bg: #fff; --text: #000; --heading: #000; }
+  .topbar, .mainnav, .site-search, .brandbar__actions, .site-footer__band, .site-footer__main, .site-footer__utility,
+  .cookie-bar, .to-top, .toast, .side-nav, .page-tools__actions, .hero, .ticker, .warli-band, .page-hero__art, dialog { display: none !important; }
+  body { font-size: 11pt; }
+  .page-body { display: block; padding: 0; }
+  .site-footer, .site-footer__bottom { background: #fff !important; color: #000 !important; }
+  a[href^='http']::after { content: ' (' attr(href) ')'; font-size: 9pt; word-break: break-all; }
+  .card, .doc-list, .fact { break-inside: avoid; box-shadow: none !important; }
+}

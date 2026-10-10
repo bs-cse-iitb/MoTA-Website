@@ -1,0 +1,32 @@
+---
+// "I want to…" quick actions (MeitY swipe-card panel): the most common tasks one click away.
+import type { Locale } from '../../data/site';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const actions = [
+  { icon: 'GraduationCap', en: 'Apply for a scholarship', hi: 'छात्रवृत्ति हेतु आवेदन', href: '/offerings/schemes/?category=education' },
+  { icon: 'Trees', en: 'Know your forest rights', hi: 'अपने वन अधिकार जानें', href: '/ministry/our-divisions/forest-rights-act/' },
+  { icon: 'LifeBuoy', en: 'Lodge a grievance', hi: 'शिकायत दर्ज करें', href: '/connect/grievance-redressal/' },
+  { icon: 'FileText', en: 'File an RTI', hi: 'आरटीआई दायर करें', href: '/connect/rti/' },
+  { icon: 'Gavel', en: 'View tenders', hi: 'निविदाएं देखें', href: '/offerings/tenders/' },
+  { icon: 'BookOpen', en: 'Scheme guidelines', hi: 'योजना दिशानिर्देश', href: '/documents/guidelines/' },
+];
+---
+<section class="quick" aria-labelledby="quick-title">
+  <div class="container quick__inner">
+    <h2 id="quick-title" class="quick__title">{hi ? 'मैं चाहता/चाहती हूं…' : 'I want to…'}</h2>
+    <ul class="quick__list" role="list">
+      {actions.map((a) => (
+        <li>
+          <SmartLink class="quick__item" href={a.href} locale={locale}>
+            <Icon name={a.icon} class="icon icon--sm" /><span>{hi ? a.hi : a.en}</span>
+          </SmartLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

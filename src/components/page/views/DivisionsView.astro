@@ -1,0 +1,19 @@
+---
+import type { Locale } from '../../../data/site';
+import { t, localePath } from '../../../data/i18n';
+import { divisions } from '../../../data/divisions';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<ul class="grid grid--3" role="list">
+  {divisions.map((d) => (
+    <li class="card card--link">
+      <span class="card__icon"><Icon name={d.icon} /></span>
+      <h2 class="card__title"><a href={localePath(`/ministry/our-divisions/${d.slug}/`, locale)}>{d.title[locale]}</a></h2>
+      <p class="card__text">{d.summary[locale]}</p>
+      <span class="card__more" aria-hidden="true">{t('explore', locale)}<Icon name="ArrowRight" /></span>
+    </li>
+  ))}
+</ul>

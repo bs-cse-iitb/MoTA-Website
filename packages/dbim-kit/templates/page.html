@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- MoTA DBIM Kit — inner page shell (DBIM 5.5), English. Generated from the tribal.gov.in pilot.
+     Replace {{…}} placeholders; put templates/en/header.html, footer.html, dialogs.html (and tribot.html if used)
+     where the @include comments are (MasterPage, PHP include or server-side include). -->
+<html lang="en" dir="ltr" data-dbim-group="9" data-theme="light" data-text="0" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}} | {{ORG_NAME}}, Government of India</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="keywords" content="{{KEYWORDS}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <link rel="alternate" hreflang="en" href="{{EN_URL}}">
+  <link rel="alternate" hreflang="hi" href="{{HI_URL}}">
+  <link rel="alternate" hreflang="x-default" href="{{EN_URL}}">
+  <meta name="theme-color" content="#3E170E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ORG_NAME}}">
+  <meta property="og:title" content="{{PAGE_TITLE}} | {{ORG_NAME}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:locale" content="en_IN">
+  <link rel="icon" href="{{KIT}}/assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="{{KIT}}/dbim.min.css">
+  <script src="{{KIT}}/dbim-early.js"></script>
+</head>
+<body>
+  <!-- @include templates/en/header.html -->
+  <main id="main" tabindex="-1">
+    <div class="page-hero"> <div class="container page-hero__inner"> <div> <nav class="breadcrumb" aria-label="Breadcrumb"> <ol> <li><a href="/">Home</a></li><li><a href="/ministry/">Ministry</a></li><li><span aria-current="page">{{PAGE_TITLE}}</span></li> </ol> </nav> <h1>{{PAGE_TITLE}}</h1> <p class="page-hero__lead">{{DESCRIPTION}}</p> </div> <svg class="page-hero__art" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 104H106" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="110" r="1.1"/><circle cx="25" cy="110" r="1.1"/><circle cx="32" cy="110" r="1.1"/><circle cx="39" cy="110" r="1.1"/><circle cx="46" cy="110" r="1.1"/><circle cx="53" cy="110" r="1.1"/><circle cx="60" cy="110" r="1.1"/><circle cx="67" cy="110" r="1.1"/><circle cx="74" cy="110" r="1.1"/><circle cx="81" cy="110" r="1.1"/><circle cx="88" cy="110" r="1.1"/><circle cx="95" cy="110" r="1.1"/><circle cx="102" cy="110" r="1.1"/><g><circle cx="34" cy="29.63" r="9.25"/><path d="M18.46 41.84L49.54 41.84L34 62.56ZM34 62.56L19.2 80.32L48.8 80.32Z"/><path d="M25.12 80.32L15.5 92.9L19.94 104M42.88 80.32L49.54 91.42L56.94 101.78M18.46 41.84L11.8 58.12L7.36 68.48M49.54 41.84L54.72 53.68L62.12 44.8" fill="none" stroke="currentColor" stroke-width="4.07" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M62 52l20-12 20 12z"/><path d="M64 56h36M64 100h36" stroke="currentColor" stroke-width="2"/><path d="M68 58v40M76 58v40M84 58v40M92 58v40M98 58v40" stroke="currentColor" stroke-width="2.2"/></svg> </div> </div>
+    <div class="container page-body">
+      <nav class="side-nav" aria-label="In this section: Ministry"> <p class="side-nav__title">Ministry</p> <ul role="list"> <li><a href="/ministry/about-us/" aria-current="page">About Us</a></li><li><a href="/ministry/our-team/">Our Team</a></li><li><a href="/ministry/our-divisions/">Our Divisions</a></li><li><a href="/ministry/our-organisations/">Our Organisations</a></li><li><a href="/ministry/our-performance/">Our Performance</a></li><li><a href="/connect/directory/">Directory</a></li> </ul> </nav>
+      <div class="page-content">
+        <div class="page-content__body">
+          {{CONTENT}}
+        </div>
+        <div class="page-tools" data-pagefind-ignore> <p>Page last reviewed: <time datetime="{{UPDATED_ISO}}">{{UPDATED}}</time></p> <div class="page-tools__actions"> <button type="button" class="btn btn--ghost btn--sm" data-print> <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="{{KIT}}/icons.svg#i-printer"></use></svg> Print</button> <button type="button" class="btn btn--ghost btn--sm" data-share="{{CANONICAL_URL}}" data-copied="Link copied"> <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="{{KIT}}/icons.svg#i-share-2"></use></svg> Share</button> </div> </div>
+      </div>
+    </div>
+  </main>
+  <!-- @include templates/en/footer.html -->
+  <!-- @include templates/en/dialogs.html -->
+  <!-- @include templates/en/tribot.html -->
+  <script src="{{KIT}}/dbim.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+---
+// One downloadable item: title, source/group, format and size (GIGW: downloads
+// show format and size), date, and a clear "opens in new tab" notice.
+import type { Locale } from '../data/site';
+import { formatDate } from '../data/i18n';
+import { linkInfo } from '../lib/links';
+import Icon from './Icon.astro';
+import SmartLink from './SmartLink.astro';
+
+interface Props {
+  title: string;
+  url: string;
+  locale?: Locale;
+  format?: string;
+  size?: string;
+  date?: string;
+  group?: string;
+  isNew?: boolean;
+  tag?: 'li' | 'div';
+}
+const { title, url, locale = 'en', format, size, date, group, isNew, tag = 'li' } = Astro.props;
+const info = linkInfo(url, locale);
+const fmt = format ?? info.format;
+const Tag = tag;
+const icon = info.document ? 'FileText' : info.external ? 'Globe' : 'ArrowRight';
+---
+<Tag class="doc" data-filter-text={`${title} ${group ?? ''} ${fmt ?? ''}`.toLowerCase()}>
+  <span class="doc__icon" aria-hidden="true">{fmt ? fmt.slice(0, 4) : <Icon name={icon} />}</span>
+  <div>
+    <SmartLink class="doc__title" href={url} locale={locale} lang={locale === 'hi' && !/[\u0900-\u097F]/.test(title) ? 'en' : undefined}>{title}</SmartLink>
+    <div class="doc__sub">
+      {isNew && <span class="badge badge--new">{locale === 'hi' ? 'नया' : 'New'}</span>}
+      {date && <span><time datetime={date}>{formatDate(date, locale)}</time></span>}
+      {group && <span lang={locale === 'hi' && !/[\u0900-\u097F]/.test(group) ? 'en' : undefined}>{group}</span>}
+      {(fmt || size) && <span class="badge badge--file" lang="en">{[fmt, size].filter(Boolean).join(' · ')}</span>}
+      {info.external && !info.document && <span lang="en">{new URL(url).hostname.replace(/^www\./, '')}</span>}
+    </div>
+  </div>
+  <span class="doc__action" aria-hidden="true"><Icon name={info.document ? 'Download' : info.external ? 'ExternalLink' : 'ArrowRight'} class="icon icon--sm" /></span>
+</Tag>

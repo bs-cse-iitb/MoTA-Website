@@ -1,0 +1,16 @@
+---
+// DBIM 3.3 line icons (Lucide, ISC licence) inlined as SVG at build time.
+import * as lucide from 'lucide-static';
+
+interface Props { name: string; class?: string; label?: string; stroke?: number }
+const { name, class: cls = 'icon', label, stroke = 1.75 } = Astro.props;
+const raw = (lucide as unknown as Record<string, string>)[name];
+if (!raw) throw new Error(`Icon "${name}" is not in lucide-static`);
+const a11y = label ? `role="img" aria-label="${label.replace(/"/g, '&quot;')}"` : 'aria-hidden="true" focusable="false"';
+const svg = raw
+  .replace(/\sclass="[^"]*"/, '')
+  .replace(/stroke-width="[^"]*"/, `stroke-width="${stroke}"`)
+  .replace('<svg', `<svg class="${cls}" ${a11y}`)
+  .replace(/\n\s*/g, ' ');
+---
+<Fragment set:html={svg} />

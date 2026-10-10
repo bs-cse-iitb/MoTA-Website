@@ -1,0 +1,6 @@
+---
+import { heroScene } from '../lib/warli';
+interface Props { class?: string }
+const { class: cls = '' } = Astro.props;
+---
+<svg class={`warli-hero ${cls}`} viewBox="0 0 520 360" fill="currentColor" aria-hidden="true" focusable="false" set:html={heroScene()} />

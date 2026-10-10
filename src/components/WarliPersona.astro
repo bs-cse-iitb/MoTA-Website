@@ -1,0 +1,6 @@
+---
+import { personaArt } from '../lib/warli';
+interface Props { prop: Parameters<typeof personaArt>[0]; class?: string }
+const { prop, class: cls = '' } = Astro.props;
+---
+<svg class={`warli-persona ${cls}`} viewBox="0 0 120 120" fill="currentColor" aria-hidden="true" focusable="false" set:html={personaArt(prop)} />

@@ -1,0 +1,85 @@
+---
+import '@fontsource-variable/noto-sans';
+import '@fontsource-variable/noto-sans-devanagari';
+import '@kit/css/tokens.css';
+import '@kit/css/base.css';
+import '@kit/css/layout.css';
+import '@kit/css/components.css';
+import '../styles/home.css';
+import '@kit/css/a11y.css';
+import '@kit/css/print.css';
+
+import type { Locale } from '../data/site';
+import { site } from '../data/site';
+import { t, localePath, basePath } from '../data/i18n';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import A11yPanel from '../components/A11yPanel.astro';
+import SiteDialogs from '../components/SiteDialogs.astro';
+import TriBot from '../components/TriBot.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  locale?: Locale;
+  /** Search filter: content type of the page (Pagefind). */
+  pageType?: string;
+  personas?: string[];
+  noindex?: boolean;
+  bodyClass?: string;
+  keywords?: string;
+}
+const { title, description, locale = 'en', pageType, personas = [], noindex = false, bodyClass, keywords } = Astro.props;
+// GIGW 3.0: page metadata (title, description, keywords, language).
+const metaKeywords = keywords ?? [title, pageType, site.name.en, site.name.hi, 'Scheduled Tribes', 'Government of India'].filter(Boolean).join(', ');
+const path = basePath(Astro.url.pathname);
+const fullTitle = path === '/' ? `${site.name[locale]} | ${site.government[locale]}` : `${title} | ${site.name[locale]}, ${site.government[locale]}`;
+const desc = description ?? site.description[locale];
+const canonical = new URL(localePath(path, locale), site.url).href;
+const alternates = (['en', 'hi'] as Locale[]).map((l) => ({ l, href: new URL(localePath(path, l), site.url).href }));
+---
+<!doctype html>
+<html lang={locale} dir="ltr" data-theme="light" data-text="0" id="top">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="keywords" content={metaKeywords} />
+    <link rel="canonical" href={canonical} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.l} href={a.href} />)}
+    <link rel="alternate" hreflang="x-default" href={alternates[0].href} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#3E170E" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content={site.name.en} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name[locale]} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:locale" content={locale === 'hi' ? 'hi_IN' : 'en_IN'} />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {path === '/' && <link rel="preconnect" href="https://cbpssubscriber.mygov.in" />}
+    <!-- Applies saved accessibility preferences before first paint (no flash). -->
+    <script is:inline src="/js/prefs-early.js"></script>
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">{t('skipToMain', locale)}</a>
+    <Header locale={locale} path={path} />
+    <main id="main" tabindex="-1" data-pagefind-body>
+      {pageType && <span hidden data-pagefind-filter="type">{pageType}</span>}
+      {personas.map((p) => <span hidden data-pagefind-filter="audience">{p}</span>)}
+      <slot />
+    </main>
+    <slot name="after-main" />
+    <Footer locale={locale} />
+    <A11yPanel locale={locale} />
+    <SiteDialogs locale={locale} />
+    <TriBot locale={locale} />
+    <script>
+      import { applyPrefs, readPrefs } from '@kit/js/prefs';
+      applyPrefs(readPrefs());
+    </script>
+  </body>
+</html>

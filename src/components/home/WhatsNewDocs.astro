@@ -1,0 +1,36 @@
+---
+// What's New (DBIM A.4.1.2 vii) and Recent Documents (viii).
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { whatsNew } from '../../data/updates';
+import { updateHi, categoryHi } from '../../data/hi-content';
+import { recentDocuments, SOURCE_LABEL } from '../../lib/legacy';
+import Icon from '../Icon.astro';
+import DocItem from '../DocItem.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const recent = recentDocuments(6);
+---
+<section class="section section--soft news" aria-label={`${t('whatsNew', locale)} / ${t('recentDocuments', locale)}`}>
+  <div class="container news__grid">
+    <div>
+      <div class="section-head">
+        <h2 id="whatsnew-title"><Icon name="Bell" class="icon section-icon" />{t('whatsNew', locale)}</h2>
+        <a class="link-arrow" href={localePath('/whats-new/', locale)}>{t('viewAll', locale)}<Icon name="ArrowRight" /></a>
+      </div>
+      <ul class="doc-list" role="list" aria-labelledby="whatsnew-title">
+        {whatsNew.slice(0, 6).map((n) => <DocItem title={(locale === 'hi' && updateHi[n.url]) || (n.title as string)} url={n.url} date={n.date} format={n.format} size={n.size} isNew={n.isNew} group={locale === 'hi' ? categoryHi[n.category] : n.category} locale={locale} />)}
+      </ul>
+    </div>
+    <div>
+      <div class="section-head">
+        <h2 id="recent-title"><Icon name="Files" class="icon section-icon" />{t('recentDocuments', locale)}</h2>
+        <a class="link-arrow" href={localePath('/documents/', locale)}>{t('viewAll', locale)}<Icon name="ArrowRight" /></a>
+      </div>
+      <ul class="doc-list" role="list" aria-labelledby="recent-title">
+        {recent.map((d) => <DocItem title={d.title} url={d.url} format={d.format} size={d.size} group={d.source ? SOURCE_LABEL[d.source] : undefined} locale={locale} />)}
+      </ul>
+    </div>
+  </div>
+</section>

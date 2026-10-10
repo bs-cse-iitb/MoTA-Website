@@ -1,0 +1,60 @@
+$ npm run check:release
+NOT READY for go-live (5 open areas):
+
+1. 1 old addresses need a Ministry decision:
+     - grievance/schreport.aspx: Scholarship Grievance Report: a separate small application on the live server (not in the source copy). Its data was last updated on 06/06/2019 and it shows "NA". Linked from the Knowledge Hub. Decide: retire, or keep it in the back-office.
+
+2. 17 old pages are held back because their content is not migrated:
+     - sanctionorder.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise1819.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise1920.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2021.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2122.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2223.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2324.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2425.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2526.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - PFMS_SentionDtSchemewise2627.aspx: Linked from /documents/sanction-orders/ as the only copy of these database reports. Redirect once the pages are built from the NIC content export; go-live is blocked until then.
+     - ICC.aspx: Linked from /ministry/our-divisions/establishment/. Internal Complaints Committee content is not migrated yet (static page; next content batch).
+     - FRAArch.aspx: Linked from /ministry/our-divisions/forest-rights-act/. FRA archive content is not migrated yet (static page; next content batch).
+     - Archive_annulreport.aspx: Linked from /ministry/our-divisions/statistics/. Statistics archive content is not migrated yet (static page; next content batch).
+     - AwarenessHTC.aspx: Linked from /ministry/our-divisions/tribal-health/. Sickle Cell awareness campaign content is not migrated yet (static page; next content batch).
+     - Display_Apex_Minutes.aspx: Linked from the TRI division and scheme pages. Database report; needs the NIC content export.
+     - display_PAC_DAJAGUAMinutes.aspx: Linked from /offerings/schemes/da-jgua/. Database report; needs the NIC content export.
+
+3. 18 links from the new pages point to old .aspx pages:
+     - https://tribal.gov.in/grievance/schreport.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2627.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2526.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2425.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2324.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2223.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2122.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise2021.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise1920.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise1819.aspx
+     - https://tribal.gov.in/PFMS_SentionDtSchemewise.aspx
+     - https://tribal.gov.in/SanctionOrder.aspx
+     - https://tribal.gov.in/ICC.aspx
+     - https://tribal.gov.in/fraarch.aspx
+     - https://tribal.gov.in/Archive_annulreport.aspx
+     - https://tribal.gov.in/Display_Apex_Minutes.aspx
+     - https://tribal.gov.in/AwarenessHTC.aspx
+     - https://tribal.gov.in/display_PAC_DAJAGUAMinutes.aspx
+
+4. Migration inventory has open items:
+     - 638 × document: CONTENT GAP: linked from old pages, not from new site
+     - 10036 × document: pending: in a database list (needs the NIC export)
+     - 147 × external-link: REVIEW: outside link dropped or replaced
+     - 10 × media: CONTENT GAP: linked from old pages, not from new site
+     - 434 × media: REVIEW: picture on old pages, not shown on new pages (file kept)
+     - 356 × media: pending: in a database list (needs the NIC export)
+     - 1 × page: DECISION NEEDED (Ministry)
+     - 17 × page: blocked: content not migrated
+     - 169 × page: redirect verified on UAT (tests/redirects.test.mjs); staging pending
+     - 2195 × query-page: pending: item-level content needs the NIC export
+
+5. Content not reconciled with the database (NIC content export not received).
+
+exit=1

@@ -1,0 +1,10 @@
+$ npm run check:links
+Pages scanned:            229
+Unique internal links:    315
+Unique external links:    1024
+Broken internal links:    0
+Missing in-page anchors:  0
+Pages without an <h1>:    0
+Links to redirected old pages (loops): 0
+Legacy documents missing on tribal.gov.in (left out, listed in docs/Evidence/broken-links-report.csv): 21
+exit=0

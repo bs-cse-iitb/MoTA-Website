@@ -1,0 +1,149 @@
+---
+// DBIM 5.4.1 "Header 1" for Central Ministries: user controls (skip link,
+// language, accessibility), logo lockup 2, search bar (engagement bar) and the
+// global navigation menu, which stays sticky while scrolling (DBIM A.4.1.2 i).
+import type { Locale } from '../data/site';
+import { site } from '../data/site';
+import { mainNav } from '../data/nav';
+import { t, localePath } from '../data/i18n';
+import Icon from './Icon.astro';
+import SmartLink from './SmartLink.astro';
+
+interface Props { locale: Locale; path: string }
+const { locale, path } = Astro.props;
+// The 404 page has no Hindi twin, so its language links point to the home pages.
+const langPath = path.startsWith('/404') ? '/' : path;
+const isActive = (href: string) => path === href || (href !== '/' && path.startsWith(href));
+const sectionId = (href: string) => href.replace(/\//g, '');
+// DBIM 5.4 co-branding: at most two campaign logos, set in src/data/site.ts.
+const cobrand = site.cobrand.slice(0, 2);
+---
+<header class="site-header">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__gov">
+        <span lang="hi">भारत सरकार</span><span class="topbar__sep" aria-hidden="true"></span><span lang="en">Government of India</span>
+      </p>
+      <ul class="topbar__tools" role="list">
+        <li class="hide-sm"><a class="topbar__link" href="#main">{t('skipToMain', locale)}</a></li>
+        <li class="hide-sm"><a class="topbar__link" href={localePath('/screen-reader-access/', locale)}>{t('screenReader', locale)}</a></li>
+        <li class="hide-sm"><div class="textsize" role="group" aria-label={t('textSize', locale)}>
+          <button type="button" class="textsize__btn" data-text-step="-1" aria-label={t('decreaseText', locale)}>A−</button>
+          <button type="button" class="textsize__btn" data-text-step="0" aria-label={t('normalText', locale)}>A</button>
+          <button type="button" class="textsize__btn" data-text-step="1" aria-label={t('increaseText', locale)}>A+</button>
+        </div></li>
+        <li>
+          <button type="button" class="topbar__btn" data-contrast-toggle aria-pressed="false" title={t('highContrast', locale)}>
+            <Icon name="Contrast" class="icon icon--sm" /><span class="visually-hidden">{t('highContrast', locale)}</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="topbar__btn topbar__btn--label" data-open-a11y aria-haspopup="dialog" aria-controls="a11y-panel" aria-label={t('accessibility', locale)}>
+            <Icon name="Accessibility" class="icon icon--sm" /><span class="hide-xs">{t('accessibility', locale)}</span>
+          </button>
+        </li>
+        <li class="lang-menu" data-lang-menu>
+          <button type="button" class="topbar__btn topbar__btn--label" aria-expanded="false" aria-controls="lang-list" aria-label={`${t('language', locale)}: ${locale === 'hi' ? 'हिन्दी' : 'English'}`}>
+            <Icon name="Languages" class="icon icon--sm" /><span>{locale === 'hi' ? 'हिन्दी' : 'English'}</span><Icon name="ChevronDown" class="icon icon--sm" />
+          </button>
+          <ul class="lang-menu__list" id="lang-list" role="list" hidden>
+            <li><a href={localePath(langPath, 'en')} hreflang="en" lang="en" aria-current={locale === 'en' ? 'true' : undefined} data-lang-switch="en">English</a></li>
+            <li><a href={localePath(langPath, 'hi')} hreflang="hi" lang="hi" aria-current={locale === 'hi' ? 'true' : undefined} data-lang-switch="hi">हिन्दी</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <div class="container brandbar__inner">
+      <a class="brand" href={localePath('/', locale)} aria-label={`${site.name[locale]}, ${site.government[locale]} — ${t('home', locale)}`}>
+        <img class="brand__emblem" src="/images/emblem/emblem-black.png" width="50" height="80" alt={locale === 'hi' ? 'भारत का राजचिह्न' : 'State Emblem of India'} />
+        <span class="brand__text">
+          <span class="brand__gov">{site.government[locale]}</span>
+          <span class="brand__name">{site.name[locale]}</span>
+        </span>
+      </a>
+
+      {cobrand.length > 0 && (
+        <ul class="cobrand" role="list" aria-label={locale === 'hi' ? 'प्रमुख कार्यक्रम' : 'Flagship programmes'}>
+          {cobrand.map((c) => {
+            const img = <img src={c.logo} alt={c.alt[locale]} width={c.width} height={c.height} />;
+            return <li>{c.href ? <SmartLink href={c.href} locale={locale}>{img}</SmartLink> : img}</li>;
+          })}
+        </ul>
+      )}
+      <form class="site-search" action={localePath('/search/', locale)} method="get" role="search" aria-label={t('search', locale)} data-site-search>
+        <label class="visually-hidden" for="site-search-q">{t('search', locale)}</label>
+        <Icon name="Search" class="icon site-search__icon" />
+        <input id="site-search-q" class="site-search__input" type="search" name="q" placeholder={t('searchPlaceholder', locale)} autocomplete="off" enterkeyhint="search" />
+        <button type="button" class="site-search__voice" data-voice-search hidden aria-label={t('voiceSearch', locale)} title={t('voiceSearch', locale)} data-listening-label={t('listening', locale)}>
+          <Icon name="Mic" class="icon icon--sm" />
+        </button>
+        <button type="submit" class="site-search__submit">{t('search', locale)}</button>
+      </form>
+
+      <div class="brandbar__actions">
+        <button type="button" class="icon-btn" data-toggle-search aria-expanded="false" aria-controls="site-search-q" aria-label={t('search', locale)}>
+          <Icon name="Search" />
+        </button>
+        <button type="button" class="icon-btn" data-toggle-menu aria-expanded="false" aria-controls="main-nav" aria-label={t('menu', locale)}>
+          <Icon name="Menu" class="icon icon-open" /><Icon name="X" class="icon icon-close" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mainnav" id="main-nav" aria-label={t('mainNav', locale)} data-mainnav>
+    <div class="container mainnav__inner">
+      <ul class="mainnav__list" role="list">
+        <li class="mainnav__item">
+          <a class:list={['mainnav__home', { 'is-active': path === '/' }]} href={localePath('/', locale)} aria-current={path === '/' ? 'page' : undefined}>
+            {t('home', locale)}
+          </a>
+        </li>
+        {mainNav.map((sec) => (
+          <li class="mainnav__item" data-menu-item>
+            <button
+              type="button"
+              class:list={['mainnav__trigger', { 'is-active': isActive(sec.href) }]}
+              aria-expanded="false"
+              aria-controls={`mega-${sectionId(sec.href)}`}
+            >
+              <span>{sec.label[locale]}</span><Icon name="ChevronDown" class="icon icon--sm mainnav__chev" />
+            </button>
+            <div class="mega" id={`mega-${sectionId(sec.href)}`} data-mega>
+              <div class="container mega__inner">
+                <div class="mega__intro">
+                  <span class="mega__icon"><Icon name={sec.icon ?? 'Circle'} class="icon icon--lg" /></span>
+                  <p class="mega__title">{sec.label[locale]}</p>
+                  {sec.blurb && <p class="mega__blurb">{sec.blurb[locale]}</p>}
+                  <a class="link-arrow mega__overview" href={localePath(sec.href, locale)}>
+                    {locale === 'hi' ? `${sec.label.hi} — अवलोकन` : `${sec.label.en} overview`}<Icon name="ArrowRight" />
+                  </a>
+                </div>
+                <ul class="mega__links" role="list">
+                  {sec.children?.map((c) => (
+                    <li>
+                      <a class="mega__link" href={localePath(c.href, locale)} aria-current={path === c.href ? 'page' : undefined}>
+                        <span class="mega__link-icon"><Icon name={c.icon ?? 'ChevronRight'} class="icon icon--sm" /></span>
+                        <span>{c.label[locale]}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <a class="mainnav__whatsnew" href={localePath('/whats-new/', locale)}>
+        <span class="pulse" aria-hidden="true"></span>{t('whatsNew', locale)}
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  import '@kit/js/header';
+</script>

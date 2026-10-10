@@ -1,0 +1,23 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { legacySections } from '../../../lib/legacy';
+import SmartLink from '../../SmartLink.astro';
+import Icon from '../../Icon.astro';
+import DocList from '../DocList.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const sections = legacySections('parliament-coordination');
+const pq = sections.filter((s) => /parliament/i.test(s.heading));
+const summaries = sections.filter((s) => /monthly summary/i.test(s.heading));
+const fy = (h: string) => (h.match(/(20\d\d-\d\d)/) || [])[1] ?? h;
+---
+<div class="grid grid--2">
+  <div class="card card--link"><span class="card__icon"><Icon name="Landmark" /></span><h2 class="card__title"><SmartLink href="https://sansad.in/ls/questions/questions-and-answers" locale={locale}>{T('Lok Sabha questions', 'लोक सभा प्रश्न')}</SmartLink></h2><p class="card__text">{T('Search questions and answers in the Lok Sabha by Ministry, member or date.', 'लोक सभा के प्रश्न और उत्तर मंत्रालय, सदस्य या तिथि के अनुसार खोजें।')}</p></div>
+  <div class="card card--link"><span class="card__icon"><Icon name="Landmark" /></span><h2 class="card__title"><SmartLink href="https://sansad.in/rs/questions/questions-and-answers" locale={locale}>{T('Rajya Sabha questions', 'राज्य सभा प्रश्न')}</SmartLink></h2><p class="card__text">{T('Search questions and answers in the Rajya Sabha by Ministry, member or date.', 'राज्य सभा के प्रश्न और उत्तर मंत्रालय, सदस्य या तिथि के अनुसार खोजें।')}</p></div>
+</div>
+{pq.length > 0 && pq.some((s) => s.links.length) && <><h2 class="mt">{T('Parliament questions and answers', 'संसद प्रश्न और उत्तर')}</h2><DocList groups={pq.map((s) => ({ heading: s.heading, links: s.links }))} locale={locale} headingLevel="h3" id="pq" /></>}
+<h2 class="mt">{T('Monthly summary of the Ministry', 'मंत्रालय का मासिक सारांश')}</h2>
+<DocList groups={summaries.map((s) => ({ heading: T(`Monthly summary ${fy(s.heading)}`, `मासिक सारांश ${fy(s.heading)}`), links: s.links }))} locale={locale} headingLevel="h3" id="ms" />

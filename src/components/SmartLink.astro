@@ -1,0 +1,27 @@
+---
+// One component for every link: localises internal paths for Hindi, opens
+// documents and other websites in a new tab, tells screen-reader users so, and
+// marks external links for the "you are leaving this website" dialog (GIGW).
+import type { Locale } from '../data/site';
+import { linkInfo } from '../lib/links';
+import { t } from '../data/i18n';
+import Icon from './Icon.astro';
+
+interface Props {
+  href: string;
+  locale?: Locale;
+  class?: string;
+  showExternalIcon?: boolean;
+  [key: string]: unknown;
+}
+const { href, locale = 'en', class: cls, showExternalIcon = false, ...rest } = Astro.props;
+const info = linkInfo(href, locale);
+---
+<a
+  href={info.href}
+  class={cls}
+  target={info.newTab ? '_blank' : undefined}
+  rel={info.newTab ? 'noopener noreferrer' : undefined}
+  data-ext={info.external ? '' : undefined}
+  {...rest}
+><slot />{info.newTab && <span class="visually-hidden"> ({info.external ? t('externalNote', locale) : t('newTabNote', locale)})</span>}{showExternalIcon && info.external && <Icon name="ExternalLink" class="icon ext-icon" />}</a>

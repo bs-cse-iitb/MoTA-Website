@@ -1,0 +1,176 @@
+/*
+ * MoTA DBIM Kit — design tokens (DBIM 3.0)
+ *
+ * Colour: one colour group from the DBIM primary palette (DBIM 2.1), chosen with
+ * <html data-dbim-group="1..10|neutral">. Default is group 9 (terracotta), the
+ * group adopted for tribal.gov.in. Each group has a key colour (darkest shade),
+ * a mid shade, a light shade and a lightest shade; --g-action is the shade used
+ * for buttons and links — the mid shade where it meets WCAG AA (4.5:1) on white
+ * and on the lightest shade, otherwise the key colour (groups 2 and 10).
+ * Functional palette: DBIM 2.2, Table 1.
+ * Typeface: Noto Sans for every script (DBIM 4.1, 4.2).
+ * Type scale and weights: DBIM 4.3.1 (desktop), 4.3.2 (mobile), Fig. 15.
+ * Icon sizes: DBIM 3.4 — 24, 32, 48 and 64 px only.
+ */
+
+:root,
+:root[data-dbim-group='9'] {
+  --g-key: #3E170E; --g-mid: #8C2F26; --g-light: #F3CEBD; --g-lightest: #F7EFED; --g-action: #8C2F26;
+}
+:root[data-dbim-group='1'] { --g-key: #6C1340; --g-mid: #A32966; --g-light: #EBADCC; --g-lightest: #FAEBF2; --g-action: #A32966; }
+:root[data-dbim-group='2'] { --g-key: #0F5757; --g-mid: #2D8686; --g-light: #A6D9D9; --g-lightest: #D9F2F2; --g-action: #0F5757; }
+:root[data-dbim-group='3'] { --g-key: #5D3E00; --g-mid: #916100; --g-light: #F4D390; --g-lightest: #FFEECC; --g-action: #916100; }
+:root[data-dbim-group='4'] { --g-key: #771D1D; --g-mid: #A72626; --g-light: #FAAAAA; --g-lightest: #FCDADA; --g-action: #A72626; }
+:root[data-dbim-group='5'] { --g-key: #162F6A; --g-mid: #214AAB; --g-light: #A3BBF3; --g-lightest: #D2DFFF; --g-action: #214AAB; }
+:root[data-dbim-group='6'] { --g-key: #29136C; --g-mid: #4729A3; --g-light: #BDADEB; --g-lightest: #EEEBFA; --g-action: #4729A3; }
+:root[data-dbim-group='7'] { --g-key: #1E3F0D; --g-mid: #285412; --g-light: #C5E0B8; --g-lightest: #F1F7ED; --g-action: #285412; }
+:root[data-dbim-group='8'] { --g-key: #412B0B; --g-mid: #6C4713; --g-light: #E8D5B0; --g-lightest: #F7F4ED; --g-action: #6C4713; }
+:root[data-dbim-group='10'] { --g-key: #006B7A; --g-mid: #009DB3; --g-light: #A8EFF9; --g-lightest: #CBF9FF; --g-action: #006B7A; }
+:root[data-dbim-group='neutral'] { --g-key: #22242A; --g-mid: #454754; --g-light: #D5D6DC; --g-lightest: #F1F1F4; --g-action: #454754; }
+
+:root {
+  /* Functional palette (DBIM 2.2) */
+  --linen: #EBEAEA;
+  --inclusive: #FFFFFF;
+  --earth: #150202;          /* Deep Earthy Brown — text on light backgrounds */
+  --black: #000000;
+  --gov-blue: #1D0A69;       /* reserved for Gov.in root websites */
+  --success: #198754;
+  --warning: #FFC107;
+  --error: #DC3545;
+  --info: #0D6EFD;
+  --grey-1: #C6C6C6;
+  --grey-2: #8E8E8E;
+  --grey-3: #606060;
+
+  /* Semantic roles (light theme) */
+  --bg: var(--inclusive);
+  --bg-soft: var(--g-lightest);
+  --bg-muted: color-mix(in srgb, var(--g-lightest) 45%, #fff);
+  --surface: var(--inclusive);
+  --text: var(--earth);
+  --text-muted: var(--grey-3);   /* 6.3:1 on white */
+  --heading: var(--g-key);
+  --accent: var(--g-action);
+  --accent-strong: var(--g-key);
+  --accent-tint: var(--g-light);
+  --icon: var(--g-key);          /* DBIM 3.7 (iii): icons in key colour or white */
+  --link: var(--g-action);
+  --link-hover: var(--g-key);
+  --border: color-mix(in srgb, var(--g-light) 55%, var(--linen));
+  --border-strong: color-mix(in srgb, var(--g-key) 30%, var(--grey-1));
+  --focus: var(--info);
+  --on-key: var(--inclusive);
+  --on-key-muted: color-mix(in srgb, var(--inclusive) 82%, var(--g-key));
+  --brand-gradient: linear-gradient(120deg, var(--g-key) 0%, var(--g-mid) 100%); /* DBIM 2.1 (vi) */
+  --warli: var(--g-lightest);
+
+  /* Type (DBIM 4.3.1 desktop) */
+  --font: 'Noto Sans Variable', 'Noto Sans', 'Noto Sans Devanagari Variable', 'Noto Sans Devanagari', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --fs-h1: 2.25rem;   /* 36px */
+  --fs-h2: 1.5rem;    /* 24px */
+  --fs-h3: 1.25rem;   /* 20px */
+  --fs-p1: 1rem;      /* 16px */
+  --fs-p2: 0.875rem;  /* 14px */
+  --fs-small: 0.75rem;/* 12px */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --lh: 1.5;          /* DBIM 4.5 (iii): 1.2–1.5 × type size */
+  --lh-tight: 1.2;
+
+  /* Icon sizes (DBIM 3.4) */
+  --icon-24: 24px;
+  --icon-32: 32px;
+  --icon-48: 48px;
+  --icon-64: 64px;
+
+  /* Space, shape, depth */
+  --gutter: 16px;
+  --container: 1280px;
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(21, 2, 2, 0.08);
+  --shadow: 0 6px 20px -8px rgba(21, 2, 2, 0.22);
+  --shadow-lg: 0 18px 40px -16px rgba(21, 2, 2, 0.35);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --header-h: 64px;
+  color-scheme: light;
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* DBIM 4.3.2 mobile scale */
+    --fs-h1: 1.5rem;    /* 24px */
+    --fs-h2: 1.25rem;   /* 20px */
+    --fs-h3: 1rem;      /* 16px */
+    --fs-p1: 0.875rem;  /* 14px */
+    --fs-p2: 0.75rem;   /* 12px */
+    --fs-small: 0.625rem; /* 10px */
+  }
+}
+
+/* Dark theme (user choice in Accessibility options) */
+:root[data-theme='dark'] {
+  --bg: #121212;
+  --bg-soft: #1B1B1B;
+  --bg-muted: #171717;
+  --surface: #1E1E1E;
+  --text: #F2F2F2;
+  --text-muted: #C9C9C9;
+  --heading: #FFFFFF;
+  --accent: var(--g-light);
+  --accent-strong: #FFFFFF;
+  --accent-tint: #3A3A3A;
+  --icon: #FFFFFF;
+  --link: var(--g-light);
+  --link-hover: #FFFFFF;
+  --border: #333333;
+  --border-strong: #555555;
+  --focus: #8AB4F8;
+  --on-key: #FFFFFF;
+  --on-key-muted: #E0E0E0;
+  --brand-gradient: linear-gradient(120deg, #000 0%, var(--g-key) 100%);
+  --warli: var(--g-light);
+  color-scheme: dark;
+}
+
+/* High contrast (GIGW contrast scheme): black, white and yellow */
+:root[data-theme='contrast'] {
+  --bg: #000000;
+  --bg-soft: #000000;
+  --bg-muted: #000000;
+  --surface: #000000;
+  --text: #FFFFFF;
+  --text-muted: #FFFFFF;
+  --heading: #FFFF00;
+  --accent: #FFFF00;
+  --accent-strong: #FFFF00;
+  --accent-tint: #000000;
+  --icon: #FFFF00;
+  --link: #FFFF00;
+  --link-hover: #FFFFFF;
+  --border: #FFFFFF;
+  --border-strong: #FFFFFF;
+  --focus: #00FFFF;
+  --on-key: #FFFFFF;
+  --on-key-muted: #FFFFFF;
+  --brand-gradient: linear-gradient(#000, #000);
+  --g-key: #000000;
+  --g-mid: #000000;
+  --g-action: #000000;
+  --g-lightest: #000000;
+  --g-light: #000000;
+  --warli: #FFFF00;
+  --shadow-sm: none;
+  --shadow: none;
+  --shadow-lg: none;
+  color-scheme: dark;
+}
+
+/* Text size steps (A− / A / A+ / A++) scale the root so all rem values follow */
+:root[data-text='-1'] { font-size: 87.5%; }
+:root[data-text='1']  { font-size: 112.5%; }
+:root[data-text='2']  { font-size: 125%; }

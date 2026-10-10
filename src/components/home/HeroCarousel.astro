@@ -1,0 +1,79 @@
+---
+// Top banner carousel (DBIM A.4.1.2 ii). DBIM requires the first slide to be the
+// centrally published (CCPS) banner; it is loaded from MyGov's banner service, as
+// on the current site. A designed welcome slide with HTML text follows (banner
+// text must not be baked into images, DBIM 8.1), then the Ministry's campaign
+// banners. Autoplay can be paused (WCAG 2.2.2) and is off for reduced motion.
+import { Image } from 'astro:assets';
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { banners } from '../../data/media';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+import WarliHero from '../WarliHero.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const CCPS = {
+  href: 'https://cbpssubscriber.mygov.in/aff/AwKMbTcBYoYAEojB',
+  src: 'https://cbpssubscriber.mygov.in/assets/uploads/juGajmc1gOVBUtt5?90',
+};
+const total = banners.length + 2;
+const hi = locale === 'hi';
+---
+<section class="hero" aria-roledescription="carousel" aria-label={hi ? 'मुख्य बैनर' : 'Featured banners'} data-carousel>
+  <div class="hero__viewport" aria-live="off" data-carousel-viewport>
+    <div class="hero__slide hero__slide--ccps is-active" role="group" aria-roledescription="slide" aria-label={`1 / ${total}`} data-slide data-ccps>
+      <a href={CCPS.href} target="_blank" rel="noopener noreferrer" data-ext>
+        <img src={CCPS.src} alt={hi ? 'भारत सरकार का केंद्रीय रूप से प्रकाशित अभियान बैनर (MyGov)' : 'Centrally published Government of India campaign banner (MyGov)'} width="1440" height="386" fetchpriority="high" data-ccps-img />
+        <span class="visually-hidden"> ({t('externalNote', locale)})</span>
+      </a>
+    </div>
+
+    <div class="hero__slide hero__slide--welcome" role="group" aria-roledescription="slide" aria-label={`2 / ${total}`} data-slide>
+      <div class="welcome">
+        <div class="welcome__text">
+          <p class="welcome__eyebrow">{hi ? 'भारत सरकार · जनजातीय कार्य मंत्रालय' : 'Government of India · Ministry of Tribal Affairs'}</p>
+          <p class="welcome__title">{hi ? 'जनजातीय सशक्तिकरण, भारत परिवर्तन' : 'Empowering Tribals, Transforming India'}</p>
+          <p class="welcome__lead">
+            {hi
+              ? '10.4 करोड़ अनुसूचित जनजाति नागरिकों और 705 से अधिक जनजातीय समुदायों के लिए योजनाएं, सेवाएं और जानकारी।'
+              : 'Schemes, services and information for 10.4 crore Scheduled Tribe citizens and more than 705 tribal communities of India.'}
+          </p>
+          <div class="welcome__cta">
+            <a class="btn btn--light" href={localePath('/offerings/schemes/', locale)}>{hi ? 'योजनाएं देखें' : 'Explore schemes'}<Icon name="ArrowRight" /></a>
+            <a class="btn btn--outline-light" href="#personas">{hi ? 'आपके लिए क्या है' : 'Find what’s for you'}</a>
+          </div>
+        </div>
+        <WarliHero class="welcome__art" />
+      </div>
+    </div>
+
+    {banners.map((b, i) => (
+      <div class="hero__slide" role="group" aria-roledescription="slide" aria-label={`${i + 3} / ${total}`} data-slide>
+        {b.href
+          ? <SmartLink href={b.href} locale={locale} class="hero__link"><Image src={b.image} alt={hi ? b.altHi : b.alt} widths={[720, 1080, 1440]} sizes="100vw" format="webp" quality={78} loading="lazy" decoding="async" /></SmartLink>
+          : <Image src={b.image} alt={hi ? b.altHi : b.alt} widths={[720, 1080, 1440]} sizes="100vw" format="webp" quality={78} loading="lazy" decoding="async" />}
+      </div>
+    ))}
+  </div>
+
+  <div class="hero__controls">
+    <div class="container hero__controls-inner">
+      <button type="button" class="hero__btn" data-carousel-toggle aria-label={t('pauseSlides', locale)} data-label-pause={t('pauseSlides', locale)} data-label-play={t('playSlides', locale)}>
+        <Icon name="Pause" class="icon icon--sm icon-pause" /><Icon name="Play" class="icon icon--sm icon-play" />
+      </button>
+      <button type="button" class="hero__btn" data-carousel-prev aria-label={t('prevSlide', locale)}><Icon name="ChevronLeft" class="icon icon--sm" /></button>
+      <div class="hero__dots" role="group" aria-label={hi ? 'स्लाइड चुनें' : 'Choose slide'}>
+        {Array.from({ length: total }).map((_, i) => (
+          <button type="button" class="hero__dot" aria-label={`${t('goToSlide', locale)} ${i + 1}`} aria-current={i === 0 ? 'true' : undefined} data-carousel-dot={i}></button>
+        ))}
+      </div>
+      <button type="button" class="hero__btn" data-carousel-next aria-label={t('nextSlide', locale)}><Icon name="ChevronRight" class="icon icon--sm" /></button>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '@kit/js/carousel';
+</script>

@@ -1,0 +1,18 @@
+---
+import type { Locale } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<div class="empty">
+  <Icon name="Briefcase" />
+  <p>{T('There are no open vacancies in the Ministry at present. New vacancies are listed here and in What’s New as soon as they are advertised.', 'वर्तमान में मंत्रालय में कोई रिक्ति खुली नहीं है। नई रिक्तियां विज्ञापित होते ही यहां और “नया क्या है” में सूचीबद्ध की जाती हैं।')}</p>
+</div>
+<div class="grid grid--2 mt">
+  <div class="callout"><Icon name="School" /><div><p><strong>{T('Teaching and non-teaching posts in Eklavya schools', 'एकलव्य विद्यालयों में शैक्षणिक और गैर-शैक्षणिक पद')}</strong> {T('are recruited by the National Education Society for Tribal Students.', 'राष्ट्रीय जनजातीय छात्र शिक्षा समिति द्वारा भरे जाते हैं।')}</p><p><SmartLink href="https://nests.tribal.gov.in/" locale={locale} showExternalIcon>{T('Visit NESTS', 'नेस्ट्स देखें')}</SmartLink></p></div></div>
+  <div class="callout"><Icon name="FolderOpen" /><div><p><strong>{T('Earlier advertisements', 'पुराने विज्ञापन')}</strong>, {T('deputation circulars and results are kept in the Archives.', 'प्रतिनियुक्ति परिपत्र और परिणाम पुरालेख में रखे जाते हैं।')}</p><p><a href={localePath('/archives/', locale)}>{T('Go to Archives', 'पुरालेख पर जाएं')}</a></p></div></div>
+</div>

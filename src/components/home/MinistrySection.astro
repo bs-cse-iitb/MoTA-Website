@@ -1,0 +1,55 @@
+---
+// Ministry section (DBIM A.4.1.2 v): about the Ministry, headshots of the Minister
+// and Minister of State (white background, DBIM 6.1.4), links into the Ministry section.
+import { Image } from 'astro:assets';
+import type { Locale } from '../../data/site';
+import { ministers } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { mainNav } from '../../data/nav';
+import Icon from '../Icon.astro';
+import SmartLink from '../SmartLink.astro';
+import jualOram from '../../assets/people/jual-oram.png';
+import durgadasUikey from '../../assets/people/durgadas-uikey.png';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const photos: Record<string, ImageMetadata> = { 'jual-oram': jualOram, 'durgadas-uikey': durgadasUikey };
+const ministry = mainNav[0];
+---
+<section class="section ministry" aria-labelledby="ministry-title">
+  <div class="container ministry__grid">
+    <div class="ministry__about">
+      <p class="eyebrow">{hi ? 'मंत्रालय' : 'The Ministry'}</p>
+      <h2 id="ministry-title">{t('aboutMinistry', locale)}</h2>
+      <p class="ministry__lead">
+        {hi
+          ? 'जनजातीय कार्य मंत्रालय का गठन अक्टूबर 1999 में अनुसूचित जनजातियों के एकीकृत सामाजिक-आर्थिक विकास पर समन्वित और नियोजित ढंग से अधिक केंद्रित दृष्टिकोण प्रदान करने हेतु किया गया।'
+          : 'The Ministry of Tribal Affairs was constituted in October 1999 to provide a more focused approach to the integrated socio-economic development of Scheduled Tribes, in a coordinated and planned manner.'}
+      </p>
+      <p class="muted">
+        {hi
+          ? 'यह अनुसूचित जनजातियों के विकास कार्यक्रमों की समग्र नीति, योजना और समन्वय हेतु नोडल मंत्रालय है।'
+          : 'It is the nodal Ministry for overall policy, planning and coordination of programmes for the development of Scheduled Tribes.'}
+      </p>
+      <ul class="ministry__links" role="list">
+        {ministry.children!.map((c) => (
+          <li><a href={localePath(c.href, locale)}><Icon name={c.icon ?? 'ChevronRight'} class="icon icon--sm" />{c.label[locale]}</a></li>
+        ))}
+        <li><SmartLink href="https://tribal.gov.in/DivisionsFiles/CitizensCharter19052026.pdf" locale={locale}><Icon name="ScrollText" class="icon icon--sm" />{hi ? 'नागरिक चार्टर' : "Citizen's Charter"}</SmartLink></li>
+      </ul>
+    </div>
+    <ul class="ministers" role="list">
+      {ministers.map((m) => (
+        <li class="minister">
+          <div class="minister__photo-wrap">
+            <Image class="minister__photo" src={photos[m.photo]} alt={m.name[locale]} width={134} height={134} format="webp" quality={92} />
+          </div>
+          <p class="minister__name">{m.name[locale]}</p>
+          <p class="minister__role">{m.role[locale]}</p>
+          <SmartLink class="minister__link" href={m.profile} locale={locale}>{hi ? 'प्रोफ़ाइल' : 'Profile'}<Icon name="ArrowUpRight" class="icon icon--sm" /></SmartLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

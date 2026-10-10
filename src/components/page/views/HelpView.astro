@@ -1,0 +1,53 @@
+---
+import type { Locale } from '../../../data/site';
+import { site } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<div class="prose">
+  <h2>{T('Finding information', 'जानकारी खोजना')}</h2>
+  <ul class="feature-list">
+    <li>{T('Use the main menu: Ministry, Offerings, Documents, Media and Connect. Every page is within three clicks of the home page.', 'मुख्य मेनू का उपयोग करें: मंत्रालय, सेवाएं, दस्तावेज़, मीडिया और संपर्क। हर पृष्ठ मुखपृष्ठ से तीन क्लिक के भीतर उपलब्ध है।')}</li>
+    <li>{T('Use the search box at the top of every page, or the microphone button to search by voice where your browser supports it.', 'हर पृष्ठ के ऊपर दिए खोज बॉक्स का उपयोग करें, या जहां आपका ब्राउज़र समर्थन करता हो वहां माइक्रोफ़ोन बटन से आवाज़ द्वारा खोजें।')}</li>
+    <li>{T('Choose who you are under “Find what is meant for you” on the home page to see content for students, tribal citizens, researchers, voluntary organisations, State Governments, entrepreneurs and media.', 'मुखपृष्ठ पर “आपके लिए क्या है, जानें” के अंतर्गत अपनी भूमिका चुनें और विद्यार्थियों, जनजातीय नागरिकों, शोधकर्ताओं, स्वैच्छिक संगठनों, राज्य सरकारों, उद्यमियों और मीडिया हेतु सामग्री देखें।')}</li>
+    <li>{T('The Sitemap lists every page.', 'साइटमैप में सभी पृष्ठ सूचीबद्ध हैं।')} <a href={localePath('/sitemap/', locale)}>{T('Open the sitemap', 'साइटमैप खोलें')}</a></li>
+  </ul>
+  {/* The old FAQ.aspx redirects here, so the FAQ document is linked in the page body too. */}
+  <h2 id="faq">{T('FAQ', 'सामान्य प्रश्न')}</h2>
+  <p><SmartLink href={site.faq.href} locale={locale}>{T('FAQ', 'सामान्य प्रश्न')} <span lang="en">{`(PDF, ${site.faq.size})`}</span></SmartLink></p>
+  <h2>{T('Accessibility options', 'सुगम्यता विकल्प')}</h2>
+  <p>{T('Select Accessibility options in the top bar to:', 'शीर्ष पट्टी में सुगम्यता विकल्प चुनकर आप:')}</p>
+  <ul class="feature-list">
+    <li>{T('Change the text size (A−, A, A+, A++). The A−, A and A+ buttons are also in the top bar.', 'पाठ का आकार बदल सकते हैं (A−, A, A+, A++)। A−, A और A+ बटन शीर्ष पट्टी में भी हैं।')}</li>
+    <li>{T('Switch between standard, dark and high-contrast colours, invert colours or reduce saturation. The contrast button in the top bar toggles high contrast.', 'सामान्य, डार्क और उच्च कंट्रास्ट रंगों के बीच बदल सकते हैं, रंग उलट सकते हैं या संतृप्ति कम कर सकते हैं। शीर्ष पट्टी का कंट्रास्ट बटन उच्च कंट्रास्ट चालू/बंद करता है।')}</li>
+    <li>{T('Highlight links, increase text spacing, use a more readable font, hide images, use a big cursor and stop animations.', 'लिंक हाइलाइट कर सकते हैं, पाठ अंतराल बढ़ा सकते हैं, पठनीय फ़ॉन्ट चुन सकते हैं, चित्र छिपा सकते हैं, बड़ा कर्सर चुन सकते हैं और एनिमेशन रोक सकते हैं।')}</li>
+  </ul>
+  <p>{T('Your choices are remembered on this device. You can also zoom with your browser (Ctrl and + on Windows, ⌘ and + on Mac).', 'आपकी पसंद इस उपकरण पर याद रखी जाती है। आप ब्राउज़र से भी ज़ूम कर सकते हैं (विंडोज़ पर Ctrl और +, मैक पर ⌘ और +)।')}</p>
+  <h2>{T('Keyboard use', 'कीबोर्ड का उपयोग')}</h2>
+  <ul class="feature-list">
+    <li><kbd>Tab</kbd> / <kbd>Shift</kbd>+<kbd>Tab</kbd>: {T('move between links and controls; the first link on every page skips to the main content.', 'लिंक और नियंत्रणों के बीच जाएं; हर पृष्ठ का पहला लिंक मुख्य सामग्री पर ले जाता है।')}</li>
+    <li><kbd>←</kbd> <kbd>→</kbd> <kbd>↓</kbd> <kbd>Esc</kbd>: {T('in the main menu, the arrow keys move between sections, the down arrow opens a section and Escape closes it.', 'मुख्य मेनू में तीर कुंजियों से अनुभागों के बीच जाएं, नीचे वाला तीर अनुभाग खोलता है और Escape उसे बंद करता है।')}</li>
+    <li>{T('The banner slideshow, announcements and logo strip can be paused with their pause buttons.', 'बैनर स्लाइड शो, घोषणाएं और लोगो पट्टी उनके पॉज़ बटन से रोकी जा सकती हैं।')}</li>
+  </ul>
+  <h2>{T('Viewing documents', 'दस्तावेज़ देखना')}</h2>
+  <p>{T('Documents are mostly in PDF. Each link shows the format and size and opens in a new tab.', 'अधिकांश दस्तावेज़ पीडीएफ़ में हैं। प्रत्येक लिंक पर प्रारूप और आकार दर्शाया गया है और वह नए टैब में खुलता है।')}</p>
+</div>
+<div class="table-wrap" tabindex="0" role="region" aria-label={T('Software to view documents', 'दस्तावेज़ देखने हेतु सॉफ़्टवेयर')}>
+  <table class="table">
+    <caption class="visually-hidden">{T('Software to view documents', 'दस्तावेज़ देखने हेतु सॉफ़्टवेयर')}</caption>
+    <thead><tr><th scope="col">{T('Document type', 'दस्तावेज़ का प्रकार')}</th><th scope="col">{T('Free software to open it', 'खोलने हेतु निःशुल्क सॉफ़्टवेयर')}</th></tr></thead>
+    <tbody>
+      <tr><td class="who">PDF</td><td>{T('Any modern browser, or', 'कोई भी आधुनिक ब्राउज़र, या')} <SmartLink href="https://get.adobe.com/reader/" locale={locale} showExternalIcon>Adobe Acrobat Reader</SmartLink></td></tr>
+      <tr><td class="who">Word, Excel, PowerPoint</td><td><SmartLink href="https://www.libreoffice.org/" locale={locale} showExternalIcon>LibreOffice</SmartLink> {T('or Microsoft Office', 'या माइक्रोसॉफ़्ट ऑफ़िस')}</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="grid grid--3 mt">
+  <a class="tile" href={localePath('/screen-reader-access/', locale)}><span class="tile__icon"><Icon name="Volume2" class="icon icon--sm" /></span>{T('Screen reader access', 'स्क्रीन रीडर का उपयोग')}</a>
+  <a class="tile" href={localePath('/policies/accessibility-statement/', locale)}><span class="tile__icon"><Icon name="Accessibility" class="icon icon--sm" /></span>{T('Accessibility statement', 'सुगम्यता विवरण')}</a>
+  <a class="tile" href={localePath('/connect/feedback/', locale)}><span class="tile__icon"><Icon name="Send" class="icon icon--sm" /></span>{T('Report a problem', 'समस्या की सूचना दें')}</a>
+</div>

@@ -1,0 +1,46 @@
+# tribal.gov.in: new website. Code at the root, project documents in docs/.
+
+# Dependencies and the site build: reproducible with `npm ci && npm run build`.
+# packages/dbim-kit/dist/ is NOT ignored: it is the ready-to-copy kit for other portals.
+node_modules/
+/dist/
+/.astro/
+
+# Local settings and secrets: copy .env.example to .env (never commit .env)
+.env
+.env.*
+!.env.example
+
+# Official guideline PDFs: public NIC, MeitY and STQC documents, recorded with their
+# URLs and checksums in docs/GIGW_DBIM_Guidelines/README.md. Download them from there.
+/docs/GIGW_DBIM_Guidelines/**/*.pdf
+
+# Bulk screenshots written by the test suites (results.json and test-cases.csv are kept;
+# the curated screenshots in docs/GIGW_DBIM_Standardisation/3_Build/Screenshots/ are kept).
+/docs/Evidence/**/screenshots/
+
+# Safety net: none of these belong in the repository. The legacy ASP.NET source (database
+# credentials) and the database backups live outside it. The old chat widget copy held
+# an API key; never commit one.
+/chat_popup/
+*.bak
+*.mdf
+*.ldf
+*.rar
+*.pfx
+*.key
+*.pem
+Web.config
+!src/pages/web.config.ts
+
+# OS, editor and tool files
+.DS_Store
+Thumbs.db
+~$*
+*.log
+npm-debug.log*
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.venv/

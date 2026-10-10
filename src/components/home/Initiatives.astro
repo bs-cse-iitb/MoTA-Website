@@ -1,0 +1,44 @@
+---
+// Innovative initiatives — horizontal scroller with buttons (keyboard and touch friendly).
+import type { Locale } from '../../data/site';
+import { t, localePath } from '../../data/i18n';
+import { initiatives } from '../../data/initiatives';
+import Icon from '../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<section class="section initiatives" aria-labelledby="init-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{locale === 'hi' ? 'पहल' : 'Initiatives'}</p>
+        <h2 id="init-title">{t('initiatives', locale)}</h2>
+      </div>
+      <div class="scroller-btns">
+        <button type="button" class="icon-btn" data-scroll="-1" aria-controls="init-track" aria-label={t('prevSlide', locale)}><Icon name="ArrowLeft" /></button>
+        <button type="button" class="icon-btn" data-scroll="1" aria-controls="init-track" aria-label={t('nextSlide', locale)}><Icon name="ArrowRight" /></button>
+      </div>
+    </div>
+    <ul class="scroller" id="init-track" role="list" tabindex="0" aria-label={t('initiatives', locale)}>
+      {initiatives.map((i) => (
+        <li class="card card--link init">
+          <span class="card__icon"><Icon name={i.icon} /></span>
+          <h3 class="card__title"><a href={localePath(`/offerings/initiatives/${i.slug}/`, locale)}>{i.title[locale]}</a></h3>
+          <p class="card__text">{i.summary[locale]}</p>
+          {i.partner && <p class="init__partner">{locale === 'hi' ? 'साझेदार' : 'With'}: <span lang={locale === 'hi' ? 'en' : undefined}>{i.partner}</span></p>}
+          <span class="card__more" aria-hidden="true">{t('explore', locale)}<Icon name="ArrowRight" /></span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-scroll]').forEach((b) => {
+    b.addEventListener('click', () => {
+      const track = document.getElementById(b.getAttribute('aria-controls')!);
+      if (!track) return;
+      track.scrollBy({ left: Number(b.dataset.scroll) * track.clientWidth * 0.85, behavior: 'smooth' });
+    });
+  });
+</script>

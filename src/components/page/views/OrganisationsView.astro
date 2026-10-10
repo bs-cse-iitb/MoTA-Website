@@ -1,0 +1,27 @@
+---
+import type { Locale } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import { organisations } from '../../../data/organisations';
+import { organisationHi } from '../../../data/hi-content';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+<ul class="grid grid--2" role="list">
+  {organisations.map((o) => (
+    <li class="card org">
+      <div class="org__head">
+        {o.logo ? <img class="org__logo" src={o.logo} alt="" width="120" height="56" loading="lazy" /> : <span class="card__icon"><Icon name={o.icon} /></span>}
+        <div><h2 class="card__title org__title">{o.name[locale]} <span class="muted">({o.short})</span></h2><p class="badge">{o.type[locale]}</p></div>
+      </div>
+      {((locale === 'hi' && organisationHi[o.slug]) || o.about).map((p) => <p class="card__text">{p}</p>)}
+      <div class="org__links">
+        {o.legacy && <a class="btn btn--sm" href={localePath(`/ministry/our-organisations/${o.slug}/`, locale)}>{T('Documents', 'दस्तावेज़')}<Icon name="ArrowRight" /></a>}
+        <SmartLink class="btn btn--ghost btn--sm" href={o.url} locale={locale}>{T('Website', 'वेबसाइट')}<Icon name="ArrowUpRight" /></SmartLink>
+      </div>
+    </li>
+  ))}
+</ul>

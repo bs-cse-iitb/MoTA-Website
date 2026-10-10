@@ -1,0 +1,114 @@
+$ npm run check:nav -- --from old-Home.aspx.html
+{"generated":"2026-10-10T08:23:55.208Z","oldPage":"old-Home.aspx.html","newPages":115,"navigation":{"items":150,"In menus":50,"On a page":82,"Same website":3,"Held":11,"Left out":2,"Dead on old site":2,"Missing":0,"maxClicks":2},"content":{"items":13,"In menus":2,"On a page":7,"Same website":0,"Held":0,"Left out":0,"Dead on old site":4,"Missing":0,"maxClicks":2}}
+Dead on old site | Header | 150 logo red |  | The old link went nowhere ("#")
+On a page        | Main menu | About us › Organisational Chart | 2 clicks: Menu › About Us
+On a page        | Main menu | About us › Work Allocation | 2 clicks: Menu › Home page
+On a page        | Main menu | About us › Channel of submission & Level of disposal | 2 clicks: Menu › About Us
+On a page        | Main menu | About us › Citizen's / Client's Charter | 2 clicks: Menu › Grievance Redressal
+On a page        | Main menu | Divisions › Scholarship | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › TRI, Research & Media | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Tribal Health Initiative | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › EMRS | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Livelihood | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › PM-JANMAN | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › DA-JGUA | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › ST Welfare Grant | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › NGO | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › FRA | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › STC Monitoring | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Constitutional & Legal Matters | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Parliament & Coordination | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Establishment | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Vigilance | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Statistics | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Finance | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › Official Language | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › NCST | 2 clicks: Menu › Home page
+On a page        | Main menu | Divisions › NSTFDC | 2 clicks: Menu › Our Organisations
+On a page        | Main menu | Dashboard | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › TribeX | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › Tribal Research Institute | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › DBT(Pre and Post Matric Scholarship) | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › National Fellowship Scheme | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › National Overseas Scholarship | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › NGO Grants | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › Forest Rights Act | 2 clicks: Menu › Home page
+On a page        | Main menu | IT Initiatives › STCMIS | 2 clicks: Menu › Our Performance
+On a page        | Main menu | IT Initiatives › State TSP | 2 clicks: Menu › Our Performance
+On a page        | Main menu | IT Initiatives › SCD-IEC | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › ADIGRAMS | 2 clicks: Menu › Our Performance
+On a page        | Main menu | IT Initiatives › Tribal Digital Document Repository | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › Tribal Repository | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › 1000 Spring Intiatives | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › Document Management System | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › Adi-Prasaran | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › NESTS | 2 clicks: Menu › Our Organisations
+On a page        | Main menu | IT Initiatives › Tribal Migration | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | IT Initiatives › Swasthya Portal | 2 clicks: Menu › Home page
+On a page        | Main menu | Adi Karmayogi | 2 clicks: Menu › Portals & Online Services
+On a page        | Main menu | Review Meeting | 2 clicks: Menu › Our Performance
+Held             | Main menu | Sanction Orders › 2026-27 (aria-label "2025-26") | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2025-26 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2024-25 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2023-24 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2022-23 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2021-22 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2020-21 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2019-20 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2018-19 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › 2017-18 | 2 clicks: Menu › Sanction Orders
+Held             | Main menu | Sanction Orders › Archive | 2 clicks: Menu › Sanction Orders
+(content) On a page        | Home page content | Slider Image2 | 2 clicks: Menu › Home page
+(content) On a page        | Home page content | myGov | 2 clicks: Menu › Home page
+(content) On a page        | Home page content | Last Date Extended! Apply for National Overseas Scholarship (NOS) for ST Candidates 2026-27. New Deadline: 31st July 2026, 5:30 PM. Apply Now at https://overseas.tribal.gov.in/ | 2 clicks: Menu › Home page
+(content) On a page        | Home page content | Card image cap | 2 clicks: Menu › Home page
+(content) Dead on old site | Home page content | Visit Honable Minister Facebook Page |  | The old link went nowhere ("#")
+(content) Dead on old site | Home page content | visit Honable Minister twitter Page |  | The old link went nowhere ("#")
+(content) On a page        | Home page content | Card image cap0 | 2 clicks: Menu › Home page
+(content) Dead on old site | Home page content | Visit Honable Minister of State facebook Page |  | The old link went nowhere ("#")
+(content) Dead on old site | Home page content | Visit Honable Minister of State twitter Page |  | The old link went nowhere ("#")
+(content) On a page        | Home page content | Explore | 2 clicks: Menu › Home page
+(content) On a page        | Home page content | Explore | 2 clicks: Menu › What's New
+On a page        | Home: Divisions & Schemes | Scholarship | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | TRI, Research & Media | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | EMRS | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | Livelihood | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | Grant | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | NGO | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | FRA | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | Constitutional & Legal Matters | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | Parliament & Coordination | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | STC Monitoring | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | Finance | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | Establishment & Vigilance | 2 clicks: Menu › Home page
+Dead on old site | Home: Divisions & Schemes | Policy & Grievances |  | The old link went nowhere ("#"); the new home page links "Policy & Grievances" to /connect/grievance-redressal/
+On a page        | Home: Divisions & Schemes | Official Language | 2 clicks: Menu › Home page
+On a page        | Home: Divisions & Schemes | NCST | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Performance Dashboard | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | GEET | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | GOAL | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | PRI awareness program | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Swasthya Portal | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Sickle Cell Support Corner | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Ice Stupa | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Model Village | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | 1000 Springs Initiative | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Tele-Medicine | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Gap Analysis | 2 clicks: Menu › Home page
+On a page        | Home: Innovative Initiatives | Atmanirbhar Bharat | 2 clicks: Menu › Home page
+Same website     | Portal logo band | India Gov (aria-label "India") | 2 clicks: Menu › Home page | services.india.gov.in now redirects to www.india.gov.in/services, a section of the National Portal of India; the new site links the portal’s home page
+On a page        | Portal logo band | India Code (aria-label "IndiaCode") | 2 clicks: Menu › Acts and Policies
+On a page        | Portal logo band | Digital India (aria-label "DIndia") | 2 clicks: Menu › Home page
+On a page        | Portal logo band | NGO (aria-label "NGODarpan") | 2 clicks: Menu › Home page
+On a page        | Portal logo band | NVSP | 2 clicks: Menu › Home page | www.nvsp.in now redirects to voters.eci.gov.in, the Voters’ Service Portal; its own certificate expired on 17 Mar 2025
+On a page        | Portal logo band | TribesIndia (aria-label "Tribes") | 2 clicks: Menu › Home page
+On a page        | Portal logo band | Tribesutsav (aria-label "utsav") | 2 clicks: Menu › Home page
+Same website     | Portal logo band | Bhuvan | 2 clicks: Menu › Home page | The new site links https://bhuvan.nrsc.gov.in/; the old link went to http://bhuvan.nrsc.gov.in/bhuvan_links.php
+On a page        | Portal logo band | NCST (aria-label "bhuvan") | 2 clicks: Menu › Home page
+On a page        | Portal logo band | NSTFDC (aria-label "nstfdc") | 2 clicks: Menu › Home page
+On a page        | Portal logo band | datagov | 2 clicks: Menu › Home page
+On a page        | Portal logo band | mygov | 2 clicks: Menu › Citizen Engagement
+Same website     | Portal logo band | PIBINDIA | 2 clicks: Menu › Press Releases | The new site links https://pib.gov.in/; the old link went to https://pib.gov.in/indexd.aspx
+Left out         | Footer | STQC Logo |  | STQC Website Quality Certificate STQC/WQCS/GIGW/2023/Q1/05 was issued for the old website and was valid up till 12 Feb 2026. The new footer shows a certificate only while it is valid (site.stqc in src/data/site.ts). The PDF stays at its old address
+Left out         | Footer | Built on Common Minimum Framework |  | "Built on Common Minimum Framework" would be untrue: the new site is not built on CMF
+exit=0

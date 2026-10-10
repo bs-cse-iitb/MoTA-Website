@@ -1,0 +1,67 @@
+{
+ "generated": "2026-10-06T01:18:38.641Z",
+ "inputs": {
+  "legacySource": "../../MoTA_Website_Old/App",
+  "liveCrawl": {
+   "file": "live-crawl.json",
+   "generated": "2026-10-06T00:35:42.322Z",
+   "pagesFetched": 900,
+   "boundaries": {
+    "method": "GET only, sequential",
+    "delayMs": 1000,
+    "maxRequests": 900,
+    "maxDepth": 2,
+    "seeds": 183,
+    "excluded": "AUTH/ (admin panel), forms, postbacks, document downloads"
+   },
+   "stoppedAt": "request limit 900 reached; 1563 pages left in the queue"
+  },
+  "newBuild": "dist/",
+  "decisions": "src/data/legacy-urls.json",
+  "database": "NOT RECONCILED: waiting for the NIC content export"
+ },
+ "rows": 26004,
+ "byType": {
+  "page": 292,
+  "query-page": 2196,
+  "verification-file": 2,
+  "document": 17712,
+  "media": 2800,
+  "external-link": 236,
+  "design-asset": 1368,
+  "internal": 1184,
+  "server-file": 189,
+  "system-file": 25
+ },
+ "byStatus": {
+  "design-asset: replaced by the new design (self-hosted)": 15,
+  "design-asset: replaced by the new design": 1353,
+  "document: CONTENT GAP: linked from old pages, not from new site": 638,
+  "document: linked in new site; file present": 626,
+  "document: missing at source (live 404)": 16,
+  "document: missing at source": 1257,
+  "document: not linked anywhere found (kept for deep links)": 5139,
+  "document: pending: in a database list (needs the NIC export)": 10036,
+  "external-link: REVIEW: outside link dropped or replaced": 147,
+  "external-link: kept": 89,
+  "internal: internal or server code (back-office only)": 1184,
+  "media: CONTENT GAP: linked from old pages, not from new site": 10,
+  "media: REVIEW: picture on old pages, not shown on new pages (file kept)": 434,
+  "media: missing at source": 67,
+  "media: not linked anywhere found (kept for deep links)": 1933,
+  "media: pending: in a database list (needs the NIC export)": 356,
+  "page: DECISION NEEDED (Ministry)": 1,
+  "page: blocked: content not migrated": 17,
+  "page: dead link in old site (not in legacy source)": 17,
+  "page: dead link in old site (not in legacy source; live 404)": 83,
+  "page: decided": 5,
+  "page: redirect verified on UAT (tests/redirects.test.mjs); staging pending": 169,
+  "query-page: decided": 1,
+  "query-page: pending: item-level content needs the NIC export": 2195,
+  "server-file: server file": 189,
+  "system-file: system file": 25,
+  "verification-file: present in new build": 2
+ },
+ "documentsAndMediaToKeepGB": 27.82,
+ "completeness": "UNVERIFIED until the database export is reconciled; see Docs/MIGRATION.md"
+}

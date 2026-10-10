@@ -1,0 +1,68 @@
+---
+// Infographics (DBIM A.4.1.2 xiii): key figures about Scheduled Tribes and the
+// Ministry's work, each with its source. Numbers count up once in view.
+import type { Locale } from '../../data/site';
+import { t } from '../../data/i18n';
+import Icon from '../Icon.astro';
+import { L } from '../../data/hi-content';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const stats = [
+  { icon: 'Users', value: 10.43, decimals: 2, suffix: hi ? ' करोड़' : ' crore', label: hi ? 'अनुसूचित जनजाति जनसंख्या (भारत की 8.6%)' : 'Scheduled Tribe population (8.6% of India)', source: 'Census 2011' },
+  { icon: 'Feather', value: 705, plus: true, label: hi ? 'अनुसूचित जनजातियों के रूप में अधिसूचित समुदाय' : 'Communities notified as Scheduled Tribes', source: 'Census 2011' },
+  { icon: 'Tent', value: 75, label: hi ? 'विशेष रूप से कमज़ोर जनजातीय समूह' : 'Particularly Vulnerable Tribal Groups', source: 'PM-JANMAN' },
+  { icon: 'School', value: 728, label: hi ? 'स्वीकृत एकलव्य विद्यालय' : 'Eklavya schools sanctioned', source: 'EMRS Division' },
+  { icon: 'Trees', value: 24.18, decimals: 2, suffix: hi ? ' लाख' : ' lakh', label: hi ? 'व्यक्तिगत वन अधिकार पत्र' : 'Individual forest rights titles', source: 'FRA Division' },
+  { icon: 'Sprout', value: 63843, label: hi ? 'धरती आबा अभियान के गांव' : 'Villages under Dharti Aaba Abhiyan', source: 'DAJGUA' },
+];
+const fmt = (n: number, d = 0) => n.toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
+---
+<section class="section stats" aria-labelledby="stats-title">
+  <div class="container">
+    <div class="section-head section-head--light">
+      <div>
+        <p class="eyebrow">{hi ? 'इन्फ़ोग्राफ़िक' : 'Infographic'}</p>
+        <h2 id="stats-title">{t('tribalIndia', locale)}</h2>
+      </div>
+    </div>
+    <ul class="stats__grid" role="list">
+      {stats.map((s) => (
+        <li class="stat">
+          <span class="stat__icon"><Icon name={s.icon} /></span>
+          <span class="stat__value">
+            <span data-count={s.value} data-decimals={s.decimals ?? 0}>{fmt(s.value, s.decimals ?? 0)}</span>{s.suffix}{s.plus && '+'}
+          </span>
+          <span class="stat__label">{s.label}</span>
+          <span class="stat__source">{hi ? 'स्रोत' : 'Source'}: {L(s.source, locale)}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<script>
+  // Count-up when the band scrolls into view (skipped for reduced motion).
+  const els = document.querySelectorAll<HTMLElement>('[data-count]');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.classList.contains('a11y-nomotion');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const el = en.target as HTMLElement;
+        io.unobserve(el);
+        const end = Number(el.dataset.count);
+        const dec = Number(el.dataset.decimals);
+        const t0 = performance.now();
+        const step = (now: number) => {
+          const p = Math.min(1, (now - t0) / 1400);
+          const v = end * (1 - Math.pow(1 - p, 3));
+          el.textContent = v.toLocaleString('en-IN', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 });
+    els.forEach((el) => io.observe(el));
+  }
+</script>

@@ -1,0 +1,38 @@
+---
+// Tenders (DBIM A.5.2.3): valid procurement-portal link, tender ID, PDF.
+import type { Locale } from '../../../data/site';
+import { formatDate, localePath, tx } from '../../../data/i18n';
+import { tenders } from '../../../data/updates';
+import { updateHi } from '../../../data/hi-content';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+---
+{tenders.length ? (
+  <div class="table-wrap" tabindex="0" role="region" aria-label={T('Current tenders', 'वर्तमान निविदाएं')}>
+    <table class="table">
+      <caption class="visually-hidden">{T('Current tenders', 'वर्तमान निविदाएं')}</caption>
+      <thead><tr><th scope="col">{T('Tender ID', 'निविदा आईडी')}</th><th scope="col">{T('Title', 'शीर्षक')}</th><th scope="col">{T('Published', 'प्रकाशन तिथि')}</th><th scope="col">{T('Documents', 'दस्तावेज़')}</th></tr></thead>
+      <tbody>
+        {tenders.map((d) => (
+          <tr>
+            <td class="who nowrap">{d.ref}</td>
+            <td>{locale === 'hi' ? updateHi[d.url] ?? (d.title as string) : (d.title as string)}{d.portal && <><br /><SmartLink class="small" href={d.portal} locale={locale}>{T('Bid on GeM', 'जेम पर बोली लगाएं')}</SmartLink></>}</td>
+            <td class="nowrap">{d.date && formatDate(d.date, locale)}</td>
+            <td><SmartLink href={d.url} locale={locale}>{T('Corrigendum and bid details', 'शुद्धिपत्र और बोली विवरण')}</SmartLink> <span class="badge badge--file">{d.format}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+) : <p class="empty">{T('No tenders are open at present.', 'वर्तमान में कोई निविदा खुली नहीं है।')}</p>}
+<div class="callout mt">
+  <Icon name="Info" />
+  <div>
+    <p>{T('All tenders of the Ministry are published on the Central Public Procurement Portal and the Government e-Marketplace. Bids are accepted only through these portals.', 'मंत्रालय की सभी निविदाएं केंद्रीय सार्वजनिक खरीद पोर्टल और सरकारी ई-मार्केटप्लेस पर प्रकाशित की जाती हैं। बोलियां केवल इन्हीं पोर्टलों के माध्यम से स्वीकार की जाती हैं।')}</p>
+    <p><SmartLink href="https://eprocure.gov.in/cppp/" locale={locale} showExternalIcon>{T('Central Public Procurement Portal', 'केंद्रीय सार्वजनिक खरीद पोर्टल')}</SmartLink> · <SmartLink href="https://gem.gov.in/" locale={locale} showExternalIcon>{T('Government e-Marketplace (GeM)', 'सरकारी ई-मार्केटप्लेस (जेम)')}</SmartLink> · <a href={localePath('/archives/', locale)}>{T('Archived tenders', 'पुरालेख में रखी निविदाएं')}</a></p>
+  </div>
+</div>

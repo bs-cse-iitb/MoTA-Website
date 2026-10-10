@@ -1,0 +1,20 @@
+---
+import type { Locale } from '../../../data/site';
+import { t, localePath } from '../../../data/i18n';
+import { initiatives } from '../../../data/initiatives';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<ul class="grid grid--3" role="list">
+  {initiatives.map((i) => (
+    <li class="card card--link">
+      <span class="card__icon"><Icon name={i.icon} /></span>
+      <h2 class="card__title"><a href={localePath(`/offerings/initiatives/${i.slug}/`, locale)}>{i.title[locale]}</a></h2>
+      <p class="card__text">{i.summary[locale]}</p>
+      {i.partner && <p class="init__partner">{locale === 'hi' ? 'साझेदार' : 'With'}: <span lang={locale === 'hi' ? 'en' : undefined}>{i.partner}</span></p>}
+      <span class="card__more" aria-hidden="true">{t('readMore', locale)}<Icon name="ArrowRight" /></span>
+    </li>
+  ))}
+</ul>

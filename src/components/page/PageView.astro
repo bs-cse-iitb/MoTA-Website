@@ -1,0 +1,92 @@
+---
+// Renders any registered page (see src/lib/routes.ts) in the chosen language.
+import type { Locale } from '../../data/site';
+import type { PageDef } from '../../lib/routes';
+import InnerLayout from './InnerLayout.astro';
+import HubView from './views/HubView.astro';
+import AboutView from './views/AboutView.astro';
+import TeamView from './views/TeamView.astro';
+import DivisionsView from './views/DivisionsView.astro';
+import DivisionView from './views/DivisionView.astro';
+import OrganisationsView from './views/OrganisationsView.astro';
+import OrganisationView from './views/OrganisationView.astro';
+import PerformanceView from './views/PerformanceView.astro';
+import ReviewView from './views/ReviewView.astro';
+import SchemesView from './views/SchemesView.astro';
+import SchemeView from './views/SchemeView.astro';
+import PortalsView from './views/PortalsView.astro';
+import InitiativesView from './views/InitiativesView.astro';
+import InitiativeView from './views/InitiativeView.astro';
+import TendersView from './views/TendersView.astro';
+import VacanciesView from './views/VacanciesView.astro';
+import CompetitionsView from './views/CompetitionsView.astro';
+import DocsView from './views/DocsView.astro';
+import SanctionView from './views/SanctionView.astro';
+import PhotosView from './views/PhotosView.astro';
+import VideosView from './views/VideosView.astro';
+import BrochuresView from './views/BrochuresView.astro';
+import ContactView from './views/ContactView.astro';
+import DirectoryView from './views/DirectoryView.astro';
+import RTIView from './views/RTIView.astro';
+import GrievanceView from './views/GrievanceView.astro';
+import CitizenView from './views/CitizenView.astro';
+import ParliamentView from './views/ParliamentView.astro';
+import FeedbackView from './views/FeedbackView.astro';
+import PoliciesView from './views/PoliciesView.astro';
+import PolicyView from './views/PolicyView.astro';
+import WhatsNewView from './views/WhatsNewView.astro';
+import ArchivesView from './views/ArchivesView.astro';
+import RelatedView from './views/RelatedView.astro';
+import HelpView from './views/HelpView.astro';
+import ScreenReaderView from './views/ScreenReaderView.astro';
+import SitemapView from './views/SitemapView.astro';
+import SearchView from './views/SearchView.astro';
+import PersonaView from './views/PersonaView.astro';
+
+interface Props { page: PageDef; locale: Locale }
+const { page, locale } = Astro.props;
+const k = page.kind;
+const slug = page.slug ?? '';
+const wide = ['hub', 'sitemap', 'search', 'persona', 'directory'].includes(k);
+---
+<InnerLayout page={page} locale={locale} wide={wide}>
+  {k === 'hub' && <HubView page={page} locale={locale} />}
+  {k === 'about' && <AboutView locale={locale} />}
+  {k === 'team' && <TeamView locale={locale} />}
+  {k === 'divisions' && <DivisionsView locale={locale} />}
+  {k === 'division' && <DivisionView slug={slug} locale={locale} />}
+  {k === 'organisations' && <OrganisationsView locale={locale} />}
+  {k === 'organisation' && <OrganisationView slug={slug} locale={locale} />}
+  {k === 'performance' && <PerformanceView locale={locale} />}
+  {k === 'reviews' && <ReviewView locale={locale} />}
+  {k === 'schemes' && <SchemesView locale={locale} />}
+  {k === 'scheme' && <SchemeView slug={slug} locale={locale} />}
+  {k === 'portals' && <PortalsView locale={locale} />}
+  {k === 'initiatives' && <InitiativesView locale={locale} />}
+  {k === 'initiative' && <InitiativeView slug={slug} locale={locale} />}
+  {k === 'tenders' && <TendersView locale={locale} />}
+  {k === 'vacancies' && <VacanciesView locale={locale} />}
+  {k === 'competitions' && <CompetitionsView locale={locale} />}
+  {k === 'docs' && <DocsView category={page.docCategory!} locale={locale} />}
+  {k === 'sanction' && <SanctionView locale={locale} />}
+  {k === 'photos' && <PhotosView locale={locale} />}
+  {k === 'videos' && <VideosView locale={locale} />}
+  {k === 'brochures' && <BrochuresView locale={locale} />}
+  {k === 'contact' && <ContactView locale={locale} />}
+  {k === 'directory' && <DirectoryView locale={locale} />}
+  {k === 'rti' && <RTIView locale={locale} />}
+  {k === 'grievance' && <GrievanceView locale={locale} />}
+  {k === 'citizen' && <CitizenView locale={locale} />}
+  {k === 'parliament' && <ParliamentView locale={locale} />}
+  {k === 'feedback' && <FeedbackView locale={locale} />}
+  {k === 'policies' && <PoliciesView locale={locale} />}
+  {k === 'policy' && <PolicyView slug={slug} locale={locale} />}
+  {k === 'whatsnew' && <WhatsNewView locale={locale} />}
+  {k === 'archives' && <ArchivesView locale={locale} />}
+  {k === 'related' && <RelatedView locale={locale} />}
+  {k === 'help' && <HelpView locale={locale} />}
+  {k === 'screenreader' && <ScreenReaderView locale={locale} />}
+  {k === 'sitemap' && <SitemapView locale={locale} />}
+  {k === 'search' && <SearchView locale={locale} />}
+  {k === 'persona' && <PersonaView slug={slug} locale={locale} />}
+</InnerLayout>

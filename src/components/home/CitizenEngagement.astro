@@ -1,0 +1,56 @@
+---
+// Citizen engagement (DBIM A.4.1.2 xi): X, Facebook, Instagram and YouTube.
+// Third-party feeds load only after the visitor consents to social media
+// cookies (DBIM 7.6.3.2 iii); until then each card links to the profile.
+import type { Locale } from '../../data/site';
+import { site } from '../../data/site';
+import { t } from '../../data/i18n';
+import BrandIcon from '../BrandIcon.astro';
+import SmartLink from '../SmartLink.astro';
+import Icon from '../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const blurbs: Record<string, { en: string; hi: string }> = {
+  x: { en: 'Announcements, events and updates as they happen.', hi: 'घोषणाएं, कार्यक्रम और ताज़ा जानकारी।' },
+  facebook: { en: 'Stories of change from tribal communities.', hi: 'जनजातीय समुदायों से बदलाव की कहानियां।' },
+  instagram: { en: 'Photos of tribal art, culture and events.', hi: 'जनजातीय कला, संस्कृति और आयोजनों की तस्वीरें।' },
+  youtube: { en: 'Videos of programmes, launches and campaigns.', hi: 'कार्यक्रमों, शुभारंभों और अभियानों के वीडियो।' },
+};
+---
+<section class="section engage" aria-labelledby="engage-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{t('citizenEngagement', locale)}</p>
+        <h2 id="engage-title">{t('socialMedia', locale)}</h2>
+      </div>
+      <SmartLink class="btn btn--ghost" href="https://www.mygov.in/" locale={locale}>{hi ? 'MyGov पर भाग लें' : 'Take part on MyGov'}<Icon name="ArrowUpRight" /></SmartLink>
+    </div>
+    <ul class="social-grid" role="list">
+      {site.social.map((s) => (
+        <li class={`social-card social-card--${s.id}`}>
+          <div class="social-card__head">
+            <span class="social-card__logo"><BrandIcon id={s.id as 'x'} /></span>
+            <div>
+              <p class="social-card__name" lang="en">{s.label}</p>
+              <p class="social-card__handle" lang="en">{s.handle}</p>
+            </div>
+          </div>
+          <p class="social-card__text">{blurbs[s.id][locale]}</p>
+          {(s.id === 'x' || s.id === 'facebook') && (
+            <div class="social-card__feed" data-social-feed={s.id} data-url={s.url}>
+              <p class="small muted">{t('feedConsent', locale)}</p>
+              <button type="button" class="btn btn--ghost btn--sm" data-load-feed>{t('loadFeed', locale)}</button>
+            </div>
+          )}
+          <SmartLink class="link-arrow social-card__link" href={s.url} locale={locale}>{hi ? 'फ़ॉलो करें' : 'Follow'}<Icon name="ArrowUpRight" /></SmartLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<script>
+  import '@kit/js/social';
+</script>

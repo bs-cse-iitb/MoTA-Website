@@ -1,0 +1,419 @@
+{
+ "checkedAt": "2026-10-10T08:23:54.044Z",
+ "source": "https://tribal.gov.in/Home.aspx",
+ "rows": [
+  {
+   "area": "Top bar",
+   "live": "Back to top",
+   "now": "Back-to-top button on every page",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Skip to Main",
+   "now": "Skip link, first in tab order",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Screen Reader Access",
+   "now": "Top bar link to /screen-reader-access/",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Text size A- / A / A+",
+   "now": "Top bar text-size buttons and Accessibility options panel",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Contrast buttons",
+   "now": "Top bar high-contrast toggle; dark and contrast themes in the panel",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Social media pop-up (Facebook, Instagram)",
+   "now": "Footer \"Follow us\" and Citizen Engagement section (DBIM A.4.1.2 xi)",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Site search",
+   "now": "Search bar in the header, with voice search",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "Sitemap icon",
+   "now": "Sitemap link in the footer (DBIM 5.6)",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Top bar",
+   "live": "हिन्दी link",
+   "now": "Language menu (English / हिन्दी) to the same page in Hindi",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Header",
+   "live": "MoTA logo (emblem, Hindi and English name)",
+   "now": "Logo lockup 2: State Emblem, Government of India, Ministry name",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Header",
+   "live": "Azadi Ka Amrit Mahotsav logo",
+   "now": "Header co-branding slot (DBIM 5.4, at most two)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Header",
+   "live": "150 years Janjatiya Gaurav logo",
+   "now": "Header co-branding slot (DBIM 5.4, at most two)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Home",
+   "now": "Home icon in the main menu",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "About us › About the Ministry",
+   "now": "Ministry › About Us",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "About us › Organisational Chart (PDF)",
+   "now": "Ministry › Our Team (interactive organogram and the PDF)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "About us › Work Allocation (PDF)",
+   "now": "Ministry › About Us and Our Team",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "About us › Channel of submission & Level of disposal (PDF)",
+   "now": "Ministry › About Us",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "About us › Citizen's / Client's Charter (PDF)",
+   "now": "Ministry › About Us; Connect › Grievance Redressal; home Ministry section",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Divisions (16 divisions)",
+   "now": "Ministry › Our Divisions, one page each",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Divisions › PM-JANMAN, DA-JGUA",
+   "now": "Offerings › Schemes and Services",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Divisions › NCST, NSTFDC",
+   "now": "Ministry › Our Organisations",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Dashboard",
+   "now": "Ministry › Our Performance and Offerings › Initiatives",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "IT Initiatives (19 portals)",
+   "now": "Offerings › Portals & Online Services",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Knowledge Hub",
+   "now": "Documents › Knowledge Hub",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Adi Karmayogi",
+   "now": "Offerings › Initiatives › Adi Karmayogi",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "JJGU (Janjatiya Garima Utsav portal)",
+   "now": "Offerings › Portals; linked from the JGU home banners",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "JJGD (Janjatiya Gaurav Varsh site; the live menu since the source copy, which has JJGU)",
+   "now": "Header co-branding logo (screens 1024 px and wider) and Offerings › Portals",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Review Meeting",
+   "now": "Ministry › Our Performance › State Review Meetings",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Sanction Orders (2017-18 to 2026-27, Archive)",
+   "now": "Documents › Sanction Orders, by financial year",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Menu",
+   "live": "Contact Us",
+   "now": "Connect › Contact Us",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Banner slider (TribeX, 12 Saal, JGU ×5, Bharat Innovates)",
+   "now": "Banner carousel, same slides and order, with pause control",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Central campaign banner (MyGov CCPS)",
+   "now": "First slide of the carousel (DBIM A.4.1.2 ii)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Scrolling marquee (NOS last date extended)",
+   "now": "Announcements ticker, pausable (WCAG 2.2.2)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "About the Ministry with Minister and MoS photos (Sansad profiles)",
+   "now": "Ministry section on the home page",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "What's New tile with latest two notices",
+   "now": "What's New list and link to all updates",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Twitter (X) timeline",
+   "now": "Citizen Engagement; posts load after cookie consent (DBIM 7.6)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Facebook page plug-in",
+   "now": "Citizen Engagement; loads after cookie consent",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Divisions & Schemes tiles (15)",
+   "now": "Divisions tiles on the home page, incl. NCST and Policy & Grievances",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Innovative Initiatives (12)",
+   "now": "Initiatives section on the home page and Offerings › Initiatives",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Home",
+   "live": "Related portals logo carousel (13)",
+   "now": "Logo carousel above the footer (DBIM A.4.1.2 xiv); NVSP now links to its replacement, voters.eci.gov.in",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Public Grievances",
+   "now": "Footer › Connect › Grievance Redressal",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "RTI",
+   "now": "Footer › Connect › RTI",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Website Policy",
+   "now": "Footer › Website Policies (13 policies)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Copyright Policy",
+   "now": "Footer policy links",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "FAQ (PDF)",
+   "now": "Footer utility links, with file type and size",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Related Websites",
+   "now": "Footer › Related Links",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Tenders, Vacancies & Advertisement",
+   "now": "Footer › Offerings › Tenders, Vacancies",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Web Information Manager",
+   "now": "Footer link to the WIM in Connect › Contact Us › Key contacts",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Feedback",
+   "now": "Footer › Feedback",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Disclaimer",
+   "now": "Footer policy links",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Help",
+   "now": "Footer › Help",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Footer social icons (Instagram, X, YouTube, Facebook)",
+   "now": "Footer \"Follow us\"",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Content owned by MoTA; designed, developed and hosted by NIC",
+   "now": "Footer lineage (DBIM 5.6)",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Last Updated date",
+   "now": "Footer and every inner page",
+   "status": "Included",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "STQC certificate (PDF)",
+   "now": "Footer badge; shown automatically while the certificate set in site.ts is valid",
+   "status": "Ready — hidden until the renewed certificate is added (2023 certificate expired 12 Feb 2026)",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "Visitor count",
+   "now": "Footer counter; shown when a counter endpoint is configured in site.ts",
+   "status": "Ready — needs a counter endpoint from NIC",
+   "check": "Pass"
+  },
+  {
+   "area": "Footer",
+   "live": "\"Built on CMF\" logo",
+   "now": "—",
+   "status": "Not carried over: the new site is not built on NIC’s Common Minimum Framework, so the claim would be wrong",
+   "check": "Pass"
+  },
+  {
+   "area": "Floating",
+   "live": "Social media side bar (Facebook, X, YouTube, Instagram)",
+   "now": "Footer \"Follow us\" and Citizen Engagement; no floating bar, so content is never covered",
+   "status": "Included (moved)",
+   "check": "Pass"
+  },
+  {
+   "area": "Floating",
+   "live": "TriBot chat assistant",
+   "now": "Floating button, bottom right; same TriBot service through /tribot-api/ (IIS forward); site-search answers if the service is down",
+   "status": "Included — connect the service on NIC staging",
+   "check": "Pass"
+  }
+ ]
+}

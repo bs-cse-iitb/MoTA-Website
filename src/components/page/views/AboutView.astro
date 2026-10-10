@@ -1,0 +1,58 @@
+---
+import type { Locale } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import { divisions } from '../../../data/divisions';
+import Icon from '../../Icon.astro';
+import DocItem from '../../DocItem.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const functions: [string, string][] = [
+  ['Overall policy, planning and coordination of programmes for the development of Scheduled Tribes, as the nodal Ministry.', 'नोडल मंत्रालय के रूप में अनुसूचित जनजातियों के विकास कार्यक्रमों की समग्र नीति, योजना और समन्वय।'],
+  ['Education of ST students: pre-matric, post-matric, top class, fellowship and overseas scholarships, and Eklavya Model Residential Schools.', 'अनुसूचित जनजाति विद्यार्थियों की शिक्षा: मैट्रिक-पूर्व, मैट्रिकोत्तर, टॉप क्लास, फ़ेलोशिप और प्रवासी छात्रवृत्तियां तथा एकलव्य मॉडल आवासीय विद्यालय।'],
+  ['Grants to States for tribal development: Special Central Assistance (PMAAGY), grants under Article 275(1), development of PVTGs, PM-JANMAN and Dharti Aaba Janjatiya Gram Utkarsh Abhiyan.', 'जनजातीय विकास हेतु राज्यों को अनुदान: विशेष केंद्रीय सहायता (पीएमएएजीवाई), अनुच्छेद 275(1) के अंतर्गत अनुदान, पीवीटीजी विकास, पीएम-जनमन और धरती आबा जनजातीय ग्राम उत्कर्ष अभियान।'],
+  ['Livelihood, marketing of minor forest produce and tribal products, and concessional credit through TRIFED and NSTFDC.', 'आजीविका, लघु वनोपज और जनजातीय उत्पादों का विपणन, तथा ट्राइफेड और एनएसटीएफडीसी के माध्यम से रियायती ऋण।'],
+  ['Research, evaluation, statistics and training through Tribal Research Institutes and Centres of Excellence.', 'जनजातीय अनुसंधान संस्थानों और उत्कृष्टता केंद्रों के माध्यम से अनुसंधान, मूल्यांकन, सांख्यिकी और प्रशिक्षण।'],
+  ['Promotion of voluntary efforts for tribal welfare through grants to voluntary organisations.', 'स्वैच्छिक संगठनों को अनुदान के माध्यम से जनजातीय कल्याण हेतु स्वैच्छिक प्रयासों को प्रोत्साहन।'],
+  ['Scheduling and de-scheduling of tribes, Scheduled Areas, and the Panchayats (Extension to the Scheduled Areas) Act, 1996.', 'जनजातियों का अनुसूचीकरण और विअनुसूचीकरण, अनुसूचित क्षेत्र, तथा पंचायत (अनुसूचित क्षेत्रों पर विस्तार) अधिनियम, 1996।'],
+  ['Nodal Ministry for the Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006.', 'अनुसूचित जनजाति और अन्य परंपरागत वन निवासी (वन अधिकारों की मान्यता) अधिनियम, 2006 हेतु नोडल मंत्रालय।'],
+  ['Monitoring of the Development Action Plan for Scheduled Tribes (Scheduled Tribe Component) of 41 Ministries and Departments.', '41 मंत्रालयों और विभागों की अनुसूचित जनजातियों हेतु विकास कार्य योजना (अनुसूचित जनजाति घटक) की निगरानी।'],
+  ['Matters relating to the National Commission for Scheduled Tribes.', 'राष्ट्रीय अनुसूचित जनजाति आयोग से संबंधित मामले।'],
+];
+const provisions: [string, string, string][] = [
+  ['Article 342', 'The President specifies tribes or tribal communities as Scheduled Tribes for each State/UT by public notification; Parliament may include or exclude communities by law.', 'राष्ट्रपति लोक अधिसूचना द्वारा प्रत्येक राज्य/केंद्र शासित प्रदेश हेतु जनजातियों या जनजातीय समुदायों को अनुसूचित जनजाति के रूप में विनिर्दिष्ट करते हैं; संसद विधि द्वारा समुदायों को सम्मिलित या अपवर्जित कर सकती है।'],
+  ['Article 46', 'The State shall promote with special care the educational and economic interests of the weaker sections, in particular Scheduled Castes and Scheduled Tribes.', 'राज्य दुर्बल वर्गों, विशेषकर अनुसूचित जातियों और अनुसूचित जनजातियों, के शैक्षिक और आर्थिक हितों की विशेष सावधानी से अभिवृद्धि करेगा।'],
+  ['Article 244 and the Fifth & Sixth Schedules', 'Administration of Scheduled Areas (Fifth Schedule) and of tribal areas in Assam, Meghalaya, Tripura and Mizoram (Sixth Schedule).', 'अनुसूचित क्षेत्रों (पांचवीं अनुसूची) तथा असम, मेघालय, त्रिपुरा और मिज़ोरम के जनजातीय क्षेत्रों (छठी अनुसूची) का प्रशासन।'],
+  ['Article 275(1)', 'Grants-in-aid from the Consolidated Fund of India to States for the welfare of Scheduled Tribes and for raising the level of administration of Scheduled Areas.', 'अनुसूचित जनजातियों के कल्याण और अनुसूचित क्षेत्रों के प्रशासन स्तर को ऊंचा उठाने हेतु भारत की संचित निधि से राज्यों को सहायता अनुदान।'],
+  ['Articles 330 and 332', 'Reservation of seats for Scheduled Tribes in the Lok Sabha and State Legislative Assemblies.', 'लोक सभा और राज्य विधान सभाओं में अनुसूचित जनजातियों हेतु स्थानों का आरक्षण।'],
+  ['Article 338A', 'The National Commission for Scheduled Tribes.', 'राष्ट्रीय अनुसूचित जनजाति आयोग।'],
+];
+const articleHi = (a: string) => a.replace('Articles', 'अनुच्छेद').replace('Article', 'अनुच्छेद').replace('and the Fifth & Sixth Schedules', 'तथा पांचवीं और छठी अनुसूची').replace(' and ', ' और ');
+const docs = [
+  { title: T("Citizen's / Client's Charter", 'नागरिक/ग्राहक चार्टर'), url: 'https://tribal.gov.in/DivisionsFiles/CitizensCharter19052026.pdf', date: '2026-05-19' },
+  { title: T('Organisational chart', 'संगठनात्मक चार्ट'), url: 'https://tribal.gov.in/downloads/Tribal/Orgchart19122025.pdf', date: '2025-12-19' },
+  { title: T('Work allocation among officers', 'अधिकारियों के बीच कार्य आवंटन'), url: 'https://tribal.gov.in/downloads/Tribal/Workallocation31072026.pdf', date: '2026-07-31' },
+  { title: T('Channel of submission and level of disposal', 'प्रस्तुतीकरण का माध्यम और निपटान का स्तर'), url: 'https://tribal.gov.in/downloads/Tribal/levelofdisposal19042021new.pdf', date: '2021-04-19' },
+];
+---
+<div class="prose">
+  <p class="ministry__lead">{T('The Ministry of Tribal Affairs was constituted in October 1999, after the bifurcation of the Ministry of Social Justice and Empowerment, to provide a more focused approach to the integrated socio-economic development of Scheduled Tribes — among the most under-served sections of Indian society — in a coordinated and planned manner.', 'जनजातीय कार्य मंत्रालय का गठन अक्टूबर 1999 में सामाजिक न्याय और अधिकारिता मंत्रालय के विभाजन के बाद किया गया, ताकि भारतीय समाज के सबसे वंचित वर्गों में शामिल अनुसूचित जनजातियों के एकीकृत सामाजिक-आर्थिक विकास हेतु समन्वित और नियोजित ढंग से अधिक केंद्रित दृष्टिकोण अपनाया जा सके।')}</p>
+  <p>{T('The Ministry is the nodal Ministry for overall policy, planning and coordination of programmes for the development of Scheduled Tribes. Its schemes are implemented through State Governments, Union Territory administrations, the Ministry’s organisations and voluntary organisations, and it works with other Ministries through convergence missions such as PM-JANMAN and Dharti Aaba Janjatiya Gram Utkarsh Abhiyan.', 'यह मंत्रालय अनुसूचित जनजातियों के विकास कार्यक्रमों की समग्र नीति, योजना और समन्वय हेतु नोडल मंत्रालय है। इसकी योजनाएं राज्य सरकारों, केंद्र शासित प्रदेश प्रशासनों, मंत्रालय के संगठनों और स्वैच्छिक संगठनों के माध्यम से कार्यान्वित की जाती हैं, तथा यह पीएम-जनमन और धरती आबा जनजातीय ग्राम उत्कर्ष अभियान जैसे अभिसरण मिशनों के माध्यम से अन्य मंत्रालयों के साथ कार्य करता है।')}</p>
+  <h2>{T('Functions of the Ministry', 'मंत्रालय के कार्य')}</h2>
+  <ul class="feature-list">{functions.map(([en, hi]) => <li>{T(en, hi)}</li>)}</ul>
+  <h2>{T('Constitutional framework', 'संवैधानिक ढांचा')}</h2>
+</div>
+<div class="table-wrap" tabindex="0" role="region" aria-label={T('Constitutional provisions', 'संवैधानिक प्रावधान')}>
+  <table class="table">
+    <caption class="visually-hidden">{T('Constitutional provisions for Scheduled Tribes', 'अनुसूचित जनजातियों हेतु संवैधानिक प्रावधान')}</caption>
+    <thead><tr><th scope="col">{T('Provision', 'प्रावधान')}</th><th scope="col">{T('What it provides', 'क्या प्रावधान है')}</th></tr></thead>
+    <tbody>{provisions.map(([a, en, hi]) => <tr><td class="who">{locale === 'hi' ? articleHi(a) : a}</td><td>{T(en, hi)}</td></tr>)}</tbody>
+  </table>
+</div>
+<h2 class="mt">{T('Key documents', 'प्रमुख दस्तावेज़')}</h2>
+<ul class="doc-list" role="list">{docs.map((d) => <DocItem {...d} locale={locale} format="PDF" />)}</ul>
+<h2 class="mt">{T('Divisions', 'प्रभाग')}</h2>
+<ul class="tiles" role="list">
+  {divisions.map((d) => <li><a class="tile" href={localePath(`/ministry/our-divisions/${d.slug}/`, locale)}><span class="tile__icon"><Icon name={d.icon} class="icon icon--sm" /></span>{d.title[locale]}</a></li>)}
+</ul>

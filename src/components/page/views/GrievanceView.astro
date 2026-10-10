@@ -1,0 +1,36 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import directory from '../../../data/generated/directory.json';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import DocItem from '../../DocItem.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const officer = directory.find((g) => g.en.startsWith('Nodal Grievance'))?.people[0];
+---
+<div class="callout callout--cta">
+  <div><h2>{T('Lodge your grievance on CPGRAMS', 'सीपीग्राम्स पर अपनी शिकायत दर्ज करें')}</h2><p>{T('The Centralised Public Grievance Redress and Monitoring System sends your grievance to the right officer and lets you track it until it is resolved.', 'केंद्रीकृत लोक शिकायत निवारण और निगरानी प्रणाली आपकी शिकायत संबंधित अधिकारी तक पहुंचाती है और समाधान होने तक उसकी स्थिति देखने की सुविधा देती है।')}</p></div>
+  <SmartLink class="btn btn--light" href="https://pgportal.gov.in/" locale={locale}>{T('Lodge a grievance', 'शिकायत दर्ज करें')}<Icon name="ArrowUpRight" /></SmartLink>
+</div>
+<div class="prose mt">
+  <h2>{T('How it works', 'प्रक्रिया')}</h2>
+  <ol>
+    <li>{T('Register on CPGRAMS and choose “Ministry of Tribal Affairs”.', 'सीपीग्राम्स पर पंजीकरण करें और “जनजातीय कार्य मंत्रालय” चुनें।')}</li>
+    <li>{T('Describe your grievance and attach any documents.', 'अपनी शिकायत का विवरण दें और आवश्यक दस्तावेज़ संलग्न करें।')}</li>
+    <li>{T('Note your registration number to track progress and file an appeal if needed.', 'प्रगति देखने और आवश्यकता होने पर अपील करने हेतु अपनी पंजीकरण संख्या नोट करें।')}</li>
+  </ol>
+</div>
+{officer && (
+  <div class="office mt">
+    <h2 class="card__title">{T('Nodal Grievance Resolution Officer', 'नोडल शिकायत निवारण अधिकारी')}</h2>
+    <p><Icon name="UserRound" />{locale === 'hi' && officer.nameHi ? `${officer.nameHi}, ${officer.designationHi || officer.designation}` : `${officer.name}, ${officer.designation}`}</p>
+  </div>
+)}
+<h2 class="mt">{T('Documents', 'दस्तावेज़')}</h2>
+<ul class="doc-list" role="list">
+  <DocItem title={T('Nodal Grievance Resolution Officer', 'नोडल शिकायत निवारण अधिकारी')} url="https://tribal.gov.in/DivisionsFiles/GrievanceOfficer24022026.pdf" date="2026-02-24" format="PDF" size="113 KB" locale={locale} />
+  <DocItem title={T("Citizen's / Client's Charter", 'नागरिक/ग्राहक चार्टर')} url="https://tribal.gov.in/DivisionsFiles/CitizensCharter19052026.pdf" date="2026-05-19" format="PDF" size="782 KB" locale={locale} />
+</ul>

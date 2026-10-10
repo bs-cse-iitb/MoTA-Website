@@ -1,0 +1,1142 @@
+[
+ {
+  "hi": "मंत्री कार्यालय",
+  "en": "Minister Office",
+  "people": [
+   {
+    "name": "Sh. Jual Oram",
+    "designation": "Cabinet Minister",
+    "nameHi": "श्री जुएल ओराम",
+    "designationHi": "कैबिनेट मंत्री",
+    "work": "Cabinet Minister",
+    "phone": "011-24013782, 011-24013783",
+    "intercom": "215701, 215702",
+    "email": "jual[dot]oram[at]gov[dot]in jualoram[at]zohomail[dot]in oram[dot]jual[at]gmail[dot]com",
+    "address": "Room No: 13107 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "",
+    "designation": "Private Secretary to Minister",
+    "nameHi": "",
+    "designationHi": "",
+    "work": "Office of Cabinet Minister",
+    "phone": "011-24013782, 011-24013783",
+    "intercom": "215699, 215700",
+    "email": "ps.hmta[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13083 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Chandra Sekhar Mund",
+    "designation": "Additional Private Secretary to Minister",
+    "nameHi": "श्री चन्द्र शेखर मुण्ड",
+    "designationHi": "अपर निजी सचिव",
+    "work": "Office of Cabinet Minister",
+    "phone": "011-24013782, 011-24013783",
+    "intercom": "215703, 215704",
+    "email": "csmund[at]nic[dot]in",
+    "address": "Room No: 13106 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Siddhartha Mohapatra",
+    "designation": "Asst. PS to Minister",
+    "nameHi": "श्री सिद्धार्थ मोहपात्रा",
+    "designationHi": "मंत्री के निजी सहायक",
+    "work": "Office of Cabinet Minister",
+    "phone": "011-24013782, 011-24013783",
+    "intercom": "",
+    "email": "siddhartha[dot]mota[at]gov[dot]in",
+    "address": "Room No: 13106 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Gourav Kumar Toppo",
+    "designation": "Asst. PS to Minister",
+    "nameHi": "श्री गौरव कुमार टोप्पो",
+    "designationHi": "मंत्री के निजी सहायक",
+    "work": "Office of Cabinet Minister",
+    "phone": "011-24013782, 011-24013783",
+    "intercom": "",
+    "email": "gouravkumartoppo-aps[at]gov[dot]in",
+    "address": "Room No: 13106 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "राज्य मंत्री कार्यालय",
+  "en": "Minister of State Office",
+  "people": [
+   {
+    "name": "Sh. Durgadas Uikey",
+    "designation": "Minister of State",
+    "nameHi": "श्री दुर्गादास उइके",
+    "designationHi": "राज्य मंत्री",
+    "work": "Minister of State",
+    "phone": "011-24013784, 011-24013785",
+    "intercom": "215707, 215708",
+    "email": "mos-tribalaffairs[at]gov[dot]in",
+    "address": "Room No: 13072 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Gaurav Bharill",
+    "designation": "Private Secretary to Minister",
+    "nameHi": "श्री गौरव भारिल्ल",
+    "designationHi": "निजी सचिव",
+    "work": "Office of Minister of State",
+    "phone": "011-24013784, 011-24013785",
+    "intercom": "215715, 215716",
+    "email": "bharill[dot]gaurav[at]gov[dot]in",
+    "address": "Room No: 13070 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Devanand Uikey",
+    "designation": "Addl. PS to MoS(TA)",
+    "nameHi": "श्री देवानंद उइके",
+    "designationHi": "अपर निजी सचिव",
+    "work": "Office of Minister of State",
+    "phone": "011-24013784, 011-24013785",
+    "intercom": "215717, 215718",
+    "email": "dnuikey[at]gov[dot]in",
+    "address": "Room No: 13071 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Satbir Singh",
+    "designation": "PS",
+    "nameHi": "श्री सतबीर सिंह",
+    "designationHi": "निजी सचिव",
+    "work": "Office of Minister of State",
+    "phone": "011-24013784, 011-24013785",
+    "intercom": "215713, 215714",
+    "email": "satbir[dot]singh13[at]nic[dot]in",
+    "address": "Room No: 13000 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "सचिव",
+  "en": "Secretary",
+  "people": [
+   {
+    "name": "Smt. Ranjana Chopra",
+    "designation": "Secretary",
+    "nameHi": "श्रीमती रंजना चोपड़ा",
+    "designationHi": "सचिव",
+    "work": "Secretary",
+    "phone": "011-24013700,011-24013701",
+    "intercom": "215501, 215502",
+    "email": "secy-tribal[at]nic[dot]in",
+    "address": "Room No: 13099-102 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Lakshmi Naryain",
+    "designation": "Sr. PPS",
+    "nameHi": "श्री लक्ष्मी नारायण",
+    "designationHi": "प्रधान निजी सचिव",
+    "work": "Office of Secretary",
+    "phone": "011-24013700,011-24013701",
+    "intercom": "215503, 215504",
+    "email": "lakshmi[dot]narayan[at]nic[dot]in",
+    "address": "Room No: 13099-102 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Kunal Negi",
+    "designation": "PA",
+    "nameHi": "श्री कुणाल नेगी",
+    "designationHi": "निजी सहायक",
+    "work": "Office of Secretary",
+    "phone": "011-24013700,011-24013701",
+    "intercom": "215505, 215506",
+    "email": "kunal[dot]negi[at]gov[dot]in",
+    "address": "Room No: 13099-102 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Savita Arora",
+    "designation": "Consultant PPS",
+    "nameHi": "सुश्री सविता अरोरा",
+    "designationHi": "सलाहकार पीपीएस",
+    "work": "Office of Secretary",
+    "phone": "011-24013700,011-24013701",
+    "intercom": "215505, 215506",
+    "email": "",
+    "address": "Room No: 13099-102 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Mr. Anshu Ashish",
+    "designation": "Stenographer",
+    "nameHi": "श्री अंशु आशीष",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of Secretary",
+    "phone": "011-24013700,011-24013701",
+    "intercom": "215505, 215506",
+    "email": "anshu[dot]ashish[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13099-102 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "अपर सचिव",
+  "en": "Additional Secretary",
+  "people": [
+   {
+    "name": "Sh. Manish Thakur",
+    "designation": "Additional Secretary",
+    "nameHi": "श्री मनीष ठाकुर",
+    "designationHi": "अपर सचिव",
+    "work": "Grants, DA JGUA, Tribal Health Care (THC), PMU/Monitoring Evaluation Survey Social Audit (MESSA), PMAAGY, Vigilance, Cyber Security, Portals/ IT, NIC",
+    "phone": "011-24013698, 011-24013699",
+    "intercom": "215507, 215508",
+    "email": "manishthakur-ps[at]gov[dot]in",
+    "address": "Room No: 13097-98 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Smt. Veena",
+    "designation": "PPS to AS",
+    "nameHi": "श्रीमती वीणा",
+    "designationHi": "अपर सचिव के प्रधान निजी सचिव",
+    "work": "Office of AS",
+    "phone": "011-24013698, 011-24013699",
+    "intercom": "215509, 215510",
+    "email": "veena[dot]kanvariya[at]nic[dot]in",
+    "address": "Room No: 13097-98 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "संयुक्त सचिव /सलाहकार/ उप-महानिदेशक",
+  "en": "Joint Secretaries /Advisors / DDG",
+  "people": [
+   {
+    "name": "Sh. Brij Nandan Prasad",
+    "designation": "Joint Secretary",
+    "nameHi": "श्री ब्रिज नंदन प्रसाद",
+    "designationHi": "संयुक्त सचिव",
+    "work": "Budget & Cash, Establishment & Capacity Building Unit (CBU), General Administration, Parliament & Coordination (PC), Eklavya Model Residential Schools (EMRS)",
+    "phone": "011-24013704, 011-24013705",
+    "intercom": "215519, 215520, 215521, 215522",
+    "email": "prasad[dot]bn[at]nic[dot]in",
+    "address": "Room No: 13093-94 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Akash Kumar",
+    "designation": "Stenographer",
+    "nameHi": "श्री आकाश कुमार",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of JS",
+    "phone": "011-24013704,011-24013705",
+    "intercom": "215525, 215526",
+    "email": "a[dot]gupta[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13093-94 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Anant Prakash Pandey",
+    "designation": "Joint Secretary",
+    "nameHi": "श्री अनंत प्रकाश पांडे",
+    "designationHi": "संयुक्त सचिव",
+    "work": "Forest Rights Act(FRA), Tribal Research Institute(TRI)/ Media/ Digital/ Social Media/ Center of Excellence, Scholarships, TRI-ICE Adi Karmayogi Abhiyan, Livelihood & Skilling, Entrepreneurship Development & VCF, Center of Excellence- Adi Vaani, Adi Sanskriti, Corporate Social Reponsibility (CSR) & IR Birsa Munda Foundation, Center of Excellence-National Design Centre & AIIMS Delhi",
+    "phone": "011-24013702, 011-24013703",
+    "intercom": "215513, 215514",
+    "email": "js-mota[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13095-96 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Guru Dutt",
+    "designation": "PPS to JS",
+    "nameHi": "श्री गुरु दत्त",
+    "designationHi": "संयुक्त सचिव के प्रधान निजी सचिव",
+    "work": "Office of JS",
+    "phone": "011-24013702,011-24013703",
+    "intercom": "215517, 215518",
+    "email": "js-mota[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13095-96 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Vikas Kumar",
+    "designation": "PA to JS",
+    "nameHi": "श्री विकास कुमार",
+    "designationHi": "निजी सहायक",
+    "work": "Office of JS",
+    "phone": "011-24013702,011-24013703",
+    "intercom": "215515, 215516",
+    "email": "js-mota[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13095-96 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Smt. Anshu Singh",
+    "designation": "DDG",
+    "nameHi": "श्रीमती अंशू सिंह",
+    "designationHi": "उप महानिदेशक",
+    "work": "Non Gov Organization (NGO), Statistics, Central Scheduled Tribe Component (STC) Monitoring",
+    "phone": "011-23340471",
+    "intercom": "",
+    "email": "anshu[dot]s[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Smt. Rashmi Manchanda",
+    "designation": "PPS to DDG",
+    "nameHi": "श्रीमती रश्मि मनचंदा",
+    "designationHi": "उप महानिदेशक के प्रधान निजी सचिव",
+    "work": "Office of DDG",
+    "phone": "011-23340471",
+    "intercom": "",
+    "email": "r[dot]manchanda[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Ms. Athira S. Babu",
+    "designation": "Economic Advisor",
+    "nameHi": "सुश्री आतिरा एस. बाबू",
+    "designationHi": "आर्थिक सलाहकार",
+    "work": "State Scheduled Tribe Component (STC) Monitoring, National Commission For Scheduled Tribes (NCST), Policy Analysis & Public Grievance (PA&PG)",
+    "phone": "011-23340005",
+    "intercom": "",
+    "email": "athira[dot]babu[at]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Bhanu Pathak",
+    "designation": "Stenographer",
+    "nameHi": "श्री भानु पाठक",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of JS",
+    "phone": "011-23340005",
+    "intercom": "",
+    "email": "bhanu[dot]pathak1994[at]tribal[dot]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Naval Kishor",
+    "designation": "Joint Secretary",
+    "nameHi": "श्री नवल किशोर",
+    "designationHi": "संयुक्त सचिव",
+    "work": "Coordination, Ranking of the ministry, Office Language, PMU/ Monitoring Evaluation Survey Social Audit (MESSA)",
+    "phone": "011-23340045",
+    "intercom": "",
+    "email": "naval[dot]kishor[at]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Munesh Kumar",
+    "designation": "Stenographer",
+    "nameHi": "श्री मुनेश कुमार",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of JS",
+    "phone": "",
+    "intercom": "",
+    "email": "muneshkumar[dot]1997[at]tribal[dot]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Bhaskar Choradia",
+    "designation": "JS&FA",
+    "nameHi": "श्री भास्कर चौर्डिया",
+    "designationHi": "संयुक्त सचिव एवं वित्त सलाहकार",
+    "work": "Integrated Financial Division (IFD)",
+    "phone": "011-24013706,011-24013716",
+    "intercom": "215527, 215528",
+    "email": "jsfa[dot]mota[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13091-92 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Manish Kumar Rai",
+    "designation": "Stenographer",
+    "nameHi": "श्री मनीष कुमार राय",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of JS",
+    "phone": "011-24013706,011-24013716",
+    "intercom": "215529, 215530",
+    "email": "manish[dot]rai99[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13091-92 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "निदेशक",
+  "en": "Directors",
+  "people": [
+   {
+    "name": "Smt. Samidha Singh",
+    "designation": "Director",
+    "nameHi": "श्रीमती समिधा सिंह",
+    "designationHi": "निदेशक",
+    "work": "PMAAGY, PM JANMAN, Forest Rights Act (FRA)",
+    "phone": "011-24013717",
+    "intercom": "215549",
+    "email": "samidha[dot]singh[at]gov[dot]in",
+    "address": "Room No: 13081 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Leena Tudu",
+    "designation": "Stenographer",
+    "nameHi": "सुश्री लीना टुडू",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of Director",
+    "phone": "011-24013717",
+    "intercom": "215550",
+    "email": "leena[dot]tudu41[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13081 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Deepali Masirkar",
+    "designation": "Director",
+    "nameHi": "सुश्री दीपाली मसीरकर",
+    "designationHi": "निदेशक",
+    "work": "Tribal Freedom Fighter Museum (TFFM) , Livelihood & Skilling, Entrepreneurship Development & VCF, Center of Excellence- Adi Vaani, Adi Sanskriti",
+    "phone": "011-24013714",
+    "intercom": "215544",
+    "email": "masirkar[dot]deepali[at]gov[dot]in",
+    "address": "Room No: 13074 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Aarav Panwar",
+    "designation": "Stenographer",
+    "nameHi": "श्री आरव पंवार",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of Director",
+    "phone": "011-24013714",
+    "intercom": "215543",
+    "email": "aarav[dot]panwar[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13074 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Arvind Kumar",
+    "designation": "Director",
+    "nameHi": "श्री अरविंद कुमार",
+    "designationHi": "निदेशक",
+    "work": "Vigilance, Parliament & Coordination (PC)",
+    "phone": "011-24013708",
+    "intercom": "215531",
+    "email": "arvind[dot]kumar84[at]nic[dot]in",
+    "address": "Room No: 13105 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Pankaj",
+    "designation": "DEO",
+    "nameHi": "श्री पंकज",
+    "designationHi": "डाटा एंट्री ऑपरेटर",
+    "work": "Office of Director",
+    "phone": "011-24013708",
+    "intercom": "215532",
+    "email": "pankaj[dot]khanagwal[at]govcontractor[dot]nic[dot]in",
+    "address": "Room No: 13105 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Kamal",
+    "designation": "Stenographer",
+    "nameHi": "श्री कमल",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of Director",
+    "phone": "011-24013713",
+    "intercom": "215542",
+    "email": "kamal[dot]deep1996[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13114 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Dr. Varnali Deka",
+    "designation": "Director",
+    "nameHi": "डॉ. वर्णाली डेका",
+    "designationHi": "निदेशक",
+    "work": "Grants, DA JGUA, Tribal Health Care (THC), PMU/ Monitoring Evaluation Survey Social Audit (MESSA)",
+    "phone": "011-24013709",
+    "intercom": "215534",
+    "email": "varnali[dot]deka[at]nic[dot]in",
+    "address": "Room No: 13104 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Anuj Singh Arya",
+    "designation": "Stenographer",
+    "nameHi": "श्री अनुज सिंह आर्य",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of Director",
+    "phone": "011-24013709",
+    "intercom": "215534",
+    "email": "anuj[dot]arya27[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13104 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Randhir Kumar B. Patel",
+    "designation": "Director",
+    "nameHi": "श्री रणधीर कुमार बी. पटेल",
+    "designationHi": "निदेशक",
+    "work": "National Commission For Scheduled Tribes (NCST) , Policy Analysis & Public Grievance (PA&PG), State Scheduled Tribes Component (STC) Monitoring, Central Scheduled Tribes Component (STC) Monitoring, Non Governmental Organization (NGO) Statistics",
+    "phone": "011-23343303",
+    "intercom": "",
+    "email": "randhir[dot]patel[at]nic[dot]in",
+    "address": "Room No-11, First Floor, Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Ms. Rekha PA to DS",
+    "designation": "",
+    "nameHi": "सुश्री रेखा",
+    "designationHi": "",
+    "work": "Office of Director",
+    "phone": "011-23343303",
+    "intercom": "",
+    "email": "pramod[dot]kumar2408[at]nic[dot]in",
+    "address": "Room No-11, First Floor, Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   }
+  ]
+ },
+ {
+  "hi": "उप सचिव / संयुक्त निदेशक",
+  "en": "Deputy Secretaries/ Joint Directors",
+  "people": [
+   {
+    "name": "Sh. Sangeet Kumar",
+    "designation": "Deputy Secretary",
+    "nameHi": "श्री संगीत कुमार",
+    "designationHi": "उप सचिव",
+    "work": "Budget & Cash, Establishment & Capacity Building Unit (CBU), General Administration",
+    "phone": "011-24013707",
+    "intercom": "215547",
+    "email": "s[dot]kumar27[at]nic[dot]in",
+    "address": "Room No: 13080 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "",
+    "designation": "Afreen Azam Stenographer",
+    "nameHi": "",
+    "designationHi": "",
+    "work": "Office of DS",
+    "phone": "011-24013707",
+    "intercom": "215548",
+    "email": "",
+    "address": "Room No: 13080 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Smt. Hari Kiran Gurla",
+    "designation": "Deputy Secretary",
+    "nameHi": "श्रीमती हरि किरण गुरला",
+    "designationHi": "उप सचिव",
+    "work": "Integrated Financial Division (IFD)",
+    "phone": "011-24013715",
+    "intercom": "215545",
+    "email": "kiran[dot]gurla[at]nic[dot]in",
+    "address": "Room No: 13075 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Divya Mishra",
+    "designation": "Stenographer",
+    "nameHi": "सुश्री दिव्या मिश्रा",
+    "designationHi": "आशुलिपिक",
+    "work": "Office of DS",
+    "phone": "011-24013715",
+    "intercom": "215546",
+    "email": "divya[dot]diyamishra[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13075 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Jafar Malik",
+    "designation": "Deputy Secretary",
+    "nameHi": "श्री जाफर मलिक",
+    "designationHi": "उप सचिव",
+    "work": "Eklavya Model Residential Schools (EMRS),",
+    "phone": "011-24013710",
+    "intercom": "215535",
+    "email": "jafar[dot]malik[at]ias[dot]nic[dot]in",
+    "address": "Room No: 13110 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Sunil Kumar Sharma PA to DS",
+    "designation": "",
+    "nameHi": "श्री सुनील कुमार शर्मा",
+    "designationHi": "",
+    "work": "Office of DS",
+    "phone": "011-24013710",
+    "intercom": "215536",
+    "email": "jitendrarana[dot]mta[at]gmail[dot]com",
+    "address": "Room No: 13110 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Ganesh Nagarajan",
+    "designation": "Deputy Secretary",
+    "nameHi": "श्री गणेश नागराजन",
+    "designationHi": "उप सचिव",
+    "work": "Cyber Security, Portals/ IT, International Relation (IR) Tribal Research Institute (TRI), Center of Excellence, Scholarship CSR Tribal Research Institute (TRI)/(TRI)-ICE Adi Karmayogi Abhiyan",
+    "phone": "011-24013712",
+    "intercom": "215539",
+    "email": "ganeshnagarajan[dot]ifs[at]gov[dot]in",
+    "address": "Room No: 13115 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Renu Sharma",
+    "designation": "PPS to DS",
+    "nameHi": "सुश्री रेनू शर्मा",
+    "designationHi": "उप सचिव के प्रधान निजी सचिव",
+    "work": "Office of DS",
+    "phone": "011-24013712",
+    "intercom": "215540",
+    "email": "renu[dot]sharma16[at]gov[dot]in",
+    "address": "Room No: 13115 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Dr. Raji. N. S.",
+    "designation": "Deputy Secretary",
+    "nameHi": "डॉ० राजी एन. एस.",
+    "designationHi": "उप सचिव",
+    "work": "Corporate Social Reponsibility (CSR) & IR Birsa Munda Foundation, Center of Excellence-National Design Centre & AIIMS Delhi, Media/ Digital/ Social Media",
+    "phone": "011-24013711",
+    "intercom": "215537",
+    "email": "raji[dot]padmakumar[at]nic[dot]in",
+    "address": "Room No: 13109 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Rekha Kumari",
+    "designation": "PPS to DS",
+    "nameHi": "सुश्री रेखा कुमारी",
+    "designationHi": "उप सचिव के प्रधान निजी सचिव",
+    "work": "Office of DS",
+    "phone": "011-24013711",
+    "intercom": "215538",
+    "email": "rekhakumar[dot]edu[at]nic[dot]in",
+    "address": "Room No: 13109 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Ved Prakash Meena",
+    "designation": "Joint Director (OL)",
+    "nameHi": "श्री वेद प्रकाश मीणा",
+    "designationHi": "संयुक्त निदेशक",
+    "work": "Official Language",
+    "phone": "011-23340461",
+    "intercom": "",
+    "email": "vp[dot]meena16[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 2, Ashoka Road, Patel Chowk, New Delhi-110001"
+   }
+  ]
+ },
+ {
+  "hi": "अवर सचिव /उप-निदेशक",
+  "en": "Under Secretaries/ Deputy Directors",
+  "people": [
+   {
+    "name": "Sh. Ashish Kumar Agrawal",
+    "designation": "Under Secretary",
+    "nameHi": "श्री आशीष कुमार अग्रवाल",
+    "designationHi": "अवर सचिव",
+    "work": "Constitution & Legal Matters (CLM)",
+    "phone": "011-24013752",
+    "intercom": "215592",
+    "email": "agrawal[dot]ashish[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Smt. Laxmi Sharma",
+    "designation": "Under Secretary",
+    "nameHi": "श्रीमती लक्ष्मी शर्मा",
+    "designationHi": "अवर सचिव",
+    "work": "PMAAGY, PM JANMAN, Cyber Security, Portals/IT Tribal Health Cell (THC)",
+    "phone": "011-24013754",
+    "intercom": "215594",
+    "email": "laxmi[dot]sharma68[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Sushil Bading",
+    "designation": "Under Secretary",
+    "nameHi": "श्री सुशील बेडिंग",
+    "designationHi": "अवर सचिव",
+    "work": "Integrated Financial Division (IFD)",
+    "phone": "011-24013726",
+    "intercom": "215566",
+    "email": "sushil[dot]bading79[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Satish Kumar Singh",
+    "designation": "Under Secretary",
+    "nameHi": "श्री सतीश कुमार सिंह",
+    "designationHi": "अवर सचिव",
+    "work": "Grants, DA-JGUA, THC, PMU/ Monitoring Evaluation Survey Social Audit (MESSA),",
+    "phone": "011-24013755",
+    "intercom": "215595",
+    "email": "satish[dot]edu[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Paokholen Haokip",
+    "designation": "Under Secretary",
+    "nameHi": "श्री पोखोलें होकीप",
+    "designationHi": "अवर सचिव",
+    "work": "Tribal Research Institute (TRI)/ Media/ Digital/ Social Media/ Center of Excellence, TRI-ICE Adi Karmayogi Abhiyan",
+    "phone": "011-24013750",
+    "intercom": "215590",
+    "email": "haokip[dot]paokholen[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13076 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Shambhu Nath Pal",
+    "designation": "Under Secretary",
+    "nameHi": "श्री शंभू नाथ पाल",
+    "designationHi": "अवर सचिव",
+    "work": "Forest Rights Act (FRA), Livelihood, Skilling and Entrepreneurship VCF, CoE(Adi Sanskriti)",
+    "phone": "011-24013725",
+    "intercom": "215565",
+    "email": "shambhu[dot]pal[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Tajinder Singh Bal",
+    "designation": "Under Secretary",
+    "nameHi": "श्री तजिंदर सिंह बल",
+    "designationHi": "अवर सचिव",
+    "work": "Policy Analysis & Public Grievance (PA&PG), National Commission For Scheduled Tribes (NCST), Non Governmental Organization (NGO)",
+    "phone": "",
+    "intercom": "",
+    "email": "ts[dot]bal[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 2, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Prasenjit Bose",
+    "designation": "Under Secretary",
+    "nameHi": "श्री प्रसेनजीत बोस",
+    "designationHi": "अवर सचिव",
+    "work": "Tribal Freedom Fighter Museum (TFFM)",
+    "phone": "011-24013728",
+    "intercom": "215568",
+    "email": "presenjit[dot]bose[at]nic[dot]in",
+    "address": "Room No: 13076 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Ms. Shilpa Taneja",
+    "designation": "- Deputy Director",
+    "nameHi": "सुश्री शिल्पा तनेजा",
+    "designationHi": "उप",
+    "work": "Budget & Cash, Establishment & Capacity Building Unit (CBU), General Administration, Vigilance,",
+    "phone": "011-24013748",
+    "intercom": "215588",
+    "email": "shilpa[dot]78[at]gov[dot]in",
+    "address": "Room No: 13076 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Dhiraj Chandra Ray",
+    "designation": "- Deputy Director",
+    "nameHi": "श्री धीरज चंद्र राय",
+    "designationHi": "उप",
+    "work": "Constitution & Legal Matters (CLM)",
+    "phone": "011-24013751",
+    "intercom": "215591",
+    "email": "dhirajc[dot]ray[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. R. K. Verma",
+    "designation": "- Deputy Director",
+    "nameHi": "श्री आर. के. वर्मा",
+    "designationHi": "उप",
+    "work": "State Scheduled Tribe Component (STC) Monitoring",
+    "phone": "011-23340274",
+    "intercom": "",
+    "email": "ramesh[dot]kv[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 2, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Ms. Pooja Meena",
+    "designation": "- Deputy Director",
+    "nameHi": "सुश्री पूजा मीना",
+    "designationHi": "उप",
+    "work": "Central Scheduled Tribe Component(STC) Monitoring, Statistics",
+    "phone": "",
+    "intercom": "",
+    "email": "",
+    "address": ""
+   },
+   {
+    "name": "Sh. Sudhir Kumar",
+    "designation": "Under Secretary",
+    "nameHi": "श्री सुधीर कुमार",
+    "designationHi": "अवर सचिव",
+    "work": "CoE, Media/Digital/ Social Media",
+    "phone": "",
+    "intercom": "",
+    "email": "sudhir[dot]kr82[at]gov[dot]in",
+    "address": "Room No: 13076 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Nikhil Rathee",
+    "designation": "Under Secretary",
+    "nameHi": "श्री निखिल राठी",
+    "designationHi": "अवर सचिव",
+    "work": "Parliament & Coordination (PC) , Eklavya Model Residential Schools (EMRS)",
+    "phone": "011-24013753",
+    "intercom": "215593",
+    "email": "nikhil.rathee[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Puneet Batra",
+    "designation": "Under Secretary",
+    "nameHi": "श्री पुनीत बत्रा",
+    "designationHi": "अवर सचिव",
+    "work": "Media ,",
+    "phone": "",
+    "intercom": "",
+    "email": "",
+    "address": "Room No: 13076 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "सहायक निदेशक/ अनुसंधान अधिकारी",
+  "en": "Assistant Director/ Research Officer",
+  "people": [
+   {
+    "name": "Ms. Archana",
+    "designation": "Assistant Director",
+    "nameHi": "सुश्री अर्चना",
+    "designationHi": "सहायक निदेशक",
+    "work": "Official Language",
+    "phone": "",
+    "intercom": "",
+    "email": "archana13[at]nic[dot]in",
+    "address": ""
+   },
+   {
+    "name": "Ms. Sunumi Changmi",
+    "designation": "Research Officer",
+    "nameHi": "सुश्री सुनुमी चांगमी",
+    "designationHi": "अनुसंधान अधिकारी",
+    "work": "Constitution & Legal Matters (CLM)",
+    "phone": "011-24013765",
+    "intercom": "215605",
+    "email": "sunumi[dot]changmi[dot]ansi[at]gov[dot]in",
+    "address": ""
+   },
+   {
+    "name": "Dr. Vandana Kumari",
+    "designation": "Research Officer",
+    "nameHi": "डॉ० वंदना कुमारी",
+    "designationHi": "अनुसंधान अधिकारी",
+    "work": "National Fellowship & Scholarship Scheme (Top Class), National Overseas Scholarship Scheme (NOS) and Direct Benefit Transfer (DBT), International Relation (IR), Media/ Digital/ Social Media/ Center of Excellence.",
+    "phone": "011-24013773",
+    "intercom": "215613",
+    "email": "dr[dot]vandanak[at]ignca[dot]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Gaurav Vats",
+    "designation": "Research Officer",
+    "nameHi": "श्री गौरव वत्स",
+    "designationHi": "अनुसंधान अधिकारी",
+    "work": "Statistics NCST",
+    "phone": "",
+    "intercom": "",
+    "email": "vats[dot]gaurav[at]gov[dot]in",
+    "address": ""
+   }
+  ]
+ },
+ {
+  "hi": "अनुभाग अधिकारी",
+  "en": "Section Officers",
+  "people": [
+   {
+    "name": "Sh. Dixit Papanai",
+    "designation": "Section Officer",
+    "nameHi": "श्री दीक्षित पपनैं",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Integrated Financial Division (IFD)",
+    "phone": "011-24013780",
+    "intercom": "215620",
+    "email": "dixit[dot]papanai[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Mukesh Kumar Yadav",
+    "designation": "Section Officer",
+    "nameHi": "श्री मुकेश कुमार यादव",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Establishment, Vigilance",
+    "phone": "011-24013720",
+    "intercom": "215562",
+    "email": "mk[dot]yadav88[at]gov[dot]in",
+    "address": "Room No: 13000A (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Rahul kumar",
+    "designation": "Section Officer",
+    "nameHi": "श्री राहुल कुमार",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "General Administration",
+    "phone": "011-24013718",
+    "intercom": "215552",
+    "email": "rahul[dot]kumar1987[at]gov[dot]in",
+    "address": "Room No: 13000A (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Aditya Gosain",
+    "designation": "Section Officer",
+    "nameHi": "श्री आदित्य गोसाईं",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "PMAAGY, PM JANMAN, Cyber Security, Portals/IT",
+    "phone": "011-24013768",
+    "intercom": "215608",
+    "email": "aditya[dot]gosain[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Subhash Kumar",
+    "designation": "Section Officer",
+    "nameHi": "श्री सुभाष कुमार",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Grants, DA JGUA, Tribal Health Care (THC), PMU/ Monitoring Evaluation Survey Social Audit (MESSA)",
+    "phone": "011-24013767",
+    "intercom": "215607",
+    "email": "subhash[dot]kr87[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Sandeep",
+    "designation": "Section Officer",
+    "nameHi": "श्री संदीप",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Forest Rights Act (FRA)",
+    "phone": "011-24013769",
+    "intercom": "215609",
+    "email": "sandeep[dot]p[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Anurag Sharma",
+    "designation": "Section Officer",
+    "nameHi": "श्री अनुराग शर्मा",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Livelihood & Skilling, Entrepreneurship Development & VCF, Center of Excellence- Adi Vaani, Adi Sanskriti",
+    "phone": "011-24013775",
+    "intercom": "215615",
+    "email": "anurag[dot]sharma88[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Mrs. Sapna Pannu",
+    "designation": "Section Officer",
+    "nameHi": "श्रीमती सपना पान्नू",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Eklavya Model Residential Schools (EMRS)",
+    "phone": "011-24013762",
+    "intercom": "215602",
+    "email": "emrs-mota[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Yogesh Kumar",
+    "designation": "Section Officer",
+    "nameHi": "श्री योगेश कुमार",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Budget & Cash, Capacity Building Unit (CBU)",
+    "phone": "011-24013777",
+    "intercom": "215617",
+    "email": "so-cashsection[at]tribal[dot]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Ashish Gupta",
+    "designation": "Section Officer",
+    "nameHi": "श्री आशीष गुप्ता",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Constitution & Legal Matters (CLM) , Non Governmental Organization (NGO)",
+    "phone": "011-24013766",
+    "intercom": "215606",
+    "email": "ashishgupta[dot]97[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Abhinandan",
+    "designation": "Section Officer",
+    "nameHi": "श्री अभिनंदन",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Parliament & Coordination (PC), Ranking",
+    "phone": "011-24013757",
+    "intercom": "215597",
+    "email": "abhinandan[dot]m[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Vinod Kumar",
+    "designation": "Section Officer",
+    "nameHi": "श्री विनोद कुमार",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "State Scheduled Tribe Component (STC) Monitoring, Policy Analysis & Public Grievance (PA&PG)",
+    "phone": "",
+    "intercom": "",
+    "email": "vinod[dot]k69[at]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Kundan Kumar",
+    "designation": "Section Officer",
+    "nameHi": "श्री कुंदन कुमार",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Pre-Matric & Post-Matric Scholarship for ST Students",
+    "phone": "011-24013774",
+    "intercom": "215614",
+    "email": "kundan[dot]kr[at]gov[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Abhisek Kumar Singh",
+    "designation": "Section Officer",
+    "nameHi": "श्री अभिषेक कुमार सिंह",
+    "designationHi": "अनुभाग अधिकारी",
+    "work": "Non Governmental Organization (NGO)",
+    "phone": "011-23340485",
+    "intercom": "",
+    "email": "abhisekkumarsingh[at]prasarbharati[dot]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 2, Ashoka Road, Patel Chowk, New Delhi-110001"
+   }
+  ]
+ },
+ {
+  "hi": "एन. आई. सी. सेल",
+  "en": "NIC CELL",
+  "people": [
+   {
+    "name": "Sh. Vineet Tomer",
+    "designation": "( )/ - Sr. Director (IT) & Scientist 'F'",
+    "nameHi": "श्री विनीत तोमर",
+    "designationHi": "वरिष्ठ निदेशक",
+    "work": "NIC Cell",
+    "phone": "011-23340470",
+    "intercom": "",
+    "email": "hod-tribalaffairs[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Balbir Singh",
+    "designation": "- Scientist-B",
+    "nameHi": "",
+    "designationHi": "श्री बलवीर सिंह वैज्ञानिक",
+    "work": "NIC Cell",
+    "phone": "011-24013747",
+    "intercom": "215587",
+    "email": "singh[dot]balbir56[at]nic[dot]in",
+    "address": "Room No: 13076 (3rd Floor, Kartavya Bhawan-01)"
+   },
+   {
+    "name": "Sh. Aman Kumar",
+    "designation": "Scientific Officer",
+    "nameHi": "श्री अमन कुमार",
+    "designationHi": "वैज्ञानिक अधिकारी",
+    "work": "NIC Cell",
+    "phone": "011-24013761",
+    "intercom": "215601",
+    "email": "aman[dot]kumar20[at]nic[dot]in",
+    "address": "Room No: 13108 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "विभागीय लेखा संगठन",
+  "en": "Departmental Accounting Organisation",
+  "people": [
+   {
+    "name": "Sh. Bhupal Nanda",
+    "designation": "Principal Chief Controller of Accounts",
+    "nameHi": "श्री भूपाल नंदा",
+    "designationHi": "प्रधान मुख्य लेखा नियंत्रक",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23382697",
+    "intercom": "",
+    "email": "Bhupal[dot]nanda[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Smt. Anju Arora",
+    "designation": "Sr. PS",
+    "nameHi": "श्रीमती अंजू अरोड़ा",
+    "designationHi": "वरिष्ठ निजी सचिव",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23382697",
+    "intercom": "",
+    "email": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Shashi Bhushan",
+    "designation": "Chief Controller of Accounts",
+    "nameHi": "श्री शशि भूषण",
+    "designationHi": "मुख्य लेखा नियंत्रक",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23380591",
+    "intercom": "",
+    "email": "sashi[dot]bhushan73[at]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Smt. Seema Diwan",
+    "designation": "PS to CCA",
+    "nameHi": "श्रीमती सीमा दीवान",
+    "designationHi": "प्रमुख्य लेखा नियंत्रक के निजी सचिव",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23380591",
+    "intercom": "",
+    "email": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Rahul Garud Dalip",
+    "designation": "Controller of Accounts",
+    "nameHi": "श्री राहुल गरुड़ दलीप",
+    "designationHi": "लेखा नियंत्रक के लेखा नियंत्रक",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23381269",
+    "intercom": "",
+    "email": "amitajain[dot]icas[at]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Vinod Kumar Singh",
+    "designation": "Sr. Accounts Officer",
+    "nameHi": "श्री विनोद कुमार सिंह",
+    "designationHi": "वरिष्ठ लेखा अधिकारी",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23366942",
+    "intercom": "",
+    "email": "pao-tribal[at]nic[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   },
+   {
+    "name": "Sh. Sanjay Pandit",
+    "designation": "Assistant Accounts Officer",
+    "nameHi": "श्री संजय पंडित",
+    "designationHi": "सहायक लेखा अधिकारी",
+    "work": "Departmental Accounting Organisation",
+    "phone": "011-23366942",
+    "intercom": "",
+    "email": "sanjay[dot]pandit20[at]gov[dot]in",
+    "address": "Jeevan Tara Building Gate No. 5, Ashoka Road, Patel Chowk, New Delhi-110001"
+   }
+  ]
+ },
+ {
+  "hi": "वेब सूचना प्रबंधक",
+  "en": "Web Information Manager",
+  "people": [
+   {
+    "name": "Sh. Ganesh Nagarajan",
+    "designation": "Deputy Secretary",
+    "nameHi": "श्री गणेश नागराजन",
+    "designationHi": "उप सचिव",
+    "work": "Cyber Security, Portals/IT, International Relation (IR) TRI, Center of Excellence, TRI-ICE Adi Karmayogi Abhiyan Scholarship CSR",
+    "phone": "011-24013712",
+    "intercom": "215539",
+    "email": "ganeshnagarajan[dot]ifs[at]gov[dot]in",
+    "address": "Room No: 13115 (3Rd Floor, Kartavya Bhawan-01)"
+   }
+  ]
+ },
+ {
+  "hi": "शिकायतों के निदेशक",
+  "en": "Nodal Grievance Resolution Officer",
+  "people": [
+   {
+    "name": "Sh. Randhir Kumar B. Patel",
+    "designation": "Director",
+    "nameHi": "श्री रणधीर कुमार बी. पटेल",
+    "designationHi": "निदेशक",
+    "work": "National Commission For Scheduled Tribes (NCST) , Policy Analysis & Public Grievance (PA&PG), State Scheduled Tribes Component (STC) Monitoring, Central Scheduled Tribes Component (STC) Monitoring, Non Governmental Organization (NGO) Statistics",
+    "phone": "",
+    "intercom": "",
+    "email": "",
+    "address": ""
+   }
+  ]
+ }
+]

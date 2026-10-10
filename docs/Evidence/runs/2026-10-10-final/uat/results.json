@@ -1,0 +1,1133 @@
+{
+ "base": "http://127.0.0.1:4322",
+ "runAt": "2026-10-10T08:23:22.259Z",
+ "results": [
+  {
+   "url": "/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/about-us/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/about-us/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-team/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-team/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-divisions/forest-rights-act/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-divisions/forest-rights-act/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/media/photos/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/media/photos/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/contact-us/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/contact-us/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/directory/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/directory/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/directory/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/directory/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/directory/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/rti/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/rti/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/feedback/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/connect/feedback/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/policies/accessibility-statement/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/policies/accessibility-statement/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/sitemap/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/sitemap/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/search/?q=scholarship",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/search/?q=scholarship",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/personas/student/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/personas/student/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/hi/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/ministry/about-us/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/ministry/about-us/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/ministry/our-team/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/ministry/our-team/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/ministry/our-divisions/forest-rights-act/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/ministry/our-divisions/forest-rights-act/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/pm-janman/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/pm-janman/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/pm-janman/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/pm-janman/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/offerings/schemes/pm-janman/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/documents/guidelines/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/documents/guidelines/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/documents/guidelines/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/documents/guidelines/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/documents/guidelines/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/media/photos/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/media/photos/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/contact-us/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/contact-us/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/directory/",
+   "viewport": "mobile320",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/directory/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/directory/",
+   "viewport": "tablet768",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/directory/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/directory/",
+   "viewport": "wide1920",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/rti/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/rti/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/feedback/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/connect/feedback/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/policies/accessibility-statement/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/policies/accessibility-statement/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/sitemap/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/sitemap/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/search/?q=scholarship",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/search/?q=scholarship",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/personas/student/",
+   "viewport": "mobile390",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/hi/personas/student/",
+   "viewport": "desktop1366",
+   "theme": "standard",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "hi"
+  },
+  {
+   "url": "/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/about-us/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-team/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-divisions/forest-rights-act/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/media/photos/",
+   "viewport": "desktop1366",
+   "theme": "dark",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/about-us/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-team/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/ministry/our-divisions/forest-rights-act/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/offerings/schemes/pm-janman/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/documents/guidelines/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  },
+  {
+   "url": "/media/photos/",
+   "viewport": "desktop1366",
+   "theme": "contrast",
+   "axe": [],
+   "horizontalScroll": false,
+   "consoleErrors": 0,
+   "lang": "en"
+  }
+ ],
+ "cases": [
+  {
+   "id": "TC-001",
+   "area": "Accessibility",
+   "title": "Automated WCAG 2.1 A/AA scan (axe-core) — 104 page/viewport/theme combinations",
+   "expected": "No violations",
+   "result": "Pass",
+   "evidence": "results.json",
+   "note": ""
+  },
+  {
+   "id": "TC-002",
+   "area": "Responsive",
+   "title": "No horizontal scrolling at 320, 390, 768, 1366 and 1920 px",
+   "expected": "Page never scrolls sideways",
+   "result": "Pass",
+   "evidence": "results.json",
+   "note": ""
+  },
+  {
+   "id": "TC-003",
+   "area": "Bilingual",
+   "title": "Hindi pages declare lang=\"hi\"; English pages lang=\"en\"",
+   "expected": "Correct lang attribute on every page",
+   "result": "Pass",
+   "evidence": "results.json",
+   "note": ""
+  },
+  {
+   "id": "TC-004",
+   "area": "Quality",
+   "title": "No JavaScript errors on any tested page",
+   "expected": "0 console errors",
+   "result": "Pass",
+   "evidence": "results.json",
+   "note": ""
+  },
+  {
+   "id": "TC-005",
+   "area": "Accessibility",
+   "title": "First Tab focuses “Skip to main content”",
+   "expected": "Skip link receives focus first",
+   "result": "Pass",
+   "evidence": "",
+   "note": ""
+  },
+  {
+   "id": "TC-006",
+   "area": "Accessibility",
+   "title": "Skip link moves focus to main content",
+   "expected": "Focus/URL at #main",
+   "result": "Pass",
+   "evidence": "",
+   "note": ""
+  },
+  {
+   "id": "TC-007",
+   "area": "Navigation",
+   "title": "Global menu opens with ↓, focus moves into it, Esc closes it",
+   "expected": "Disclosure pattern works by keyboard",
+   "result": "Pass",
+   "evidence": "interaction-mega-menu.jpg",
+   "note": ""
+  },
+  {
+   "id": "TC-008",
+   "area": "Bilingual",
+   "title": "Language selector lists English and हिन्दी and links to the same page in Hindi",
+   "expected": "Menu opens; Hindi link = /hi/",
+   "result": "Pass",
+   "evidence": "interaction-language.jpg",
+   "note": ""
+  },
+  {
+   "id": "TC-009",
+   "area": "Accessibility",
+   "title": "Accessibility panel: text size, invert, low saturation, hide images, big cursor, highlight links, spacing, readable font, stop motion, reset",
+   "expected": "Each control applies and Reset clears all",
+   "result": "Pass",
+   "evidence": "interaction-accessibility-panel.jpg",
+   "note": "{\"[data-a11y=\\\"text\\\"][value=\\\"2\\\"]\":true,\"[data-a11y=\\\"filter\\\"][value=\\\"invert\\\"]\":true,\"[data-a11y=\\\"hideImages\\\"]\":true,\"[data-a11y=\\\"bigCursor\\\"]\":true,\"[data-a11y=\\\"links\\\"]\":true,\"[data-a11y=\\\"spacing\\\"]\":true,\"[data-a11y=\\\"readable\\\"]\":true,\"[data-a11y=\\\"noMotion\\\"]\":true}"
+  },
+  {
+   "id": "TC-010",
+   "area": "Accessibility",
+   "title": "High-contrast toggle in the top bar",
+   "expected": "Theme switches to high contrast and back",
+   "result": "Pass",
+   "evidence": "",
+   "note": ""
+  },
+  {
+   "id": "TC-011",
+   "area": "Hyperlinks",
+   "title": "External link shows “You are leaving tribal.gov.in” notice",
+   "expected": "Dialog opens with Continue/Cancel",
+   "result": "Pass",
+   "evidence": "interaction-external-link.jpg",
+   "note": ""
+  },
+  {
+   "id": "TC-012",
+   "area": "Accessibility",
+   "title": "Banner slideshow can be paused (WCAG 2.2.2)",
+   "expected": "Pause button stops rotation",
+   "result": "Pass",
+   "evidence": "",
+   "note": ""
+  },
+  {
+   "id": "TC-013",
+   "area": "Accessibility",
+   "title": "Announcements ticker can be paused",
+   "expected": "Pause button stops scrolling",
+   "result": "Pass",
+   "evidence": "",
+   "note": ""
+  },
+  {
+   "id": "TC-014",
+   "area": "Privacy",
+   "title": "Cookie consent banner at the bottom with Accept / Reject / Customise (DBIM 7.6)",
+   "expected": "Banner shows on first visit; choice is stored",
+   "result": "Pass",
+   "evidence": "interaction-cookie-banner.jpg",
+   "note": ""
+  },
+  {
+   "id": "TC-015",
+   "area": "Responsive",
+   "title": "Mobile menu opens as a drawer",
+   "expected": "Drawer visible with all sections",
+   "result": "Pass",
+   "evidence": "interaction-mobile-menu.jpg",
+   "note": ""
+  },
+  {
+   "id": "TC-016",
+   "area": "Search",
+   "title": "Site search returns results with type filters (DBIM 9)",
+   "expected": "Results listed for “forest”",
+   "result": "Pass",
+   "evidence": "",
+   "note": "25 results"
+  },
+  {
+   "id": "TC-017",
+   "area": "Forms",
+   "title": "Feedback form shows errors and focuses the first invalid field",
+   "expected": "Errors announced; focus on Name",
+   "result": "Pass",
+   "evidence": "",
+   "note": ""
+  },
+  {
+   "id": "TC-018",
+   "area": "TriBot",
+   "title": "Chat assistant (Jago) opens from the keyboard, replies, and Esc returns focus",
+   "expected": "Panel opens with focus in the input; reply with links; focus back on the assistant button",
+   "result": "Pass",
+   "evidence": "interaction-tribot.jpg",
+   "note": "No chat service on UAT: the reply came from the site-search fallback (service checks: tests/assistant.test.mjs)"
+  },
+  {
+   "id": "TC-019",
+   "area": "Metadata",
+   "title": "Home page has title, description, keywords, canonical, hreflang en/hi, lang",
+   "expected": "All present",
+   "result": "Pass",
+   "evidence": "dist/index.html",
+   "note": ""
+  },
+  {
+   "id": "TC-020",
+   "area": "Sitemap",
+   "title": "XML sitemap with both languages; HTML sitemap with at least two levels",
+   "expected": "sitemap.xml and /sitemap/ present",
+   "result": "Pass",
+   "evidence": "dist/sitemap.xml",
+   "note": ""
+  },
+  {
+   "id": "TC-021",
+   "area": "Security",
+   "title": "Security headers configured (HSTS, CSP, XCTO, XFO, Referrer, Permissions; server header removed)",
+   "expected": "All configured in web.config",
+   "result": "Pass",
+   "evidence": "dist/web.config",
+   "note": "To be verified on UAT server with curl -I"
+  }
+ ]
+}

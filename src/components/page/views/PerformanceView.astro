@@ -1,0 +1,41 @@
+---
+// Our Performance (DBIM A.5.1.4): performance dashboards of the main schemes,
+// with headline figures published by the divisions.
+import type { Locale } from '../../../data/site';
+import { localePath, tx } from '../../../data/i18n';
+import { schemes } from '../../../data/schemes';
+import { schemeHi } from '../../../data/hi-content';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import Facts from '../Facts.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const dashboards = [
+  { icon: 'ChartColumn', name: T('Performance Dashboard — Empowering Tribals, Transforming India', 'प्रदर्शन डैशबोर्ड — जनजातीय सशक्तिकरण, भारत परिवर्तन'), url: 'https://dashboard.tribal.gov.in/', text: T('Real-time details of the Ministry’s schemes and initiatives, scholarships, EMRS and STC spending of 41 Ministries.', 'मंत्रालय की योजनाओं और पहलों, छात्रवृत्तियों, ईएमआरएस तथा 41 मंत्रालयों के एसटीसी व्यय का वास्तविक समय विवरण।') },
+  { icon: 'BadgeIndianRupee', name: T('DBT Tribal — Pre and Post Matric Scholarships', 'डीबीटी ट्राइबल — मैट्रिक-पूर्व और मैट्रिकोत्तर छात्रवृत्तियां'), url: 'https://dbttribal.gov.in/', text: T('State-wise fund release, beneficiary data and utilisation for the centrally sponsored scholarships.', 'केंद्र प्रायोजित छात्रवृत्तियों हेतु राज्य-वार निधि विमोचन, लाभार्थी डेटा और उपयोग।') },
+  { icon: 'ChartLine', name: T('STCMIS — Scheduled Tribe Component monitoring', 'एसटीसीएमआईएस — अनुसूचित जनजाति घटक निगरानी'), url: 'https://stcmis.gov.in/', text: T('Allocation and expenditure of 41 Ministries and Departments under DAPST.', 'डीएपीएसटी के अंतर्गत 41 मंत्रालयों और विभागों का आवंटन और व्यय।') },
+  { icon: 'Map', name: T('State TSP monitoring', 'राज्य टीएसपी निगरानी'), url: 'https://statetsp.tribal.gov.in/', text: T('Tribal Sub-Plan allocations and spending by States.', 'राज्यों द्वारा जनजातीय उप-योजना आवंटन और व्यय।') },
+  { icon: 'HandCoins', name: T('ADIGRAMS — grants monitoring', 'आदिग्राम्स — अनुदान निगरानी'), url: 'https://grants.tribal.gov.in/', text: T('Proposals, sanctions and utilisation of grants to States.', 'राज्यों को अनुदानों के प्रस्ताव, स्वीकृतियां और उपयोग।') },
+];
+const highlights = schemes.filter((s) => s.facts?.length).slice(0, 6);
+---
+<ul class="grid grid--2" role="list">
+  {dashboards.map((d) => (
+    <li class="card card--link">
+      <span class="card__icon"><Icon name={d.icon} /></span>
+      <h2 class="card__title"><SmartLink href={d.url} locale={locale}>{d.name}</SmartLink></h2>
+      <p class="card__text">{d.text}</p>
+      <span class="card__more" aria-hidden="true">{new URL(d.url).hostname}<Icon name="ArrowUpRight" /></span>
+    </li>
+  ))}
+</ul>
+<p class="mt"><a class="link-arrow" href={localePath('/ministry/our-performance/state-review-meetings/', locale)}>{T('State Review Meetings: monitoring reports and circulars', 'राज्य समीक्षा बैठकें: निगरानी रिपोर्ट और परिपत्र')}<Icon name="ArrowRight" /></a></p>
+<h2 class="mt">{T('Scheme highlights', 'योजनाओं की प्रमुख उपलब्धियां')}</h2>
+{highlights.map((s) => (
+  <section class="perf-block">
+    <h3><a href={localePath(`/offerings/schemes/${s.slug}/`, locale)}>{s.title[locale]}</a></h3>
+    <Facts facts={s.facts!} note={(locale === 'hi' && schemeHi[s.slug]?.factsNote) || s.factsNote} locale={locale} />
+  </section>
+))}

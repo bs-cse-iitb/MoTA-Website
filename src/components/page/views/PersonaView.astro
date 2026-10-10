@@ -1,0 +1,45 @@
+---
+// Persona page (DBIM A.2, Fig. 60): content tagged for the selected persona.
+import type { Locale } from '../../../data/site';
+import { t, localePath } from '../../../data/i18n';
+import { personas } from '../../../data/personas';
+import { schemes } from '../../../data/schemes';
+import { divisions } from '../../../data/divisions';
+import { initiatives } from '../../../data/initiatives';
+import { portals } from '../../../data/portals';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import WarliPersona from '../../WarliPersona.astro';
+import { L, portalDescHi } from '../../../data/hi-content';
+import { tx } from '../../../data/i18n';
+interface Props { slug: string; locale: Locale }
+const { slug, locale } = Astro.props;
+const p = personas.find((x) => x.id === slug)!;
+const s = schemes.filter((x) => x.personas.includes(p.id));
+const d = divisions.filter((x) => x.personas.includes(p.id));
+const i = initiatives.filter((x) => x.personas.includes(p.id));
+const po = portals.filter((x) => x.personas.includes(p.id));
+---
+<div class="persona-hero">
+  <WarliPersona prop={p.prop} class="persona-hero__art" />
+  <div>
+    <p class="persona-hero__intent">“{p.intent[locale]}”</p>
+    <ul class="chips" role="list">{p.quickLinks.map((q) => <li><SmartLink class="chip" href={q.href} locale={locale}>{L(q.label, locale)}</SmartLink></li>)}</ul>
+  </div>
+</div>
+{s.length > 0 && (<section class="mt"><h2>{t('schemes', locale)}</h2><ul class="grid grid--3" role="list">{s.map((x) => (
+  <li class="card card--link"><span class="card__icon"><Icon name={x.icon} /></span><h3 class="card__title"><a href={localePath(`/offerings/schemes/${x.slug}/`, locale)}>{locale === 'hi' ? x.title.hi : x.short}</a></h3><p class="card__text">{x.summary[locale]}</p></li>
+))}</ul></section>)}
+{po.length > 0 && (<section class="mt"><h2>{locale === 'hi' ? 'ऑनलाइन सेवाएं' : 'Online services'}</h2><ul class="portal-grid" role="list">{po.map((x) => (
+  <li><SmartLink class="portal" href={x.url} locale={locale}><span class="portal__icon"><Icon name={x.icon} /></span><span class="portal__body"><span class="portal__name">{x.name[locale]}</span><span class="portal__host" lang={locale === 'hi' && !portalDescHi[x.url] ? 'en' : undefined}>{locale === 'hi' ? portalDescHi[x.url] ?? x.desc : x.desc}</span></span><Icon name="ArrowUpRight" class="icon icon--sm portal__arrow" /></SmartLink></li>
+))}</ul></section>)}
+{i.length > 0 && (<section class="mt"><h2>{locale === 'hi' ? 'पहल' : 'Initiatives'}</h2><ul class="tiles" role="list">{i.map((x) => (
+  <li><a class="tile" href={localePath(`/offerings/initiatives/${x.slug}/`, locale)}><span class="tile__icon"><Icon name={x.icon} class="icon icon--sm" /></span>{x.title[locale]}</a></li>
+))}</ul></section>)}
+{d.length > 0 && (<section class="mt"><h2>{t('divisions', locale)}</h2><ul class="tiles" role="list">{d.map((x) => (
+  <li><a class="tile" href={localePath(`/ministry/our-divisions/${x.slug}/`, locale)}><span class="tile__icon"><Icon name={x.icon} class="icon icon--sm" /></span>{x.title[locale]}</a></li>
+))}</ul></section>)}
+<nav class="mt" aria-label={locale === 'hi' ? 'अन्य उपयोगकर्ता' : 'Other personas'}>
+  <h2>{locale === 'hi' ? 'अन्य उपयोगकर्ता' : 'Other personas'}</h2>
+  <ul class="chips" role="list">{personas.filter((x) => x.id !== p.id).map((x) => <li><a class="chip" href={localePath(`/personas/${x.id}/`, locale)}>{x.title[locale]}</a></li>)}</ul>
+</nav>

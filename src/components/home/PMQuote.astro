@@ -1,0 +1,41 @@
+---
+// PM Quote (DBIM A.4.1.2 iv): sector-specific quote on the darkest shade of the
+// colour group, citing the occasion, with a link to the source. The quote below
+// is the one the Ministry already publishes in its Janjatiya Garima Utsav 2026
+// campaign. Add the PM's transparent-background photo from the DBIM Toolkit at
+// public/images/pm/pm.webp and set `photo` to show it.
+import type { Locale } from '../../data/site';
+import { t } from '../../data/i18n';
+import WarliBand from '../WarliBand.astro';
+import SmartLink from '../SmartLink.astro';
+import Icon from '../Icon.astro';
+import { celebration } from '../../lib/warli';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+const quote = {
+  en: 'Bhagwan Birsa Munda was not just the hero of our political freedom, but he was also the carrier of our spiritual and cultural energy.',
+  occasion: { en: 'On the declaration of Janjatiya Gaurav Divas', hi: 'जनजातीय गौरव दिवस की घोषणा के अवसर पर' },
+  source: 'https://www.pmindia.gov.in/en/',
+  photo: '' as string,
+};
+---
+<section class="pmq" aria-labelledby="pmq-title">
+  <WarliBand class="pmq__band" height={28} />
+  <div class="container pmq__inner">
+    <Icon name="Quote" class="icon icon--2xl pmq__mark" />
+    <figure class="pmq__figure">
+      <h2 id="pmq-title" class="visually-hidden">{hi ? 'प्रधानमंत्री का संदेश' : 'Message from the Prime Minister'}</h2>
+      <blockquote class="pmq__quote" lang="en"><p>{quote.en}</p></blockquote>
+      <figcaption class="pmq__cite">
+        <span class="pmq__name">{hi ? 'श्री नरेन्द्र मोदी' : 'Shri Narendra Modi'}, {t('pmQuote', locale)}</span>
+        <span class="pmq__occasion">{quote.occasion[locale]}</span>
+        <SmartLink class="pmq__link" href={quote.source} locale={locale}>{hi ? 'पीएम इंडिया पर पढ़ें' : 'Read on PM India'}<Icon name="ArrowUpRight" class="icon icon--sm" /></SmartLink>
+      </figcaption>
+    </figure>
+    {quote.photo
+      ? <img class="pmq__photo" src={quote.photo} alt="Shri Narendra Modi, Hon'ble Prime Minister" width="320" height="320" loading="lazy" />
+      : <svg class="pmq__art" viewBox="0 0 300 190" fill="currentColor" aria-hidden="true" focusable="false" set:html={celebration()} />}
+  </div>
+</section>

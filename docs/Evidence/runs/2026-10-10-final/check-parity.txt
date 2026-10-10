@@ -1,0 +1,3 @@
+$ npm run check:parity
+59 live components checked, 59 pass
+exit=0

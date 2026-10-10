@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../../../data/site';
+import { tx } from '../../../data/i18n';
+import { legacySections } from '../../../lib/legacy';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import DocList from '../DocList.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const links = legacySections('rti').flatMap((s) => s.links).filter((l) => l.kind === 'document');
+const groups = [
+  { heading: T('CPIOs and Appellate Authorities', 'केंद्रीय लोक सूचना अधिकारी और अपीलीय प्राधिकारी'), links: links.filter((l) => /CPIO|Appellate|Nodal/i.test(l.title)) },
+  { heading: T('RTI manual, notifications and audit', 'आरटीआई पुस्तिका, अधिसूचनाएं और लेखा परीक्षा'), links: links.filter((l) => !/CPIO|Appellate|Nodal/i.test(l.title)) },
+];
+---
+<div class="callout callout--cta">
+  <div><h2>{T('File an RTI application online', 'आरटीआई आवेदन ऑनलाइन दायर करें')}</h2><p>{T('Apply, pay the fee and track your application or first appeal on the RTI Online portal of the Government of India.', 'भारत सरकार के आरटीआई ऑनलाइन पोर्टल पर आवेदन करें, शुल्क का भुगतान करें और अपने आवेदन या प्रथम अपील की स्थिति देखें।')}</p></div>
+  <SmartLink class="btn btn--light" href="https://rtionline.gov.in/" locale={locale}>{T('Go to RTI Online', 'आरटीआई ऑनलाइन पर जाएं')}<Icon name="ArrowUpRight" /></SmartLink>
+</div>
+<div class="prose mt">
+  <h2>{T('How to apply', 'आवेदन कैसे करें')}</h2>
+  <ol>
+    <li>{T('Write your request for information to the Central Public Information Officer (CPIO) of the Ministry of Tribal Affairs, online through RTI Online or by post.', 'जनजातीय कार्य मंत्रालय के केंद्रीय लोक सूचना अधिकारी (सीपीआईओ) को आरटीआई ऑनलाइन के माध्यम से या डाक द्वारा सूचना हेतु अनुरोध भेजें।')}</li>
+    <li>{T('Pay the prescribed application fee. Applicants below the poverty line are exempt on submitting proof.', 'निर्धारित आवेदन शुल्क का भुगतान करें। गरीबी रेखा से नीचे के आवेदकों को प्रमाण प्रस्तुत करने पर छूट है।')}</li>
+    <li>{T('If you do not receive a reply in time or are not satisfied, file a first appeal with the First Appellate Authority.', 'समय पर उत्तर न मिलने या संतुष्ट न होने पर प्रथम अपीलीय प्राधिकारी के समक्ष प्रथम अपील दायर करें।')}</li>
+  </ol>
+  <p>{T('Read the', 'पढ़ें:')} <SmartLink href="https://rti.gov.in/" locale={locale} showExternalIcon>{T('Right to Information Act, 2005', 'सूचना का अधिकार अधिनियम, 2005')}</SmartLink>.</p>
+</div>
+<h2 class="mt">{T('Documents', 'दस्तावेज़')}</h2>
+<DocList groups={groups} locale={locale} headingLevel="h3" />

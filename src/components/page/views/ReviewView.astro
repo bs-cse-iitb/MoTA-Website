@@ -1,0 +1,16 @@
+---
+// State Review Meetings (the "Review Meeting" item of the live menu): STC monitoring
+// reports and the circulars used in the Ministry's reviews with States.
+import type { Locale } from '../../../data/site';
+import { legacySections } from '../../../lib/legacy';
+import { tx } from '../../../data/i18n';
+import DocList from '../DocList.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const sections = legacySections('review-meeting');
+---
+<div class="prose">
+  <p>{tx(locale, 'The Ministry reviews the progress of tribal welfare schemes with State Governments. The monitoring reports below come live from STCMIS, the Scheduled Tribe Component monitoring system, and are followed by the related circulars and orders.', 'मंत्रालय राज्य सरकारों के साथ जनजातीय कल्याण योजनाओं की प्रगति की समीक्षा करता है। नीचे दी गई निगरानी रिपोर्ट अनुसूचित जनजाति घटक निगरानी प्रणाली (एसटीसीएमआईएस) से सीधे आती हैं, इसके बाद संबंधित परिपत्र और आदेश दिए गए हैं।')}</p>
+</div>
+<DocList groups={sections.map((s) => ({ heading: s.heading, links: s.links }))} locale={locale} />

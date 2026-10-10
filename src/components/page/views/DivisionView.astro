@@ -1,0 +1,86 @@
+---
+import type { Locale } from '../../../data/site';
+import { localePath, t, tx } from '../../../data/i18n';
+import { divisionBySlug } from '../../../data/divisions';
+import { schemeBySlug } from '../../../data/schemes';
+import { divisionHi, L } from '../../../data/hi-content';
+import { legacySections } from '../../../lib/legacy';
+import directory from '../../../data/generated/directory.json';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import DocList from '../DocList.astro';
+import Facts from '../Facts.astro';
+
+interface Props { slug: string; locale: Locale }
+const { slug, locale } = Astro.props;
+const T = (en: string, hi: string) => tx(locale, en, hi);
+const d = divisionBySlug(slug)!;
+const hi = locale === 'hi' ? divisionHi[slug] : undefined;
+const about = hi?.about ?? d.about;
+const bullets = hi?.bullets ?? d.bullets;
+const sections = d.legacy ? legacySections(d.legacy.key, d.legacy) : [];
+const officers = d.officerMatch
+  ? directory.flatMap((g) => g.people).filter((p) => p.name && d.officerMatch!.test(p.work) && !/stenographer|PPS|PA\b|PS\b|DEO/i.test(p.designation))
+  : [];
+const uniqOfficers = officers.filter((p, i, a) => a.findIndex((x) => x.name === p.name) === i).slice(0, 8);
+---
+<div class="prose">
+  {about.map((p) => <p>{p}</p>)}
+  {bullets && <ul class="feature-list">{bullets.map((b) => <li>{b}</li>)}</ul>}
+</div>
+{d.facts && <Facts facts={d.facts} note={hi?.factsNote ?? d.factsNote} locale={locale} />}
+
+{d.schemes && (
+  <section class="mt">
+    <h2>{T('Schemes of this division', 'इस प्रभाग की योजनाएं')}</h2>
+    <ul class="grid grid--3" role="list">
+      {d.schemes.map((s) => schemeBySlug(s)).filter(Boolean).map((s) => (
+        <li class="card card--link">
+          <span class="card__icon"><Icon name={s!.icon} /></span>
+          <h3 class="card__title"><a href={localePath(`/offerings/schemes/${s!.slug}/`, locale)}>{locale === 'hi' ? s!.title.hi : s!.short}</a></h3>
+          <p class="card__text">{s!.summary[locale]}</p>
+          <span class="card__more" aria-hidden="true">{t('explore', locale)}<Icon name="ArrowRight" /></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+{(d.portals || d.contacts) && (
+  <section class="mt split">
+    {d.portals && (
+      <div>
+        <h2>{T('Portals', 'पोर्टल')}</h2>
+        <ul class="link-list" role="list">{d.portals.map((p) => <li><SmartLink href={p.url} locale={locale} showExternalIcon>{L(p.label, locale)}</SmartLink></li>)}</ul>
+      </div>
+    )}
+    {d.contacts && (
+      <div>
+        <h2>{T('Helpdesk', 'सहायता केंद्र')}</h2>
+        <dl class="kv">{d.contacts.map((c) => <><dt>{L(c.label, locale)}</dt><dd lang="en">{c.value}</dd></>)}</dl>
+      </div>
+    )}
+  </section>
+)}
+
+{sections.length > 0 && (
+  <section class="mt">
+    <h2>{t('documents', locale)}</h2>
+    <DocList groups={sections.map((s) => ({ heading: s.heading, links: s.links }))} locale={locale} headingLevel="h3" />
+  </section>
+)}
+
+{uniqOfficers.length > 0 && (
+  <section class="mt">
+    <h2>{T('Officers', 'अधिकारी')}</h2>
+    <ul class="people" role="list">
+      {uniqOfficers.map((p) => (
+        <li class="person"><div>
+          <p class="person__name">{locale === 'hi' && p.nameHi ? p.nameHi : p.name}</p>
+          <p class="person__role">{locale === 'hi' && p.designationHi ? p.designationHi : p.designation}</p>
+          <p class="person__role small" lang="en">{p.phone}{p.email && p.email.includes('[at]') ? ` · ${p.email}` : ''}</p>
+        </div></li>
+      ))}
+    </ul>
+  </section>
+)}

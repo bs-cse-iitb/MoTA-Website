@@ -1,0 +1,7 @@
+---
+// Decorative band of Warli dancers holding hands. The tile (/images/warli-band.svg)
+// is applied as a CSS mask so the band takes the current theme colour.
+interface Props { class?: string; height?: number }
+const { class: cls = '', height = 40 } = Astro.props;
+---
+<div class:list={['warli-band', `warli-band--${height}`, cls]} aria-hidden="true"></div>

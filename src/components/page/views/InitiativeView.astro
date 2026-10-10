@@ -1,0 +1,30 @@
+---
+import type { Locale } from '../../../data/site';
+import { t, tx } from '../../../data/i18n';
+import { initiativeBySlug } from '../../../data/initiatives';
+import { initiativeHi, L } from '../../../data/hi-content';
+import { legacySections } from '../../../lib/legacy';
+import Icon from '../../Icon.astro';
+import SmartLink from '../../SmartLink.astro';
+import DocList from '../DocList.astro';
+
+interface Props { slug: string; locale: Locale }
+const { slug, locale } = Astro.props;
+const i = initiativeBySlug(slug)!;
+const hi = locale === 'hi' ? initiativeHi[slug] : undefined;
+const about = hi?.about ?? i.about;
+const highlights = hi?.highlights ?? i.highlights;
+const sections = i.legacy
+  ? legacySections(i.legacy, { skip: /^innovative initiatives$|^related links$/i }).map((s) => ({ ...s, links: s.links.filter((l) => l.kind !== 'internal') })).filter((s) => s.links.length)
+  : [];
+---
+{i.partner && <p class="badge badge--partner"><Icon name="Handshake" class="icon icon--sm" />{tx(locale, 'In partnership with', 'साझेदार')}: <span lang={locale === 'hi' ? 'en' : undefined}>{i.partner}</span></p>}
+<div class="prose mt-sm">{about.map((p) => <p>{p}</p>)}</div>
+{highlights && <ul class="facts" role="list">{highlights.map((h) => <li class="fact"><span class="fact__label fact__label--strong">{h}</span></li>)}</ul>}
+{i.portal && <p class="mt"><SmartLink class="btn" href={i.portal.url} locale={locale}>{L(i.portal.label, locale)}<Icon name="ArrowUpRight" /></SmartLink></p>}
+{sections.length > 0 && (
+  <section class="mt">
+    <h2>{t('documents', locale)}</h2>
+    <DocList groups={sections.map((s) => ({ heading: s.heading, links: s.links }))} locale={locale} headingLevel="h3" />
+  </section>
+)}

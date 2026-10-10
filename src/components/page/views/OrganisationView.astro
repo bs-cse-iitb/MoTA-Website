@@ -1,0 +1,24 @@
+---
+import type { Locale } from '../../../data/site';
+import { organisations } from '../../../data/organisations';
+import { organisationHi } from '../../../data/hi-content';
+import { legacySections } from '../../../lib/legacy';
+import { t, tx } from '../../../data/i18n';
+import SmartLink from '../../SmartLink.astro';
+import Icon from '../../Icon.astro';
+import DocList from '../DocList.astro';
+
+interface Props { slug: string; locale: Locale }
+const { slug, locale } = Astro.props;
+const o = organisations.find((x) => x.slug === slug)!;
+const sections = o.legacy ? legacySections(o.legacy) : [];
+const about = (locale === 'hi' && organisationHi[o.slug]) || o.about;
+---
+<div class="prose">{about.map((p) => <p>{p}</p>)}</div>
+<p><SmartLink class="btn" href={o.url} locale={locale}>{tx(locale, `Visit the ${o.short} website`, 'आधिकारिक वेबसाइट देखें')}<Icon name="ArrowUpRight" /></SmartLink></p>
+{sections.length > 0 && (
+  <section class="mt">
+    <h2>{t('documents', locale)}</h2>
+    <DocList groups={sections.map((s) => ({ heading: s.heading, links: s.links }))} locale={locale} headingLevel="h3" />
+  </section>
+)}

@@ -1,0 +1,3019 @@
+[
+ {
+  "id": "tribal-en",
+  "name": "tribal.gov.in \u2014 current production (English home)",
+  "url": "https://tribal.gov.in/Home.aspx",
+  "category": "main",
+  "checkedAt": "2026-10-05T06:26:54.668Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=63072000;includeSubdomains",
+   "csp": "",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff script-src-elem 'unsafe-inline' 'self'",
+   "xctoValid": false,
+   "referrer": "",
+   "permissions": "",
+   "server": "Microsoft-IIS/10.0",
+   "poweredBy": "NIC"
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "ENGLISHCOUNT",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": ""
+   }
+  ],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 2585,
+  "page": {
+   "lang": "en",
+   "title": "Ministry of Tribal Affairs - Government of India",
+   "description": "The Ministry was set up in 1999 after the bifurcation of Ministry of Social Justice and Empowerment with the objective of providing more focused approach on the integrated socio-economic development of the Scheduled Tribes (STs), the most underprivileged of the Indian Society, in a coordinated and planned manner. Before the formation of the Ministry, tribal affairs were handled by different Ministries at different points in time",
+   "keywords": "Tribal Affairs, Ministry",
+   "viewport": "width=device-width, initial-scale=1",
+   "canonical": "https://tribal.nic.in/",
+   "hreflang": 0,
+   "ogTitle": "Ministry of Tribal Affairs, Government of India",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": true,
+   "textResize": true,
+   "contrastToggle": true,
+   "screenReaderPage": true,
+   "search": false,
+   "sitemapLink": true,
+   "feedbackLink": true,
+   "helpLink": true,
+   "contactLink": true,
+   "policyLinks": 2,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": true,
+   "fontBody": "Inter, system-ui, -apple-system, sans-serif",
+   "fontHeading": "",
+   "fontNav": "Inter, system-ui, -apple-system, sans-serif",
+   "headerRgb": [
+    213,
+    112,
+    11
+   ],
+   "footerRgb": null,
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 31,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 78,
+   "generator": "",
+   "headerGroup": "none (closest Group 4 (red), distance 127)",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 1,
+   "nodes": 1,
+   "critical": 0,
+   "serious": 1,
+   "rules": [
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<marquee> elements are deprecated and must not be used"
+    }
+   ]
+  },
+  "transferKB": 17671,
+  "requests": 211,
+  "consoleErrors": [
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_3e_YS\" [Caught in: Module \"__elem_a588f507_1_0_nF\"]\n\nSubsequent non-fatal errors won't be logged; see h",
+   "ErrorUtils caught an error:\n\nDataStore.get: namespace is required, got undefined\n\nSubsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. JS",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_4_0I\" [Caught in: Module \"__elem_9fc087ed_1_0_Px\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_4_0I\" [Caught in: Module \"__elem_9fc087ed_1_0_Px\"] [Caught in: Requiring module \"__elem_9fc087ed_1_0_Px",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_0_ZT\" [Caught in: Module \"__elem_9fc087ed_1_1_hP\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_0_ZT\" [Caught in: Module \"__elem_9fc087ed_1_1_hP\"] [Caught in: Requiring module \"__elem_9fc087ed_1_1_hP",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_1_gQ\" [Caught in: Module \"__elem_9fc087ed_1_2_DB\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_1_gQ\" [Caught in: Module \"__elem_9fc087ed_1_2_DB\"] [Caught in: Requiring module \"__elem_9fc087ed_1_2_DB"
+  ],
+  "failedRequests": [
+   "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-YDDQHY3HE8&gtm=45je69u2v897282431za200zd897282431xf1&_p=17911816155",
+   "net::ERR_ABORTED https://tribal.gov.in/images/tribot.mp4",
+   "net::ERR_ABORTED https://tribal.gov.in/images/tribot.mp4",
+   "net::ERR_ABORTED https://tribal.gov.in/images/tribot.mp4",
+   "429 https://syndication.twitter.com/srv/timeline-profile/screen-name/TribalAffairsIn?dnt=false&embedId=twitter-widget-0&feat"
+  ],
+  "failedCount": 5,
+  "thirdParty": [
+   "cdnjs.cloudflare.com",
+   "cdn.jsdelivr.net",
+   "code.jquery.com",
+   "fonts.googleapis.com",
+   "",
+   "platform.twitter.com",
+   "www.googletagmanager.com",
+   "fonts.gstatic.com",
+   "cbpssubscriber.mygov.in",
+   "www.facebook.com",
+   "www.google-analytics.com",
+   "syndication.twitter.com",
+   "scontent-del2-1.xx.fbcdn.net",
+   "static.xx.fbcdn.net",
+   "video-del2-3.xx.fbcdn.net"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1",
+   "tinyText": 72
+  },
+  "lighthouse": {
+   "performance": 63,
+   "accessibility": 96,
+   "bestPractices": 71,
+   "seo": 83,
+   "lcp": "14.9\u00a0s",
+   "cls": "0.024",
+   "tbt": "70\u00a0ms",
+   "fcp": "3.3\u00a0s"
+  }
+ },
+ {
+  "id": "tribal-hi",
+  "name": "tribal.gov.in \u2014 current production (Hindi home)",
+  "url": "https://tribal.gov.in/ResourcesHindi/Homeh.aspx",
+  "category": "main",
+  "checkedAt": "2026-10-05T06:27:17.296Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=63072000;includeSubdomains",
+   "csp": "",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff script-src-elem 'unsafe-inline' 'self'",
+   "xctoValid": false,
+   "referrer": "",
+   "permissions": "",
+   "server": "Microsoft-IIS/10.0",
+   "poweredBy": "NIC"
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "HINDICOUNT",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": ""
+   }
+  ],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 2489,
+  "page": {
+   "lang": "en",
+   "title": "Ministry of Tribal Affairs - Government of India",
+   "description": "The Ministry was set up in 1999 after the bifurcation of Ministry of Social Justice and Empowerment with the objective of providing more focused approach on the integrated socio-economic development of the Scheduled Tribes (STs), the most underprivileged of the Indian Society, in a coordinated and planned manner. Before the formation of the Ministry, tribal affairs were handled by different Ministries at different points in time",
+   "keywords": "Tribal Affairs, Ministry",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "canonical": "https://tribal.nic.in/",
+   "hreflang": 0,
+   "ogTitle": "Ministry of Tribal Affairs, Government of India",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": false,
+   "textResize": true,
+   "contrastToggle": true,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": true,
+   "feedbackLink": true,
+   "helpLink": true,
+   "contactLink": true,
+   "policyLinks": 1,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontHeading": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontNav": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 38,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 82,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": true
+  },
+  "axe": {
+   "violations": 4,
+   "nodes": 6,
+   "critical": 0,
+   "serious": 4,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "frame-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Frames must have an accessible name"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "list",
+     "impact": "serious",
+     "nodes": 3,
+     "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+    }
+   ]
+  },
+  "transferKB": 16329,
+  "requests": 199,
+  "consoleErrors": [
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_3e_Zm\" [Caught in: Module \"__elem_a588f507_1_0_PV\"]\n\nSubsequent non-fatal errors won't be logged; see h",
+   "ErrorUtils caught an error:\n\nDataStore.get: namespace is required, got undefined\n\nSubsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. JS",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_0_6T\" [Caught in: Module \"__elem_9fc087ed_1_0_zY\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_1_MI\" [Caught in: Module \"__elem_9fc087ed_1_1_uT\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_2_Em\" [Caught in: Module \"__elem_9fc087ed_1_2_xd\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_2_Em\" [Caught in: Module \"__elem_9fc087ed_1_2_xd\"] [Caught in: Requiring module \"__elem_9fc087ed_1_2_xd",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_0_6T\" [Caught in: Module \"__elem_9fc087ed_1_0_zY\"] [Caught in: Requiring module \"__elem_9fc087ed_1_0_zY",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_1_MI\" [Caught in: Module \"__elem_9fc087ed_1_1_uT\"] [Caught in: Requiring module \"__elem_9fc087ed_1_1_uT"
+  ],
+  "failedRequests": [
+   "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-YDDQHY3HE8&gtm=45je69u2v897282431za200zd897282431xf1&_p=17911816382",
+   "net::ERR_ABORTED https://tribal.gov.in/ResourcesHindi/images/tribot.mp4",
+   "net::ERR_ABORTED https://tribal.gov.in/ResourcesHindi/images/tribot.mp4",
+   "net::ERR_ABORTED https://tribal.gov.in/ResourcesHindi/images/tribot.mp4",
+   "429 https://syndication.twitter.com/srv/timeline-profile/screen-name/TribalAffairsIn?dnt=false&embedId=twitter-widget-0&feat"
+  ],
+  "failedCount": 5,
+  "thirdParty": [
+   "cdnjs.cloudflare.com",
+   "cdn.jsdelivr.net",
+   "www.googletagmanager.com",
+   "code.jquery.com",
+   "www.google-analytics.com",
+   "cbpssubscriber.mygov.in",
+   "",
+   "platform.twitter.com",
+   "www.facebook.com",
+   "static.xx.fbcdn.net",
+   "scontent-del2-1.xx.fbcdn.net",
+   "syndication.twitter.com",
+   "scontent-del3-1.xx.fbcdn.net",
+   "video-del2-3.xx.fbcdn.net",
+   "video-del3-1.xx.fbcdn.net"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "tinyText": 68
+  },
+  "lighthouse": {
+   "performance": 64,
+   "accessibility": 77,
+   "bestPractices": 71,
+   "seo": 92,
+   "lcp": "15.6\u00a0s",
+   "cls": "0.002",
+   "tbt": "110\u00a0ms",
+   "fcp": "2.4\u00a0s"
+  }
+ },
+ {
+  "id": "dashboard",
+  "name": "Performance Dashboard",
+  "url": "https://dashboard.tribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:27:38.527Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "default-src 'self';                      script-src 'unsafe-inline' 'self' https://code.jquery.com;                      script-src-elem 'unsafe-inline' 'self' https://code.jquery.com ;                      style-src 'unsafe-inline' 'self' https://fonts.googleapis.com ;                      font-src 'unsafe-inline' 'self' https://gstatic.com data:;                      frame-src 'unsafe-inline' https://dashboard.tribal.gov.in;",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "strict-origin",
+   "permissions": "geolocation=(), camera=(), microphone=()",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "ENGLISHCOUNT",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "BNES_ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "BNES_ENGLISHCOUNT",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   }
+  ],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.3",
+   "chainComplete": true,
+   "verify": "0 (ok)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": true,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 3450,
+  "page": {
+   "lang": "",
+   "title": "",
+   "description": "",
+   "keywords": "",
+   "viewport": "",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": false,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": false,
+   "policyLinks": 0,
+   "lastUpdated": false,
+   "nationalPortalLink": false,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontHeading": "",
+   "fontNav": "",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": null,
+   "iconFonts": 0,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 0,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": true
+  },
+  "axe": {
+   "violations": 3,
+   "nodes": 3,
+   "critical": 0,
+   "serious": 3,
+   "rules": [
+    {
+     "id": "document-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Documents must have <title> element to aid in navigation"
+    },
+    {
+     "id": "frame-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Frames must have an accessible name"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    }
+   ]
+  },
+  "transferKB": 28890,
+  "requests": 103,
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+   "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ],
+  "failedRequests": [
+   "401 https://dashboard.tribal.gov.in/powerbi/libs/scripts/visualSandbox.externals.js",
+   "net::ERR_ABORTED https://dashboard.tribal.gov.in/powerbi/libs/scripts/visualSandbox.externals.js",
+   "401 https://dashboard.tribal.gov.in/powerbi/libs/scripts/jQuery.js",
+   "net::ERR_ABORTED https://dashboard.tribal.gov.in/powerbi/libs/scripts/jQuery.js",
+   "401 https://dashboard.tribal.gov.in/powerbi/libs/scripts/globalize.cultures.js",
+   "net::ERR_ABORTED https://dashboard.tribal.gov.in/powerbi/libs/scripts/globalize.cultures.js",
+   "401 https://dashboard.tribal.gov.in/powerbi/libs/scripts/customVisualsHost.js",
+   "net::ERR_ABORTED https://dashboard.tribal.gov.in/powerbi/libs/scripts/customVisualsHost.js",
+   "401 https://dashboard.tribal.gov.in/powerbi/libs/scripts/globalize.js",
+   "net::ERR_ABORTED https://dashboard.tribal.gov.in/powerbi/libs/scripts/globalize.js",
+   "401 https://dashboard.tribal.gov.in/powerbi/libs/scripts/globalize.js",
+   "net::ERR_ABORTED https://dashboard.tribal.gov.in/powerbi/libs/scripts/globalize.js"
+  ],
+  "failedCount": 30,
+  "thirdParty": [
+   "api.powerbi.com",
+   "pbivisuals.powerbi.com",
+   "",
+   "appsource.powerbi.com"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 980,
+   "viewportMeta": "",
+   "tinyText": 0
+  },
+  "lighthouse": {
+   "performance": 43,
+   "accessibility": 45,
+   "bestPractices": 50,
+   "seo": 73,
+   "lcp": "3.7\u00a0s",
+   "cls": "0",
+   "tbt": "4,870\u00a0ms",
+   "fcp": "3.5\u00a0s"
+  }
+ },
+ {
+  "id": "tritribal",
+  "name": "National Tribal Research Portal",
+  "url": "https://tritribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:28:03.055Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "default-src 'unsafe-inline' 'self' https://*; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net  ajax.googleapis.com 'unsafe-eval';  style-src-elem 'unsafe-inline' 'self' https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css; script-src-elem 'unsafe-inline' 'self' https://code.jquery.com https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js https://platform.twitter.com/widgets.js https://cdn.jsdelivr.net/npm/sweetalert2@11;    font-src 'self' https://fonts.googleapis.com  ;connect-src 'self';frame-src 'self';object-src 'self';report-to groupName;",
+   "xfo": "SAMEORIGIN, SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "",
+   "permissions": "",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   }
+  ],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "20 (unable to get local issuer certificate)",
+   "subject": "CN=tritribal.gov.in",
+   "issuer": "C=US, O=Let's Encrypt, CN=YR1",
+   "notAfter": "Nov 29 11:09:30 2026 GMT",
+   "daysLeft": 55,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 870,
+  "page": {
+   "lang": "",
+   "title": "NATIONAL TRIBAL RESEARCH PORTAL",
+   "description": "The Ministry was set up in 1999 after the bifurcation of Ministry of Social Justice and Empowerment with the objective of providing more focused approach on the integrated socio-economic development of the Scheduled Tribes (STs), the most underprivileged of the Indian Society, in a coordinated and planned manner. Before the formation of the Ministry, tribal affairs were handled by different Ministries at different points in time",
+   "keywords": "Tribal Affairs, Ministry",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "canonical": "https://tritribal.gov.in/",
+   "hreflang": 0,
+   "ogTitle": "Ministry of Tribal Affairs, Government of India",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontHeading": "",
+   "fontNav": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "headerRgb": null,
+   "footerRgb": [
+    43,
+    43,
+    43
+   ],
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 11,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 43,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "Neutral (grey)",
+   "notoSans": true
+  },
+  "axe": {
+   "violations": 5,
+   "nodes": 19,
+   "critical": 1,
+   "serious": 4,
+   "rules": [
+    {
+     "id": "button-name",
+     "impact": "critical",
+     "nodes": 2,
+     "help": "Buttons must have discernible text"
+    },
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 4,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "link-in-text-block",
+     "impact": "serious",
+     "nodes": 7,
+     "help": "Links must be distinguishable without relying on color"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 5,
+     "help": "Links must have discernible text"
+    }
+   ]
+  },
+  "transferKB": 4121,
+  "requests": 43,
+  "consoleErrors": [
+   "Loading the image 'data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4",
+   "Loading the image 'data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Framing 'https://platform.twitter.com/' violates the following Content Security Policy directive: \"frame-src 'self'\". The request has been blocked.\n",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Connecting to 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' violates the following Content Security Policy directive: \"connect-src '"
+  ],
+  "failedRequests": [
+   "undefined data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cp",
+   "undefined data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cp",
+   "404 https://tritribal.gov.in/images/carousel-bg.png",
+   "404 https://tritribal.gov.in/images/favicon.png",
+   "undefined https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+  ],
+  "failedCount": 5,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "platform.twitter.com",
+   "code.jquery.com",
+   ""
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 405,
+   "viewportMeta": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "tinyText": 29
+  },
+  "lighthouse": {
+   "performance": 86,
+   "accessibility": 63,
+   "bestPractices": 71,
+   "seo": 83,
+   "lcp": "3.5\u00a0s",
+   "cls": "0.11",
+   "tbt": "0\u00a0ms",
+   "fcp": "2.0\u00a0s"
+  }
+ },
+ {
+  "id": "dbttribal",
+  "name": "DBT Tribal (Pre/Post Matric)",
+  "url": "https://dbttribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:28:15.839Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "default-src 'unsafe-inline' 'self' https://*;      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://ajax.googleapis.com https://code.jquery.com 'unsafe-eval';      style-src-elem 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com https://dbttribal.gov.in/;      script-src-elem 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://ajax.googleapis.com https://code.jquery.com https://platform.twitter.com https://maxcdn.bootstrapcdn.com;      font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net;      connect-src 'self';      object-src 'self';      report-to groupName;      frame-src 'self' data:;",
+   "xfo": "SAMEORIGIN, SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "strict-origin-when-cross-origin",
+   "permissions": "camera=(), microphone=(), geolocation=(), fullscreen=(self)",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   },
+   {
+    "name": "__AntiXsrfToken",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": ""
+   }
+  ],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "20 (unable to get local issuer certificate)",
+   "subject": "CN=dbttribal.gov.in",
+   "issuer": "C=US, O=Let's Encrypt, CN=YR1",
+   "notAfter": "Nov 29 10:50:22 2026 GMT",
+   "daysLeft": 55,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1191,
+  "page": {
+   "lang": "",
+   "title": "Ministry of Tribal Affairs",
+   "description": "",
+   "keywords": "",
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+   "fontHeading": "",
+   "fontNav": "",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    51,
+    122,
+    183
+   ],
+   "iconFonts": 0,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 8,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 14,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 5,
+   "nodes": 20,
+   "critical": 1,
+   "serious": 3,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 8,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 8,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "meta-viewport",
+     "impact": "moderate",
+     "nodes": 1,
+     "help": "Zooming and scaling must not be disabled"
+    }
+   ]
+  },
+  "transferKB": 4663,
+  "requests": 214,
+  "consoleErrors": [
+   "Refused to apply style from 'https://dbttribal.gov.in/ddmenu/ddmenu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict",
+   "Refused to apply style from 'https://dbttribal.gov.in/ddmenu/ddmenu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict",
+   "Loading the font 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2' violates the following Content Security Policy direc",
+   "Loading the font 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff' violates the following Content Security Policy direct",
+   "Loading the font 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.ttf' violates the following Content Security Policy directi",
+   "Loading the font 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2' violates the following Content Security Policy direc",
+   "Loading the font 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff' violates the following Content Security Policy direct",
+   "Loading the font 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf' violates the following Content Security Policy directi"
+  ],
+  "failedRequests": [
+   "net::ERR_ABORTED https://dbttribal.gov.in/ddmenu/ddmenu.css",
+   "net::ERR_ABORTED https://dbttribal.gov.in/ddmenu/ddmenu.css",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.ttf",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf",
+   "404 https://dbttribal.gov.in/favicon.ico",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
+   "undefined https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
+   "404 https://dbttribal.gov.in/ddmenu/ddmenu.css"
+  ],
+  "failedCount": 12,
+  "thirdParty": [
+   "maxcdn.bootstrapcdn.com",
+   "ajax.googleapis.com"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 730,
+   "viewportMeta": "width=device-width, initial-scale=1, maximum-scale=1",
+   "tinyText": 2
+  },
+  "lighthouse": {
+   "performance": 63,
+   "accessibility": 53,
+   "bestPractices": 68,
+   "seo": 82,
+   "lcp": "13.8\u00a0s",
+   "cls": "0",
+   "tbt": "10\u00a0ms",
+   "fcp": "4.6\u00a0s"
+  }
+ },
+ {
+  "id": "fellowship",
+  "name": "National Fellowship",
+  "url": "https://fellowship.tribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:28:30.540Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "",
+   "xfo": "SAMEORIGIN, SAMEORIGIN",
+   "xcto": "strict-origin-when-cross-origin",
+   "xctoValid": false,
+   "referrer": "",
+   "permissions": "nosniff",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "__AntiXsrfToken",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": ""
+   }
+  ],
+  "httpToHttps": {
+   "code": 303,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1401,
+  "page": {
+   "lang": "",
+   "title": "",
+   "description": "",
+   "keywords": "",
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+   "fontHeading": "",
+   "fontNav": "",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    51,
+    122,
+    183
+   ],
+   "iconFonts": 0,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 8,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 23,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 8,
+   "nodes": 36,
+   "critical": 2,
+   "serious": 5,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "document-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Documents must have <title> element to aid in navigation"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 8,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "input-image-alt",
+     "impact": "critical",
+     "nodes": 16,
+     "help": "Image buttons must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 7,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<marquee> elements are deprecated and must not be used"
+    },
+    {
+     "id": "meta-viewport",
+     "impact": "moderate",
+     "nodes": 1,
+     "help": "Zooming and scaling must not be disabled"
+    }
+   ]
+  },
+  "transferKB": 4649,
+  "requests": 228,
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failedRequests": [
+   "404 https://fellowship.tribal.gov.in/ddmenu/ddmenu.css",
+   "net::ERR_ABORTED https://fellowship.tribal.gov.in/ddmenu/ddmenu.css",
+   "404 https://fellowship.tribal.gov.in/ddmenu/ddmenu.css",
+   "net::ERR_ABORTED https://fellowship.tribal.gov.in/ddmenu/ddmenu.css",
+   "404 https://fellowship.tribal.gov.in/fonts/glyphicons-halflings-regular.woff2",
+   "net::ERR_ABORTED https://fellowship.tribal.gov.in/fonts/glyphicons-halflings-regular.woff2",
+   "404 https://fellowship.tribal.gov.in/fonts/glyphicons-halflings-regular.woff",
+   "net::ERR_ABORTED https://fellowship.tribal.gov.in/fonts/glyphicons-halflings-regular.woff",
+   "404 https://fellowship.tribal.gov.in/fonts/glyphicons-halflings-regular.ttf",
+   "net::ERR_ABORTED https://fellowship.tribal.gov.in/fonts/glyphicons-halflings-regular.ttf",
+   "404 https://fellowship.tribal.gov.in/favicon.ico"
+  ],
+  "failedCount": 11,
+  "thirdParty": [
+   "ajax.googleapis.com",
+   "cdnjs.cloudflare.com",
+   "maxcdn.bootstrapcdn.com"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 811,
+   "viewportMeta": "width=device-width, initial-scale=1, maximum-scale=1",
+   "tinyText": 2
+  },
+  "lighthouse": {
+   "performance": 62,
+   "accessibility": 39,
+   "bestPractices": 71,
+   "seo": 73,
+   "lcp": "14.6\u00a0s",
+   "cls": "0",
+   "tbt": "0\u00a0ms",
+   "fcp": "4.8\u00a0s"
+  }
+ },
+ {
+  "id": "overseas",
+  "name": "National Overseas Scholarship",
+  "url": "https://overseas.tribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:28:45.462Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "",
+   "xfo": "SAMEORIGIN, SAMEORIGIN",
+   "xcto": "strict-origin-when-cross-origin",
+   "xctoValid": false,
+   "referrer": "",
+   "permissions": "nosniff",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "__AntiXsrfToken",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   }
+  ],
+  "httpToHttps": {
+   "code": 303,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1209,
+  "page": {
+   "lang": "",
+   "title": "Ministry of Tribal Affairs",
+   "description": "",
+   "keywords": "",
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+   "fontHeading": "",
+   "fontNav": "",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    51,
+    122,
+    183
+   ],
+   "iconFonts": 0,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 9,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 17,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 6,
+   "nodes": 45,
+   "critical": 2,
+   "serious": 3,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 9,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "input-image-alt",
+     "impact": "critical",
+     "nodes": 26,
+     "help": "Image buttons must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 7,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "meta-viewport",
+     "impact": "moderate",
+     "nodes": 1,
+     "help": "Zooming and scaling must not be disabled"
+    }
+   ]
+  },
+  "transferKB": 6188,
+  "requests": 221,
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failedRequests": [
+   "404 https://overseas.tribal.gov.in/ddmenu/ddmenu.css",
+   "net::ERR_ABORTED https://overseas.tribal.gov.in/ddmenu/ddmenu.css",
+   "404 https://overseas.tribal.gov.in/ddmenu/ddmenu.css",
+   "net::ERR_ABORTED https://overseas.tribal.gov.in/ddmenu/ddmenu.css",
+   "404 https://overseas.tribal.gov.in/favicon.ico"
+  ],
+  "failedCount": 5,
+  "thirdParty": [
+   "maxcdn.bootstrapcdn.com",
+   "cdnjs.cloudflare.com",
+   "ajax.googleapis.com"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 753,
+   "viewportMeta": "width=device-width, initial-scale=1, maximum-scale=1",
+   "tinyText": 2
+  },
+  "lighthouse": {
+   "performance": 62,
+   "accessibility": 48,
+   "bestPractices": 71,
+   "seo": 82,
+   "lcp": "15.4\u00a0s",
+   "cls": "0",
+   "tbt": "0\u00a0ms",
+   "fcp": "5.1\u00a0s"
+  }
+ },
+ {
+  "id": "stcmis",
+  "name": "STCMIS",
+  "url": "https://stcmis.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:28:59.604Z",
+  "status": 404,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "default-src 'unsafe-inline' 'self' https://*; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net  ajax.googleapis.com 'unsafe-eval';  style-src-elem 'unsafe-inline' 'self' https://maxcdn.bootstrapcdn.com/; script-src-elem 'unsafe-inline' 'self' https://code.jquery.com http://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://www.google.com https://www.gstatic.com https://platform.twitter.com/widgets.js;    font-src 'self' https://fonts.googleapis.com  https://maxcdn.bootstrapcdn.com;connect-src 'self';frame-src 'self';object-src 'self';report-to groupName;",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "",
+   "permissions": "",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "20 (unable to get local issuer certificate)",
+   "subject": "CN=stcmis.gov.in",
+   "issuer": "C=US, O=Let's Encrypt, CN=YR1",
+   "notAfter": "Nov 30 03:43:36 2026 GMT",
+   "daysLeft": 56,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1548,
+  "page": {
+   "lang": "",
+   "title": "STC Monitoring System",
+   "description": "",
+   "keywords": "",
+   "viewport": "width=device-width, initial-scale=1",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": false,
+   "nationalPortalLink": false,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "Inter, \"Segoe UI\", Tahoma, sans-serif",
+   "fontHeading": "",
+   "fontNav": "Inter, \"Segoe UI\", Tahoma, sans-serif",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 0,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 8,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 48,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 4,
+   "nodes": 15,
+   "critical": 1,
+   "serious": 3,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 11,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 2,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<marquee> elements are deprecated and must not be used"
+    }
+   ]
+  },
+  "transferKB": 200,
+  "requests": 17,
+  "consoleErrors": [
+   "Loading the stylesheet 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap' violates the following",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Connecting to 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap' violates the following Content "
+  ],
+  "failedRequests": [
+   "undefined https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap",
+   "404 https://stcmis.gov.in/favicon.ico",
+   "undefined https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+  ],
+  "failedCount": 3,
+  "thirdParty": [],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 476,
+   "viewportMeta": "width=device-width, initial-scale=1",
+   "tinyText": 20
+  },
+  "lighthouse": {
+   "performance": 96,
+   "accessibility": 78,
+   "bestPractices": 71,
+   "seo": 73,
+   "lcp": "2.4\u00a0s",
+   "cls": "0",
+   "tbt": "0\u00a0ms",
+   "fcp": "1.9\u00a0s"
+  }
+ },
+ {
+  "id": "statetsp",
+  "name": "State TSP",
+  "url": "https://statetsp.tribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:29:14.192Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "default-src 'unsafe-inline' 'self' https://*; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net  ajax.googleapis.com 'unsafe-eval';  style-src-elem 'unsafe-inline' 'self' https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css https://dbttribal.gov.in/; script-src-elem 'unsafe-inline' 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js https://code.jquery.com https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js https://platform.twitter.com/widgets.js https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js https://ajax.googleapis.com/ https://maxcdn.bootstrapcdn.com/;    font-src 'self' https://fonts.googleapis.com  ;connect-src 'self';object-src 'self';report-to groupName;frame-src 'self' data:;",
+   "xfo": "SAMEORIGIN, SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "strict-origin",
+   "permissions": "geolocation=(), camera=(), microphone=()",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Strict"
+   }
+  ],
+  "httpToHttps": {
+   "code": 301,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1615,
+  "page": {
+   "lang": "",
+   "title": "State/ UT Tribal Sub-Plan Monitoring Portal",
+   "description": "The Ministry was set up in 1999 after the bifurcation of Ministry of Social Justice and Empowerment with the objective of providing more focused approach on the integrated socio-economic development of the Scheduled Tribes (STs), the most underprivileged of the Indian Society, in a coordinated and planned manner. Before the formation of the Ministry, tribal affairs were handled by different Ministries at different points in time",
+   "keywords": "Tribal Affairs, Ministry",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "canonical": "https://tribal.gov.in/",
+   "hreflang": 0,
+   "ogTitle": "Ministry of Tribal Affairs, Government of India",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": true,
+   "contactLink": true,
+   "policyLinks": 1,
+   "lastUpdated": true,
+   "nationalPortalLink": false,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "Nunito, sans-serif",
+   "fontHeading": "Nunito, sans-serif",
+   "fontNav": "Nunito, sans-serif",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 14,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 1,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 17,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 5,
+   "nodes": 16,
+   "critical": 1,
+   "serious": 4,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 11,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 1,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<marquee> elements are deprecated and must not be used"
+    }
+   ]
+  },
+  "transferKB": 1986,
+  "requests": 62,
+  "consoleErrors": [
+   "Loading the stylesheet 'https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800' violates the following Content Security Policy directive: \"style-src",
+   "Loading the stylesheet 'https://fonts.googleapis.com/css?family=Nunito' violates the following Content Security Policy directive: \"style-src-elem 'unsafe-inline",
+   "Framing 'https://platform.twitter.com/' violates the following Content Security Policy directive: \"frame-src 'self' data:\". The request has been blocked.\n",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Connecting to 'https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800' violates the following Content Security Policy directive: \"connect-src 'self'",
+   "Connecting to 'https://fonts.googleapis.com/css?family=Nunito' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has be",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failedRequests": [
+   "undefined https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800",
+   "undefined https://fonts.googleapis.com/css?family=Nunito",
+   "404 https://statetsp.tribal.gov.in/favicon.ico",
+   "undefined https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800",
+   "undefined https://fonts.googleapis.com/css?family=Nunito",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/font-awesome/css/all.min.css",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/Glyphicons/glyphicon.css",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/feathericons/style.css",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/Linearicons/Linearicons.css",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/ionicons/css/ionicons.min.css",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/Pe-icon-7-stroke/Pe-icon-7.css",
+   "404 https://statetsp.tribal.gov.in/plugins/iconfonts/materialdesignicons/materialdesignicons.css"
+  ],
+  "failedCount": 17,
+  "thirdParty": [
+   "code.jquery.com",
+   "cdn.jsdelivr.net",
+   "platform.twitter.com",
+   ""
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 1133,
+   "viewportMeta": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "tinyText": 14
+  },
+  "lighthouse": {
+   "performance": 71,
+   "accessibility": 67,
+   "bestPractices": 46,
+   "seo": 73,
+   "lcp": "5.3\u00a0s",
+   "cls": "0",
+   "tbt": "0\u00a0ms",
+   "fcp": "4.1\u00a0s"
+  }
+ },
+ {
+  "id": "grants",
+  "name": "ADIGRAMS (grants)",
+  "url": "https://grants.tribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:29:29.925Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=63072000; includeSubdomains; preload",
+   "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com https://cdn.linearicons.com; img-src 'self' data: blob: https://counter3.stat.ovh; font-src 'self' data: https://fonts.gstatic.com https://cdn.linearicons.com https://use.fontawesome.com; connect-src 'self'; frame-src 'self' https://app.powerbi.com https://www.youtube.com;frame-src 'self' https://app.powerbi.com https://www.powerbi.com https://www.youtube.com;",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "strict-origin-when-cross-origin",
+   "permissions": "camera=(), microphone=(), geolocation=()",
+   "server": "nginx",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "Path",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": ""
+   }
+  ],
+  "httpToHttps": {
+   "code": 403,
+   "toHttps": false
+  },
+  "tls": {
+   "protocol": "TLSv1.3",
+   "chainComplete": true,
+   "verify": "0 (ok)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": true,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 2129,
+  "page": {
+   "lang": "en",
+   "title": "ADIGRAMS: Adivasi Grants Management System",
+   "description": "ADIGRAMS: Adivasi Grants Management System",
+   "keywords": "",
+   "viewport": "width=device-width, initial-scale=1",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": true,
+   "feedbackLink": true,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 3,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "Inter, \"Segoe UI\", system-ui, -apple-system, sans-serif",
+   "fontHeading": "Montserrat, sans-serif",
+   "fontNav": "Inter, \"Segoe UI\", system-ui, sans-serif",
+   "headerRgb": [
+    2,
+    132,
+    199
+   ],
+   "footerRgb": null,
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 12,
+   "svgIcons": 6,
+   "imagesWithoutAlt": 17,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 13,
+   "generator": "",
+   "headerGroup": "none (closest Group 10 (cyan), distance 81)",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 4,
+   "nodes": 10,
+   "critical": 2,
+   "serious": 2,
+   "rules": [
+    {
+     "id": "button-name",
+     "impact": "critical",
+     "nodes": 4,
+     "help": "Buttons must have discernible text"
+    },
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 3,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 2,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Links must have discernible text"
+    }
+   ]
+  },
+  "transferKB": 12486,
+  "requests": 54,
+  "consoleErrors": [
+   "Ignoring duplicate Content-Security-Policy directive 'frame-src'.",
+   "Connecting to 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family"
+  ],
+  "failedRequests": [
+   "undefined https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Poppins:wg"
+  ],
+  "failedCount": 1,
+  "thirdParty": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com",
+   "",
+   "counter3.stat.ovh"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1",
+   "tinyText": 1
+  },
+  "lighthouse": {
+   "performance": 35,
+   "accessibility": 78,
+   "bestPractices": 96,
+   "seo": 75,
+   "lcp": "15.6\u00a0s",
+   "cls": "0.374",
+   "tbt": "180\u00a0ms",
+   "fcp": "9.9\u00a0s"
+  }
+ },
+ {
+  "id": "adiprasaran",
+  "name": "Adi Prasaran",
+  "url": "https://adiprasaran.tribal.gov.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:29:47.930Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "",
+   "xfo": "",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "",
+   "permissions": "",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": false
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 11175,
+  "page": {
+   "lang": "",
+   "title": "",
+   "description": "The Ministry was set up in 1999 after the bifurcation of Ministry of Social Justice and Empowerment with the objective of providing more focused approach on the integrated socio-economic development of the Scheduled Tribes (STs), the most underprivileged of the Indian Society, in a coordinated and planned manner. Before the formation of the Ministry, tribal affairs were handled by different Ministries at different points in time",
+   "keywords": "Tribal Affairs, Ministry",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "canonical": "https://tribal.gov.in/",
+   "hreflang": 0,
+   "ogTitle": "Ministry of Tribal Affairs, Government of India",
+   "h1Count": 1,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontHeading": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontNav": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "headerRgb": null,
+   "footerRgb": [
+    0,
+    71,
+    87
+   ],
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 25,
+   "svgIcons": 2,
+   "imagesWithoutAlt": 13,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 82,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "Group 2 (teal)",
+   "notoSans": true
+  },
+  "axe": {
+   "violations": 7,
+   "nodes": 56,
+   "critical": 2,
+   "serious": 5,
+   "rules": [
+    {
+     "id": "button-name",
+     "impact": "critical",
+     "nodes": 2,
+     "help": "Buttons must have discernible text"
+    },
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 26,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "document-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Documents must have <title> element to aid in navigation"
+    },
+    {
+     "id": "frame-title",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "Frames must have an accessible name"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 7,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 17,
+     "help": "Links must have discernible text"
+    }
+   ]
+  },
+  "transferKB": 120162,
+  "requests": 218,
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Refused to execute script from 'https://adiprasaran.tribal.gov.in/js/bootstrap.min.js' because its MIME type ('text/html') is not executable, and strict MIME ty",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_3e_yr\" [Caught in: Module \"__elem_a588f507_1_0_qt\"]\n\nSubsequent non-fatal errors won't be logged; see h",
+   "ErrorUtils caught an error:\n\nDataStore.get: namespace is required, got undefined\n\nSubsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. JS",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_0_en\" [Caught in: Module \"__elem_9fc087ed_1_0_5Z\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_0_en\" [Caught in: Module \"__elem_9fc087ed_1_0_5Z\"] [Caught in: Requiring module \"__elem_9fc087ed_1_0_5Z",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_4_JQ\" [Caught in: Module \"__elem_9fc087ed_1_1_4c\"]\n\nSubsequent non-fatal errors won't be logged; see ht",
+   "ErrorUtils caught an error:\n\nCould not find element \"u_1_4_JQ\" [Caught in: Module \"__elem_9fc087ed_1_1_4c\"] [Caught in: Requiring module \"__elem_9fc087ed_1_1_4c"
+  ],
+  "failedRequests": [
+   "404 https://adiprasaran.tribal.gov.in/js/bootstrap.min.js",
+   "net::ERR_ABORTED https://adiprasaran.tribal.gov.in/js/bootstrap.min.js",
+   "net::ERR_CONNECTION_RESET https://static.doubleclick.net/instream/ad_status.js",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id",
+   "net::ERR_CONNECTION_RESET https://static.doubleclick.net/instream/ad_status.js",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id",
+   "429 https://syndication.twitter.com/srv/timeline-profile/screen-name/TribalAffairsIn?dnt=false&embedId=twitter-widget-0&feat",
+   "404 https://adiprasaran.tribal.gov.in/favicon.ico"
+  ],
+  "failedCount": 8,
+  "thirdParty": [
+   "",
+   "platform.twitter.com",
+   "www.youtube.com",
+   "www.facebook.com",
+   "fonts.gstatic.com",
+   "scontent-del2-1.xx.fbcdn.net",
+   "static.xx.fbcdn.net",
+   "i.ytimg.com",
+   "www.google.com",
+   "jnn-pa.googleapis.com",
+   "syndication.twitter.com",
+   "video-del2-3.xx.fbcdn.net",
+   "video-del2-2.xx.fbcdn.net",
+   "video-del3-1.xx.fbcdn.net",
+   "video-del3-2.xx.fbcdn.net"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "tinyText": 51
+  },
+  "lighthouse": {
+   "performance": 71,
+   "accessibility": 61,
+   "bestPractices": 61,
+   "seo": 64,
+   "lcp": "4.6\u00a0s",
+   "cls": "0.056",
+   "tbt": "30\u00a0ms",
+   "fcp": "2.5\u00a0s"
+  }
+ },
+ {
+  "id": "adikarmayogi",
+  "name": "Adi Karmayogi",
+  "url": "https://adiprasaran.tribal.gov.in/adikarmayogi/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:30:31.652Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000",
+   "csp": "",
+   "xfo": "",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "",
+   "permissions": "",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "ASP.NET_SessionId",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Lax"
+   }
+  ],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": false
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1118,
+  "page": {
+   "lang": "",
+   "title": "Adi Karmayogi",
+   "description": "The Ministry was set up in 1999 after the bifurcation of Ministry of Social Justice and Empowerment with the objective of providing more focused approach on the integrated socio-economic development of the Scheduled Tribes (STs), the most underprivileged of the Indian Society, in a coordinated and planned manner. Before the formation of the Ministry, tribal affairs were handled by different Ministries at different points in time",
+   "keywords": "Tribal Affairs, Ministry",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "canonical": "https://tribal.gov.in/",
+   "hreflang": 0,
+   "ogTitle": "Ministry of Tribal Affairs, Government of India",
+   "h1Count": 1,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 0,
+   "lastUpdated": true,
+   "nationalPortalLink": false,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "fontHeading": "Roboto, sans-serif",
+   "fontNav": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "headerRgb": null,
+   "footerRgb": [
+    0,
+    71,
+    87
+   ],
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 8,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 1,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 6,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "Group 2 (teal)",
+   "notoSans": true
+  },
+  "axe": {
+   "violations": 5,
+   "nodes": 9,
+   "critical": 1,
+   "serious": 4,
+   "rules": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 4,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 1,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<marquee> elements are deprecated and must not be used"
+    }
+   ]
+  },
+  "transferKB": 39311,
+  "requests": 36,
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failedRequests": [
+   "404 https://adiprasaran.tribal.gov.in/adikarmayogi/Videos/3MinVedio.jpg",
+   "net::ERR_ABORTED https://adiprasaran.tribal.gov.in/adikarmayogi/Videos/Karmayogi.mp4"
+  ],
+  "failedCount": 2,
+  "thirdParty": [
+   "platform.twitter.com",
+   "",
+   "syndication.twitter.com"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "tinyText": 8
+  },
+  "lighthouse": {
+   "performance": 84,
+   "accessibility": 76,
+   "bestPractices": 61,
+   "seo": 82,
+   "lcp": "4.3\u00a0s",
+   "cls": "0.082",
+   "tbt": "0\u00a0ms",
+   "fcp": "1.4\u00a0s"
+  }
+ },
+ {
+  "id": "nests",
+  "name": "NESTS (EMRS)",
+  "url": "https://nests.tribal.gov.in/",
+  "category": "subordinate",
+  "checkedAt": "2026-10-05T06:30:45.007Z",
+  "status": 405,
+  "security": {
+   "hsts": "max-age=31536000; includeSubDomains, max-age=31536000; includeSubDomains",
+   "csp": "script-src 'self' 'nonce-y2kKl2tmxD3/MHf+iU2Po9kYH6TZSWO48E8BdZDpG/Q=' 'unsafe-eval' https://translate.google.com https://translate.googleapis.com https://translate-pa.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; font-src 'self' https://fonts.gstatic.com https://cdn.linearicons.com https://use.fontawesome.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; connect-src 'self' https://translate.googleapis.com https://cdn.jsdelivr.net; img-src 'self' data: https://*.fontawesome.com https://fonts.gstatic.com https://www.gstatic.com/;",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff, nosniff",
+   "xctoValid": false,
+   "referrer": "strict-origin-when-cross-origin, strict-origin-when-cross-origin",
+   "permissions": "geolocation=self",
+   "server": "GoIServer",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "PHPSESSID",
+    "secure": false,
+    "httpOnly": false,
+    "sameSite": ""
+   }
+  ],
+  "httpToHttps": {
+   "code": 403,
+   "toHttps": false
+  },
+  "tls": {
+   "protocol": "TLSv1.3",
+   "chainComplete": true,
+   "verify": "0 (ok)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": true,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 3860,
+  "page": {
+   "lang": "en",
+   "title": "EMRS",
+   "description": "EMRS",
+   "keywords": "EMRS",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 4,
+   "skipLink": true,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": true,
+   "textResize": true,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": true,
+   "feedbackLink": false,
+   "helpLink": true,
+   "contactLink": true,
+   "policyLinks": 2,
+   "lastUpdated": false,
+   "nationalPortalLink": false,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": true,
+   "fontBody": "Roboto, sans-serif",
+   "fontHeading": "Poppins, sans-serif",
+   "fontNav": "Roboto, sans-serif",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 7,
+   "svgIcons": 2,
+   "imagesWithoutAlt": 28,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 37,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 6,
+   "nodes": 49,
+   "critical": 2,
+   "serious": 4,
+   "rules": [
+    {
+     "id": "button-name",
+     "impact": "critical",
+     "nodes": 2,
+     "help": "Buttons must have discernible text"
+    },
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 12,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "frame-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Frames must have an accessible name"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 29,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "list",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 3,
+     "help": "<marquee> elements are deprecated and must not be used"
+    }
+   ]
+  },
+  "transferKB": 17032,
+  "requests": 187,
+  "consoleErrors": [
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe",
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe",
+   "Loading the image 'https://templates.envytheme.com/labto/default/assets/img/appointment-bg.jpg' violates the following Content Security Policy directive: \"img-s",
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe",
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe",
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe",
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe",
+   "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'nonce-MmjgCXot77iV0xp1cNIRLy0EU0UFnBW2IHY1MJBdb5o=' 'unsafe"
+  ],
+  "failedRequests": [
+   "undefined https://templates.envytheme.com/labto/default/assets/img/appointment-bg.jpg",
+   "undefined https://www.googletagmanager.com/gtag/js?id=G-ZKJ17CNGQG",
+   "net::ERR_CONNECTION_RESET https://static.doubleclick.net/instream/ad_status.js",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id",
+   "net::ERR_CONNECTION_RESET https://static.doubleclick.net/instream/ad_status.js",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id",
+   "net::ERR_ABORTED https://www.youtube.com/embed/7ON94vTwug4?",
+   "net::ERR_CONNECTION_RESET https://static.doubleclick.net/instream/ad_status.js",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id",
+   "net::ERR_CONNECTION_RESET https://static.doubleclick.net/instream/ad_status.js",
+   "net::ERR_CONNECTION_RESET https://googleads.g.doubleclick.net/pagead/id"
+  ],
+  "failedCount": 15,
+  "thirdParty": [
+   "",
+   "www.youtube.com",
+   "fonts.gstatic.com",
+   "www.google.com",
+   "maps.gstatic.com",
+   "i.ytimg.com",
+   "jnn-pa.googleapis.com",
+   "maps.googleapis.com",
+   "fonts.googleapis.com"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "tinyText": 6
+  },
+  "lighthouse": {
+   "performance": 56,
+   "accessibility": 72,
+   "bestPractices": 86,
+   "seo": 73,
+   "lcp": "9.1\u00a0s",
+   "cls": "0.001",
+   "tbt": "20\u00a0ms",
+   "fcp": "6.3\u00a0s"
+  }
+ },
+ {
+  "id": "nstfdc",
+  "name": "NSTFDC",
+  "url": "https://nstfdc.tribal.gov.in/",
+  "category": "subordinate",
+  "checkedAt": "2026-10-05T06:31:15.665Z",
+  "status": 200,
+  "security": {
+   "hsts": "",
+   "csp": "",
+   "xfo": "SAMEORIGIN, DENY",
+   "xcto": "",
+   "xctoValid": false,
+   "referrer": "",
+   "permissions": "",
+   "server": "Microsoft-IIS/10.0",
+   "poweredBy": "4.0.30319"
+  },
+  "cookies": [],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": true,
+   "verify": "0 (ok)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 1735,
+  "page": {
+   "lang": "",
+   "title": "::NSTFDC::",
+   "description": "",
+   "keywords": "",
+   "viewport": "width=device-width; initial-scale=1.0",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": true,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": true,
+   "textResize": true,
+   "contrastToggle": false,
+   "screenReaderPage": true,
+   "search": true,
+   "sitemapLink": false,
+   "feedbackLink": true,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 2,
+   "lastUpdated": false,
+   "nationalPortalLink": true,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "Arial, Helvetica, sans-serif",
+   "fontHeading": "Arial, Helvetica, sans-serif",
+   "fontNav": "Arial, Helvetica, sans-serif",
+   "headerRgb": null,
+   "footerRgb": [
+    91,
+    202,
+    245
+   ],
+   "linkRgb": [
+    97,
+    97,
+    98
+   ],
+   "iconFonts": 46,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 2,
+   "brokenImages": 9,
+   "httpResources": 1,
+   "externalLinksNewTab": 29,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "none (closest Group 10 (cyan), distance 180)",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 8,
+   "nodes": 31,
+   "critical": 4,
+   "serious": 4,
+   "rules": [
+    {
+     "id": "button-name",
+     "impact": "critical",
+     "nodes": 1,
+     "help": "Buttons must have discernible text"
+    },
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 7,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "html-has-lang",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<html> element must have a lang attribute"
+    },
+    {
+     "id": "image-alt",
+     "impact": "critical",
+     "nodes": 2,
+     "help": "Images must have alternative text"
+    },
+    {
+     "id": "input-image-alt",
+     "impact": "critical",
+     "nodes": 1,
+     "help": "Image buttons must have alternative text"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 16,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "<marquee> elements are deprecated and must not be used"
+    },
+    {
+     "id": "select-name",
+     "impact": "critical",
+     "nodes": 1,
+     "help": "Select element must have an accessible name"
+    }
+   ]
+  },
+  "transferKB": 6300,
+  "requests": 68,
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 403 ()",
+   "Failed to load resource: the server responded with a status of 403 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failedRequests": [
+   "403 https://nstfdc.tribal.gov.in/(S(ktjxtaqsfr5sl1srurc5scst))/UploadData/Sucess_story/",
+   "403 https://nstfdc.tribal.gov.in/(S(ktjxtaqsfr5sl1srurc5scst))/UploadData/PhotoGallery/",
+   "404 https://nstfdc.tribal.gov.in/(S(ktjxtaqsfr5sl1srurc5scst))/responsive.css",
+   "404 https://nstfdc.tribal.gov.in/(S(ktjxtaqsfr5sl1srurc5scst))/bootstrap.min.css",
+   "404 https://nstfdc.tribal.gov.in/(S(ktjxtaqsfr5sl1srurc5scst))/font-awesome.min.css"
+  ],
+  "failedCount": 5,
+  "thirdParty": [],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width; initial-scale=1.0",
+   "tinyText": 1
+  },
+  "lighthouse": {
+   "performance": 92,
+   "accessibility": 69,
+   "bestPractices": 71,
+   "seo": 64,
+   "lcp": "2.8\u00a0s",
+   "cls": "0.068",
+   "tbt": "40\u00a0ms",
+   "fcp": "2.3\u00a0s"
+  }
+ },
+ {
+  "id": "trifed",
+  "name": "TRIFED",
+  "url": "https://trifed.tribal.gov.in/",
+  "category": "subordinate",
+  "checkedAt": "2026-10-05T06:31:32.565Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=63072000; includeSubDomains",
+   "csp": "default-src 'unsafe-inlin' https:; font-src https: data:; img-src https: data:; script-src 'unsafe-inline' https:; style-src 'unsafe-inline' https:;",
+   "xfo": "SAMEORIGIN",
+   "xcto": "nosniff",
+   "xctoValid": true,
+   "referrer": "same-origin",
+   "permissions": "accelerometer=()\u201a autoplay=(self), camera=(), encrypted-media=(), fullscreen=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(self), usb=(), interest-cohort=()",
+   "server": "Apache",
+   "poweredBy": ""
+  },
+  "cookies": [],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": false,
+   "verify": "21 (unable to verify the first certificate)",
+   "subject": "CN=*.tribal.gov.in",
+   "issuer": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R6 AlphaSSL CA 2025",
+   "notAfter": "Feb 17 09:58:09 2027 GMT",
+   "daysLeft": 135,
+   "tls13": false,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 3712,
+  "page": {
+   "lang": "hi",
+   "title": "Home | TRIFED - Tribes India | PMVDY",
+   "description": "TRIFED, TRIBAL HANDICRAFTS, VAN DHAN YOJANA",
+   "keywords": "TRIFED, TRIBAL HANDICRAFTS",
+   "viewport": "width=device-width, initial-scale=1.0",
+   "canonical": "https://trifed.tribal.gov.in/hi/home",
+   "hreflang": 2,
+   "ogTitle": "",
+   "h1Count": 8,
+   "skipLink": true,
+   "emblem": true,
+   "govOfIndia": true,
+   "hindiSwitch": true,
+   "textResize": true,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": true,
+   "sitemapLink": true,
+   "feedbackLink": true,
+   "helpLink": true,
+   "contactLink": true,
+   "policyLinks": 3,
+   "lastUpdated": true,
+   "nationalPortalLink": true,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "Lato, sans-serif",
+   "fontHeading": "Lato, sans-serif",
+   "fontNav": "Lato, sans-serif",
+   "headerRgb": [
+    34,
+    34,
+    34
+   ],
+   "footerRgb": [
+    37,
+    36,
+    41
+   ],
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 46,
+   "svgIcons": 5,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 83,
+   "generator": "",
+   "headerGroup": "Neutral (grey)",
+   "footerGroup": "Neutral (grey)",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 6,
+   "nodes": 35,
+   "critical": 0,
+   "serious": 5,
+   "rules": [
+    {
+     "id": "aria-hidden-focus",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "ARIA hidden element must not be focusable or contain focusable elements"
+    },
+    {
+     "id": "frame-title",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "Frames must have an accessible name"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 27,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "list",
+     "impact": "serious",
+     "nodes": 2,
+     "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+    },
+    {
+     "id": "meta-viewport",
+     "impact": "moderate",
+     "nodes": 1,
+     "help": "Zooming and scaling must not be disabled"
+    },
+    {
+     "id": "scrollable-region-focusable",
+     "impact": "serious",
+     "nodes": 3,
+     "help": "Scrollable region must have keyboard access"
+    }
+   ]
+  },
+  "transferKB": 17995,
+  "requests": 162,
+  "consoleErrors": [
+   "Error with Permissions-Policy header: Parse of permissions policy failed because of errors reported by structured header parser.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored.",
+   "The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-inlin''. It will be ignored."
+  ],
+  "failedRequests": [],
+  "failedCount": 0,
+  "thirdParty": [
+   "cdnjs.cloudflare.com",
+   "fonts.googleapis.com",
+   "translate.google.com",
+   "fonts.gstatic.com",
+   "www.gstatic.com",
+   "translate.googleapis.com",
+   "platform.x.com",
+   "platform.twitter.com",
+   "translate-pa.googleapis.com",
+   "syndication.twitter.com",
+   ""
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1.0",
+   "tinyText": 3
+  },
+  "lighthouse": {
+   "performance": 54,
+   "accessibility": 72,
+   "bestPractices": 68,
+   "seo": 92,
+   "lcp": "22.0\u00a0s",
+   "cls": "0",
+   "tbt": "130\u00a0ms",
+   "fcp": "13.7\u00a0s"
+  }
+ },
+ {
+  "id": "tribex",
+  "name": "TribeX",
+  "url": "https://tribexdigital.org.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:32:10.387Z",
+  "status": 200,
+  "security": {
+   "hsts": "max-age=31536000; includeSubDomains, max-age=31536000; includeSubDomains",
+   "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; script-src-elem 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self';",
+   "xfo": "SAMEORIGIN, SAMEORIGIN",
+   "xcto": "nosniff, nosniff",
+   "xctoValid": false,
+   "referrer": "strict-origin-when-cross-origin, strict-origin-when-cross-origin",
+   "permissions": "geolocation=(), microphone=(), camera=(), geolocation=(), microphone=(), camera=(self)",
+   "server": "cloudflare",
+   "poweredBy": ""
+  },
+  "cookies": [
+   {
+    "name": "XSRF-TOKEN",
+    "secure": true,
+    "httpOnly": false,
+    "sameSite": "lax"
+   },
+   {
+    "name": "tribal_session",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "lax"
+   }
+  ],
+  "httpToHttps": {
+   "code": 301,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.3",
+   "chainComplete": true,
+   "verify": "0 (ok)",
+   "subject": "CN=tribexdigital.org.in",
+   "issuer": "C=US, O=Google Trust Services, CN=WE1",
+   "notAfter": "Nov 30 13:30:39 2026 GMT",
+   "daysLeft": 56,
+   "tls13": true,
+   "tls10": false,
+   "tls11": false
+  },
+  "loadMs": 2871,
+  "page": {
+   "lang": "en",
+   "title": "Home",
+   "description": "",
+   "keywords": "",
+   "viewport": "width=device-width, initial-scale=1.0",
+   "canonical": "https://tribexdigital.org.in",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 0,
+   "skipLink": false,
+   "emblem": true,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": true,
+   "sitemapLink": false,
+   "feedbackLink": true,
+   "helpLink": false,
+   "contactLink": true,
+   "policyLinks": 3,
+   "lastUpdated": false,
+   "nationalPortalLink": false,
+   "socialLinks": 4,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "\"IBM Plex Sans\", sans-serif",
+   "fontHeading": "\"IBM Plex Sans\", sans-serif",
+   "fontNav": "\"IBM Plex Sans\", sans-serif",
+   "headerRgb": [
+    0,
+    0,
+    138
+   ],
+   "footerRgb": [
+    1,
+    1,
+    49
+   ],
+   "linkRgb": [
+    255,
+    255,
+    255
+   ],
+   "iconFonts": 65,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 25,
+   "generator": "",
+   "headerGroup": "Group 6 (violet)",
+   "footerGroup": "Neutral (grey)",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 4,
+   "nodes": 54,
+   "critical": 1,
+   "serious": 3,
+   "rules": [
+    {
+     "id": "button-name",
+     "impact": "critical",
+     "nodes": 40,
+     "help": "Buttons must have discernible text"
+    },
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 10,
+     "help": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+     "id": "link-name",
+     "impact": "serious",
+     "nodes": 3,
+     "help": "Links must have discernible text"
+    },
+    {
+     "id": "marquee",
+     "impact": "serious",
+     "nodes": 1,
+     "help": "<marquee> elements are deprecated and must not be used"
+    }
+   ]
+  },
+  "transferKB": 15694,
+  "requests": 104,
+  "consoleErrors": [
+   "Loading the script 'https://assets.usestyle.ai/seonajsplugin' violates the following Content Security Policy directive: \"script-src-elem 'self' 'unsafe-inline' ",
+   "Failed to load resource: net::ERR_CONNECTION_RESET",
+   "Failed to load resource: net::ERR_CONNECTION_RESET",
+   "Connecting to 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,1"
+  ],
+  "failedRequests": [
+   "undefined https://assets.usestyle.ai/seonajsplugin",
+   "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-ZJE6F71LEC&gtm=45je69u2v9178108951za200zd9178108951xf1&_p=179118193",
+   "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-MNX1Y5QGP9&gtm=45je69u2v9183544075za200zb9178108951zd9178108951xf1&_p=1",
+   "net::ERR_CONNECTION_RESET https://stats.g.doubleclick.net/g/collect?v=2&tid=G-MNX1Y5QGP9&cid=1291795123.1791181935&gtm=45je69u2v9183544075za200zb9",
+   "net::ERR_CONNECTION_RESET https://stats.g.doubleclick.net/g/collect?v=2&tid=G-Q2B3ZSNY0F&cid=1291795123.1791181935&gtm=45je69u2v872893890za200zb91",
+   "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-Q2B3ZSNY0F&gtm=45je69u2v872893890za200zb9178108951zd9178108951xf1&_p=17",
+   "undefined https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&famil"
+  ],
+  "failedCount": 7,
+  "thirdParty": [
+   "cdnjs.cloudflare.com",
+   "cdn.jsdelivr.net",
+   "static.cloudflareinsights.com",
+   "fonts.googleapis.com",
+   "www.googletagmanager.com",
+   "fonts.gstatic.com",
+   "www.google-analytics.com",
+   "www.google.co.in",
+   "analytics.google.com",
+   "courses.iid.org.in"
+  ],
+  "mobile": {
+   "horizontalScroll": false,
+   "docWidth": 390,
+   "viewportMeta": "width=device-width, initial-scale=1.0",
+   "tinyText": 16
+  },
+  "lighthouse": {
+   "performance": 54,
+   "accessibility": 85,
+   "bestPractices": 93,
+   "seo": 75,
+   "lcp": "13.6\u00a0s",
+   "cls": "0",
+   "tbt": "200\u00a0ms",
+   "fcp": "4.2\u00a0s"
+  }
+ },
+ {
+  "id": "forestrights",
+  "name": "Forest Rights Act portal",
+  "url": "https://forestrights.nic.in/",
+  "category": "sister",
+  "checkedAt": "2026-10-05T06:32:35.659Z",
+  "status": 0,
+  "security": {
+   "hsts": "",
+   "csp": "",
+   "xfo": "",
+   "xcto": "",
+   "xctoValid": false,
+   "referrer": "",
+   "permissions": "",
+   "server": "",
+   "poweredBy": ""
+  },
+  "cookies": [],
+  "httpToHttps": {
+   "code": 302,
+   "toHttps": true
+  },
+  "tls": {
+   "protocol": "TLSv1.2",
+   "chainComplete": null,
+   "verify": "10 (certificate has expired)",
+   "subject": "CN=forestrights.nic.in",
+   "issuer": "C=US, O=Let's Encrypt, CN=R12",
+   "notAfter": "Jul 26 05:54:39 2026 GMT",
+   "daysLeft": -71,
+   "tls13": false,
+   "tls10": true,
+   "tls11": true
+  },
+  "loadError": "net::ERR_CERT_DATE_INVALID at https://forestrights.nic.in/",
+  "loadMs": 324,
+  "page": {
+   "lang": "en",
+   "title": "Privacy error",
+   "description": "",
+   "keywords": "",
+   "viewport": "initial-scale=1, minimum-scale=1, width=device-width",
+   "canonical": "",
+   "hreflang": 0,
+   "ogTitle": "",
+   "h1Count": 1,
+   "skipLink": false,
+   "emblem": false,
+   "govOfIndia": false,
+   "hindiSwitch": false,
+   "textResize": false,
+   "contrastToggle": false,
+   "screenReaderPage": false,
+   "search": false,
+   "sitemapLink": false,
+   "feedbackLink": false,
+   "helpLink": false,
+   "contactLink": false,
+   "policyLinks": 1,
+   "lastUpdated": false,
+   "nationalPortalLink": false,
+   "socialLinks": 0,
+   "cookieBanner": false,
+   "lineage": false,
+   "fontBody": "system-ui, sans-serif",
+   "fontHeading": "system-ui, sans-serif",
+   "fontNav": "",
+   "headerRgb": null,
+   "footerRgb": null,
+   "linkRgb": [
+    88,
+    88,
+    88
+   ],
+   "iconFonts": 0,
+   "svgIcons": 0,
+   "imagesWithoutAlt": 0,
+   "brokenImages": 0,
+   "httpResources": 0,
+   "externalLinksNewTab": 0,
+   "generator": "",
+   "headerGroup": "",
+   "footerGroup": "",
+   "notoSans": false
+  },
+  "axe": {
+   "violations": 0,
+   "nodes": 0,
+   "critical": 0,
+   "serious": 0,
+   "rules": []
+  },
+  "transferKB": 1,
+  "requests": 2,
+  "consoleErrors": [],
+  "failedRequests": [
+   "net::ERR_CERT_DATE_INVALID https://forestrights.nic.in/"
+  ],
+  "failedCount": 1,
+  "thirdParty": [
+   ""
+  ],
+  "mobile": {
+   "error": "net::ERR_CERT_DATE_INVALID at https://forestrights.nic.in/"
+  }
+ },
+ {
+  "id": "ngo",
+  "name": "NGO Grants",
+  "url": "https://ngo.tribal.gov.in/",
+  "category": "sister",
+  "unreachable": "Timed out from the assessment network; re-run from NICNET",
+  "status": 0,
+  "note": "Timed out from the assessment network; re-run from NICNET"
+ },
+ {
+  "id": "swasthya",
+  "name": "Swasthya portal",
+  "url": "https://swasthya.tribal.gov.in/",
+  "category": "sister",
+  "unreachable": "Timed out from the assessment network; re-run from NICNET",
+  "status": 0,
+  "note": "Timed out from the assessment network; re-run from NICNET"
+ },
+ {
+  "id": "repository",
+  "name": "Tribal Digital Document Repository",
+  "url": "https://repository.tribal.gov.in/",
+  "category": "sister",
+  "unreachable": "Timed out from the assessment network; re-run from NICNET",
+  "status": 0,
+  "note": "Timed out from the assessment network; re-run from NICNET"
+ },
+ {
+  "id": "scdiec",
+  "name": "SCD-IEC",
+  "url": "https://scdiec.tribal.gov.in/",
+  "category": "sister",
+  "unreachable": "Timed out from the assessment network; re-run from NICNET",
+  "status": 0,
+  "note": "Timed out from the assessment network; re-run from NICNET"
+ },
+ {
+  "id": "shramshakti",
+  "name": "Shram Shakti (tribal migration)",
+  "url": "https://shramshakti.tribal.gov.in/",
+  "category": "sister",
+  "unreachable": "Timed out from the assessment network; re-run from NICNET",
+  "status": 0,
+  "note": "Timed out from the assessment network; re-run from NICNET"
+ },
+ {
+  "id": "goal",
+  "name": "GOAL",
+  "url": "https://goal.tribal.gov.in/",
+  "category": "sister",
+  "unreachable": "Timed out from the assessment network; re-run from NICNET",
+  "status": 0,
+  "note": "Timed out from the assessment network; re-run from NICNET"
+ }
+]

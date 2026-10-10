@@ -1,0 +1,77 @@
+---
+// Feedback form (GIGW: online feedback with a mechanism to respond). Validates
+// in the browser; submission goes to the endpoint set in data-endpoint once the
+// CMS/backend is connected.
+import type { Locale } from '../../../data/site';
+import Icon from '../../Icon.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const hi = locale === 'hi';
+---
+<form class="feedback" novalidate data-feedback data-endpoint="">
+  <div class="grid grid--2">
+    <div class="field">
+      <label for="fb-name">{hi ? 'नाम' : 'Name'} <span aria-hidden="true">*</span></label>
+      <input class="input" id="fb-name" name="name" autocomplete="name" required aria-describedby="fb-name-err" />
+      <p class="error" id="fb-name-err" hidden>{hi ? 'कृपया अपना नाम लिखें।' : 'Enter your name.'}</p>
+    </div>
+    <div class="field">
+      <label for="fb-email">{hi ? 'ईमेल' : 'Email'} <span aria-hidden="true">*</span></label>
+      <input class="input" id="fb-email" name="email" type="email" autocomplete="email" required aria-describedby="fb-email-hint fb-email-err" />
+      <p class="hint" id="fb-email-hint">{hi ? 'हम केवल आपकी प्रतिक्रिया का उत्तर देने हेतु इसका उपयोग करेंगे।' : 'Used only to reply to your feedback.'}</p>
+      <p class="error" id="fb-email-err" hidden>{hi ? 'मान्य ईमेल पता लिखें, जैसे name@example.com' : 'Enter a valid email address, like name@example.com.'}</p>
+    </div>
+  </div>
+  <div class="field">
+    <label for="fb-type">{hi ? 'प्रतिक्रिया का प्रकार' : 'Type of feedback'}</label>
+    <select class="select" id="fb-type" name="type">
+      <option>{hi ? 'वेबसाइट सामग्री' : 'Website content'}</option>
+      <option>{hi ? 'सुगम्यता समस्या' : 'Accessibility problem'}</option>
+      <option>{hi ? 'टूटा हुआ लिंक' : 'Broken link'}</option>
+      <option>{hi ? 'सुझाव' : 'Suggestion'}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="fb-msg">{hi ? 'संदेश' : 'Message'} <span aria-hidden="true">*</span></label>
+    <textarea class="textarea" id="fb-msg" name="message" required maxlength="2000" aria-describedby="fb-msg-hint fb-msg-err"></textarea>
+    <p class="hint" id="fb-msg-hint">{hi ? 'अधिकतम 2000 अक्षर। शिकायतों हेतु CPGRAMS का उपयोग करें।' : 'Up to 2,000 characters. For grievances, please use CPGRAMS.'}</p>
+    <p class="error" id="fb-msg-err" hidden>{hi ? 'कृपया अपना संदेश लिखें।' : 'Enter your message.'}</p>
+  </div>
+  <p class="small muted">{hi ? '* अनिवार्य फ़ील्ड' : '* Required field'}</p>
+  <button class="btn" type="submit"><Icon name="Send" />{hi ? 'प्रतिक्रिया भेजें' : 'Send feedback'}</button>
+  <div class="callout mt" role="status" hidden data-feedback-status></div>
+</form>
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-feedback]');
+  const status = form?.querySelector<HTMLElement>('[data-feedback-status]');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let firstBad: HTMLElement | null = null;
+    form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[required]').forEach((f) => {
+      const ok = f.checkValidity() && f.value.trim() !== '';
+      f.setAttribute('aria-invalid', String(!ok));
+      const err = document.getElementById(`${f.id}-err`);
+      if (err) err.hidden = ok;
+      if (!ok && !firstBad) firstBad = f;
+    });
+    if (firstBad) { (firstBad as HTMLElement).focus(); return; }
+    const endpoint = form.dataset.endpoint;
+    const hi = document.documentElement.lang === 'hi';
+    if (!status) return;
+    status.hidden = false;
+    if (!endpoint) {
+      status.textContent = hi
+        ? 'ऑनलाइन जमा करने की सुविधा बैकएंड जुड़ने पर सक्रिय होगी। तब तक कृपया वेब सूचना प्रबंधक को संपर्क पृष्ठ पर दिए ईमेल पर लिखें।'
+        : 'Online submission will be enabled when the website backend is connected. Until then, please email the Web Information Manager listed on the Contact Us page.';
+      return;
+    }
+    try {
+      const res = await fetch(endpoint, { method: 'POST', body: new FormData(form) });
+      status.textContent = res.ok ? (hi ? 'धन्यवाद। आपकी प्रतिक्रिया प्राप्त हो गई है।' : 'Thank you. Your feedback has been received.') : (hi ? 'प्रतिक्रिया नहीं भेजी जा सकी। कृपया बाद में पुनः प्रयास करें।' : 'Your feedback could not be sent. Please try again later.');
+      if (res.ok) form.reset();
+    } catch {
+      status.textContent = hi ? 'नेटवर्क त्रुटि। कृपया पुनः प्रयास करें।' : 'Network error. Please try again.';
+    }
+  });
+</script>

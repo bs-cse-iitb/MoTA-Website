@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../data/i18n';
+import { mainNav } from '../data/nav';
+import Icon from '../components/Icon.astro';
+import WarliPersona from '../components/WarliPersona.astro';
+---
+<BaseLayout title={t('notFoundTitle', 'en')} noindex>
+  <section class="section">
+    <div class="container notfound">
+      <WarliPersona prop="lens" class="notfound__art" />
+      <div>
+        <p class="eyebrow">404</p>
+        <h1>{t('notFoundTitle', 'en')} <span lang="hi" class="muted">/ {t('notFoundTitle', 'hi')}</span></h1>
+        <p>{t('notFoundBody', 'en')}</p>
+        <p lang="hi" class="muted">{t('notFoundBody', 'hi')}</p>
+        <form class="search-box" action="/search/" role="search">
+          <label class="visually-hidden" for="nf-q">Search</label>
+          <input class="input" id="nf-q" name="q" type="search" placeholder={t('searchPlaceholder', 'en')} />
+          <button class="btn" type="submit">{t('search', 'en')}</button>
+        </form>
+        <ul class="chips" role="list">
+          <li><a class="chip" href="/"><Icon name="House" class="icon icon--sm" />Home</a></li>
+          {mainNav.map((s) => <li><a class="chip" href={s.href}>{s.label.en}</a></li>)}
+          <li><a class="chip" href="/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

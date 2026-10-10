@@ -1,0 +1,12 @@
+---
+import type { Locale } from '../../data/site';
+import type { Fact } from '../../data/schemes';
+interface Props { facts: Fact[]; note?: string; locale: Locale }
+const { facts, note, locale } = Astro.props;
+---
+<div class="facts-wrap">
+  <ul class="facts" role="list">
+    {facts.map((f) => <li class="fact"><span class="fact__value">{f.value}</span><span class="fact__label">{f.label[locale]}</span></li>)}
+  </ul>
+  {note && <p class="facts-note">{note}</p>}
+</div>

@@ -1,0 +1,30 @@
+# Checks every push and pull request: the site builds, has no broken links or
+# type errors, and every old page address still redirects as recorded.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check:links
+      - run: npx tsc --noEmit
+      - name: Old addresses redirect as recorded
+        run: |
+          node scripts/serve-uat.mjs &
+          for i in $(seq 1 30); do curl -sf http://127.0.0.1:4322/ >/dev/null && break; sleep 1; done
+          npm run test:redirects
