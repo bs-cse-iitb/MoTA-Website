@@ -38,6 +38,10 @@ npm run serve:uat    # http://127.0.0.1:4322, served like IIS
 | `docs/` | Project documents and test evidence |
 | `vendor/` | Third-party artwork kept with its source (State Emblem SVG) |
 
+
+## Free Deploy
+- https://mota-website.bs-veer-868.workers.dev/
+
 Not in the repository: `node_modules/` and `dist/` (rebuilt by `npm ci && npm run build`),
 `.env` (local settings; see `.env.example`), the official guideline PDFs (download links in
 [docs/GIGW_DBIM_Guidelines/](docs/GIGW_DBIM_Guidelines/README.md)), and the old ASP.NET site,
