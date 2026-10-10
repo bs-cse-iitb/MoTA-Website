@@ -36,8 +36,12 @@ Old page addresses (`.aspx`) get permanent redirects to the new pages
 
 The assistant posts to `/tribot-api/chat` on tribal.gov.in. IIS must forward that path to
 `https://tribot.tribal.gov.in/api/v1/chat`. The service rejects cross-origin calls from
-tribal.gov.in (checked 6 Oct 2026), so the browser cannot call it directly. No API key is
-needed or sent. Steps for the hosting team:
+tribal.gov.in (checked 6 Oct 2026), so the browser cannot call it directly; the same call
+forwarded by a server is answered (checked 10 Oct 2026). No API key is needed or sent. Like
+tribal.gov.in, the service sends no intermediate certificate: if the server cannot fetch it
+from GlobalSign itself, install "GlobalSign GCC R6 AlphaSSL CA 2025"
+(`vendor/globalsign-gcc-r6-alphassl-ca-2025.crt`) in the server's Intermediate Certification
+Authorities store, or the forwarding cannot connect. Steps for the hosting team:
 
 1. Install Application Request Routing and switch proxy on (server level).
 2. Uncomment the `tribot` rule in `src/pages/web.config.ts`, rebuild and deploy.

@@ -74,7 +74,7 @@ addresses: [MIGRATION.md](MIGRATION.md).
 
 | Service | Purpose | How the site reaches it |
 |---|---|---|
-| TriBot service, `tribot.tribal.gov.in/api/v1` | Answers for the chat assistant "Jago" | Same-origin path `/tribot-api/`, which IIS forwards; NIC switches it on ([DEPLOYMENT.md](DEPLOYMENT.md) §2) |
+| TriBot service, `tribot.tribal.gov.in/api/v1` | Answers for the chat assistant "Jago" | Same-origin path `/tribot-api/`, which IIS forwards; NIC switches it on ([DEPLOYMENT.md](DEPLOYMENT.md) §2). `npm run dev` forwards it too (`astro.config.mjs`) |
 | MyGov Central Content Publishing System, `cbpssubscriber.mygov.in` | Central campaign banner (DBIM 7.4) | Image in the home page banner |
 | X and Facebook | Social media posts | Loaded only after the visitor accepts them in the cookie notice |
 | YouTube | Videos | Links open the Ministry's YouTube channel |
