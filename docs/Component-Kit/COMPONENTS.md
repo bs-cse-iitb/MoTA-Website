@@ -42,7 +42,7 @@ competent authority has approved it. Record approvals in the last column.
 | 28 | Site search results with filters | pilot `/search/` (`dbim-search.js`) | 9 | 4.1.3 | `data-search-form` | UAT passed | |
 | 29 | Colour groups 1–10 and neutral | `data-dbim-group` | 2.1, 2.2 (pp. 5–6) | 1.4.3 in every group (KIT-01) | — | UAT passed | |
 | 30 | Icon sprite (line icons, 24/32/48/64 px) | `dist/icons.svg` | 3.3, 3.4, 3.7 (iii) (pp. 12–14) | 1.1.1 (decorative icons hidden) | — | UAT passed | |
-| 31 | Chat assistant "Jago" on the TriBot service (floating; 11 answer languages; list and table answers; site-search fallback; mascot in `assets/jago-*.webp`) | `templates/*/tribot.html` | — | 2.1.1; 4.1.3 (`role="log"`); 3.1.2 | `data-tribot`, `data-endpoint` | UAT passed (service to be connected on staging) | |
+| 31 | Chat assistant "Jago" on the TriBot service (floating; 11 answer languages; list and table answers; site-search fallback; mascot in `assets/jago-*.webp`) | `templates/*/tribot.html` | — | 2.1.1; 4.1.3 (`role="log"`); 3.1.2 | `data-tribot`, `data-endpoint`, `data-search-url` (optional) | UAT passed (service to be connected on staging) | |
 | 32 | Co-branding logos in the header (at most two) | `.cobrand` in `templates/*/header.html` | 5.4 (p. 31) | 1.1.1 | — | UAT passed | |
 | 33 | Footer visitor counter (shown only when the endpoint answers) | `[data-visitor-count]` in footer | — | 4.1.3 | `data-endpoint` | Ready (needs counter feed) | |
 | 34 | Footer STQC certificate badge (shown only while valid) | footer | GIGW 3.0 | — | — | Ready (needs renewed certificate) | |

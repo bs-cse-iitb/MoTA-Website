@@ -9,6 +9,8 @@
 //
 // Answers are written into the page as text nodes only, never as HTML, so nothing in an
 // answer can run as code. If the service fails, the assistant answers from the site search.
+// On a page without the site's search index (the standalone chat_popup/), data-search-url
+// names the website's search page: the fallback then links there and searches nothing.
 
 type Turn = { role: 'user' | 'assistant'; content: string };
 type Item = string | { title?: string; text?: string; content?: string; url?: string };
@@ -249,7 +251,8 @@ function init(root: HTMLElement) {
       el.append(ul);
     }
     const more = document.createElement('p');
-    more.append(link(d.lSearch!, `${pageLang === 'hi' ? '/hi' : ''}/search/?q=${encodeURIComponent(query)}`));
+    const search = d.searchUrl || `${pageLang === 'hi' ? '/hi' : ''}/search/`;
+    more.append(link(d.lSearch!, `${search}?q=${encodeURIComponent(query)}`));
     el.append(more);
     scroll(el);
   }
@@ -388,6 +391,7 @@ function init(root: HTMLElement) {
   };
   let pf: PF | null = null;
   async function siteSearch(query: string): Promise<Link[]> {
+    if (d.searchUrl) return []; // no search index on this page
     try {
       if (!pf) {
         const url = '/pagefind/pagefind.js';
